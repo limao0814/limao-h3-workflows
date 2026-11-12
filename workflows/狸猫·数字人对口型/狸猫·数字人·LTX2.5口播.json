@@ -76,7 +76,9 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      675
+     ]
     },
     {
      "label": "MASK",
@@ -168,7 +170,7 @@
      "label": "video",
      "name": "video",
      "type": "VIDEO",
-     "link": null
+     "link": 676
     },
     {
      "label": "filename_prefix",
@@ -273,7 +275,9 @@
      "label": "NOISE",
      "name": "NOISE",
      "type": "NOISE",
-     "links": []
+     "links": [
+      664
+     ]
     }
    ],
    "properties": {
@@ -333,7 +337,9 @@
      "label": "NOISE",
      "name": "NOISE",
      "type": "NOISE",
-     "links": []
+     "links": [
+      619
+     ]
     }
    ],
    "properties": {
@@ -383,13 +389,13 @@
      "label": "video_latent",
      "name": "video_latent",
      "type": "LATENT",
-     "link": null
+     "link": 611
     },
     {
      "label": "audio_latent",
      "name": "audio_latent",
      "type": "LATENT",
-     "link": null
+     "link": 612
     }
    ],
    "outputs": [
@@ -397,7 +403,9 @@
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      668
+     ]
     }
    ],
    "properties": {
@@ -449,7 +457,9 @@
      "label": "SAMPLER",
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      666
+     ]
     }
    ],
    "properties": {
@@ -507,7 +517,9 @@
      "label": "SIGMAS",
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      667
+     ]
     }
    ],
    "properties": {
@@ -555,31 +567,31 @@
      "label": "noise",
      "name": "noise",
      "type": "NOISE",
-     "link": null
+     "link": 619
     },
     {
      "label": "guider",
      "name": "guider",
      "type": "GUIDER",
-     "link": null
+     "link": 752
     },
     {
      "label": "sampler",
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 621
     },
     {
      "label": "sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 622
     },
     {
      "label": "latent_image",
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 623
     }
    ],
    "outputs": [
@@ -587,7 +599,9 @@
      "label": "output",
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      663
+     ]
     },
     {
      "label": "denoised_output",
@@ -637,7 +651,7 @@
      "label": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 628
     },
     {
      "label": "longer_edge",
@@ -653,7 +667,9 @@
      "label": "images",
      "name": "images",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      636
+     ]
     }
    ],
    "properties": {
@@ -701,19 +717,19 @@
      "label": "samples",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 757
     },
     {
      "label": "upscale_model",
      "name": "upscale_model",
      "type": "LATENT_UPSCALE_MODEL",
-     "link": null
+     "link": 728
     },
     {
      "label": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 631
     }
    ],
    "outputs": [
@@ -721,7 +737,9 @@
      "label": "LATENT",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      634
+     ]
     }
    ],
    "properties": {
@@ -763,19 +781,19 @@
      "label": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 632
     },
     {
      "label": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 633
     },
     {
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "link": null
+     "link": 634
     },
     {
      "label": "strength",
@@ -792,7 +810,7 @@
      "widget": {
       "name": "bypass"
      },
-     "link": null
+     "link": 635
     }
    ],
    "outputs": [
@@ -800,7 +818,9 @@
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      611
+     ]
     }
    ],
    "properties": {
@@ -852,7 +872,7 @@
      "label": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 636
     },
     {
      "label": "img_compression",
@@ -868,7 +888,10 @@
      "label": "output_image",
      "name": "output_image",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      633,
+      646
+     ]
     }
    ],
    "properties": {
@@ -916,7 +939,7 @@
      "label": "input",
      "name": "input",
      "type": "IMAGE,MASK",
-     "link": null
+     "link": 675
     },
     {
      "label": "resize_type",
@@ -932,7 +955,7 @@
      "widget": {
       "name": "resize_type.width"
      },
-     "link": null
+     "link": 779
     },
     {
      "name": "resize_type.height",
@@ -940,7 +963,7 @@
      "widget": {
       "name": "resize_type.height"
      },
-     "link": null
+     "link": 782
     },
     {
      "label": "scale_method",
@@ -956,7 +979,9 @@
      "label": "resized",
      "name": "resized",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      628
+     ]
     }
    ],
    "properties": {
@@ -1025,7 +1050,9 @@
      "label": "SAMPLER",
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      621
+     ]
     }
    ],
    "properties": {
@@ -1075,7 +1102,7 @@
      "label": "values.a",
      "name": "values.a",
      "type": "FLOAT,INT,BOOLEAN",
-     "link": null
+     "link": 781
     },
     {
      "label": "b",
@@ -1107,7 +1134,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      642
+     ]
     },
     {
      "label": "BOOL",
@@ -1160,7 +1189,7 @@
      "label": "",
      "name": "",
      "type": "*",
-     "link": null
+     "link": 723
     }
    ],
    "outputs": [
@@ -1168,7 +1197,11 @@
      "label": "",
      "name": "",
      "type": "VAE",
-     "links": []
+     "links": [
+      631,
+      632,
+      671
+     ]
     }
    ],
    "properties": {
@@ -1204,7 +1237,7 @@
      "label": "values.a",
      "name": "values.a",
      "type": "FLOAT,INT,BOOLEAN",
-     "link": null
+     "link": 784
     },
     {
      "label": "b",
@@ -1236,7 +1269,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      643
+     ]
     },
     {
      "label": "BOOL",
@@ -1292,7 +1327,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 642
     },
     {
      "label": "height",
@@ -1301,7 +1336,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 643
     },
     {
      "label": "length",
@@ -1310,7 +1345,7 @@
      "widget": {
       "name": "length"
      },
-     "link": null
+     "link": 644
     },
     {
      "label": "batch_size",
@@ -1326,7 +1361,9 @@
      "label": "LATENT",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      647
+     ]
     }
    ],
    "properties": {
@@ -1384,19 +1421,19 @@
      "label": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 724
     },
     {
      "label": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 646
     },
     {
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "link": null
+     "link": 647
     },
     {
      "label": "strength",
@@ -1413,7 +1450,7 @@
      "widget": {
       "name": "bypass"
      },
-     "link": null
+     "link": 648
     }
    ],
    "outputs": [
@@ -1421,7 +1458,10 @@
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      658,
+      714
+     ]
     }
    ],
    "properties": {
@@ -1473,13 +1513,13 @@
      "label": "samples",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 649
     },
     {
      "label": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": null
+     "link": 725
     }
    ],
    "outputs": [
@@ -1531,7 +1571,7 @@
      "label": "values.a",
      "name": "values.a",
      "type": "FLOAT,INT,BOOLEAN",
-     "link": null
+     "link": 679
     },
     {
      "label": "b",
@@ -1558,7 +1598,10 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      674,
+      657
+     ]
     },
     {
      "label": "INT",
@@ -1627,7 +1670,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      679
+     ]
     }
    ],
    "title": "Frame Rate",
@@ -1681,7 +1726,7 @@
      "widget": {
       "name": "value"
      },
-     "link": null
+     "link": 708
     }
    ],
    "outputs": [
@@ -1689,7 +1734,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      644
+     ]
     }
    ],
    "title": "Length",
@@ -1750,7 +1797,10 @@
      "label": "BOOLEAN",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": []
+     "links": [
+      635,
+      648
+     ]
     }
    ],
    "title": "Switch to Text to Video?",
@@ -1802,7 +1852,7 @@
      "widget": {
       "name": "value"
      },
-     "link": null
+     "link": 785
     }
    ],
    "outputs": [
@@ -1810,7 +1860,9 @@
      "label": "STRING",
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      718
+     ]
     }
    ],
    "title": "主要肢体动作表情描写",
@@ -1859,13 +1911,13 @@
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 715
     },
     {
      "label": "negative",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 717
     },
     {
      "label": "frame_rate",
@@ -1874,7 +1926,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": null
+     "link": 657
     }
    ],
    "outputs": [
@@ -1882,13 +1934,19 @@
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      750,
+      759
+     ]
     },
     {
      "label": "negative",
      "name": "negative",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      751,
+      761
+     ]
     }
    ],
    "properties": {
@@ -1938,13 +1996,13 @@
      "label": "video_latent",
      "name": "video_latent",
      "type": "LATENT",
-     "link": null
+     "link": 658
     },
     {
      "label": "audio_latent",
      "name": "audio_latent",
      "type": "LATENT",
-     "link": null
+     "link": 698
     }
    ],
    "outputs": [
@@ -1952,7 +2010,9 @@
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      623
+     ]
     }
    ],
    "properties": {
@@ -2004,7 +2064,9 @@
      "label": "SIGMAS",
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      622
+     ]
     }
    ],
    "properties": {
@@ -2052,7 +2114,7 @@
      "label": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
-     "link": null
+     "link": 663
     }
    ],
    "outputs": [
@@ -2060,13 +2122,17 @@
      "label": "video_latent",
      "name": "video_latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      757
+     ]
     },
     {
      "label": "audio_latent",
      "name": "audio_latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      612
+     ]
     }
    ],
    "properties": {
@@ -2108,31 +2174,31 @@
      "label": "noise",
      "name": "noise",
      "type": "NOISE",
-     "link": null
+     "link": 664
     },
     {
      "label": "guider",
      "name": "guider",
      "type": "GUIDER",
-     "link": null
+     "link": 756
     },
     {
      "label": "sampler",
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 666
     },
     {
      "label": "sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 667
     },
     {
      "label": "latent_image",
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 668
     }
    ],
    "outputs": [
@@ -2140,7 +2206,9 @@
      "label": "output",
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      669
+     ]
     },
     {
      "label": "denoised_output",
@@ -2188,7 +2256,7 @@
      "label": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
-     "link": null
+     "link": 669
     }
    ],
    "outputs": [
@@ -2196,13 +2264,17 @@
      "label": "video_latent",
      "name": "video_latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      762
+     ]
     },
     {
      "label": "audio_latent",
      "name": "audio_latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      649
+     ]
     }
    ],
    "properties": {
@@ -2244,14 +2316,14 @@
      "label": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 672
     },
     {
      "label": "audio",
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 700
     },
     {
      "label": "fps",
@@ -2260,7 +2332,7 @@
      "widget": {
       "name": "fps"
      },
-     "link": null
+     "link": 674
     },
     {
      "label": "bit_depth",
@@ -2277,7 +2349,9 @@
      "label": "VIDEO",
      "name": "VIDEO",
      "type": "VIDEO",
-     "links": []
+     "links": [
+      676
+     ]
     }
    ],
    "properties": {
@@ -2331,13 +2405,13 @@
      "label": "samples",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 762
     },
     {
      "label": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 671
     },
     {
      "label": "tile_size",
@@ -2377,7 +2451,9 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      672
+     ]
     }
    ],
    "properties": {
@@ -2431,13 +2507,13 @@
      "label": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "link": null
+     "link": 770
     },
     {
      "label": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": null
+     "link": 726
     }
    ],
    "outputs": [
@@ -2445,7 +2521,9 @@
      "label": "Audio Latent",
      "name": "Audio Latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      692
+     ]
     }
    ],
    "properties": {
@@ -2494,7 +2572,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 780
     },
     {
      "label": "height",
@@ -2503,7 +2581,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 783
     }
    ],
    "outputs": [
@@ -2511,7 +2589,9 @@
      "label": "MASK",
      "name": "MASK",
      "type": "MASK",
-     "links": []
+     "links": [
+      693
+     ]
     }
    ],
    "properties": {
@@ -2560,13 +2640,13 @@
      "label": "samples",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 692
     },
     {
      "label": "mask",
      "name": "mask",
      "type": "MASK",
-     "link": null
+     "link": 693
     }
    ],
    "outputs": [
@@ -2574,7 +2654,9 @@
      "label": "LATENT",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      698
+     ]
     }
    ],
    "properties": {
@@ -2610,7 +2692,7 @@
      "label": "",
      "name": "",
      "type": "*",
-     "link": null
+     "link": 771
     }
    ],
    "outputs": [
@@ -2618,7 +2700,9 @@
      "label": "",
      "name": "",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      700
+     ]
     }
    ],
    "properties": {
@@ -2654,7 +2738,7 @@
      "label": "values.a",
      "name": "values.a",
      "type": "FLOAT,INT,BOOLEAN",
-     "link": null
+     "link": 769
     },
     {
      "label": "b",
@@ -2686,7 +2770,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      708
+     ]
     },
     {
      "label": "BOOL",
@@ -2739,19 +2825,19 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 722
     },
     {
      "label": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 727
     },
     {
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "link": null
+     "link": 714
     },
     {
      "label": "global_prompt",
@@ -2760,7 +2846,7 @@
      "widget": {
       "name": "global_prompt"
      },
-     "link": null
+     "link": 719
     },
     {
      "label": "smart_prompt",
@@ -2769,7 +2855,7 @@
      "widget": {
       "name": "smart_prompt"
      },
-     "link": null
+     "link": 718
     },
     {
      "label": "normalize_by_tokens",
@@ -2793,13 +2879,19 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "links": []
+     "links": [
+      749,
+      753
+     ]
     },
     {
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      715,
+      716
+     ]
     }
    ],
    "properties": {
@@ -2846,7 +2938,7 @@
      "label": "conditioning",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 716
     }
    ],
    "outputs": [
@@ -2854,7 +2946,9 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      717
+     ]
     }
    ],
    "properties": {
@@ -2899,7 +2993,9 @@
      "label": "STRING",
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      719
+     ]
     }
    ],
    "title": "全片主要内容简单概括",
@@ -2966,7 +3062,9 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      722
+     ]
     }
    ],
    "properties": {
@@ -3033,7 +3131,10 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      723,
+      724
+     ]
     }
    ],
    "properties": {
@@ -3097,7 +3198,10 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      725,
+      726
+     ]
     }
    ],
    "properties": {
@@ -3178,7 +3282,9 @@
      "label": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      727
+     ]
     }
    ],
    "properties": {
@@ -3248,7 +3354,9 @@
      "label": "LATENT_UPSCALE_MODEL",
      "name": "LATENT_UPSCALE_MODEL",
      "type": "LATENT_UPSCALE_MODEL",
-     "links": []
+     "links": [
+      728
+     ]
     }
    ],
    "properties": {
@@ -3309,19 +3417,19 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 749
     },
     {
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 750
     },
     {
      "label": "negative",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 751
     },
     {
      "label": "video_cfg",
@@ -3345,7 +3453,9 @@
      "label": "GUIDER",
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": []
+     "links": [
+      752
+     ]
     }
    ],
    "properties": {
@@ -3401,19 +3511,19 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 753
     },
     {
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 759
     },
     {
      "label": "negative",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 761
     },
     {
      "label": "video_cfg",
@@ -3437,7 +3547,9 @@
      "label": "GUIDER",
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": []
+     "links": [
+      756
+     ]
     }
    ],
    "properties": {
@@ -3494,13 +3606,18 @@
      "label": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      770,
+      771
+     ]
     },
     {
      "label": "duration",
      "name": "duration",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      769
+     ]
     }
    ],
    "properties": {
@@ -3573,12 +3690,20 @@
     {
      "name": "宽",
      "type": "INT",
-     "links": []
+     "links": [
+      779,
+      780,
+      781
+     ]
     },
     {
      "name": "高",
      "type": "INT",
-     "links": []
+     "links": [
+      782,
+      783,
+      784
+     ]
     },
     {
      "name": "总张数",
@@ -3828,7 +3953,9 @@
     {
      "name": "prompt",
      "type": "STRING",
-     "links": []
+     "links": [
+      785
+     ]
     },
     {
      "name": "show_help",
@@ -3903,7 +4030,584 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   611,
+   288,
+   0,
+   276,
+   0,
+   "LATENT"
+  ],
+  [
+   612,
+   309,
+   1,
+   276,
+   1,
+   "LATENT"
+  ],
+  [
+   619,
+   275,
+   0,
+   283,
+   0,
+   "NOISE"
+  ],
+  [
+   621,
+   291,
+   0,
+   283,
+   2,
+   "SAMPLER"
+  ],
+  [
+   622,
+   308,
+   0,
+   283,
+   3,
+   "SIGMAS"
+  ],
+  [
+   623,
+   306,
+   0,
+   283,
+   4,
+   "LATENT"
+  ],
+  [
+   628,
+   290,
+   0,
+   286,
+   0,
+   "IMAGE"
+  ],
+  [
+   631,
+   293,
+   0,
+   287,
+   2,
+   "VAE"
+  ],
+  [
+   632,
+   293,
+   0,
+   288,
+   0,
+   "VAE"
+  ],
+  [
+   633,
+   289,
+   0,
+   288,
+   1,
+   "IMAGE"
+  ],
+  [
+   634,
+   287,
+   0,
+   288,
+   2,
+   "LATENT"
+  ],
+  [
+   635,
+   302,
+   0,
+   288,
+   4,
+   "BOOLEAN"
+  ],
+  [
+   636,
+   286,
+   0,
+   289,
+   0,
+   "IMAGE"
+  ],
+  [
+   642,
+   292,
+   1,
+   295,
+   0,
+   "INT"
+  ],
+  [
+   643,
+   294,
+   1,
+   295,
+   1,
+   "INT"
+  ],
+  [
+   644,
+   301,
+   0,
+   295,
+   2,
+   "INT"
+  ],
+  [
+   646,
+   289,
+   0,
+   296,
+   1,
+   "IMAGE"
+  ],
+  [
+   647,
+   295,
+   0,
+   296,
+   2,
+   "LATENT"
+  ],
+  [
+   648,
+   302,
+   0,
+   296,
+   4,
+   "BOOLEAN"
+  ],
+  [
+   649,
+   311,
+   1,
+   297,
+   0,
+   "LATENT"
+  ],
+  [
+   657,
+   298,
+   0,
+   305,
+   2,
+   "FLOAT"
+  ],
+  [
+   658,
+   296,
+   0,
+   306,
+   0,
+   "LATENT"
+  ],
+  [
+   663,
+   283,
+   0,
+   309,
+   0,
+   "LATENT"
+  ],
+  [
+   664,
+   274,
+   0,
+   310,
+   0,
+   "NOISE"
+  ],
+  [
+   666,
+   279,
+   0,
+   310,
+   2,
+   "SAMPLER"
+  ],
+  [
+   667,
+   280,
+   0,
+   310,
+   3,
+   "SIGMAS"
+  ],
+  [
+   668,
+   276,
+   0,
+   310,
+   4,
+   "LATENT"
+  ],
+  [
+   669,
+   310,
+   0,
+   311,
+   0,
+   "LATENT"
+  ],
+  [
+   671,
+   293,
+   0,
+   317,
+   1,
+   "VAE"
+  ],
+  [
+   672,
+   317,
+   0,
+   312,
+   0,
+   "IMAGE"
+  ],
+  [
+   674,
+   298,
+   0,
+   312,
+   2,
+   "FLOAT"
+  ],
+  [
+   675,
+   269,
+   0,
+   290,
+   0,
+   "IMAGE"
+  ],
+  [
+   676,
+   312,
+   0,
+   273,
+   0,
+   "VIDEO"
+  ],
+  [
+   679,
+   300,
+   0,
+   298,
+   0,
+   "FLOAT,INT"
+  ],
+  [
+   692,
+   334,
+   0,
+   336,
+   0,
+   "LATENT"
+  ],
+  [
+   693,
+   335,
+   0,
+   336,
+   1,
+   "MASK"
+  ],
+  [
+   698,
+   336,
+   0,
+   306,
+   1,
+   "LATENT"
+  ],
+  [
+   700,
+   337,
+   0,
+   312,
+   1,
+   "AUDIO"
+  ],
+  [
+   708,
+   340,
+   1,
+   301,
+   0,
+   "INT"
+  ],
+  [
+   714,
+   296,
+   0,
+   341,
+   2,
+   "LATENT"
+  ],
+  [
+   715,
+   341,
+   1,
+   305,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   716,
+   341,
+   1,
+   342,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   717,
+   342,
+   0,
+   305,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   718,
+   303,
+   0,
+   341,
+   4,
+   "STRING"
+  ],
+  [
+   719,
+   343,
+   0,
+   341,
+   3,
+   "STRING"
+  ],
+  [
+   722,
+   344,
+   0,
+   341,
+   0,
+   "MODEL"
+  ],
+  [
+   723,
+   345,
+   0,
+   293,
+   0,
+   "*"
+  ],
+  [
+   724,
+   345,
+   0,
+   296,
+   0,
+   "VAE"
+  ],
+  [
+   725,
+   346,
+   0,
+   297,
+   1,
+   "VAE"
+  ],
+  [
+   726,
+   346,
+   0,
+   334,
+   1,
+   "VAE"
+  ],
+  [
+   727,
+   347,
+   0,
+   341,
+   1,
+   "CLIP"
+  ],
+  [
+   728,
+   348,
+   0,
+   287,
+   1,
+   "LATENT_UPSCALE_MODEL"
+  ],
+  [
+   749,
+   341,
+   0,
+   354,
+   0,
+   "MODEL"
+  ],
+  [
+   750,
+   305,
+   0,
+   354,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   751,
+   305,
+   1,
+   354,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   752,
+   354,
+   0,
+   283,
+   1,
+   "GUIDER"
+  ],
+  [
+   753,
+   341,
+   0,
+   355,
+   0,
+   "MODEL"
+  ],
+  [
+   756,
+   355,
+   0,
+   310,
+   1,
+   "GUIDER"
+  ],
+  [
+   757,
+   309,
+   0,
+   287,
+   0,
+   "LATENT"
+  ],
+  [
+   759,
+   305,
+   0,
+   355,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   761,
+   305,
+   1,
+   355,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   762,
+   311,
+   0,
+   317,
+   0,
+   "LATENT"
+  ],
+  [
+   769,
+   356,
+   1,
+   340,
+   0,
+   "FLOAT"
+  ],
+  [
+   770,
+   356,
+   0,
+   334,
+   0,
+   "AUDIO"
+  ],
+  [
+   771,
+   356,
+   0,
+   337,
+   0,
+   "AUDIO"
+  ],
+  [
+   779,
+   363,
+   1,
+   290,
+   2,
+   "INT"
+  ],
+  [
+   780,
+   363,
+   1,
+   335,
+   1,
+   "INT"
+  ],
+  [
+   781,
+   363,
+   1,
+   292,
+   0,
+   "INT"
+  ],
+  [
+   782,
+   363,
+   2,
+   290,
+   3,
+   "INT"
+  ],
+  [
+   783,
+   363,
+   2,
+   335,
+   2,
+   "INT"
+  ],
+  [
+   784,
+   363,
+   2,
+   294,
+   0,
+   "INT"
+  ],
+  [
+   785,
+   370,
+   0,
+   303,
+   0,
+   "STRING"
+  ]
+ ],
  "groups": [
   {
    "id": 29,

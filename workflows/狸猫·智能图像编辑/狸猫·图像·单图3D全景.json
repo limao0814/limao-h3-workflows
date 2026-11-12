@@ -24,7 +24,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 9
     },
     {
      "label": "lora_name",
@@ -51,7 +51,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      10
+     ]
     }
    ],
    "title": "360 ERP outpaint LoRA",
@@ -127,7 +129,10 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      14,
+      15
+     ]
     }
    ],
    "properties": {
@@ -176,7 +181,7 @@
      "localized_name": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 5
     },
     {
      "label": "latent",
@@ -184,7 +189,7 @@
      "name": "latent",
      "shape": 7,
      "type": "LATENT",
-     "link": null
+     "link": 6
     }
    ],
    "outputs": [
@@ -193,7 +198,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      11
+     ]
     }
    ],
    "title": "正向 + 参考",
@@ -233,7 +240,7 @@
      "localized_name": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 7
     },
     {
      "label": "latent",
@@ -241,7 +248,7 @@
      "name": "latent",
      "shape": 7,
      "type": "LATENT",
-     "link": null
+     "link": 8
     }
    ],
    "outputs": [
@@ -250,7 +257,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      12
+     ]
     }
    ],
    "title": "负向 + 参考",
@@ -290,7 +299,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 22
     }
    ],
    "outputs": [
@@ -350,7 +359,10 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      4,
+      17
+     ]
     }
    ],
    "properties": {
@@ -395,14 +407,14 @@
      "localized_name": "像素",
      "name": "pixels",
      "type": "IMAGE",
-     "link": null
+     "link": 3
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 4
     }
    ],
    "outputs": [
@@ -411,7 +423,11 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      6,
+      8,
+      13
+     ]
     }
    ],
    "title": "ERP 控制图 -> latent",
@@ -460,7 +476,7 @@
      "name": "sticker_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 1
     },
     {
      "label": "sticker_state",
@@ -468,7 +484,7 @@
      "name": "sticker_state",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 2
     },
     {
      "label": "audio",
@@ -530,7 +546,10 @@
      "localized_name": "cond_erp",
      "name": "cond_erp",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      3,
+      22
+     ]
     },
     {
      "label": "mask",
@@ -592,7 +611,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 15
     },
     {
      "label": "text",
@@ -610,7 +629,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      7
+     ]
     }
    ],
    "title": "CLIP Text Encode (Negative)",
@@ -656,7 +677,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 14
     },
     {
      "label": "text",
@@ -674,7 +695,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      5
+     ]
     }
    ],
    "title": "CLIP Text Encode (Positive)",
@@ -731,7 +754,9 @@
      "localized_name": "字符串",
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      2
+     ]
     }
    ],
    "title": "参考图视角 JSON",
@@ -795,7 +820,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      9
+     ]
     }
    ],
    "properties": {
@@ -840,28 +867,28 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 10
     },
     {
      "label": "positive",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 11
     },
     {
      "label": "negative",
      "localized_name": "负面条件",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 12
     },
     {
      "label": "latent_image",
      "localized_name": "Latent图像",
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 13
     },
     {
      "label": "seed",
@@ -924,7 +951,9 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      16
+     ]
     }
    ],
    "properties": {
@@ -979,14 +1008,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 16
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 17
     }
    ],
    "outputs": [
@@ -995,7 +1024,11 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      18,
+      19,
+      20
+     ]
     }
    ],
    "properties": {
@@ -1032,7 +1065,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 21
     }
    ],
    "outputs": [
@@ -1081,7 +1114,7 @@
      "localized_name": "图片",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 19
     },
     {
      "label": "filename_prefix",
@@ -1143,7 +1176,7 @@
      "localized_name": "erp_image",
      "name": "erp_image",
      "type": "IMAGE",
-     "link": null
+     "link": 20
     },
     {
      "label": "audio",
@@ -1196,7 +1229,9 @@
      "localized_name": "rect_image",
      "name": "rect_image",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      21
+     ]
     },
     {
      "label": "sticker_state_json",
@@ -1263,7 +1298,7 @@
      "localized_name": "erp_image",
      "name": "erp_image",
      "type": "IMAGE",
-     "link": null
+     "link": 18
     },
     {
      "label": "audio",
@@ -1364,7 +1399,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      1
+     ]
     },
     {
      "label": "MASK",
@@ -1515,7 +1552,184 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   20,
+   1,
+   "IMAGE"
+  ],
+  [
+   2,
+   2,
+   0,
+   20,
+   2,
+   "STRING"
+  ],
+  [
+   3,
+   20,
+   0,
+   21,
+   0,
+   "IMAGE"
+  ],
+  [
+   4,
+   13,
+   0,
+   21,
+   1,
+   "VAE"
+  ],
+  [
+   5,
+   14,
+   0,
+   22,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   6,
+   21,
+   0,
+   22,
+   1,
+   "LATENT"
+  ],
+  [
+   7,
+   15,
+   0,
+   23,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   8,
+   21,
+   0,
+   23,
+   1,
+   "LATENT"
+  ],
+  [
+   9,
+   10,
+   0,
+   11,
+   0,
+   "MODEL"
+  ],
+  [
+   10,
+   11,
+   0,
+   24,
+   0,
+   "MODEL"
+  ],
+  [
+   11,
+   22,
+   0,
+   24,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   12,
+   23,
+   0,
+   24,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   13,
+   21,
+   0,
+   24,
+   3,
+   "LATENT"
+  ],
+  [
+   14,
+   12,
+   0,
+   14,
+   0,
+   "CLIP"
+  ],
+  [
+   15,
+   12,
+   0,
+   15,
+   0,
+   "CLIP"
+  ],
+  [
+   16,
+   24,
+   0,
+   25,
+   0,
+   "LATENT"
+  ],
+  [
+   17,
+   13,
+   0,
+   25,
+   1,
+   "VAE"
+  ],
+  [
+   18,
+   25,
+   0,
+   30,
+   0,
+   "IMAGE"
+  ],
+  [
+   19,
+   25,
+   0,
+   31,
+   0,
+   "IMAGE"
+  ],
+  [
+   20,
+   25,
+   0,
+   32,
+   0,
+   "IMAGE"
+  ],
+  [
+   21,
+   32,
+   0,
+   33,
+   0,
+   "IMAGE"
+  ],
+  [
+   22,
+   20,
+   0,
+   34,
+   0,
+   "IMAGE"
+  ]
+ ],
  "groups": [
   {
    "id": 5,

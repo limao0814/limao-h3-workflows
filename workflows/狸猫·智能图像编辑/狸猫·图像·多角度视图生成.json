@@ -24,7 +24,7 @@
      "localized_name": "条件化",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 229
     },
     {
      "label": "reference_latents_method",
@@ -42,7 +42,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      241
+     ]
     }
    ],
    "properties": {
@@ -94,7 +96,7 @@
      "localized_name": "条件化",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 256
     },
     {
      "label": "reference_latents_method",
@@ -112,7 +114,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      240
+     ]
     }
    ],
    "properties": {
@@ -164,7 +168,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 231
     },
     {
      "label": "strength",
@@ -192,7 +196,9 @@
      "localized_name": "模型",
      "name": "patched_model",
      "type": "MODEL",
-     "links": []
+     "links": [
+      239
+     ]
     }
    ],
    "properties": {
@@ -279,7 +285,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 253
     },
     {
      "label": "vae",
@@ -287,7 +293,7 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 254
     },
     {
      "label": "image1",
@@ -295,7 +301,7 @@
      "name": "image1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 255
     },
     {
      "label": "image2",
@@ -319,7 +325,7 @@
      "widget": {
       "name": "prompt"
      },
-     "link": null
+     "link": 270
     }
    ],
    "outputs": [
@@ -328,7 +334,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      256
+     ]
     }
    ],
    "title": "TextEncodeQwenImageEditPlus (Positive)",
@@ -404,7 +412,9 @@
      "name": "MODEL",
      "type": "MODEL",
      "slot_index": 0,
-     "links": []
+     "links": [
+      257
+     ]
     }
    ],
    "properties": {
@@ -484,7 +494,10 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      247,
+      269
+     ]
     },
     {
      "label": "遮罩",
@@ -544,28 +557,28 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 239
     },
     {
      "label": "正面条件",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 240
     },
     {
      "label": "负面条件",
      "localized_name": "负面条件",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 241
     },
     {
      "label": "Latent",
      "localized_name": "Latent图像",
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 242
     },
     {
      "label": "seed",
@@ -628,7 +641,9 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      244
+     ]
     }
    ],
    "properties": {
@@ -690,7 +705,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 257
     },
     {
      "label": "lora_name",
@@ -717,7 +732,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      258
+     ]
     }
    ],
    "properties": {
@@ -778,7 +795,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 258
     },
     {
      "label": "lora_name",
@@ -805,7 +822,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      228
+     ]
     }
    ],
    "properties": {
@@ -894,7 +913,10 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      232,
+      253
+     ]
     }
    ],
    "properties": {
@@ -968,7 +990,12 @@
      "name": "VAE",
      "type": "VAE",
      "slot_index": 0,
-     "links": []
+     "links": [
+      233,
+      236,
+      245,
+      254
+     ]
     }
    ],
    "properties": {
@@ -1026,7 +1053,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 247
     }
    ],
    "outputs": [
@@ -1035,7 +1062,11 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      234,
+      235,
+      255
+     ]
     }
    ],
    "properties": {
@@ -1079,7 +1110,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 228
     },
     {
      "label": "shift",
@@ -1097,7 +1128,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      231
+     ]
     }
    ],
    "properties": {
@@ -1148,7 +1181,7 @@
      "name": "image",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 269
     },
     {
      "label": "horizontal_angle",
@@ -1206,7 +1239,9 @@
      "localized_name": "Prompt",
      "name": "Prompt",
      "type": "STRING",
-     "links": []
+     "links": [
+      270
+     ]
     },
     {
      "localized_name": "Camera Info",
@@ -1267,14 +1302,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 244
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 245
     }
    ],
    "outputs": [
@@ -1284,7 +1319,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "slot_index": 0,
-     "links": []
+     "links": [
+      246
+     ]
     }
    ],
    "properties": {
@@ -1328,7 +1365,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 232
     },
     {
      "label": "vae",
@@ -1336,7 +1373,7 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 233
     },
     {
      "label": "image1",
@@ -1344,7 +1381,7 @@
      "name": "image1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 234
     },
     {
      "label": "image2",
@@ -1376,7 +1413,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      229
+     ]
     }
    ],
    "properties": {
@@ -1428,14 +1467,14 @@
      "localized_name": "像素",
      "name": "pixels",
      "type": "IMAGE",
-     "link": null
+     "link": 235
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 236
     }
    ],
    "outputs": [
@@ -1444,7 +1483,9 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      242
+     ]
     }
    ],
    "properties": {
@@ -1488,7 +1529,7 @@
      "localized_name": "图片",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 246
     },
     {
      "label": "filename_prefix",
@@ -1703,7 +1744,200 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   228,
+   102,
+   0,
+   94,
+   0,
+   "MODEL"
+  ],
+  [
+   229,
+   100,
+   0,
+   96,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   231,
+   94,
+   0,
+   98,
+   0,
+   "MODEL"
+  ],
+  [
+   232,
+   93,
+   0,
+   100,
+   0,
+   "CLIP"
+  ],
+  [
+   233,
+   95,
+   0,
+   100,
+   1,
+   "VAE"
+  ],
+  [
+   234,
+   107,
+   0,
+   100,
+   2,
+   "IMAGE"
+  ],
+  [
+   235,
+   107,
+   0,
+   105,
+   0,
+   "IMAGE"
+  ],
+  [
+   236,
+   95,
+   0,
+   105,
+   1,
+   "VAE"
+  ],
+  [
+   239,
+   98,
+   0,
+   106,
+   0,
+   "MODEL"
+  ],
+  [
+   240,
+   97,
+   0,
+   106,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   241,
+   96,
+   0,
+   106,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   242,
+   105,
+   0,
+   106,
+   3,
+   "LATENT"
+  ],
+  [
+   244,
+   106,
+   0,
+   103,
+   0,
+   "LATENT"
+  ],
+  [
+   245,
+   95,
+   0,
+   103,
+   1,
+   "VAE"
+  ],
+  [
+   246,
+   103,
+   0,
+   9,
+   0,
+   "IMAGE"
+  ],
+  [
+   247,
+   41,
+   0,
+   107,
+   0,
+   "IMAGE"
+  ],
+  [
+   253,
+   93,
+   0,
+   112,
+   0,
+   "CLIP"
+  ],
+  [
+   254,
+   95,
+   0,
+   112,
+   1,
+   "VAE"
+  ],
+  [
+   255,
+   107,
+   0,
+   112,
+   2,
+   "IMAGE"
+  ],
+  [
+   256,
+   112,
+   0,
+   97,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   257,
+   108,
+   0,
+   109,
+   0,
+   "MODEL"
+  ],
+  [
+   258,
+   109,
+   0,
+   102,
+   0,
+   "MODEL"
+  ],
+  [
+   269,
+   41,
+   0,
+   123,
+   0,
+   "IMAGE"
+  ],
+  [
+   270,
+   123,
+   0,
+   112,
+   5,
+   "STRING"
+  ]
+ ],
  "groups": [
   {
    "id": 8,

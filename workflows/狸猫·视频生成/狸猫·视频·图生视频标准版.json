@@ -144,7 +144,10 @@
      "name": "torch_compile_args",
      "type": "WANCOMPILEARGS",
      "slot_index": 0,
-     "links": []
+     "links": [
+      191,
+      192
+     ]
     }
    ],
    "properties": {
@@ -192,7 +195,7 @@
      "name": "compile_args",
      "shape": 7,
      "type": "WANCOMPILEARGS",
-     "link": null
+     "link": 191
     },
     {
      "label": "block_swap_args",
@@ -313,7 +316,9 @@
      "name": "model",
      "type": "WANVIDEOMODEL",
      "slot_index": 0,
-     "links": []
+     "links": [
+      193
+     ]
     }
    ],
    "properties": {
@@ -358,7 +363,7 @@
      "name": "compile_args",
      "shape": 7,
      "type": "WANCOMPILEARGS",
-     "link": null
+     "link": 192
     },
     {
      "label": "block_swap_args",
@@ -479,7 +484,9 @@
      "name": "model",
      "type": "WANVIDEOMODEL",
      "slot_index": 0,
-     "links": []
+     "links": [
+      195
+     ]
     }
    ],
    "properties": {
@@ -525,7 +532,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 193
     },
     {
      "label": "block_swap_args",
@@ -533,7 +540,7 @@
      "name": "block_swap_args",
      "shape": 7,
      "type": "BLOCKSWAPARGS",
-     "link": null
+     "link": 194
     }
    ],
    "outputs": [
@@ -542,7 +549,10 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": []
+     "links": [
+      201,
+      233
+     ]
     }
    ],
    "properties": {
@@ -581,7 +591,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 195
     },
     {
      "label": "block_swap_args",
@@ -589,7 +599,7 @@
      "name": "block_swap_args",
      "shape": 7,
      "type": "BLOCKSWAPARGS",
-     "link": null
+     "link": 196
     }
    ],
    "outputs": [
@@ -598,7 +608,10 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": []
+     "links": [
+      197,
+      234
+     ]
     }
    ],
    "properties": {
@@ -637,7 +650,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 197
     },
     {
      "label": "lora",
@@ -645,7 +658,7 @@
      "name": "lora",
      "shape": 7,
      "type": "WANVIDLORA",
-     "link": null
+     "link": 198
     }
    ],
    "outputs": [
@@ -654,7 +667,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": []
+     "links": [
+      208
+     ]
     }
    ],
    "properties": {
@@ -742,7 +757,10 @@
      "name": "vae",
      "type": "WANVAE",
      "slot_index": 0,
-     "links": []
+     "links": [
+      199,
+      214
+     ]
     }
    ],
    "properties": {
@@ -784,14 +802,14 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "WANVAE",
-     "link": null
+     "link": 199
     },
     {
      "label": "samples",
      "localized_name": "samples",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 200
     },
     {
      "label": "enable_vae_tiling",
@@ -856,7 +874,9 @@
      "name": "images",
      "type": "IMAGE",
      "slot_index": 0,
-     "links": []
+     "links": [
+      203
+     ]
     }
    ],
    "properties": {
@@ -911,7 +931,10 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      207,
+      211
+     ]
     }
    ],
    "properties": {
@@ -954,7 +977,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 201
     },
     {
      "label": "lora",
@@ -962,7 +985,7 @@
      "name": "lora",
      "shape": 7,
      "type": "WANVIDLORA",
-     "link": null
+     "link": 202
     }
    ],
    "outputs": [
@@ -971,7 +994,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": []
+     "links": [
+      204
+     ]
     }
    ],
    "properties": {
@@ -1008,7 +1033,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 203
     }
    ],
    "outputs": [
@@ -1017,7 +1042,10 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      221,
+      248
+     ]
     },
     {
      "label": "1280 width",
@@ -1072,14 +1100,14 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 204
     },
     {
      "label": "image_embeds",
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_EMBEDS",
-     "link": null
+     "link": 225
     },
     {
      "label": "text_embeds",
@@ -1087,7 +1115,7 @@
      "name": "text_embeds",
      "shape": 7,
      "type": "WANVIDEOTEXTEMBEDS",
-     "link": null
+     "link": 240
     },
     {
      "label": "samples",
@@ -1195,7 +1223,7 @@
      "widget": {
       "name": "steps"
      },
-     "link": null
+     "link": 205
     },
     {
      "label": "cfg",
@@ -1205,7 +1233,7 @@
      "widget": {
       "name": "cfg"
      },
-     "link": null
+     "link": 206
     },
     {
      "label": "shift",
@@ -1301,7 +1329,7 @@
      "widget": {
       "name": "end_step"
      },
-     "link": null
+     "link": 207
     },
     {
      "label": "add_noise_to_samples",
@@ -1321,7 +1349,9 @@
      "name": "samples",
      "type": "LATENT",
      "slot_index": 0,
-     "links": []
+     "links": [
+      209
+     ]
     },
     {
      "label": "denoised_samples",
@@ -1379,14 +1409,14 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 208
     },
     {
      "label": "image_embeds",
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_EMBEDS",
-     "link": null
+     "link": 226
     },
     {
      "label": "text_embeds",
@@ -1394,7 +1424,7 @@
      "name": "text_embeds",
      "shape": 7,
      "type": "WANVIDEOTEXTEMBEDS",
-     "link": null
+     "link": 241
     },
     {
      "label": "samples",
@@ -1402,7 +1432,7 @@
      "name": "samples",
      "shape": 7,
      "type": "LATENT",
-     "link": null
+     "link": 209
     },
     {
      "label": "feta_args",
@@ -1503,7 +1533,7 @@
      "widget": {
       "name": "steps"
      },
-     "link": null
+     "link": 210
     },
     {
      "label": "cfg",
@@ -1598,7 +1628,7 @@
      "widget": {
       "name": "start_step"
      },
-     "link": null
+     "link": 211
     },
     {
      "label": "end_step",
@@ -1628,7 +1658,9 @@
      "name": "samples",
      "type": "LATENT",
      "slot_index": 0,
-     "links": []
+     "links": [
+      200
+     ]
     },
     {
      "label": "denoised_samples",
@@ -1697,7 +1729,11 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      205,
+      210,
+      212
+     ]
     }
    ],
    "properties": {
@@ -1741,7 +1777,7 @@
      "widget": {
       "name": "steps"
      },
-     "link": null
+     "link": 212
     },
     {
      "label": "cfg_scale_start",
@@ -1795,7 +1831,9 @@
      "localized_name": "float_list",
      "name": "float_list",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      206
+     ]
     }
    ],
    "properties": {
@@ -1893,7 +1931,9 @@
      "localized_name": "lora",
      "name": "lora",
      "type": "WANVIDLORA",
-     "links": []
+     "links": [
+      198
+     ]
     }
    ],
    "properties": {
@@ -1989,7 +2029,9 @@
      "localized_name": "lora",
      "name": "lora",
      "type": "WANVIDLORA",
-     "links": []
+     "links": [
+      202
+     ]
     }
    ],
    "properties": {
@@ -2072,7 +2114,9 @@
      "name": "wan_t5_model",
      "type": "WANTEXTENCODER",
      "slot_index": 0,
-     "links": []
+     "links": [
+      242
+     ]
     }
    ],
    "properties": {
@@ -2184,7 +2228,10 @@
      "name": "block_swap_args",
      "type": "BLOCKSWAPARGS",
      "slot_index": 0,
-     "links": []
+     "links": [
+      194,
+      196
+     ]
     }
    ],
    "properties": {
@@ -2230,7 +2277,7 @@
      "name": "vae",
      "shape": 7,
      "type": "WANVAE",
-     "link": null
+     "link": 214
     },
     {
      "label": "clip_embeds",
@@ -2245,7 +2292,7 @@
      "name": "start_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 215
     },
     {
      "label": "end_image",
@@ -2297,7 +2344,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 243
     },
     {
      "localized_name": "height",
@@ -2306,7 +2353,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 244
     },
     {
      "label": "num_frames",
@@ -2316,7 +2363,7 @@
      "widget": {
       "name": "num_frames"
      },
-     "link": null
+     "link": 229
     },
     {
      "label": "noise_aug_strength",
@@ -2391,7 +2438,10 @@
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_EMBEDS",
-     "links": []
+     "links": [
+      225,
+      226
+     ]
     }
    ],
    "properties": {
@@ -2439,7 +2489,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 224
     },
     {
      "label": "mask",
@@ -2455,7 +2505,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 245
     },
     {
      "localized_name": "height",
@@ -2464,7 +2514,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 246
     },
     {
      "label": "upscale_method",
@@ -2528,21 +2578,27 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      215
+     ]
     },
     {
      "label": "width",
      "localized_name": "width",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      243
+     ]
     },
     {
      "label": "height",
      "localized_name": "height",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      244
+     ]
     },
     {
      "label": "mask",
@@ -2594,7 +2650,7 @@
      "localized_name": "任意内容",
      "name": "anything",
      "type": "*",
-     "link": null
+     "link": 221
     },
     {
      "label": "purge_cache",
@@ -2657,7 +2713,7 @@
      "name": "a",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 227
     },
     {
      "label": "b",
@@ -2665,7 +2721,7 @@
      "name": "b",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 228
     },
     {
      "label": "c",
@@ -2690,7 +2746,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      229
+     ]
     },
     {
      "label": "浮点",
@@ -2735,7 +2793,7 @@
      "localized_name": "任意内容",
      "name": "anything",
      "type": "*",
-     "link": null
+     "link": 233
     },
     {
      "label": "purge_cache",
@@ -2795,7 +2853,7 @@
      "localized_name": "任意内容",
      "name": "anything",
      "type": "*",
-     "link": null
+     "link": 234
     },
     {
      "label": "purge_cache",
@@ -2855,7 +2913,7 @@
      "name": "t5",
      "shape": 7,
      "type": "WANTEXTENCODER",
-     "link": null
+     "link": 242
     },
     {
      "localized_name": "model_to_offload",
@@ -2918,7 +2976,10 @@
      "localized_name": "text_embeds",
      "name": "text_embeds",
      "type": "WANVIDEOTEXTEMBEDS",
-     "links": []
+     "links": [
+      240,
+      241
+     ]
     }
    ],
    "properties": {
@@ -2982,7 +3043,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "slot_index": 0,
-     "links": []
+     "links": [
+      224
+     ]
     },
     {
      "label": "遮罩",
@@ -3153,7 +3216,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      245
+     ]
     }
    ],
    "properties": {
@@ -3205,7 +3270,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      246
+     ]
     }
    ],
    "properties": {
@@ -3257,7 +3324,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      227
+     ]
     }
    ],
    "properties": {
@@ -3309,7 +3378,10 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      165,
+      228
+     ]
     }
    ],
    "properties": {
@@ -3381,7 +3453,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 248
     },
     {
      "localized_name": "offload_model",
@@ -3407,7 +3479,9 @@
      "localized_name": "output",
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      247
+     ]
     }
    ],
    "properties": {
@@ -3448,7 +3522,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 247
     },
     {
      "localized_name": "clean_file_cache",
@@ -3492,7 +3566,9 @@
      "localized_name": "output",
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      249
+     ]
     }
    ],
    "properties": {
@@ -3535,7 +3611,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 249
     },
     {
      "label": "音频",
@@ -3566,7 +3642,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": null
+     "link": 165
     },
     {
      "label": "loop_count",
@@ -3851,7 +3927,360 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   165,
+   124,
+   0,
+   119,
+   4,
+   "FLOAT,INT"
+  ],
+  [
+   191,
+   132,
+   0,
+   133,
+   0,
+   "WANCOMPILEARGS"
+  ],
+  [
+   192,
+   132,
+   0,
+   134,
+   0,
+   "WANCOMPILEARGS"
+  ],
+  [
+   193,
+   133,
+   0,
+   135,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   194,
+   152,
+   0,
+   135,
+   1,
+   "BLOCKSWAPARGS"
+  ],
+  [
+   195,
+   134,
+   0,
+   136,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   196,
+   152,
+   0,
+   136,
+   1,
+   "BLOCKSWAPARGS"
+  ],
+  [
+   197,
+   136,
+   0,
+   137,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   198,
+   148,
+   0,
+   137,
+   1,
+   "WANVIDLORA"
+  ],
+  [
+   199,
+   138,
+   0,
+   140,
+   0,
+   "WANVAE"
+  ],
+  [
+   200,
+   145,
+   0,
+   140,
+   1,
+   "LATENT"
+  ],
+  [
+   201,
+   135,
+   0,
+   142,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   202,
+   149,
+   0,
+   142,
+   1,
+   "WANVIDLORA"
+  ],
+  [
+   203,
+   140,
+   0,
+   143,
+   0,
+   "IMAGE"
+  ],
+  [
+   204,
+   142,
+   0,
+   144,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   205,
+   146,
+   0,
+   144,
+   17,
+   "INT"
+  ],
+  [
+   206,
+   147,
+   0,
+   144,
+   18,
+   "FLOAT"
+  ],
+  [
+   207,
+   141,
+   0,
+   144,
+   28,
+   "INT"
+  ],
+  [
+   208,
+   137,
+   0,
+   145,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   209,
+   144,
+   0,
+   145,
+   3,
+   "LATENT"
+  ],
+  [
+   210,
+   146,
+   0,
+   145,
+   17,
+   "INT"
+  ],
+  [
+   211,
+   141,
+   0,
+   145,
+   27,
+   "INT"
+  ],
+  [
+   212,
+   146,
+   0,
+   147,
+   0,
+   "INT"
+  ],
+  [
+   214,
+   138,
+   0,
+   153,
+   0,
+   "WANVAE"
+  ],
+  [
+   215,
+   155,
+   0,
+   153,
+   2,
+   "IMAGE"
+  ],
+  [
+   221,
+   143,
+   0,
+   156,
+   0,
+   "*"
+  ],
+  [
+   224,
+   114,
+   0,
+   155,
+   0,
+   "IMAGE"
+  ],
+  [
+   225,
+   153,
+   0,
+   144,
+   1,
+   "WANVIDIMAGE_EMBEDS"
+  ],
+  [
+   226,
+   153,
+   0,
+   145,
+   1,
+   "WANVIDIMAGE_EMBEDS"
+  ],
+  [
+   227,
+   125,
+   0,
+   157,
+   0,
+   "*"
+  ],
+  [
+   228,
+   124,
+   0,
+   157,
+   1,
+   "*"
+  ],
+  [
+   229,
+   157,
+   0,
+   153,
+   11,
+   "INT"
+  ],
+  [
+   233,
+   135,
+   0,
+   160,
+   0,
+   "*"
+  ],
+  [
+   234,
+   136,
+   0,
+   161,
+   0,
+   "*"
+  ],
+  [
+   240,
+   164,
+   0,
+   144,
+   2,
+   "WANVIDEOTEXTEMBEDS"
+  ],
+  [
+   241,
+   164,
+   0,
+   145,
+   2,
+   "WANVIDEOTEXTEMBEDS"
+  ],
+  [
+   242,
+   150,
+   0,
+   164,
+   0,
+   "WANTEXTENCODER"
+  ],
+  [
+   243,
+   155,
+   1,
+   153,
+   9,
+   "INT"
+  ],
+  [
+   244,
+   155,
+   2,
+   153,
+   10,
+   "INT"
+  ],
+  [
+   245,
+   112,
+   0,
+   155,
+   2,
+   "INT"
+  ],
+  [
+   246,
+   163,
+   0,
+   155,
+   3,
+   "INT"
+  ],
+  [
+   247,
+   166,
+   0,
+   167,
+   0,
+   "*"
+  ],
+  [
+   248,
+   143,
+   0,
+   166,
+   0,
+   "IMAGE"
+  ],
+  [
+   249,
+   167,
+   0,
+   119,
+   0,
+   "IMAGE"
+  ]
+ ],
  "groups": [
   {
    "id": 12,

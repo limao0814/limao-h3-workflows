@@ -26,7 +26,9 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      543
+     ]
     }
    ],
    "properties": {
@@ -75,7 +77,9 @@
      "label": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      212
+     ]
     }
    ],
    "properties": {
@@ -125,7 +129,10 @@
     {
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      220,
+      544
+     ]
     }
    ],
    "properties": {
@@ -172,7 +179,7 @@
      "label": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 695
     }
    ],
    "outputs": [
@@ -228,14 +235,14 @@
      "label": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 212
     },
     {
      "label": "vae",
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 220
     },
     {
      "label": "mask",
@@ -249,7 +256,7 @@
      "name": "image_01",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 399
     },
     {
      "label": "图像 2",
@@ -283,7 +290,7 @@
      "widget": {
       "name": "latent_width"
      },
-     "link": null
+     "link": 388
     },
     {
      "label": "latent_height",
@@ -292,7 +299,7 @@
      "widget": {
       "name": "latent_height"
      },
-     "link": null
+     "link": 389
     },
     {
      "label": "mode",
@@ -318,7 +325,9 @@
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      538
+     ]
     },
     {
      "label": "negative",
@@ -330,7 +339,9 @@
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      539
+     ]
     },
     {
      "label": "info",
@@ -396,14 +407,14 @@
      "name": "图像_01",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 680
     },
     {
      "label": "图像 2",
      "name": "图像_02",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 833
     },
     {
      "label": "图像 3",
@@ -419,7 +430,7 @@
      "widget": {
       "name": "用户提示词"
      },
-     "link": null
+     "link": 678
     },
     {
      "label": "文生图模型",
@@ -499,7 +510,9 @@
      "label": "prompt",
      "name": "prompt",
      "type": "STRING",
-     "links": []
+     "links": [
+      713
+     ]
     },
     {
      "label": "json",
@@ -606,13 +619,18 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      374,
+      564
+     ]
     },
     {
      "label": "遮罩",
      "name": "遮罩",
      "type": "MASK",
-     "links": []
+     "links": [
+      483
+     ]
     },
     {
      "label": "文件名",
@@ -677,13 +695,13 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "link": null
+     "link": 374
     },
     {
      "label": "遮罩",
      "name": "遮罩",
      "type": "MASK",
-     "link": null
+     "link": 483
     },
     {
      "label": "遮罩填充",
@@ -772,19 +790,26 @@
      "label": "接缝",
      "name": "接缝",
      "type": "SEAM",
-     "links": []
+     "links": [
+      395
+     ]
     },
     {
      "label": "裁剪图像",
      "name": "裁剪图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      379
+     ]
     },
     {
      "label": "裁剪遮罩",
      "name": "裁剪遮罩",
      "type": "MASK",
-     "links": []
+     "links": [
+      381,
+      401
+     ]
     }
    ],
    "properties": {
@@ -847,20 +872,20 @@
      "label": "背景图",
      "name": "背景图",
      "type": "IMAGE",
-     "link": null
+     "link": 379
     },
     {
      "label": "覆盖图",
      "name": "覆盖图",
      "type": "IMAGE",
-     "link": null
+     "link": 380
     },
     {
      "label": "遮罩",
      "name": "遮罩",
      "shape": 7,
      "type": "MASK",
-     "link": null
+     "link": 381
     },
     {
      "label": "透明度",
@@ -904,7 +929,10 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      428,
+      429
+     ]
     }
    ],
    "properties": {
@@ -956,7 +984,9 @@
      "label": "图像",
      "name": "image",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      380
+     ]
     }
    ],
    "properties": {
@@ -1008,7 +1038,7 @@
      "name": "图像",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 428
     },
     {
      "label": "遮罩",
@@ -1045,7 +1075,7 @@
      "widget": {
       "name": "最大尺寸"
      },
-     "link": null
+     "link": 570
     },
     {
      "label": "整除数",
@@ -1063,7 +1093,9 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      700
+     ]
     },
     {
      "label": "遮罩",
@@ -1125,14 +1157,14 @@
      "name": "图像",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 429
     },
     {
      "label": "遮罩",
      "name": "遮罩",
      "shape": 7,
      "type": "MASK",
-     "link": null
+     "link": 401
     },
     {
      "label": "宽度",
@@ -1141,7 +1173,7 @@
      "widget": {
       "name": "宽度"
      },
-     "link": null
+     "link": 705
     },
     {
      "label": "高度",
@@ -1150,7 +1182,7 @@
      "widget": {
       "name": "高度"
      },
-     "link": null
+     "link": 706
     },
     {
      "label": "缩放方法",
@@ -1230,19 +1262,25 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      399
+     ]
     },
     {
      "label": "宽度",
      "name": "宽度",
      "type": "INT",
-     "links": []
+     "links": [
+      388
+     ]
     },
     {
      "label": "高度",
      "name": "高度",
      "type": "INT",
-     "links": []
+     "links": [
+      389
+     ]
     },
     {
      "label": "遮罩",
@@ -1321,13 +1359,13 @@
      "label": "接缝",
      "name": "接缝",
      "type": "SEAM",
-     "link": null
+     "link": 395
     },
     {
      "label": "裁剪图像",
      "name": "裁剪图像",
      "type": "IMAGE",
-     "link": null
+     "link": 587
     },
     {
      "label": "裁剪遮罩",
@@ -1367,7 +1405,10 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      694,
+      695
+     ]
     }
    ],
    "properties": {
@@ -1415,7 +1456,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 543
     }
    ],
    "outputs": [
@@ -1423,7 +1464,9 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      537
+     ]
     }
    ],
    "properties": {
@@ -1473,7 +1516,7 @@
      "name": "图像",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 475
     },
     {
      "label": "遮罩",
@@ -1510,7 +1553,7 @@
      "widget": {
       "name": "最大尺寸"
      },
-     "link": null
+     "link": 690
     },
     {
      "label": "整除数",
@@ -1528,7 +1571,9 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      709
+     ]
     },
     {
      "label": "遮罩",
@@ -1589,13 +1634,13 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "link": null
+     "link": 691
     },
     {
      "label": "遮罩",
      "name": "遮罩",
      "type": "MASK",
-     "link": null
+     "link": 692
     },
     {
      "label": "遮罩填充",
@@ -1684,19 +1729,26 @@
      "label": "接缝",
      "name": "接缝",
      "type": "SEAM",
-     "links": []
+     "links": [
+      485
+     ]
     },
     {
      "label": "裁剪图像",
      "name": "裁剪图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      475,
+      478
+     ]
     },
     {
      "label": "裁剪遮罩",
      "name": "裁剪遮罩",
      "type": "MASK",
-     "links": []
+     "links": [
+      479
+     ]
     }
    ],
    "properties": {
@@ -1759,14 +1811,14 @@
      "name": "图像",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 478
     },
     {
      "label": "遮罩",
      "name": "遮罩",
      "shape": 7,
      "type": "MASK",
-     "link": null
+     "link": 479
     },
     {
      "label": "宽度",
@@ -1775,7 +1827,7 @@
      "widget": {
       "name": "宽度"
      },
-     "link": null
+     "link": 707
     },
     {
      "label": "高度",
@@ -1784,7 +1836,7 @@
      "widget": {
       "name": "高度"
      },
-     "link": null
+     "link": 708
     },
     {
      "label": "缩放方法",
@@ -1864,19 +1916,26 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      520,
+      680
+     ]
     },
     {
      "label": "宽度",
      "name": "宽度",
      "type": "INT",
-     "links": []
+     "links": [
+      515
+     ]
     },
     {
      "label": "高度",
      "name": "高度",
      "type": "INT",
-     "links": []
+     "links": [
+      516
+     ]
     },
     {
      "label": "遮罩",
@@ -1955,13 +2014,13 @@
      "label": "接缝",
      "name": "接缝",
      "type": "SEAM",
-     "link": null
+     "link": 485
     },
     {
      "label": "裁剪图像",
      "name": "裁剪图像",
      "type": "IMAGE",
-     "link": null
+     "link": 586
     },
     {
      "label": "裁剪遮罩",
@@ -2001,7 +2060,10 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      697,
+      698
+     ]
     }
    ],
    "properties": {
@@ -2049,14 +2111,14 @@
      "label": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 683
     },
     {
      "label": "vae",
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 684
     },
     {
      "label": "mask",
@@ -2070,14 +2132,14 @@
      "name": "image_01",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 520
     },
     {
      "label": "图像 2",
      "name": "image_02",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 832
     },
     {
      "label": "图像 3",
@@ -2093,7 +2155,7 @@
      "widget": {
       "name": "prompt"
      },
-     "link": null
+     "link": 710
     },
     {
      "label": "negative_prompt",
@@ -2111,7 +2173,7 @@
      "widget": {
       "name": "latent_width"
      },
-     "link": null
+     "link": 515
     },
     {
      "label": "latent_height",
@@ -2120,7 +2182,7 @@
      "widget": {
       "name": "latent_height"
      },
-     "link": null
+     "link": 516
     },
     {
      "label": "mode",
@@ -2146,7 +2208,9 @@
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      549
+     ]
     },
     {
      "label": "negative",
@@ -2158,7 +2222,9 @@
      "label": "latent",
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      552
+     ]
     },
     {
      "label": "info",
@@ -2223,13 +2289,13 @@
      "label": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 553
     },
     {
      "label": "VAE",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 685
     }
    ],
    "outputs": [
@@ -2237,7 +2303,9 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      586
+     ]
     }
    ],
    "properties": {
@@ -2275,7 +2343,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 682
     }
    ],
    "outputs": [
@@ -2283,7 +2351,9 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      548
+     ]
     }
    ],
    "properties": {
@@ -2334,7 +2404,7 @@
      "widget": {
       "name": "noise_seed"
      },
-     "link": null
+     "link": 699
     }
    ],
    "outputs": [
@@ -2342,7 +2412,9 @@
      "label": "噪波生成",
      "name": "NOISE",
      "type": "NOISE",
-     "links": []
+     "links": [
+      531
+     ]
     }
    ],
    "properties": {
@@ -2390,7 +2462,9 @@
      "label": "采样器",
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      533
+     ]
     }
    ],
    "properties": {
@@ -2435,13 +2509,13 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 537
     },
     {
      "label": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 538
     }
    ],
    "outputs": [
@@ -2449,7 +2523,9 @@
      "label": "引导",
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": []
+     "links": [
+      532
+     ]
     }
    ],
    "properties": {
@@ -2488,31 +2564,31 @@
      "label": "噪波生成",
      "name": "noise",
      "type": "NOISE",
-     "link": null
+     "link": 531
     },
     {
      "label": "引导",
      "name": "guider",
      "type": "GUIDER",
-     "link": null
+     "link": 532
     },
     {
      "label": "采样器",
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 533
     },
     {
      "label": "Sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 688
     },
     {
      "label": "Latent",
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 539
     }
    ],
    "outputs": [
@@ -2520,7 +2596,9 @@
      "label": "输出",
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      535
+     ]
     },
     {
      "label": "降噪输出",
@@ -2565,13 +2643,13 @@
      "label": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 535
     },
     {
      "label": "VAE",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 544
     }
    ],
    "outputs": [
@@ -2579,7 +2657,9 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      587
+     ]
     }
    ],
    "properties": {
@@ -2617,31 +2697,31 @@
      "label": "噪波生成",
      "name": "noise",
      "type": "NOISE",
-     "link": null
+     "link": 686
     },
     {
      "label": "引导",
      "name": "guider",
      "type": "GUIDER",
-     "link": null
+     "link": 550
     },
     {
      "label": "采样器",
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 689
     },
     {
      "label": "Sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 780
     },
     {
      "label": "Latent",
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 552
     }
    ],
    "outputs": [
@@ -2649,7 +2729,9 @@
      "label": "输出",
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      553
+     ]
     },
     {
      "label": "降噪输出",
@@ -2694,13 +2776,13 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 548
     },
     {
      "label": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 549
     }
    ],
    "outputs": [
@@ -2708,7 +2790,9 @@
      "label": "引导",
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": []
+     "links": [
+      550
+     ]
     }
    ],
    "properties": {
@@ -2747,14 +2831,14 @@
      "label": "图像_A",
      "name": "image_a",
      "type": "IMAGE",
-     "link": null
+     "link": 694
     },
     {
      "dir": 3,
      "label": "图像_B",
      "name": "image_b",
      "type": "IMAGE",
-     "link": null
+     "link": 564
     }
    ],
    "outputs": [
@@ -2849,7 +2933,9 @@
      "label": "*",
      "name": "*",
      "type": "*",
-     "links": []
+     "links": [
+      570
+     ]
     }
    ],
    "title": "最大采样尺寸（长边）",
@@ -2902,7 +2988,7 @@
     {
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 635
     }
    ],
    "outputs": [
@@ -2953,14 +3039,14 @@
      "label": "图像_A",
      "name": "image_a",
      "type": "IMAGE",
-     "link": null
+     "link": 636
     },
     {
      "dir": 3,
      "label": "图像_B",
      "name": "image_b",
      "type": "IMAGE",
-     "link": null
+     "link": 637
     }
    ],
    "outputs": [
@@ -3042,14 +3128,16 @@
      "widget": {
       "name": "noise_seed"
      },
-     "link": null
+     "link": 638
     }
    ],
    "outputs": [
     {
      "name": "NOISE",
      "type": "NOISE",
-     "links": []
+     "links": [
+      639
+     ]
     }
    ],
    "properties": {
@@ -3093,34 +3181,36 @@
     {
      "name": "noise",
      "type": "NOISE",
-     "link": null
+     "link": 639
     },
     {
      "name": "guider",
      "type": "GUIDER",
-     "link": null
+     "link": 640
     },
     {
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 641
     },
     {
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 642
     },
     {
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 643
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      657
+     ]
     },
     {
      "name": "denoised_output",
@@ -3162,19 +3252,21 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 644
     },
     {
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 645
     }
    ],
    "outputs": [
     {
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": []
+     "links": [
+      640
+     ]
     }
    ],
    "properties": {
@@ -3208,12 +3300,12 @@
     {
      "name": "接缝",
      "type": "SEAM",
-     "link": null
+     "link": 646
     },
     {
      "name": "裁剪图像",
      "type": "IMAGE",
-     "link": null
+     "link": 647
     },
     {
      "name": "裁剪遮罩",
@@ -3232,7 +3324,10 @@
     {
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      635,
+      636
+     ]
     }
    ],
    "properties": {
@@ -3277,7 +3372,9 @@
     {
      "name": "*",
      "type": "*",
-     "links": []
+     "links": [
+      665
+     ]
     }
    ],
    "title": "最大采样尺寸（长边）",
@@ -3330,25 +3427,31 @@
     {
      "name": "图像",
      "type": "IMAGE",
-     "link": null
+     "link": 648
     },
     {
      "name": "遮罩",
      "shape": 7,
      "type": "MASK",
-     "link": null
+     "link": 649
     }
    ],
    "outputs": [
     {
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      637,
+      659
+     ]
     },
     {
      "name": "遮罩",
      "type": "MASK",
-     "links": []
+     "links": [
+      660,
+      674
+     ]
     },
     {
      "name": "外补是否存在",
@@ -3417,12 +3520,16 @@
     {
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      648
+     ]
     },
     {
      "name": "遮罩",
      "type": "MASK",
-     "links": []
+     "links": [
+      649
+     ]
     },
     {
      "name": "文件名",
@@ -3479,7 +3586,7 @@
      "name": "图像",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 650
     },
     {
      "name": "遮罩",
@@ -3493,24 +3600,30 @@
      "widget": {
       "name": "将边缩放到"
      },
-     "link": null
+     "link": 651
     }
    ],
    "outputs": [
     {
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      654
+     ]
     },
     {
      "name": "宽度",
      "type": "INT",
-     "links": []
+     "links": [
+      676
+     ]
     },
     {
      "name": "高度",
      "type": "INT",
-     "links": []
+     "links": [
+      677
+     ]
     },
     {
      "name": "遮罩",
@@ -3575,13 +3688,13 @@
     {
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 652
     },
     {
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 653
     },
     {
      "name": "mask",
@@ -3594,7 +3707,7 @@
      "name": "image_01",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 654
     },
     {
      "label": "图像 2",
@@ -3609,7 +3722,7 @@
      "widget": {
       "name": "prompt"
      },
-     "link": null
+     "link": 675
     },
     {
      "name": "latent_width",
@@ -3617,7 +3730,7 @@
      "widget": {
       "name": "latent_width"
      },
-     "link": null
+     "link": 676
     },
     {
      "name": "latent_height",
@@ -3625,7 +3738,7 @@
      "widget": {
       "name": "latent_height"
      },
-     "link": null
+     "link": 677
     },
     {
      "label": "参考图尺寸",
@@ -3641,7 +3754,9 @@
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      645
+     ]
     },
     {
      "name": "negative",
@@ -3651,7 +3766,9 @@
     {
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      643
+     ]
     },
     {
      "name": "info",
@@ -3707,7 +3824,9 @@
     {
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      652
+     ]
     }
    ],
    "properties": {
@@ -3754,7 +3873,10 @@
     {
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      653,
+      658
+     ]
     }
    ],
    "properties": {
@@ -3800,7 +3922,9 @@
     {
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      641
+     ]
     }
    ],
    "properties": {
@@ -3844,7 +3968,9 @@
     {
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      642
+     ]
     }
    ],
    "properties": {
@@ -3884,14 +4010,16 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 656
     }
    ],
    "outputs": [
     {
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      644
+     ]
     }
    ],
    "properties": {
@@ -3938,13 +4066,13 @@
      "label": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 657
     },
     {
      "label": "VAE",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 658
     }
    ],
    "outputs": [
@@ -3952,7 +4080,9 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      647
+     ]
     }
    ],
    "properties": {
@@ -3989,12 +4119,12 @@
     {
      "name": "图像",
      "type": "IMAGE",
-     "link": null
+     "link": 659
     },
     {
      "name": "遮罩",
      "type": "MASK",
-     "link": null
+     "link": 660
     },
     {
      "name": "扩展系数上",
@@ -4002,7 +4132,7 @@
      "widget": {
       "name": "扩展系数上"
      },
-     "link": null
+     "link": 661
     },
     {
      "name": "扩展系数下",
@@ -4010,7 +4140,7 @@
      "widget": {
       "name": "扩展系数下"
      },
-     "link": null
+     "link": 662
     },
     {
      "name": "扩展系数左",
@@ -4018,7 +4148,7 @@
      "widget": {
       "name": "扩展系数左"
      },
-     "link": null
+     "link": 663
     },
     {
      "name": "扩展系数右",
@@ -4026,19 +4156,24 @@
      "widget": {
       "name": "扩展系数右"
      },
-     "link": null
+     "link": 664
     }
    ],
    "outputs": [
     {
      "name": "接缝",
      "type": "SEAM",
-     "links": []
+     "links": [
+      646
+     ]
     },
     {
      "name": "裁剪图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      650,
+      667
+     ]
     },
     {
      "name": "裁剪遮罩",
@@ -4102,13 +4237,13 @@
      "name": "a",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 665
     },
     {
      "name": "b",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 666
     },
     {
      "name": "c",
@@ -4133,7 +4268,9 @@
     {
      "name": "整数1",
      "type": "INT",
-     "links": []
+     "links": [
+      651
+     ]
     },
     {
      "name": "浮点1",
@@ -4198,7 +4335,7 @@
      "name": "图像",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 667
     },
     {
      "name": "宽度",
@@ -4217,7 +4354,9 @@
     {
      "name": "长边",
      "type": "INT",
-     "links": []
+     "links": [
+      666
+     ]
     },
     {
      "name": "短边",
@@ -4265,14 +4404,14 @@
      "name": "text1",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 668
     },
     {
      "label": "文本2",
      "name": "text2",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 669
     },
     {
      "label": "分隔符",
@@ -4290,7 +4429,9 @@
      "label": "字符串",
      "name": "STRING",
      "type": "*",
-     "links": []
+     "links": [
+      675
+     ]
     },
     {
      "label": "显示帮助",
@@ -4339,7 +4480,9 @@
     {
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      669
+     ]
     }
    ],
    "title": "补充提示词（可不填，为默认扩展）",
@@ -4392,7 +4535,9 @@
     {
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      668
+     ]
     }
    ],
    "title": "固定提示词",
@@ -4443,7 +4588,9 @@
     {
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      656
+     ]
     }
    ],
    "properties": {
@@ -4490,25 +4637,25 @@
      "name": "a",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 670
     },
     {
      "name": "b",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 671
     },
     {
      "name": "c",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 672
     },
     {
      "name": "d",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 673
     },
     {
      "name": "f",
@@ -4526,7 +4673,10 @@
     {
      "name": "浮点1",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      661,
+      662
+     ]
     },
     {
      "name": "整数2",
@@ -4536,7 +4686,10 @@
     {
      "name": "浮点2",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      663,
+      664
+     ]
     },
     {
      "name": "？帮助",
@@ -4585,7 +4738,7 @@
     {
      "name": "遮罩",
      "type": "MASK",
-     "link": null
+     "link": 674
     }
    ],
    "outputs": [
@@ -4597,22 +4750,30 @@
     {
      "name": "画布宽",
      "type": "INT",
-     "links": []
+     "links": [
+      670
+     ]
     },
     {
      "name": "画布高",
      "type": "INT",
-     "links": []
+     "links": [
+      671
+     ]
     },
     {
      "name": "遮罩宽",
      "type": "INT",
-     "links": []
+     "links": [
+      672
+     ]
     },
     {
      "name": "遮罩高",
      "type": "INT",
-     "links": []
+     "links": [
+      673
+     ]
     },
     {
      "name": "遮罩中心x",
@@ -4672,7 +4833,9 @@
      "name": "SEED",
      "shape": 3,
      "type": "INT",
-     "links": []
+     "links": [
+      638
+     ]
     }
    ],
    "properties": {
@@ -4762,7 +4925,10 @@
     {
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      678,
+      714
+     ]
     }
    ],
    "title": "重绘提示词",
@@ -4815,7 +4981,10 @@
     {
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      684,
+      685
+     ]
     }
    ],
    "properties": {
@@ -4862,7 +5031,9 @@
      "label": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      683
+     ]
     }
    ],
    "properties": {
@@ -4913,7 +5084,9 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      682
+     ]
     }
    ],
    "properties": {
@@ -4964,7 +5137,7 @@
      "widget": {
       "name": "noise_seed"
      },
-     "link": null
+     "link": 715
     }
    ],
    "outputs": [
@@ -4972,7 +5145,9 @@
      "label": "噪波生成",
      "name": "NOISE",
      "type": "NOISE",
-     "links": []
+     "links": [
+      686
+     ]
     }
    ],
    "properties": {
@@ -5019,7 +5194,9 @@
     {
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      780
+     ]
     }
    ],
    "properties": {
@@ -5063,7 +5240,9 @@
     {
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      688
+     ]
     }
    ],
    "properties": {
@@ -5108,7 +5287,9 @@
      "label": "采样器",
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      689
+     ]
     }
    ],
    "properties": {
@@ -5161,7 +5342,9 @@
      "label": "*",
      "name": "*",
      "type": "*",
-     "links": []
+     "links": [
+      690
+     ]
     }
    ],
    "title": "最大采样尺寸（长边）",
@@ -5245,13 +5428,18 @@
      "label": "图像",
      "name": "图像",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      691,
+      696
+     ]
     },
     {
      "label": "遮罩",
      "name": "遮罩",
      "type": "MASK",
-     "links": []
+     "links": [
+      692
+     ]
     },
     {
      "label": "文件名",
@@ -5316,7 +5504,7 @@
      "label": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 698
     }
    ],
    "outputs": [
@@ -5373,14 +5561,14 @@
      "label": "图像_A",
      "name": "image_a",
      "type": "IMAGE",
-     "link": null
+     "link": 697
     },
     {
      "dir": 3,
      "label": "图像_B",
      "name": "image_b",
      "type": "IMAGE",
-     "link": null
+     "link": 696
     }
    ],
    "outputs": [
@@ -5467,7 +5655,9 @@
      "name": "SEED",
      "shape": 3,
      "type": "INT",
-     "links": []
+     "links": [
+      699
+     ]
     }
    ],
    "properties": {
@@ -5520,7 +5710,7 @@
      "label": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 700
     }
    ],
    "outputs": [
@@ -5528,13 +5718,17 @@
      "label": "宽度",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      705
+     ]
     },
     {
      "label": "高度",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      706
+     ]
     },
     {
      "name": "batch_size",
@@ -5576,7 +5770,7 @@
      "label": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 709
     }
    ],
    "outputs": [
@@ -5584,13 +5778,17 @@
      "label": "宽度",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      707
+     ]
     },
     {
      "label": "高度",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      708
+     ]
     },
     {
      "name": "batch_size",
@@ -5632,20 +5830,22 @@
      "name": "on_false",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 714
     },
     {
      "name": "on_true",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 713
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "STRING",
-     "links": []
+     "links": [
+      712
+     ]
     }
    ],
    "title": "提示词优化（开/关）",
@@ -5690,14 +5890,16 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 712
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      710
+     ]
     }
    ],
    "title": "最终提示词预览",
@@ -5743,7 +5945,9 @@
      "name": "SEED",
      "shape": 3,
      "type": "INT",
-     "links": []
+     "links": [
+      715
+     ]
     }
    ],
    "properties": {
@@ -5991,7 +6195,7 @@
     {
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 782
     }
    ],
    "outputs": [
@@ -6082,14 +6286,14 @@
      "label": "图像_A",
      "name": "image_a",
      "type": "IMAGE",
-     "link": null
+     "link": 743
     },
     {
      "dir": 3,
      "label": "图像_B",
      "name": "image_b",
      "type": "IMAGE",
-     "link": null
+     "link": 744
     }
    ],
    "outputs": [
@@ -6166,7 +6370,9 @@
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      768
+     ]
     },
     {
      "name": "MASK",
@@ -6217,20 +6423,22 @@
      "name": "on_false",
      "shape": 7,
      "type": "LATENT",
-     "link": null
+     "link": 745
     },
     {
      "name": "on_true",
      "shape": 7,
      "type": "LATENT",
-     "link": null
+     "link": 746
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      764
+     ]
     }
    ],
    "title": "自定义尺寸（开/关）",
@@ -6274,7 +6482,10 @@
     {
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      753,
+      758
+     ]
     }
    ],
    "title": "这里写提示词",
@@ -6326,12 +6537,16 @@
     {
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      765
+     ]
     },
     {
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      766
+     ]
     }
    ],
    "title": "自定义出图尺寸",
@@ -6380,19 +6595,22 @@
     {
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 747
     },
     {
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 748
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      743,
+      782
+     ]
     }
    ],
    "properties": {
@@ -6428,25 +6646,25 @@
     {
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 749
     },
     {
      "name": "images.image_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 750
     },
     {
      "name": "images.image_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 784
     },
     {
      "name": "images.image_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 785
     },
     {
      "name": "images.image_4",
@@ -6458,7 +6676,7 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 786
     },
     {
      "name": "prompt",
@@ -6466,24 +6684,30 @@
      "widget": {
       "name": "prompt"
      },
-     "link": null
+     "link": 783
     }
    ],
    "outputs": [
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      770
+     ]
     },
     {
      "name": "negative",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      771
+     ]
     },
     {
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      745
+     ]
     }
    ],
    "properties": {
@@ -6532,7 +6756,9 @@
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      752
+     ]
     },
     {
      "name": "MASK",
@@ -6582,14 +6808,17 @@
     {
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 752
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      773,
+      784
+     ]
     }
    ],
    "properties": {
@@ -6758,20 +6987,22 @@
      "name": "on_false",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 753
     },
     {
      "name": "on_true",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 754
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "STRING",
-     "links": []
+     "links": [
+      759
+     ]
     }
    ],
    "properties": {
@@ -6816,13 +7047,13 @@
     {
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 755
     },
     {
      "name": "image",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 756
     },
     {
      "name": "video",
@@ -6840,7 +7071,7 @@
      "name": "system_prompt",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 757
     },
     {
      "name": "prompt",
@@ -6848,14 +7079,16 @@
      "widget": {
       "name": "prompt"
      },
-     "link": null
+     "link": 758
     }
    ],
    "outputs": [
     {
      "name": "generated_text",
      "type": "STRING",
-     "links": []
+     "links": [
+      754
+     ]
     },
     {
      "name": "thinking",
@@ -7018,14 +7251,16 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 759
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      783
+     ]
     }
    ],
    "title": "最终提示词预览",
@@ -7107,7 +7342,9 @@
     {
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      762
+     ]
     }
    ],
    "title": "KSampler Select (euler)",
@@ -7150,34 +7387,36 @@
     {
      "name": "noise",
      "type": "NOISE",
-     "link": null
+     "link": 760
     },
     {
      "name": "guider",
      "type": "GUIDER",
-     "link": null
+     "link": 761
     },
     {
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 762
     },
     {
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 788
     },
     {
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 764
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      747
+     ]
     },
     {
      "name": "denoised_output",
@@ -7222,7 +7461,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 765
     },
     {
      "name": "height",
@@ -7230,14 +7469,16 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 766
     }
    ],
    "outputs": [
     {
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      746
+     ]
     }
    ],
    "properties": {
@@ -7283,14 +7524,16 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 767
     }
    ],
    "outputs": [
     {
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      769
+     ]
     }
    ],
    "properties": {
@@ -7333,7 +7576,9 @@
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      775
+     ]
     },
     {
      "name": "MASK",
@@ -7383,14 +7628,18 @@
     {
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 768
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      744,
+      750,
+      772
+     ]
     }
    ],
    "title": "默认出图尺寸",
@@ -7481,24 +7730,26 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 769
     },
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 770
     },
     {
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 771
     }
    ],
    "outputs": [
     {
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": []
+     "links": [
+      761
+     ]
     }
    ],
    "properties": {
@@ -7540,19 +7791,19 @@
     {
      "name": "images.image0",
      "type": "IMAGE",
-     "link": null
+     "link": 772
     },
     {
      "name": "images.image1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 773
     },
     {
      "name": "images.image2",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 774
     },
     {
      "name": "images.image3",
@@ -7565,7 +7816,9 @@
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      756
+     ]
     }
    ],
    "properties": {
@@ -7600,7 +7853,9 @@
     {
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      749
+     ]
     }
    ],
    "properties": {
@@ -7654,7 +7909,10 @@
     {
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      748,
+      786
+     ]
     }
    ],
    "properties": {
@@ -7707,7 +7965,9 @@
      "name": "SEED",
      "shape": 3,
      "type": "INT",
-     "links": []
+     "links": [
+      776
+     ]
     }
    ],
    "properties": {
@@ -7759,14 +8019,17 @@
     {
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 775
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      774,
+      785
+     ]
     }
    ],
    "properties": {
@@ -7821,14 +8084,16 @@
      "widget": {
       "name": "noise_seed"
      },
-     "link": null
+     "link": 776
     }
    ],
    "outputs": [
     {
      "name": "NOISE",
      "type": "NOISE",
-     "links": []
+     "links": [
+      760
+     ]
     }
    ],
    "title": "Random Noise",
@@ -7876,7 +8141,9 @@
     {
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      757
+     ]
     }
    ],
    "title": "Text (System Prompt)",
@@ -7920,7 +8187,9 @@
     {
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      755
+     ]
     }
    ],
    "properties": {
@@ -7979,7 +8248,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 777
     },
     {
      "dir": 3,
@@ -7995,7 +8264,9 @@
      "name": "模型",
      "shape": 3,
      "type": "MODEL",
-     "links": []
+     "links": [
+      767
+     ]
     },
     {
      "dir": 4,
@@ -8091,7 +8362,9 @@
     {
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      777
+     ]
     }
    ],
    "properties": {
@@ -8259,7 +8532,9 @@
     {
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      788
+     ]
     }
    ],
    "properties": {
@@ -8299,7 +8574,7 @@
     {
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 797
     }
    ],
    "outputs": [
@@ -8390,19 +8665,21 @@
     {
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 798
     },
     {
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 799
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      797
+     ]
     }
    ],
    "properties": {
@@ -8436,34 +8713,36 @@
     {
      "name": "noise",
      "type": "NOISE",
-     "link": null
+     "link": 800
     },
     {
      "name": "guider",
      "type": "GUIDER",
-     "link": null
+     "link": 801
     },
     {
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 802
     },
     {
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 822
     },
     {
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 804
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      798
+     ]
     },
     {
      "name": "denoised_output",
@@ -8504,7 +8783,9 @@
     {
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      802
+     ]
     }
    ],
    "title": "KSampler Select (euler)",
@@ -8552,14 +8833,16 @@
      "widget": {
       "name": "noise_seed"
      },
-     "link": null
+     "link": 805
     }
    ],
    "outputs": [
     {
      "name": "NOISE",
      "type": "NOISE",
-     "links": []
+     "links": [
+      800
+     ]
     }
    ],
    "title": "Random Noise",
@@ -8604,24 +8887,26 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 806
     },
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 807
     },
     {
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 808
     }
    ],
    "outputs": [
     {
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": []
+     "links": [
+      801
+     ]
     }
    ],
    "properties": {
@@ -8664,20 +8949,22 @@
      "name": "on_false",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 809
     },
     {
      "name": "on_true",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 810
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "STRING",
-     "links": []
+     "links": [
+      817
+     ]
     }
    ],
    "properties": {
@@ -8761,7 +9048,7 @@
     {
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 811
     },
     {
      "name": "image",
@@ -8785,7 +9072,7 @@
      "name": "system_prompt",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 830
     },
     {
      "name": "prompt",
@@ -8793,14 +9080,16 @@
      "widget": {
       "name": "prompt"
      },
-     "link": null
+     "link": 813
     }
    ],
    "outputs": [
     {
      "name": "generated_text",
      "type": "STRING",
-     "links": []
+     "links": [
+      810
+     ]
     },
     {
      "name": "thinking",
@@ -8886,7 +9175,9 @@
     {
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      822
+     ]
     }
    ],
    "title": "Sigmas (Qwen2.1-Turbo 8step)",
@@ -8933,7 +9224,9 @@
      "name": "SEED",
      "shape": 3,
      "type": "INT",
-     "links": []
+     "links": [
+      805
+     ]
     }
    ],
    "properties": {
@@ -8983,7 +9276,7 @@
     {
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 814
     },
     {
      "name": "images.image_1",
@@ -8995,7 +9288,7 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 820
     },
     {
      "name": "prompt",
@@ -9003,19 +9296,23 @@
      "widget": {
       "name": "prompt"
      },
-     "link": null
+     "link": 815
     }
    ],
    "outputs": [
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      807
+     ]
     },
     {
      "name": "negative",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      808
+     ]
     },
     {
      "name": "latent",
@@ -9069,7 +9366,9 @@
     {
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      816
+     ]
     }
    ],
    "properties": {
@@ -9124,7 +9423,9 @@
     {
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      814
+     ]
     }
    ],
    "properties": {
@@ -9182,7 +9483,10 @@
     {
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      799,
+      820
+     ]
     }
    ],
    "properties": {
@@ -9235,14 +9539,16 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 816
     }
    ],
    "outputs": [
     {
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      806
+     ]
     }
    ],
    "properties": {
@@ -9289,12 +9595,16 @@
     {
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      818
+     ]
     },
     {
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      819
+     ]
     }
    ],
    "properties": {
@@ -9346,7 +9656,9 @@
     {
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      811
+     ]
     }
    ],
    "properties": {
@@ -9404,7 +9716,10 @@
     {
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      809,
+      813
+     ]
     }
    ],
    "title": "这里写提示词",
@@ -9456,14 +9771,16 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 817
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      815
+     ]
     }
    ],
    "title": "最终提示词预览",
@@ -9510,7 +9827,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 818
     },
     {
      "name": "height",
@@ -9518,14 +9835,16 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 819
     }
    ],
    "outputs": [
     {
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      804
+     ]
     }
    ],
    "properties": {
@@ -9728,7 +10047,9 @@
     {
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      830
+     ]
     }
    ],
    "title": "Text (System Prompt)",
@@ -9812,7 +10133,9 @@
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      831
+     ]
     },
     {
      "name": "MASK",
@@ -9862,14 +10185,17 @@
     {
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 831
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      832,
+      833
+     ]
     }
    ],
    "properties": {
@@ -10146,7 +10472,1424 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   374,
+   193,
+   0,
+   201,
+   0,
+   "IMAGE"
+  ],
+  [
+   379,
+   201,
+   1,
+   204,
+   0,
+   "IMAGE"
+  ],
+  [
+   380,
+   205,
+   0,
+   204,
+   1,
+   "IMAGE"
+  ],
+  [
+   381,
+   201,
+   2,
+   204,
+   2,
+   "MASK"
+  ],
+  [
+   401,
+   201,
+   2,
+   209,
+   1,
+   "MASK"
+  ],
+  [
+   428,
+   204,
+   0,
+   207,
+   0,
+   "IMAGE"
+  ],
+  [
+   429,
+   204,
+   0,
+   209,
+   0,
+   "IMAGE"
+  ],
+  [
+   475,
+   249,
+   1,
+   247,
+   0,
+   "IMAGE"
+  ],
+  [
+   478,
+   249,
+   1,
+   250,
+   0,
+   "IMAGE"
+  ],
+  [
+   479,
+   249,
+   2,
+   250,
+   1,
+   "MASK"
+  ],
+  [
+   483,
+   193,
+   1,
+   201,
+   1,
+   "MASK"
+  ],
+  [
+   531,
+   267,
+   0,
+   270,
+   0,
+   "NOISE"
+  ],
+  [
+   532,
+   269,
+   0,
+   270,
+   1,
+   "GUIDER"
+  ],
+  [
+   533,
+   268,
+   0,
+   270,
+   2,
+   "SAMPLER"
+  ],
+  [
+   535,
+   270,
+   0,
+   272,
+   0,
+   "LATENT"
+  ],
+  [
+   537,
+   217,
+   0,
+   269,
+   0,
+   "MODEL"
+  ],
+  [
+   538,
+   118,
+   0,
+   269,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   539,
+   118,
+   2,
+   270,
+   4,
+   "LATENT"
+  ],
+  [
+   543,
+   8,
+   0,
+   217,
+   0,
+   "MODEL"
+  ],
+  [
+   544,
+   10,
+   0,
+   272,
+   1,
+   "VAE"
+  ],
+  [
+   548,
+   258,
+   0,
+   275,
+   0,
+   "MODEL"
+  ],
+  [
+   549,
+   255,
+   0,
+   275,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   550,
+   275,
+   0,
+   274,
+   1,
+   "GUIDER"
+  ],
+  [
+   552,
+   255,
+   2,
+   274,
+   4,
+   "LATENT"
+  ],
+  [
+   553,
+   274,
+   0,
+   256,
+   0,
+   "LATENT"
+  ],
+  [
+   564,
+   193,
+   0,
+   281,
+   1,
+   "IMAGE"
+  ],
+  [
+   570,
+   288,
+   0,
+   207,
+   4,
+   "INT"
+  ],
+  [
+   635,
+   336,
+   0,
+   331,
+   0,
+   "IMAGE"
+  ],
+  [
+   636,
+   336,
+   0,
+   332,
+   0,
+   "IMAGE"
+  ],
+  [
+   637,
+   338,
+   0,
+   332,
+   1,
+   "IMAGE"
+  ],
+  [
+   638,
+   357,
+   0,
+   333,
+   0,
+   "INT"
+  ],
+  [
+   639,
+   333,
+   0,
+   334,
+   0,
+   "NOISE"
+  ],
+  [
+   640,
+   335,
+   0,
+   334,
+   1,
+   "GUIDER"
+  ],
+  [
+   641,
+   344,
+   0,
+   334,
+   2,
+   "SAMPLER"
+  ],
+  [
+   642,
+   345,
+   0,
+   334,
+   3,
+   "SIGMAS"
+  ],
+  [
+   643,
+   341,
+   2,
+   334,
+   4,
+   "LATENT"
+  ],
+  [
+   644,
+   346,
+   0,
+   335,
+   0,
+   "MODEL"
+  ],
+  [
+   645,
+   341,
+   0,
+   335,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   648,
+   339,
+   0,
+   338,
+   0,
+   "IMAGE"
+  ],
+  [
+   649,
+   339,
+   1,
+   338,
+   1,
+   "MASK"
+  ],
+  [
+   650,
+   348,
+   1,
+   340,
+   0,
+   "IMAGE"
+  ],
+  [
+   651,
+   349,
+   0,
+   340,
+   2,
+   "INT"
+  ],
+  [
+   656,
+   354,
+   0,
+   346,
+   0,
+   "MODEL"
+  ],
+  [
+   657,
+   334,
+   0,
+   347,
+   0,
+   "LATENT"
+  ],
+  [
+   658,
+   343,
+   0,
+   347,
+   1,
+   "VAE"
+  ],
+  [
+   659,
+   338,
+   0,
+   348,
+   0,
+   "IMAGE"
+  ],
+  [
+   660,
+   338,
+   1,
+   348,
+   1,
+   "MASK"
+  ],
+  [
+   661,
+   355,
+   1,
+   348,
+   2,
+   "FLOAT"
+  ],
+  [
+   662,
+   355,
+   1,
+   348,
+   3,
+   "FLOAT"
+  ],
+  [
+   663,
+   355,
+   3,
+   348,
+   4,
+   "FLOAT"
+  ],
+  [
+   664,
+   355,
+   3,
+   348,
+   5,
+   "FLOAT"
+  ],
+  [
+   665,
+   337,
+   0,
+   349,
+   0,
+   "*"
+  ],
+  [
+   666,
+   350,
+   0,
+   349,
+   1,
+   "INT"
+  ],
+  [
+   667,
+   348,
+   1,
+   350,
+   0,
+   "IMAGE"
+  ],
+  [
+   668,
+   353,
+   0,
+   351,
+   0,
+   "STRING"
+  ],
+  [
+   669,
+   352,
+   0,
+   351,
+   1,
+   "STRING"
+  ],
+  [
+   670,
+   356,
+   1,
+   355,
+   0,
+   "INT"
+  ],
+  [
+   671,
+   356,
+   2,
+   355,
+   1,
+   "INT"
+  ],
+  [
+   672,
+   356,
+   3,
+   355,
+   2,
+   "INT"
+  ],
+  [
+   673,
+   356,
+   4,
+   355,
+   3,
+   "INT"
+  ],
+  [
+   674,
+   338,
+   1,
+   356,
+   0,
+   "MASK"
+  ],
+  [
+   682,
+   363,
+   0,
+   258,
+   0,
+   "MODEL"
+  ],
+  [
+   685,
+   361,
+   0,
+   256,
+   1,
+   "VAE"
+  ],
+  [
+   686,
+   364,
+   0,
+   274,
+   0,
+   "NOISE"
+  ],
+  [
+   688,
+   366,
+   0,
+   270,
+   3,
+   "SIGMAS"
+  ],
+  [
+   689,
+   367,
+   0,
+   274,
+   2,
+   "SAMPLER"
+  ],
+  [
+   690,
+   368,
+   0,
+   247,
+   4,
+   "INT"
+  ],
+  [
+   691,
+   369,
+   0,
+   249,
+   0,
+   "IMAGE"
+  ],
+  [
+   692,
+   369,
+   1,
+   249,
+   1,
+   "MASK"
+  ],
+  [
+   694,
+   212,
+   0,
+   281,
+   0,
+   "IMAGE"
+  ],
+  [
+   695,
+   212,
+   0,
+   38,
+   0,
+   "IMAGE"
+  ],
+  [
+   696,
+   369,
+   0,
+   371,
+   1,
+   "IMAGE"
+  ],
+  [
+   697,
+   252,
+   0,
+   371,
+   0,
+   "IMAGE"
+  ],
+  [
+   698,
+   252,
+   0,
+   370,
+   0,
+   "IMAGE"
+  ],
+  [
+   699,
+   373,
+   0,
+   267,
+   0,
+   "INT"
+  ],
+  [
+   700,
+   207,
+   0,
+   374,
+   0,
+   "IMAGE"
+  ],
+  [
+   705,
+   374,
+   0,
+   209,
+   2,
+   "INT"
+  ],
+  [
+   706,
+   374,
+   1,
+   209,
+   3,
+   "INT"
+  ],
+  [
+   707,
+   380,
+   0,
+   250,
+   2,
+   "INT"
+  ],
+  [
+   708,
+   380,
+   1,
+   250,
+   3,
+   "INT"
+  ],
+  [
+   709,
+   247,
+   0,
+   380,
+   0,
+   "IMAGE"
+  ],
+  [
+   712,
+   385,
+   0,
+   386,
+   0,
+   "*"
+  ],
+  [
+   713,
+   179,
+   0,
+   385,
+   1,
+   "STRING"
+  ],
+  [
+   714,
+   359,
+   0,
+   385,
+   0,
+   "STRING"
+  ],
+  [
+   715,
+   388,
+   0,
+   364,
+   0,
+   "INT"
+  ],
+  [
+   743,
+   429,
+   0,
+   424,
+   0,
+   "IMAGE"
+  ],
+  [
+   744,
+   448,
+   0,
+   424,
+   1,
+   "IMAGE"
+  ],
+  [
+   745,
+   430,
+   2,
+   426,
+   0,
+   "LATENT"
+  ],
+  [
+   746,
+   445,
+   0,
+   426,
+   1,
+   "LATENT"
+  ],
+  [
+   747,
+   444,
+   0,
+   429,
+   0,
+   "LATENT"
+  ],
+  [
+   748,
+   453,
+   0,
+   429,
+   1,
+   "VAE"
+  ],
+  [
+   752,
+   431,
+   0,
+   432,
+   0,
+   "IMAGE"
+  ],
+  [
+   753,
+   427,
+   0,
+   437,
+   0,
+   "STRING"
+  ],
+  [
+   754,
+   438,
+   0,
+   437,
+   1,
+   "STRING"
+  ],
+  [
+   759,
+   437,
+   0,
+   441,
+   0,
+   "STRING"
+  ],
+  [
+   760,
+   456,
+   0,
+   444,
+   0,
+   "NOISE"
+  ],
+  [
+   761,
+   450,
+   0,
+   444,
+   1,
+   "GUIDER"
+  ],
+  [
+   762,
+   443,
+   0,
+   444,
+   2,
+   "SAMPLER"
+  ],
+  [
+   764,
+   426,
+   0,
+   444,
+   4,
+   "LATENT"
+  ],
+  [
+   765,
+   428,
+   0,
+   445,
+   0,
+   "INT"
+  ],
+  [
+   766,
+   428,
+   1,
+   445,
+   1,
+   "INT"
+  ],
+  [
+   767,
+   459,
+   0,
+   446,
+   0,
+   "MODEL"
+  ],
+  [
+   768,
+   425,
+   0,
+   448,
+   0,
+   "IMAGE"
+  ],
+  [
+   769,
+   446,
+   0,
+   450,
+   0,
+   "MODEL"
+  ],
+  [
+   770,
+   430,
+   0,
+   450,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   771,
+   430,
+   1,
+   450,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   775,
+   447,
+   0,
+   455,
+   0,
+   "IMAGE"
+  ],
+  [
+   776,
+   454,
+   0,
+   456,
+   0,
+   "INT"
+  ],
+  [
+   777,
+   460,
+   0,
+   459,
+   0,
+   "MODEL"
+  ],
+  [
+   780,
+   365,
+   0,
+   274,
+   3,
+   "SIGMAS"
+  ],
+  [
+   782,
+   429,
+   0,
+   422,
+   0,
+   "IMAGE"
+  ],
+  [
+   788,
+   467,
+   0,
+   444,
+   3,
+   "SIGMAS"
+  ],
+  [
+   797,
+   481,
+   0,
+   479,
+   0,
+   "IMAGE"
+  ],
+  [
+   798,
+   482,
+   0,
+   481,
+   0,
+   "LATENT"
+  ],
+  [
+   799,
+   496,
+   0,
+   481,
+   1,
+   "VAE"
+  ],
+  [
+   800,
+   484,
+   0,
+   482,
+   0,
+   "NOISE"
+  ],
+  [
+   801,
+   485,
+   0,
+   482,
+   1,
+   "GUIDER"
+  ],
+  [
+   802,
+   483,
+   0,
+   482,
+   2,
+   "SAMPLER"
+  ],
+  [
+   804,
+   502,
+   0,
+   482,
+   4,
+   "LATENT"
+  ],
+  [
+   805,
+   490,
+   0,
+   484,
+   0,
+   "INT"
+  ],
+  [
+   806,
+   497,
+   0,
+   485,
+   0,
+   "MODEL"
+  ],
+  [
+   807,
+   493,
+   0,
+   485,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   808,
+   493,
+   1,
+   485,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   809,
+   500,
+   0,
+   486,
+   0,
+   "STRING"
+  ],
+  [
+   810,
+   488,
+   0,
+   486,
+   1,
+   "STRING"
+  ],
+  [
+   814,
+   495,
+   0,
+   493,
+   0,
+   "CLIP"
+  ],
+  [
+   815,
+   501,
+   0,
+   493,
+   3,
+   "STRING"
+  ],
+  [
+   816,
+   494,
+   0,
+   497,
+   0,
+   "MODEL"
+  ],
+  [
+   817,
+   486,
+   0,
+   501,
+   0,
+   "STRING"
+  ],
+  [
+   818,
+   498,
+   0,
+   502,
+   0,
+   "INT"
+  ],
+  [
+   819,
+   498,
+   1,
+   502,
+   1,
+   "INT"
+  ],
+  [
+   820,
+   496,
+   0,
+   493,
+   2,
+   "VAE"
+  ],
+  [
+   822,
+   489,
+   0,
+   482,
+   3,
+   "SIGMAS"
+  ],
+  [
+   831,
+   526,
+   0,
+   527,
+   0,
+   "IMAGE"
+  ],
+  [
+   395,
+   201,
+   0,
+   212,
+   0,
+   "SEAM"
+  ],
+  [
+   587,
+   272,
+   0,
+   212,
+   1,
+   "IMAGE"
+  ],
+  [
+   485,
+   249,
+   0,
+   252,
+   0,
+   "SEAM"
+  ],
+  [
+   586,
+   256,
+   0,
+   252,
+   1,
+   "IMAGE"
+  ],
+  [
+   646,
+   348,
+   0,
+   336,
+   0,
+   "SEAM"
+  ],
+  [
+   647,
+   347,
+   0,
+   336,
+   1,
+   "IMAGE"
+  ],
+  [
+   755,
+   458,
+   0,
+   438,
+   0,
+   "CLIP"
+  ],
+  [
+   756,
+   451,
+   0,
+   438,
+   1,
+   "IMAGE"
+  ],
+  [
+   757,
+   457,
+   0,
+   438,
+   4,
+   "STRING"
+  ],
+  [
+   758,
+   427,
+   0,
+   438,
+   5,
+   "STRING"
+  ],
+  [
+   772,
+   448,
+   0,
+   451,
+   0,
+   "IMAGE"
+  ],
+  [
+   773,
+   432,
+   0,
+   451,
+   1,
+   "IMAGE"
+  ],
+  [
+   774,
+   455,
+   0,
+   451,
+   2,
+   "IMAGE"
+  ],
+  [
+   811,
+   499,
+   0,
+   488,
+   0,
+   "CLIP"
+  ],
+  [
+   830,
+   524,
+   0,
+   488,
+   4,
+   "STRING"
+  ],
+  [
+   813,
+   500,
+   0,
+   488,
+   5,
+   "STRING"
+  ],
+  [
+   749,
+   452,
+   0,
+   430,
+   0,
+   "CLIP"
+  ],
+  [
+   750,
+   448,
+   0,
+   430,
+   1,
+   "IMAGE"
+  ],
+  [
+   784,
+   432,
+   0,
+   430,
+   2,
+   "IMAGE"
+  ],
+  [
+   785,
+   455,
+   0,
+   430,
+   3,
+   "IMAGE"
+  ],
+  [
+   786,
+   453,
+   0,
+   430,
+   5,
+   "VAE"
+  ],
+  [
+   783,
+   441,
+   0,
+   430,
+   6,
+   "STRING"
+  ],
+  [
+   683,
+   362,
+   0,
+   255,
+   0,
+   "CLIP"
+  ],
+  [
+   684,
+   361,
+   0,
+   255,
+   1,
+   "VAE"
+  ],
+  [
+   520,
+   250,
+   0,
+   255,
+   3,
+   "IMAGE"
+  ],
+  [
+   832,
+   527,
+   0,
+   255,
+   4,
+   "IMAGE"
+  ],
+  [
+   710,
+   386,
+   0,
+   255,
+   6,
+   "STRING"
+  ],
+  [
+   515,
+   250,
+   1,
+   255,
+   8,
+   "INT"
+  ],
+  [
+   516,
+   250,
+   2,
+   255,
+   9,
+   "INT"
+  ],
+  [
+   680,
+   250,
+   0,
+   179,
+   0,
+   "IMAGE"
+  ],
+  [
+   833,
+   527,
+   0,
+   179,
+   1,
+   "IMAGE"
+  ],
+  [
+   678,
+   359,
+   0,
+   179,
+   3,
+   "STRING"
+  ],
+  [
+   212,
+   9,
+   0,
+   118,
+   0,
+   "CLIP"
+  ],
+  [
+   220,
+   10,
+   0,
+   118,
+   1,
+   "VAE"
+  ],
+  [
+   399,
+   209,
+   0,
+   118,
+   3,
+   "IMAGE"
+  ],
+  [
+   388,
+   209,
+   1,
+   118,
+   7,
+   "INT"
+  ],
+  [
+   389,
+   209,
+   2,
+   118,
+   8,
+   "INT"
+  ],
+  [
+   652,
+   342,
+   0,
+   341,
+   0,
+   "CLIP"
+  ],
+  [
+   653,
+   343,
+   0,
+   341,
+   1,
+   "VAE"
+  ],
+  [
+   654,
+   340,
+   0,
+   341,
+   3,
+   "IMAGE"
+  ],
+  [
+   675,
+   351,
+   0,
+   341,
+   5,
+   "STRING"
+  ],
+  [
+   676,
+   340,
+   1,
+   341,
+   6,
+   "INT"
+  ],
+  [
+   677,
+   340,
+   2,
+   341,
+   7,
+   "INT"
+  ]
+ ],
  "groups": [
   {
    "id": 28,

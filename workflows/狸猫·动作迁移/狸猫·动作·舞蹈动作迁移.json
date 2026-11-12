@@ -36,7 +36,9 @@
      "label": "STRING",
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      455
+     ]
     }
    ],
    "title": "08 | Generic prompt / 通用提示词",
@@ -87,7 +89,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      456
+     ]
     }
    ],
    "title": "03 | Shared output MP / 统一输出MP",
@@ -138,7 +142,9 @@
      "label": "BOOLEAN",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": []
+     "links": [
+      459
+     ]
     }
    ],
    "title": "05 | Keep original audio / 保留原音频",
@@ -189,7 +195,9 @@
      "label": "BOOLEAN",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": []
+     "links": [
+      460
+     ]
     }
    ],
    "title": "06 | Carry motion across segments / 跨段续接",
@@ -240,7 +248,9 @@
      "label": "BOOLEAN",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": []
+     "links": [
+      461
+     ]
     }
    ],
    "title": "04 | Reference size: ON 720P · OFF 480P",
@@ -291,7 +301,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      465
+     ]
     }
    ],
    "title": "07 | Color stability: 0 = OFF / 调色强度",
@@ -331,7 +343,7 @@
      "label": "video",
      "name": "video",
      "type": "VIDEO",
-     "link": null
+     "link": 464
     },
     {
      "label": "filename_prefix",
@@ -517,7 +529,9 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      458
+     ]
     },
     {
      "label": "mask",
@@ -529,13 +543,17 @@
      "label": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      463
+     ]
     },
     {
      "label": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "links": []
+     "links": [
+      457
+     ]
     }
    ],
    "title": "02 | Main video ≤27s / 主视频",
@@ -639,7 +657,9 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      462
+     ]
     },
     {
      "label": "MASK",
@@ -692,7 +712,7 @@
      "label": "prompt",
      "name": "prompt",
      "type": "STRING",
-     "link": null
+     "link": 455
     },
     {
      "label": "output_MP",
@@ -701,19 +721,19 @@
      "widget": {
       "name": "output_MP"
      },
-     "link": null
+     "link": 456
     },
     {
      "label": "source_video_info",
      "name": "source_video_info",
      "type": "VHS_VIDEOINFO",
-     "link": null
+     "link": 457
     },
     {
      "label": "source_image",
      "name": "source_image",
      "type": "IMAGE",
-     "link": null
+     "link": 458
     },
     {
      "label": "original_audio",
@@ -722,7 +742,7 @@
      "widget": {
       "name": "original_audio"
      },
-     "link": null
+     "link": 459
     },
     {
      "label": "motion_continuity",
@@ -731,34 +751,34 @@
      "widget": {
       "name": "motion_continuity"
      },
-     "link": null
+     "link": 460
     },
     {
      "label": "reference_720P",
      "name": "reference_720P",
      "type": "BOOLEAN",
-     "link": null
+     "link": 461
     },
     {
      "label": "character",
      "name": "character",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 462
     },
     {
      "label": "source_audio",
      "name": "source_audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 463
     },
     {
      "label": "color_strength",
      "name": "color_strength",
      "shape": 7,
      "type": "FLOAT",
-     "link": null
+     "link": 465
     }
    ],
    "outputs": [
@@ -766,7 +786,9 @@
      "label": "final_video",
      "name": "final_video",
      "type": "VIDEO",
-     "links": []
+     "links": [
+      464
+     ]
     }
    ],
    "title": "BUNNY | AUTO DANCE ENGINE / 自动迁移引擎",
@@ -868,7 +890,96 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   455,
+   826,
+   0,
+   74042,
+   0,
+   "STRING"
+  ],
+  [
+   456,
+   10020,
+   0,
+   74042,
+   1,
+   "FLOAT"
+  ],
+  [
+   457,
+   70000,
+   3,
+   74042,
+   2,
+   "VHS_VIDEOINFO"
+  ],
+  [
+   458,
+   70000,
+   0,
+   74042,
+   3,
+   "IMAGE"
+  ],
+  [
+   459,
+   70100,
+   0,
+   74042,
+   4,
+   "BOOLEAN"
+  ],
+  [
+   460,
+   72000,
+   0,
+   74042,
+   5,
+   "BOOLEAN"
+  ],
+  [
+   461,
+   10019,
+   0,
+   74042,
+   6,
+   "BOOLEAN"
+  ],
+  [
+   462,
+   349,
+   0,
+   74042,
+   7,
+   "IMAGE"
+  ],
+  [
+   463,
+   70000,
+   2,
+   74042,
+   8,
+   "AUDIO"
+  ],
+  [
+   465,
+   74000,
+   0,
+   74042,
+   9,
+   "FLOAT"
+  ],
+  [
+   464,
+   74042,
+   0,
+   70057,
+   0,
+   "VIDEO"
+  ]
+ ],
  "groups": [
   {
    "id": 1,

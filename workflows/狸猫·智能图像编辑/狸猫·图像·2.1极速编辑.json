@@ -22,13 +22,13 @@
     {
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 15
     },
     {
      "name": "images.image_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 3
     },
     {
      "name": "images.image_2",
@@ -46,24 +46,30 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 13
     }
    ],
    "outputs": [
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      5
+     ]
     },
     {
      "name": "negative",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      6
+     ]
     },
     {
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      9
+     ]
     }
    ],
    "title": "2.1编辑条件 · 提示词＋参考图＋VAE",
@@ -109,7 +115,9 @@
     {
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      7
+     ]
     }
    ],
    "properties": {
@@ -150,7 +158,9 @@
     {
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      8
+     ]
     }
    ],
    "title": "官方8步Sigma · 末尾0",
@@ -191,39 +201,41 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 16
     },
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 5
     },
     {
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 6
     },
     {
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 7
     },
     {
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 8
     },
     {
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 9
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      10
+     ]
     },
     {
      "name": "denoised_output",
@@ -275,19 +287,21 @@
     {
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 10
     },
     {
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 14
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      12
+     ]
     }
    ],
    "properties": {
@@ -321,7 +335,7 @@
     {
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 12
     }
    ],
    "outputs": [
@@ -369,7 +383,9 @@
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      3
+     ]
     },
     {
      "name": "MASK",
@@ -419,17 +435,24 @@
     {
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      13,
+      14
+     ]
     },
     {
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      15
+     ]
     },
     {
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      16
+     ]
     }
    ],
    "properties": {
@@ -611,7 +634,104 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   5,
+   4,
+   0,
+   7,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   6,
+   4,
+   1,
+   7,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   7,
+   5,
+   0,
+   7,
+   3,
+   "SAMPLER"
+  ],
+  [
+   8,
+   6,
+   0,
+   7,
+   4,
+   "SIGMAS"
+  ],
+  [
+   9,
+   4,
+   2,
+   7,
+   5,
+   "LATENT"
+  ],
+  [
+   10,
+   7,
+   0,
+   8,
+   0,
+   "LATENT"
+  ],
+  [
+   12,
+   8,
+   0,
+   9,
+   0,
+   "IMAGE"
+  ],
+  [
+   14,
+   22,
+   0,
+   8,
+   1,
+   "VAE"
+  ],
+  [
+   16,
+   22,
+   2,
+   7,
+   0,
+   "MODEL"
+  ],
+  [
+   15,
+   22,
+   1,
+   4,
+   0,
+   "CLIP"
+  ],
+  [
+   3,
+   21,
+   0,
+   4,
+   1,
+   "IMAGE"
+  ],
+  [
+   13,
+   22,
+   0,
+   4,
+   4,
+   "VAE"
+  ]
+ ],
  "groups": [
   {
    "id": 1,

@@ -23,7 +23,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 5
     },
     {
      "localized_name": "音频",
@@ -57,7 +57,9 @@
      "localized_name": "视频",
      "name": "VIDEO",
      "type": "VIDEO",
-     "links": []
+     "links": [
+      7
+     ]
     }
    ],
    "properties": {
@@ -110,7 +112,9 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      3
+     ]
     }
    ],
    "title": "Video VAE",
@@ -162,7 +166,9 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      4
+     ]
     }
    ],
    "title": "Audio VAE",
@@ -224,7 +230,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      18
+     ]
     }
    ],
    "title": "H3 Model (safetensors or GGUF)",
@@ -284,7 +292,9 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      9
+     ]
     }
    ],
    "properties": {
@@ -386,7 +396,9 @@
      "name": "AUDIO",
      "type": "AUDIO",
      "slot_index": 0,
-     "links": []
+     "links": [
+      19
+     ]
     }
    ],
    "title": "VOICE ANCHOR (muted) - unmute + pick a file, or use self_anchor_voice",
@@ -457,7 +469,7 @@
      "localized_name": "视频",
      "name": "video",
      "type": "VIDEO",
-     "link": null
+     "link": 7
     },
     {
      "localized_name": "文件名前缀",
@@ -538,7 +550,7 @@
      "name": "image",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 16
     },
     {
      "localized_name": "enabled",
@@ -555,7 +567,9 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      17
+     ]
     }
    ],
    "properties": {
@@ -593,7 +607,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 18
     },
     {
      "localized_name": "lora_1",
@@ -674,7 +688,9 @@
      "name": "model",
      "type": "MODEL",
      "slot_index": 0,
-     "links": []
+     "links": [
+      1
+     ]
     }
    ],
    "title": "LoRA stack (empty = stock)",
@@ -718,39 +734,39 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 1
     },
     {
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 9
     },
     {
      "localized_name": "video_vae",
      "name": "video_vae",
      "type": "VAE",
-     "link": null
+     "link": 3
     },
     {
      "localized_name": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": null
+     "link": 4
     },
     {
      "localized_name": "start_image",
      "name": "start_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 17
     },
     {
      "localized_name": "voice_ref",
      "name": "voice_ref",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 19
     },
     {
      "localized_name": "sampler_override",
@@ -874,7 +890,9 @@
      "localized_name": "master_frames",
      "name": "master_frames",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      5
+     ]
     },
     {
      "localized_name": "master_audio",
@@ -965,7 +983,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      16
+     ]
     },
     {
      "localized_name": "遮罩",
@@ -1042,11 +1062,91 @@
  ],
  "links": [
   [
+   1,
+   18,
+   0,
+   5,
+   0,
+   "MODEL"
+  ],
+  [
+   3,
+   3,
+   0,
+   5,
+   2,
+   "VAE"
+  ],
+  [
+   4,
+   4,
+   0,
+   5,
+   3,
+   "VAE"
+  ],
+  [
+   5,
+   5,
+   0,
+   6,
+   0,
+   "IMAGE"
+  ],
+  [
    6,
    5,
    1,
    6,
    1,
+   "AUDIO"
+  ],
+  [
+   7,
+   6,
+   0,
+   7,
+   0,
+   "VIDEO"
+  ],
+  [
+   9,
+   11,
+   0,
+   5,
+   1,
+   "CLIP"
+  ],
+  [
+   16,
+   12,
+   0,
+   17,
+   0,
+   "IMAGE"
+  ],
+  [
+   17,
+   17,
+   0,
+   5,
+   4,
+   "IMAGE"
+  ],
+  [
+   18,
+   1,
+   0,
+   18,
+   0,
+   "MODEL"
+  ],
+  [
+   19,
+   19,
+   0,
+   5,
+   5,
    "AUDIO"
   ]
  ],

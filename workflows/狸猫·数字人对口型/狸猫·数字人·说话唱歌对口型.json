@@ -25,7 +25,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "link": null
+     "link": 2908
     }
    ],
    "outputs": [
@@ -73,7 +73,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "link": null
+     "link": 2909
     }
    ],
    "outputs": [
@@ -121,7 +121,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "link": null
+     "link": 2912
     }
    ],
    "outputs": [
@@ -169,7 +169,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 2985
     }
    ],
    "outputs": [
@@ -218,7 +218,9 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      2939
+     ]
     }
    ],
    "title": "Get_vae_audio",
@@ -262,7 +264,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      2936
+     ]
     }
    ],
    "title": "Get_width",
@@ -317,7 +321,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 2936
     },
     {
      "label": "height",
@@ -327,7 +331,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 2937
     }
    ],
    "outputs": [
@@ -336,7 +340,9 @@
      "localized_name": "遮罩",
      "name": "MASK",
      "type": "MASK",
-     "links": []
+     "links": [
+      2935
+     ]
     }
    ],
    "properties": {
@@ -387,7 +393,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      2937
+     ]
     }
    ],
    "title": "Get_height",
@@ -429,7 +437,7 @@
      "label": "LATENT",
      "name": "LATENT",
      "type": "LATENT",
-     "link": null
+     "link": 2933
     }
    ],
    "outputs": [
@@ -478,7 +486,9 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      3236
+     ]
     }
    ],
    "title": "Get_vae",
@@ -521,7 +531,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      2960
+     ]
     }
    ],
    "title": "Get_fps",
@@ -563,7 +575,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "link": null
+     "link": 1688
     }
    ],
    "outputs": [
@@ -611,7 +623,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "link": null
+     "link": 1689
     }
    ],
    "outputs": [
@@ -658,14 +670,14 @@
      "localized_name": "video_latent",
      "name": "video_latent",
      "type": "LATENT",
-     "link": null
+     "link": 3235
     },
     {
      "label": "audio_latent",
      "localized_name": "audio_latent",
      "name": "audio_latent",
      "type": "LATENT",
-     "link": null
+     "link": 2977
     }
    ],
    "outputs": [
@@ -674,7 +686,9 @@
      "localized_name": "latent",
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      1252
+     ]
     }
    ],
    "properties": {
@@ -712,7 +726,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "link": null
+     "link": 1571
     }
    ],
    "outputs": [
@@ -720,7 +734,9 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      1572
+     ]
     }
    ],
    "title": "Set_model",
@@ -761,7 +777,7 @@
      "label": "GUIDER",
      "name": "GUIDER",
      "type": "GUIDER",
-     "link": null
+     "link": 1574
     }
    ],
    "outputs": [
@@ -809,7 +825,7 @@
      "label": "SIGMAS",
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "link": null
+     "link": 2964
     }
    ],
    "outputs": [
@@ -817,7 +833,9 @@
      "label": "SIGMAS",
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      2628
+     ]
     }
    ],
    "title": "Set_sigmas",
@@ -857,7 +875,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 2795
     },
     {
      "label": "scheduler",
@@ -893,7 +911,9 @@
      "localized_name": "Sigmas",
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      2964
+     ]
     }
    ],
    "properties": {
@@ -939,7 +959,7 @@
      "label": "SAMPLER",
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "link": null
+     "link": 1575
     }
    ],
    "outputs": [
@@ -997,7 +1017,10 @@
      "localized_name": "采样器",
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      371,
+      1575
+     ]
     }
    ],
    "properties": {
@@ -1047,7 +1070,9 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      2507
+     ]
     }
    ],
    "title": "Get_vae",
@@ -1088,21 +1113,21 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 1572
     },
     {
      "label": "positive",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 1509
     },
     {
      "label": "negative",
      "localized_name": "负面条件",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 1510
     },
     {
      "label": "cfg",
@@ -1120,7 +1145,10 @@
      "localized_name": "引导器",
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": []
+     "links": [
+      370,
+      1574
+     ]
     }
    ],
    "properties": {
@@ -1170,7 +1198,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      2847
+     ]
     }
    ],
    "title": "Get_start_seed",
@@ -1212,7 +1242,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 2843
     }
    ],
    "outputs": [
@@ -1259,14 +1289,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 2934
     },
     {
      "label": "mask",
      "localized_name": "遮罩",
      "name": "mask",
      "type": "MASK",
-     "link": null
+     "link": 2935
     }
    ],
    "outputs": [
@@ -1275,7 +1305,10 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      2933,
+      2977
+     ]
     }
    ],
    "properties": {
@@ -1315,7 +1348,9 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      2979
+     ]
     }
    ],
    "title": "Get_vae_tiny",
@@ -1356,7 +1391,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 2850
     },
     {
      "label": "latent_upscale_model",
@@ -1371,7 +1406,7 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": null
+     "link": 2979
     },
     {
      "label": "preview_rate",
@@ -1389,7 +1424,10 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      1571,
+      2794
+     ]
     }
    ],
    "properties": {
@@ -1430,14 +1468,14 @@
      "localized_name": "音频",
      "name": "audio",
      "type": "AUDIO",
-     "link": null
+     "link": 3217
     },
     {
      "label": "audio_vae",
      "localized_name": "音频VAE",
      "name": "audio_vae",
      "type": "VAE",
-     "link": null
+     "link": 2939
     }
    ],
    "outputs": [
@@ -1446,7 +1484,9 @@
      "localized_name": "音频latent",
      "name": "Audio Latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      2934
+     ]
     }
    ],
    "properties": {
@@ -1485,7 +1525,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "link": null
+     "link": 2925
     }
    ],
    "outputs": [
@@ -1535,7 +1575,7 @@
      "name": "variables.a",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 2983
     },
     {
      "label": "b",
@@ -1543,7 +1583,7 @@
      "name": "variables.b",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 2984
     },
     {
      "label": "c",
@@ -1579,7 +1619,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      2985
+     ]
     },
     {
      "label": "BOOLEAN",
@@ -1627,7 +1669,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 2957
     }
    ],
    "outputs": [
@@ -1676,7 +1718,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 2956
     }
    ],
    "outputs": [
@@ -1685,14 +1727,18 @@
      "localized_name": "宽度",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      2957
+     ]
     },
     {
      "label": "height",
      "localized_name": "高度",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      2958
+     ]
     },
     {
      "label": "batch_size",
@@ -1737,7 +1783,7 @@
      "localized_name": "输入",
      "name": "input",
      "type": "IMAGE,MASK",
-     "link": null
+     "link": 2955
     },
     {
      "label": "resize_type",
@@ -1772,7 +1818,9 @@
      "localized_name": "已调整大小",
      "name": "resized",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      2956
+     ]
     }
    ],
    "properties": {
@@ -1818,7 +1866,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 2958
     }
    ],
    "outputs": [
@@ -1866,7 +1914,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": null
+     "link": 1700
     }
    ],
    "outputs": [
@@ -1915,7 +1963,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      2954
+     ]
     }
    ],
    "title": "Get_height",
@@ -1958,7 +2008,7 @@
      "localized_name": "音频",
      "name": "audio",
      "type": "AUDIO",
-     "link": null
+     "link": 2990
     },
     {
      "label": "start_index",
@@ -1977,7 +2027,7 @@
      "widget": {
       "name": "duration"
      },
-     "link": null
+     "link": 2992
     }
    ],
    "outputs": [
@@ -2032,7 +2082,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "link": null
+     "link": 2940
     }
    ],
    "outputs": [
@@ -2082,7 +2132,7 @@
      "name": "variables.a",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 2966
     },
     {
      "label": "b",
@@ -2090,7 +2140,7 @@
      "name": "variables.b",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 2967
     },
     {
      "label": "c",
@@ -2120,7 +2170,9 @@
      "localized_name": "浮点",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      2968
+     ]
     },
     {
      "label": "INT",
@@ -2176,7 +2228,7 @@
      "widget": {
       "name": "noise_seed"
      },
-     "link": null
+     "link": 2847
     }
    ],
    "outputs": [
@@ -2185,7 +2237,9 @@
      "localized_name": "噪波",
      "name": "NOISE",
      "type": "NOISE",
-     "links": []
+     "links": [
+      2518
+     ]
     }
    ],
    "properties": {
@@ -2240,7 +2294,9 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      2912
+     ]
     }
    ],
    "properties": {
@@ -2310,7 +2366,9 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      2908
+     ]
     }
    ],
    "properties": {
@@ -2357,14 +2415,14 @@
      "localized_name": "为假时",
      "name": "on_false",
      "type": "AUDIO",
-     "link": null
+     "link": 2941
     },
     {
      "label": "on_true",
      "localized_name": "为真时",
      "name": "on_true",
      "type": "AUDIO",
-     "link": null
+     "link": 2942
     },
     {
      "label": "switch",
@@ -2382,7 +2440,10 @@
      "localized_name": "输出",
      "name": "output",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      2940,
+      2990
+     ]
     }
    ],
    "title": "USE VOCALS ONLY",
@@ -2425,7 +2486,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 2923
     }
    ],
    "outputs": [
@@ -2473,7 +2534,7 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "link": null
+     "link": 2968
     }
    ],
    "outputs": [
@@ -2481,7 +2542,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      3166
+     ]
     }
    ],
    "title": "Set_window_seconds",
@@ -2522,7 +2585,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "link": null
+     "link": 2924
     }
    ],
    "outputs": [
@@ -2580,7 +2643,9 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      2843
+     ]
     }
    ],
    "title": "Start Seed",
@@ -2626,7 +2691,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      2992
+     ]
     }
    ],
    "title": "Get_window_seconds",
@@ -2669,7 +2736,7 @@
      "localized_name": "音频",
      "name": "audio",
      "type": "AUDIO",
-     "link": null
+     "link": 2929
     },
     {
      "label": "start_index",
@@ -2688,7 +2755,7 @@
      "widget": {
       "name": "duration"
      },
-     "link": null
+     "link": 2995
     }
    ],
    "outputs": [
@@ -2697,7 +2764,11 @@
      "localized_name": "音频",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      2924,
+      2932,
+      2941
+     ]
     }
    ],
    "title": "Trim Audio",
@@ -2744,7 +2815,9 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      3230
+     ]
     }
    ],
    "title": "Get_audio_original",
@@ -2796,7 +2869,9 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      2923
+     ]
     }
    ],
    "title": "4",
@@ -2853,7 +2928,10 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      3069,
+      3094
+     ]
     }
    ],
    "title": "s2",
@@ -2899,7 +2977,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      3233
+     ]
     }
    ],
    "title": "Get_fps",
@@ -2940,7 +3020,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 3224
     },
     {
      "label": "mask",
@@ -2957,7 +3037,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 2953
     },
     {
      "label": "height",
@@ -2967,7 +3047,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 2954
     },
     {
      "label": "upscale_method",
@@ -3031,21 +3111,29 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      1231,
+      1700,
+      2955
+     ]
     },
     {
      "label": "width",
      "localized_name": "width",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      1233
+     ]
     },
     {
      "label": "height",
      "localized_name": "height",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      1234
+     ]
     },
     {
      "label": "mask",
@@ -3112,7 +3200,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      2953
+     ]
     }
    ],
    "title": "Get_width",
@@ -3154,7 +3244,7 @@
      "label": "LATENT_UPSCALE_MODEL",
      "name": "LATENT_UPSCALE_MODEL",
      "type": "LATENT_UPSCALE_MODEL",
-     "link": null
+     "link": 2907
     }
    ],
    "outputs": [
@@ -3202,7 +3292,7 @@
      "label": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "link": null
+     "link": 2910
     }
    ],
    "outputs": [
@@ -3290,7 +3380,9 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      2910
+     ]
     }
    ],
    "properties": {
@@ -3338,7 +3430,7 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "link": null
+     "link": 2916
     }
    ],
    "outputs": [
@@ -3386,7 +3478,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 3227
     }
    ],
    "outputs": [
@@ -3434,7 +3526,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 3226
     }
    ],
    "outputs": [
@@ -3492,7 +3584,9 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      2909
+     ]
     }
    ],
    "properties": {
@@ -3535,7 +3629,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 3225
     },
     {
      "label": "mask",
@@ -3552,7 +3646,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 3228
     },
     {
      "label": "height",
@@ -3562,7 +3656,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 3229
     },
     {
      "label": "upscale_method",
@@ -3626,21 +3720,27 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      3224
+     ]
     },
     {
      "label": "width",
      "localized_name": "width",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      3226
+     ]
     },
     {
      "label": "height",
      "localized_name": "height",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      3227
+     ]
     },
     {
      "label": "mask",
@@ -3701,7 +3801,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 3252
     },
     {
      "label": "audio",
@@ -3709,7 +3809,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 3230
     },
     {
      "label": "meta_batch",
@@ -3733,7 +3833,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": null
+     "link": 3233
     },
     {
      "label": "loop_count",
@@ -3900,7 +4000,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 2963
     },
     {
      "label": "sage_attention",
@@ -3928,7 +4028,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      1351
+     ]
     }
    ],
    "properties": {
@@ -3973,7 +4075,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 2848
     },
     {
      "label": "blocks",
@@ -4036,7 +4138,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "links": []
+     "links": [
+      3223
+     ]
     }
    ],
    "properties": {
@@ -4089,7 +4193,7 @@
      "localized_name": "任意内容",
      "name": "anything",
      "type": "*",
-     "link": null
+     "link": 3213
     },
     {
      "label": "purge_cache",
@@ -4154,7 +4258,10 @@
      "label": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      2945,
+      2950
+     ]
     }
    ],
    "title": "Get_clip",
@@ -4195,7 +4302,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 1231
     },
     {
      "label": "img_compression",
@@ -4213,7 +4320,9 @@
      "localized_name": "输出图像",
      "name": "output_image",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      3239
+     ]
     }
    ],
    "properties": {
@@ -4267,7 +4376,9 @@
      "localized_name": "字符串",
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      3241
+     ]
     }
    ],
    "title": "text",
@@ -4317,7 +4428,7 @@
      "name": "string1",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 3241
     },
     {
      "label": "string2",
@@ -4325,7 +4436,7 @@
      "name": "string2",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 3243
     },
     {
      "label": "delimiter",
@@ -4343,7 +4454,9 @@
      "localized_name": "字符串",
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      3246
+     ]
     }
    ],
    "properties": {
@@ -4387,7 +4500,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 2945
     },
     {
      "label": "text",
@@ -4397,7 +4510,7 @@
      "widget": {
       "name": "text"
      },
-     "link": null
+     "link": 3246
     }
    ],
    "outputs": [
@@ -4406,7 +4519,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      2961
+     ]
     }
    ],
    "properties": {
@@ -4458,7 +4573,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 1351
     },
     {
      "label": "chunks",
@@ -4485,7 +4600,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "links": []
+     "links": [
+      2848
+     ]
     }
    ],
    "properties": {
@@ -4548,7 +4665,10 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      2911,
+      3213
+     ]
     }
    ],
    "properties": {
@@ -4592,7 +4712,7 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "link": null
+     "link": 3210
     }
    ],
    "outputs": [
@@ -4641,7 +4761,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      3167
+     ]
     }
    ],
    "title": "Get_overlap_seconds",
@@ -4684,7 +4806,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      3066
+     ]
     }
    ],
    "title": "Get_loop_count",
@@ -4727,7 +4851,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      2966
+     ]
     }
    ],
    "title": "Get_frames",
@@ -4771,7 +4897,7 @@
      "name": "variables.a",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 3166
     },
     {
      "label": "b",
@@ -4779,7 +4905,7 @@
      "name": "variables.b",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 3066
     },
     {
      "label": "c",
@@ -4787,7 +4913,7 @@
      "name": "variables.c",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 3167
     },
     {
      "label": "d",
@@ -4817,7 +4943,9 @@
      "localized_name": "浮点",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      2995
+     ]
     },
     {
      "label": "INT",
@@ -4873,7 +5001,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      2967
+     ]
     }
    ],
    "title": "Get_fps",
@@ -4916,14 +5046,14 @@
      "localized_name": "model",
      "name": "model",
      "type": "MELROFORMERMODEL",
-     "link": null
+     "link": 2931
     },
     {
      "label": "audio",
      "localized_name": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "link": null
+     "link": 2932
     }
    ],
    "outputs": [
@@ -4932,7 +5062,10 @@
      "localized_name": "vocals",
      "name": "vocals",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      2925,
+      2942
+     ]
     },
     {
      "label": "instruments",
@@ -4976,14 +5109,14 @@
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 2961
     },
     {
      "label": "negative",
      "localized_name": "负面条件",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 2962
     },
     {
      "label": "frame_rate",
@@ -4993,7 +5126,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": null
+     "link": 2960
     }
    ],
    "outputs": [
@@ -5002,14 +5135,23 @@
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      1451,
+      1509,
+      1688
+     ]
     },
     {
      "label": "negative",
      "localized_name": "负面条件",
      "name": "negative",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      1453,
+      1510,
+      1689,
+      3247
+     ]
     }
    ],
    "properties": {
@@ -5060,7 +5202,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 3071
     }
    ],
    "outputs": [
@@ -5110,7 +5252,7 @@
      "name": "variables.a",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 3069
     },
     {
      "label": "b",
@@ -5118,7 +5260,7 @@
      "name": "variables.b",
      "shape": 7,
      "type": "INT,FLOAT,BOOLEAN",
-     "link": null
+     "link": 3070
     },
     {
      "label": "c",
@@ -5154,7 +5296,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      3071
+     ]
     },
     {
      "label": "BOOLEAN",
@@ -5203,7 +5347,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      3070
+     ]
     }
    ],
    "title": "Get_fps",
@@ -5245,7 +5391,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 3094
     }
    ],
    "outputs": [
@@ -5292,14 +5438,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 2505
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 2507
     }
    ],
    "outputs": [
@@ -5308,7 +5454,10 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      3160,
+      3214
+     ]
     }
    ],
    "properties": {
@@ -5346,7 +5495,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": null
+     "link": 3160
     }
    ],
    "outputs": [
@@ -5393,7 +5542,7 @@
      "localized_name": "任意内容",
      "name": "anything",
      "type": "*",
-     "link": null
+     "link": 3214
     },
     {
      "label": "purge_cache",
@@ -5458,21 +5607,21 @@
      "localized_name": "正向",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 1451
     },
     {
      "label": "negative",
      "localized_name": "负向",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 1453
     },
     {
      "label": "latent",
      "localized_name": "潜在空间",
      "name": "latent",
      "type": "LATENT",
-     "link": null
+     "link": 956
     }
    ],
    "outputs": [
@@ -5530,7 +5679,7 @@
      "localized_name": "音视频潜空间",
      "name": "av_latent",
      "type": "LATENT",
-     "link": null
+     "link": 2514
     }
    ],
    "outputs": [
@@ -5539,7 +5688,10 @@
      "localized_name": "video_latent",
      "name": "video_latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      956,
+      2505
+     ]
     },
     {
      "label": "audio_latent",
@@ -5585,7 +5737,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 2911
     },
     {
      "label": "lora_name",
@@ -5612,7 +5764,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      2963
+     ]
     }
    ],
    "properties": {
@@ -5672,7 +5826,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 1233
     },
     {
      "label": "height",
@@ -5682,7 +5836,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 1234
     },
     {
      "label": "length",
@@ -5692,7 +5846,7 @@
      "widget": {
       "name": "length"
      },
-     "link": null
+     "link": 2959
     },
     {
      "label": "batch_size",
@@ -5710,7 +5864,9 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      3237
+     ]
     }
    ],
    "properties": {
@@ -5774,7 +5930,10 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      3228,
+      3229
+     ]
     }
    ],
    "title": "最大分辨率",
@@ -5829,7 +5988,10 @@
      "localized_name": "浮点",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      2916,
+      2984
+     ]
     }
    ],
    "title": "帧率",
@@ -5882,7 +6044,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "MELROFORMERMODEL",
-     "links": []
+     "links": [
+      2931
+     ]
     }
    ],
    "title": "Mel-Band RoFormer Model Loader aijuxi",
@@ -5954,7 +6118,10 @@
      "localized_name": "音频",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      2929,
+      3217
+     ]
     }
    ],
    "title": "上传歌曲或语音",
@@ -6003,7 +6170,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 3223
     },
     {
      "label": "nag_cond_video",
@@ -6011,7 +6178,7 @@
      "name": "nag_cond_video",
      "shape": 7,
      "type": "CONDITIONING",
-     "link": null
+     "link": 3247
     },
     {
      "label": "nag_cond_audio",
@@ -6064,7 +6231,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "links": []
+     "links": [
+      2850
+     ]
     }
    ],
    "properties": {
@@ -6113,7 +6282,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 2950
     },
     {
      "label": "text",
@@ -6131,7 +6300,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      2962
+     ]
     }
    ],
    "properties": {
@@ -6192,7 +6363,9 @@
      "localized_name": "浮点",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      3210
+     ]
     }
    ],
    "title": "IMG STRENGTH. Set 0 for T2I mode",
@@ -6245,7 +6418,9 @@
      "localized_name": "LATENT_UPSCALE_MODEL",
      "name": "LATENT_UPSCALE_MODEL",
      "type": "LATENT_UPSCALE_MODEL",
-     "links": []
+     "links": [
+      2907
+     ]
     }
    ],
    "properties": {
@@ -6300,7 +6475,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 2794
     },
     {
      "label": "shift",
@@ -6318,7 +6493,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      2795
+     ]
     }
    ],
    "properties": {
@@ -6372,7 +6549,9 @@
      "localized_name": "字符串",
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      3243
+     ]
     }
    ],
    "title": "提示词",
@@ -6427,7 +6606,9 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      2983
+     ]
     }
    ],
    "title": "生成秒数 (35秒以下效果更佳)",
@@ -6491,7 +6672,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      3225
+     ]
     },
     {
      "label": "MASK",
@@ -6548,7 +6731,9 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      2959
+     ]
     }
    ],
    "title": "Get_frames",
@@ -6591,7 +6776,9 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      3248
+     ]
     }
    ],
    "title": "Get_image_strength",
@@ -6634,35 +6821,35 @@
      "localized_name": "噪波",
      "name": "noise",
      "type": "NOISE",
-     "link": null
+     "link": 2518
     },
     {
      "label": "guider",
      "localized_name": "引导器",
      "name": "guider",
      "type": "GUIDER",
-     "link": null
+     "link": 370
     },
     {
      "label": "sampler",
      "localized_name": "采样器",
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 371
     },
     {
      "label": "sigmas",
      "localized_name": "西格玛",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 2628
     },
     {
      "label": "latent_image",
      "localized_name": "Latent图像",
      "name": "latent_image",
      "type": "LATENT",
-     "link": null
+     "link": 1252
     }
    ],
    "outputs": [
@@ -6671,7 +6858,9 @@
      "localized_name": "Latent",
      "name": "output",
      "type": "LATENT",
-     "links": []
+     "links": [
+      2514
+     ]
     },
     {
      "label": "denoised_output",
@@ -6724,14 +6913,14 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 3236
     },
     {
      "label": "latent",
      "localized_name": "latent",
      "name": "latent",
      "type": "LATENT",
-     "link": null
+     "link": 3237
     },
     {
      "localized_name": "num_images",
@@ -6757,7 +6946,7 @@
      "name": "num_images.image_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 3239
     },
     {
      "localized_name": "num_images.index_1",
@@ -6776,7 +6965,9 @@
      "localized_name": "latent",
      "name": "latent",
      "type": "LATENT",
-     "links": []
+     "links": [
+      3235
+     ]
     }
    ],
    "properties": {
@@ -6820,7 +7011,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 3251
     },
     {
      "localized_name": "offload_model",
@@ -6846,7 +7037,9 @@
      "localized_name": "output",
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      3250
+     ]
     }
    ],
    "properties": {
@@ -6888,7 +7081,9 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      3251
+     ]
     }
    ],
    "title": "Get_video_aijuxi",
@@ -6929,7 +7124,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 3250
     },
     {
      "localized_name": "clean_file_cache",
@@ -6973,7 +7168,9 @@
      "localized_name": "output",
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      3252
+     ]
     }
    ],
    "properties": {
@@ -7163,7 +7360,888 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   370,
+   153,
+   0,
+   161,
+   1,
+   "GUIDER"
+  ],
+  [
+   371,
+   154,
+   0,
+   161,
+   2,
+   "SAMPLER"
+  ],
+  [
+   956,
+   245,
+   0,
+   381,
+   2,
+   "LATENT"
+  ],
+  [
+   1231,
+   445,
+   0,
+   446,
+   0,
+   "IMAGE"
+  ],
+  [
+   1233,
+   445,
+   1,
+   344,
+   0,
+   "INT"
+  ],
+  [
+   1234,
+   445,
+   2,
+   344,
+   1,
+   "INT"
+  ],
+  [
+   1252,
+   350,
+   0,
+   161,
+   4,
+   "LATENT"
+  ],
+  [
+   1351,
+   268,
+   0,
+   504,
+   0,
+   "MODEL"
+  ],
+  [
+   1451,
+   164,
+   0,
+   381,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   1453,
+   164,
+   1,
+   381,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   1509,
+   164,
+   0,
+   153,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   1510,
+   164,
+   1,
+   153,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   1571,
+   503,
+   0,
+   572,
+   0,
+   "MODEL"
+  ],
+  [
+   1572,
+   572,
+   0,
+   153,
+   0,
+   "MODEL"
+  ],
+  [
+   1574,
+   153,
+   0,
+   575,
+   0,
+   "GUIDER"
+  ],
+  [
+   1575,
+   154,
+   0,
+   576,
+   0,
+   "SAMPLER"
+  ],
+  [
+   1688,
+   164,
+   0,
+   645,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   1689,
+   164,
+   1,
+   646,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   1700,
+   445,
+   0,
+   650,
+   0,
+   "IMAGE"
+  ],
+  [
+   2505,
+   245,
+   0,
+   1318,
+   0,
+   "LATENT"
+  ],
+  [
+   2507,
+   236,
+   0,
+   1318,
+   1,
+   "VAE"
+  ],
+  [
+   2514,
+   161,
+   0,
+   245,
+   0,
+   "LATENT"
+  ],
+  [
+   2518,
+   1322,
+   0,
+   161,
+   0,
+   "NOISE"
+  ],
+  [
+   2628,
+   579,
+   0,
+   161,
+   3,
+   "SIGMAS"
+  ],
+  [
+   2794,
+   503,
+   0,
+   1513,
+   0,
+   "MODEL"
+  ],
+  [
+   2795,
+   1513,
+   0,
+   1421,
+   0,
+   "MODEL"
+  ],
+  [
+   2843,
+   1527,
+   0,
+   1528,
+   0,
+   "INT"
+  ],
+  [
+   2847,
+   1530,
+   0,
+   1322,
+   0,
+   "INT"
+  ],
+  [
+   2848,
+   504,
+   0,
+   1523,
+   0,
+   "MODEL"
+  ],
+  [
+   2850,
+   508,
+   0,
+   503,
+   0,
+   "MODEL"
+  ],
+  [
+   2907,
+   1561,
+   0,
+   1555,
+   0,
+   "LATENT_UPSCALE_MODEL"
+  ],
+  [
+   2908,
+   1567,
+   0,
+   1556,
+   0,
+   "VAE"
+  ],
+  [
+   2909,
+   1559,
+   0,
+   1557,
+   0,
+   "VAE"
+  ],
+  [
+   2910,
+   1562,
+   0,
+   1558,
+   0,
+   "CLIP"
+  ],
+  [
+   2911,
+   1570,
+   0,
+   1560,
+   0,
+   "MODEL"
+  ],
+  [
+   2912,
+   1569,
+   0,
+   1568,
+   0,
+   "VAE"
+  ],
+  [
+   2916,
+   1586,
+   0,
+   1577,
+   0,
+   "FLOAT"
+  ],
+  [
+   2923,
+   1611,
+   0,
+   1585,
+   0,
+   "INT"
+  ],
+  [
+   2924,
+   1598,
+   0,
+   1589,
+   0,
+   "AUDIO"
+  ],
+  [
+   2925,
+   1599,
+   0,
+   1590,
+   0,
+   "AUDIO"
+  ],
+  [
+   2929,
+   1594,
+   0,
+   1598,
+   0,
+   "AUDIO"
+  ],
+  [
+   2931,
+   1600,
+   0,
+   1599,
+   0,
+   "MELROFORMERMODEL"
+  ],
+  [
+   2932,
+   1598,
+   0,
+   1599,
+   1,
+   "AUDIO"
+  ],
+  [
+   2933,
+   1603,
+   0,
+   1602,
+   0,
+   "LATENT"
+  ],
+  [
+   2934,
+   1605,
+   0,
+   1603,
+   0,
+   "LATENT"
+  ],
+  [
+   2935,
+   1604,
+   0,
+   1603,
+   1,
+   "MASK"
+  ],
+  [
+   2936,
+   1601,
+   0,
+   1604,
+   1,
+   "INT"
+  ],
+  [
+   2937,
+   1595,
+   0,
+   1604,
+   2,
+   "INT"
+  ],
+  [
+   2939,
+   1597,
+   0,
+   1605,
+   1,
+   "VAE"
+  ],
+  [
+   2940,
+   1616,
+   0,
+   1615,
+   0,
+   "*"
+  ],
+  [
+   2941,
+   1598,
+   0,
+   1616,
+   0,
+   "AUDIO"
+  ],
+  [
+   2942,
+   1599,
+   0,
+   1616,
+   1,
+   "AUDIO"
+  ],
+  [
+   2945,
+   1622,
+   0,
+   1621,
+   0,
+   "CLIP"
+  ],
+  [
+   2950,
+   1622,
+   0,
+   1626,
+   0,
+   "CLIP"
+  ],
+  [
+   2953,
+   1628,
+   0,
+   445,
+   2,
+   "INT"
+  ],
+  [
+   2954,
+   1629,
+   0,
+   445,
+   3,
+   "INT"
+  ],
+  [
+   2955,
+   445,
+   0,
+   1630,
+   0,
+   "IMAGE"
+  ],
+  [
+   2956,
+   1630,
+   0,
+   1631,
+   0,
+   "IMAGE"
+  ],
+  [
+   2957,
+   1631,
+   0,
+   1633,
+   0,
+   "INT"
+  ],
+  [
+   2958,
+   1631,
+   1,
+   1634,
+   0,
+   "INT"
+  ],
+  [
+   2959,
+   1635,
+   0,
+   344,
+   2,
+   "INT"
+  ],
+  [
+   2960,
+   1636,
+   0,
+   164,
+   2,
+   "FLOAT"
+  ],
+  [
+   2961,
+   1621,
+   0,
+   164,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   2962,
+   1626,
+   0,
+   164,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   2963,
+   1560,
+   0,
+   268,
+   0,
+   "MODEL"
+  ],
+  [
+   2964,
+   1421,
+   0,
+   579,
+   0,
+   "SIGMAS"
+  ],
+  [
+   2966,
+   1639,
+   0,
+   1638,
+   0,
+   "INT"
+  ],
+  [
+   2967,
+   1640,
+   0,
+   1638,
+   1,
+   "FLOAT"
+  ],
+  [
+   2968,
+   1638,
+   0,
+   1641,
+   0,
+   "FLOAT"
+  ],
+  [
+   2977,
+   1603,
+   0,
+   350,
+   1,
+   "LATENT"
+  ],
+  [
+   2979,
+   1649,
+   0,
+   503,
+   2,
+   "VAE"
+  ],
+  [
+   2983,
+   1583,
+   0,
+   1651,
+   0,
+   "INT"
+  ],
+  [
+   2984,
+   1586,
+   0,
+   1651,
+   1,
+   "FLOAT"
+  ],
+  [
+   2985,
+   1651,
+   1,
+   1578,
+   0,
+   "INT"
+  ],
+  [
+   2990,
+   1616,
+   0,
+   1653,
+   0,
+   "AUDIO"
+  ],
+  [
+   2992,
+   1654,
+   0,
+   1653,
+   2,
+   "FLOAT"
+  ],
+  [
+   2995,
+   1593,
+   0,
+   1598,
+   2,
+   "FLOAT"
+  ],
+  [
+   3066,
+   1652,
+   0,
+   1593,
+   1,
+   "INT"
+  ],
+  [
+   3069,
+   1610,
+   0,
+   1699,
+   0,
+   "INT"
+  ],
+  [
+   3070,
+   1700,
+   0,
+   1699,
+   1,
+   "FLOAT"
+  ],
+  [
+   3071,
+   1699,
+   1,
+   1584,
+   0,
+   "INT"
+  ],
+  [
+   3094,
+   1610,
+   0,
+   1707,
+   0,
+   "INT"
+  ],
+  [
+   3160,
+   1318,
+   0,
+   1716,
+   0,
+   "IMAGE"
+  ],
+  [
+   3166,
+   1641,
+   0,
+   1593,
+   0,
+   "INT,FLOAT,BOOLEAN"
+  ],
+  [
+   3167,
+   1725,
+   0,
+   1593,
+   2,
+   "INT"
+  ],
+  [
+   3210,
+   1722,
+   0,
+   1738,
+   0,
+   "FLOAT"
+  ],
+  [
+   3213,
+   1570,
+   0,
+   1741,
+   0,
+   "MODEL"
+  ],
+  [
+   3214,
+   1318,
+   0,
+   1742,
+   0,
+   "IMAGE"
+  ],
+  [
+   3217,
+   1594,
+   0,
+   1605,
+   0,
+   "AUDIO"
+  ],
+  [
+   3223,
+   1523,
+   0,
+   508,
+   0,
+   "MODEL"
+  ],
+  [
+   3224,
+   1746,
+   0,
+   445,
+   0,
+   "IMAGE"
+  ],
+  [
+   3225,
+   444,
+   0,
+   1746,
+   0,
+   "IMAGE"
+  ],
+  [
+   3226,
+   1746,
+   1,
+   1576,
+   0,
+   "INT"
+  ],
+  [
+   3227,
+   1746,
+   2,
+   1575,
+   0,
+   "INT"
+  ],
+  [
+   3228,
+   1606,
+   0,
+   1746,
+   2,
+   "INT"
+  ],
+  [
+   3229,
+   1606,
+   0,
+   1746,
+   3,
+   "INT"
+  ],
+  [
+   3230,
+   582,
+   0,
+   1747,
+   1,
+   "AUDIO"
+  ],
+  [
+   3233,
+   1637,
+   0,
+   1747,
+   4,
+   "FLOAT"
+  ],
+  [
+   3235,
+   1750,
+   0,
+   350,
+   0,
+   "LATENT"
+  ],
+  [
+   3236,
+   413,
+   0,
+   1750,
+   0,
+   "VAE"
+  ],
+  [
+   3237,
+   344,
+   0,
+   1750,
+   1,
+   "LATENT"
+  ],
+  [
+   3239,
+   446,
+   0,
+   1750,
+   4,
+   "IMAGE"
+  ],
+  [
+   3241,
+   1754,
+   0,
+   1753,
+   0,
+   "STRING"
+  ],
+  [
+   3243,
+   1624,
+   0,
+   1753,
+   1,
+   "STRING"
+  ],
+  [
+   3246,
+   1753,
+   0,
+   1621,
+   1,
+   "STRING"
+  ],
+  [
+   3247,
+   164,
+   1,
+   508,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   3248,
+   1740,
+   0,
+   1750,
+   5,
+   "FLOAT"
+  ],
+  [
+   3250,
+   1760,
+   0,
+   1759,
+   0,
+   "*"
+  ],
+  [
+   3251,
+   1748,
+   0,
+   1760,
+   0,
+   "IMAGE"
+  ],
+  [
+   3252,
+   1759,
+   0,
+   1747,
+   0,
+   "IMAGE"
+  ]
+ ],
  "groups": [
   {
    "id": 32,

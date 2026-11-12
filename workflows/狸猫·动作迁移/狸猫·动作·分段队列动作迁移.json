@@ -58,7 +58,7 @@
      "localized_name": "any",
      "name": "any",
      "type": "*",
-     "link": null
+     "link": 40
     },
     {
      "label": "模式",
@@ -146,7 +146,7 @@
      "label": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": null
+     "link": 43
     }
    ],
    "outputs": [
@@ -154,7 +154,9 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      40
+     ]
     }
    ],
    "title": "Set_视频输出",
@@ -198,7 +200,7 @@
      "label": "输入",
      "name": "WANVIDIMAGE_CLIPEMBEDS",
      "type": "WANVIDIMAGE_CLIPEMBEDS",
-     "link": null
+     "link": 659
     }
    ],
    "outputs": [
@@ -249,7 +251,7 @@
      "label": "输入",
      "name": "WANVIDEOMODEL",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 57
     }
    ],
    "outputs": [
@@ -298,14 +300,14 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 58
     },
     {
      "localized_name": "block_swap_args",
      "name": "block_swap_args",
      "shape": 7,
      "type": "BLOCKSWAPARGS",
-     "link": null
+     "link": 59
     }
    ],
    "outputs": [
@@ -313,7 +315,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": []
+     "links": [
+      57
+     ]
     }
    ],
    "properties": {
@@ -387,7 +391,9 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      94
+     ]
     }
    ],
    "title": "Get_宽度",
@@ -432,7 +438,9 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      95
+     ]
     }
    ],
    "title": "Get_高度",
@@ -476,7 +484,7 @@
      "localized_name": "输入",
      "name": "FLOAT",
      "type": "FLOAT",
-     "link": null
+     "link": 104
     }
    ],
    "outputs": [
@@ -570,7 +578,9 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      797
+     ]
     }
    ],
    "title": "Get_视频输出",
@@ -611,13 +621,13 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "WANVAE",
-     "link": null
+     "link": 41
     },
     {
      "localized_name": "samples",
      "name": "samples",
      "type": "LATENT",
-     "link": null
+     "link": 42
     },
     {
      "localized_name": "enable_vae_tiling",
@@ -680,7 +690,9 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      43
+     ]
     }
    ],
    "properties": {
@@ -729,7 +741,9 @@
      "localized_name": "输出",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      302
+     ]
     }
    ],
    "title": "Get_帧率",
@@ -773,7 +787,10 @@
      "label": "输出",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      653,
+      791
+     ]
     }
    ],
    "title": "Get_总帧数",
@@ -858,7 +875,9 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      91
+     ]
     }
    ],
    "title": "Get_宽度",
@@ -902,7 +921,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": null
+     "link": 149
     }
    ],
    "outputs": [
@@ -1000,7 +1019,9 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "WANVAE",
-     "links": []
+     "links": [
+      63
+     ]
     }
    ],
    "properties": {
@@ -1047,7 +1068,9 @@
      "localized_name": "输出",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      116
+     ]
     }
    ],
    "title": "Get_帧率",
@@ -1091,7 +1114,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": null
+     "link": 103
     }
    ],
    "outputs": [
@@ -1146,7 +1169,9 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      74
+     ]
     }
    ],
    "title": "Get_输入视频",
@@ -1189,7 +1214,10 @@
      "label": "输出",
      "name": "WANVAE",
      "type": "WANVAE",
-     "links": []
+     "links": [
+      41,
+      642
+     ]
     }
    ],
    "title": "Get_VAE",
@@ -1233,7 +1261,9 @@
      "label": "输出",
      "name": "WANVIDEOMODEL",
      "type": "WANVIDEOMODEL",
-     "links": []
+     "links": [
+      33
+     ]
     }
    ],
    "title": "Get_模型",
@@ -1276,7 +1306,9 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      92
+     ]
     }
    ],
    "title": "Get_高度",
@@ -1320,7 +1352,7 @@
      "localized_name": "输入",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 113
     }
    ],
    "outputs": [
@@ -1373,7 +1405,7 @@
      "localized_name": "输入",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 112
     }
    ],
    "outputs": [
@@ -1426,7 +1458,9 @@
      "label": "输出",
      "name": "WANVIDIMAGE_CLIPEMBEDS",
      "type": "WANVIDIMAGE_CLIPEMBEDS",
-     "links": []
+     "links": [
+      643
+     ]
     }
    ],
    "title": "Get_视觉clip",
@@ -1468,7 +1502,9 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      649
+     ]
     }
    ],
    "title": "Get_pose_video_mask",
@@ -1513,7 +1549,9 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      650
+     ]
     }
    ],
    "title": "Get_reference_image_mask",
@@ -1629,7 +1667,7 @@
      "label": "输入",
      "name": "WANVAE",
      "type": "WANVAE",
-     "link": null
+     "link": 63
     }
    ],
    "outputs": [
@@ -1681,7 +1719,9 @@
      "label": "输出",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      651
+     ]
     }
    ],
    "title": "Get_宽度",
@@ -1726,7 +1766,9 @@
      "localized_name": "输出",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": []
+     "links": [
+      782
+     ]
     }
    ],
    "title": "Get_替换模式",
@@ -1776,7 +1818,9 @@
      "localized_name": "CLIP视觉",
      "name": "CLIP_VISION",
      "type": "CLIP_VISION",
-     "links": []
+     "links": [
+      657
+     ]
     }
    ],
    "properties": {
@@ -1817,7 +1861,7 @@
      "localized_name": "sampler_inputs",
      "name": "sampler_inputs",
      "type": "SAMPLER_ARGS",
-     "link": null
+     "link": 39
     }
    ],
    "outputs": [
@@ -1825,7 +1869,9 @@
      "localized_name": "samples",
      "name": "samples",
      "type": "LATENT",
-     "links": []
+     "links": [
+      42
+     ]
     },
     {
      "localized_name": "denoised_samples",
@@ -1938,7 +1984,9 @@
      "localized_name": "block_swap_args",
      "name": "block_swap_args",
      "type": "BLOCKSWAPARGS",
-     "links": []
+     "links": [
+      59
+     ]
     }
    ],
    "properties": {
@@ -1987,7 +2035,9 @@
      "label": "输出",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      652
+     ]
     }
    ],
    "title": "Get_高度",
@@ -2142,7 +2192,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": []
+     "links": [
+      61
+     ]
     }
    ],
    "properties": {
@@ -2190,7 +2242,7 @@
      "localized_name": "输入",
      "name": "AUDIO",
      "type": "AUDIO",
-     "link": null
+     "link": 107
     }
    ],
    "outputs": [
@@ -2243,7 +2295,7 @@
      "localized_name": "输入",
      "name": "INT",
      "type": "INT",
-     "link": null
+     "link": 102
     }
    ],
    "outputs": [
@@ -2305,7 +2357,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      764
+     ]
     }
    ],
    "title": "跳过帧数",
@@ -2350,7 +2404,9 @@
      "localized_name": "输出",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      115
+     ]
     }
    ],
    "title": "Get_输入音频",
@@ -2391,14 +2447,14 @@
      "localized_name": "驱动追踪数据",
      "name": "driving_track_data",
      "type": "SAM3_TRACK_DATA",
-     "link": null
+     "link": 218
     },
     {
      "localized_name": "参考追踪数据",
      "name": "ref_track_data",
      "shape": 7,
      "type": "SAM3_TRACK_DATA",
-     "link": null
+     "link": 219
     },
     {
      "localized_name": "前缀追踪数据",
@@ -2441,7 +2497,7 @@
      "widget": {
       "name": "replacement_mode"
      },
-     "link": null
+     "link": 757
     },
     {
      "localized_name": "渲染设备",
@@ -2458,13 +2514,19 @@
      "localized_name": "姿态视频遮罩",
      "name": "pose_video_mask",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      222,
+      257
+     ]
     },
     {
      "localized_name": "参考图像遮罩",
      "name": "reference_image_mask",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      220,
+      258
+     ]
     },
     {
      "localized_name": "前缀图像遮罩",
@@ -2514,7 +2576,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 220
     }
    ],
    "outputs": [
@@ -2564,7 +2626,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": null
+     "link": 257
     }
    ],
    "outputs": [
@@ -2617,7 +2679,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": null
+     "link": 258
     }
    ],
    "outputs": [
@@ -2678,13 +2740,18 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      75,
+      79
+     ]
     },
     {
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      73
+     ]
     },
     {
      "localized_name": "VAE",
@@ -2730,7 +2797,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 73
     },
     {
      "localized_name": "文本",
@@ -2747,7 +2814,10 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      76,
+      80
+     ]
     }
    ],
    "properties": {
@@ -2788,7 +2858,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 222
     },
     {
      "label": "音频",
@@ -2821,7 +2891,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": null
+     "link": 302
     },
     {
      "label": "循环次数",
@@ -2984,7 +3054,9 @@
      "name": "SEED",
      "shape": 3,
      "type": "INT",
-     "links": []
+     "links": [
+      656
+     ]
     }
    ],
    "properties": {
@@ -3032,7 +3104,9 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      644
+     ]
     }
    ],
    "title": "Get_输入图像",
@@ -3077,7 +3151,9 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      716
+     ]
     }
    ],
    "title": "Get_输入视频",
@@ -3120,7 +3196,9 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      773
+     ]
     }
    ],
    "title": "Get_输入图像",
@@ -3173,7 +3251,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      768
+     ]
     }
    ],
    "title": "读取帧数",
@@ -3215,7 +3295,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 724
     },
     {
      "label": "遮罩",
@@ -3233,7 +3313,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 94
     },
     {
      "label": "高度",
@@ -3243,7 +3323,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 95
     },
     {
      "label": "缩放方法",
@@ -3313,7 +3393,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      103
+     ]
     },
     {
      "label": "宽度",
@@ -3389,14 +3471,14 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 74
     },
     {
      "label": "model",
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 75
     },
     {
      "label": "initial_mask",
@@ -3412,7 +3494,7 @@
      "name": "conditioning",
      "shape": 7,
      "type": "CONDITIONING",
-     "link": null
+     "link": 76
     },
     {
      "localized_name": "检测阈值",
@@ -3447,7 +3529,9 @@
      "localized_name": "跟踪数据",
      "name": "track_data",
      "type": "SAM3_TRACK_DATA",
-     "links": []
+     "links": [
+      218
+     ]
     }
    ],
    "properties": {
@@ -3490,14 +3574,14 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 557
     },
     {
      "label": "model",
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 79
     },
     {
      "label": "initial_mask",
@@ -3513,7 +3597,7 @@
      "name": "conditioning",
      "shape": 7,
      "type": "CONDITIONING",
-     "link": null
+     "link": 80
     },
     {
      "localized_name": "检测阈值",
@@ -3548,7 +3632,9 @@
      "localized_name": "跟踪数据",
      "name": "track_data",
      "type": "SAM3_TRACK_DATA",
-     "links": []
+     "links": [
+      219
+     ]
     }
    ],
    "properties": {
@@ -3591,7 +3677,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 90
     },
     {
      "label": "遮罩",
@@ -3609,7 +3695,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 91
     },
     {
      "label": "高度",
@@ -3619,7 +3705,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 92
     },
     {
      "label": "缩放方法",
@@ -3689,7 +3775,10 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      149,
+      781
+     ]
     },
     {
      "label": "宽度",
@@ -3887,7 +3976,9 @@
      "localized_name": "输出",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": []
+     "links": [
+      757
+     ]
     }
    ],
    "title": "Get_替换模式",
@@ -3928,7 +4019,7 @@
      "localized_name": "输入",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "link": null
+     "link": 783
     }
    ],
    "outputs": [
@@ -3987,7 +4078,9 @@
      "localized_name": "布尔",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": []
+     "links": [
+      783
+     ]
     }
    ],
    "title": "ture =  动作迁移  |   false = 人物替换",
@@ -4028,7 +4121,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 781
     }
    ],
    "outputs": [
@@ -4072,13 +4165,13 @@
      "localized_name": "clip_vision",
      "name": "clip_vision",
      "type": "CLIP_VISION",
-     "link": null
+     "link": 657
     },
     {
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 773
     },
     {
      "localized_name": "negative_image",
@@ -4149,7 +4242,9 @@
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_CLIPEMBEDS",
-     "links": []
+     "links": [
+      659
+     ]
     }
    ],
    "properties": {
@@ -4194,20 +4289,20 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 33
     },
     {
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_EMBEDS",
-     "link": null
+     "link": 655
     },
     {
      "localized_name": "text_embeds",
      "name": "text_embeds",
      "shape": 7,
      "type": "WANVIDEOTEXTEMBEDS",
-     "link": null
+     "link": 35
     },
     {
      "localized_name": "samples",
@@ -4228,7 +4323,7 @@
      "name": "context_options",
      "shape": 7,
      "type": "WANVIDCONTEXT",
-     "link": null
+     "link": 759
     },
     {
      "localized_name": "cache_args",
@@ -4341,7 +4436,7 @@
      "widget": {
       "name": "seed"
      },
-     "link": null
+     "link": 656
     },
     {
      "localized_name": "force_offload",
@@ -4536,7 +4631,9 @@
      "localized_name": "sampler_inputs",
      "name": "sampler_inputs",
      "type": "SAMPLER_ARGS",
-     "links": []
+     "links": [
+      39
+     ]
     }
    ],
    "properties": {
@@ -4612,7 +4709,9 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      112
+     ]
     }
    ],
    "title": "宽",
@@ -4669,7 +4768,9 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": []
+     "links": [
+      113
+     ]
     }
    ],
    "title": "高",
@@ -4771,7 +4872,7 @@
      "widget": {
       "name": "frame_load_cap"
      },
-     "link": null
+     "link": 768
     },
     {
      "label": "跳过前X帧",
@@ -4781,7 +4882,7 @@
      "widget": {
       "name": "skip_first_frames"
      },
-     "link": null
+     "link": 764
     },
     {
      "label": "间隔",
@@ -4811,7 +4912,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      724
+     ]
     },
     {
      "label": "帧计数",
@@ -4825,14 +4928,18 @@
      "localized_name": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      107
+     ]
     },
     {
      "label": "视频信息",
      "localized_name": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "links": []
+     "links": [
+      101
+     ]
     }
    ],
    "properties": {
@@ -5009,7 +5116,9 @@
      "localized_name": "context_options",
      "name": "context_options",
      "type": "WANVIDCONTEXT",
-     "links": []
+     "links": [
+      759
+     ]
     }
    ],
    "properties": {
@@ -5055,21 +5164,21 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "WANVAE",
-     "link": null
+     "link": 642
     },
     {
      "localized_name": "clip_embeds",
      "name": "clip_embeds",
      "shape": 7,
      "type": "WANVIDIMAGE_CLIPEMBEDS",
-     "link": null
+     "link": 643
     },
     {
      "localized_name": "ref_image",
      "name": "ref_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 644
     },
     {
      "localized_name": "bg_image",
@@ -5083,7 +5192,7 @@
      "name": "pose_images",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 716
     },
     {
      "localized_name": "prefix_frames",
@@ -5111,14 +5220,14 @@
      "name": "pose_image_mask",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 649
     },
     {
      "localized_name": "reference_image_mask",
      "name": "reference_image_mask",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 650
     },
     {
      "localized_name": "width",
@@ -5127,7 +5236,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 651
     },
     {
      "localized_name": "height",
@@ -5136,7 +5245,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 652
     },
     {
      "localized_name": "num_frames",
@@ -5145,7 +5254,7 @@
      "widget": {
       "name": "num_frames"
      },
-     "link": null
+     "link": 653
     },
     {
      "localized_name": "frame_window_size",
@@ -5154,7 +5263,7 @@
      "widget": {
       "name": "frame_window_size"
      },
-     "link": null
+     "link": 791
     },
     {
      "localized_name": "force_offload",
@@ -5240,7 +5349,7 @@
      "widget": {
       "name": "preserve_main_ref_background"
      },
-     "link": null
+     "link": 782
     },
     {
      "localized_name": "single_frame_prefix_encoding",
@@ -5268,7 +5377,9 @@
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_EMBEDS",
-     "links": []
+     "links": [
+      655
+     ]
     }
    ],
    "properties": {
@@ -5326,7 +5437,9 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      557
+     ]
     }
    ],
    "title": "Get_输入图像",
@@ -5367,7 +5480,7 @@
      "localized_name": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "link": null
+     "link": 101
     }
    ],
    "outputs": [
@@ -5376,14 +5489,20 @@
      "localized_name": "fps🟦",
      "name": "fps🟦",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      104,
+      799
+     ]
     },
     {
      "label": "帧数🟦",
      "localized_name": "frame_count🟦",
      "name": "frame_count🟦",
      "type": "INT",
-     "links": []
+     "links": [
+      102,
+      800
+     ]
     },
     {
      "label": "时长🟦",
@@ -5563,7 +5682,9 @@
      "localized_name": "text_embeds",
      "name": "text_embeds",
      "type": "WANVIDEOTEXTEMBEDS",
-     "links": []
+     "links": [
+      35
+     ]
     },
     {
      "label": "负面文本嵌入",
@@ -5700,7 +5821,7 @@
      "name": "prev_lora",
      "shape": 7,
      "type": "WANVIDLORA",
-     "link": null
+     "link": 794
     },
     {
      "localized_name": "blocks",
@@ -5825,7 +5946,9 @@
      "localized_name": "lora",
      "name": "lora",
      "type": "WANVIDLORA",
-     "links": []
+     "links": [
+      795
+     ]
     }
    ],
    "properties": {
@@ -5930,7 +6053,9 @@
      "localized_name": "lora",
      "name": "lora",
      "type": "WANVIDLORA",
-     "links": []
+     "links": [
+      794
+     ]
     }
    ],
    "properties": {
@@ -5973,14 +6098,14 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": null
+     "link": 61
     },
     {
      "localized_name": "lora",
      "name": "lora",
      "shape": 7,
      "type": "WANVIDLORA",
-     "link": null
+     "link": 795
     }
    ],
    "outputs": [
@@ -5988,7 +6113,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": []
+     "links": [
+      58
+     ]
     }
    ],
    "properties": {
@@ -6049,7 +6176,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      90
+     ]
     },
     {
      "label": "MASK",
@@ -6135,7 +6264,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 797
     },
     {
      "localized_name": "offload_model",
@@ -6161,7 +6290,9 @@
      "localized_name": "output",
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      796
+     ]
     }
    ],
    "properties": {
@@ -6203,7 +6334,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 798
     },
     {
      "label": "音频",
@@ -6211,7 +6342,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 115
     },
     {
      "label": "批次管理",
@@ -6237,7 +6368,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": null
+     "link": 116
     },
     {
      "label": "循环次数",
@@ -6416,7 +6547,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 796
     },
     {
      "localized_name": "clean_file_cache",
@@ -6460,7 +6591,9 @@
      "localized_name": "output",
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      798
+     ]
     }
    ],
    "properties": {
@@ -6503,13 +6636,13 @@
      "localized_name": "帧率",
      "name": "帧率",
      "type": "FLOAT",
-     "link": null
+     "link": 799
     },
     {
      "localized_name": "总帧数",
      "name": "总帧数",
      "type": "INT",
-     "link": null
+     "link": 800
     },
     {
      "localized_name": "分段数",
@@ -6944,7 +7077,576 @@
    ]
   }
  ],
- "links": [],
+ "links": [
+  [
+   33,
+   57,
+   0,
+   40,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   35,
+   58,
+   0,
+   40,
+   2,
+   "WANVIDEOTEXTEMBEDS"
+  ],
+  [
+   39,
+   40,
+   0,
+   41,
+   0,
+   "SAMPLER_ARGS"
+  ],
+  [
+   40,
+   44,
+   0,
+   42,
+   0,
+   "*"
+  ],
+  [
+   41,
+   47,
+   0,
+   43,
+   0,
+   "WANVAE"
+  ],
+  [
+   42,
+   41,
+   0,
+   43,
+   1,
+   "LATENT"
+  ],
+  [
+   43,
+   43,
+   0,
+   44,
+   0,
+   "IMAGE"
+  ],
+  [
+   57,
+   62,
+   0,
+   61,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   58,
+   69,
+   0,
+   62,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   59,
+   67,
+   0,
+   62,
+   1,
+   "BLOCKSWAPARGS"
+  ],
+  [
+   61,
+   37,
+   0,
+   69,
+   0,
+   "WANVIDEOMODEL"
+  ],
+  [
+   63,
+   71,
+   0,
+   70,
+   0,
+   "WANVAE"
+  ],
+  [
+   73,
+   78,
+   1,
+   75,
+   0,
+   "CLIP"
+  ],
+  [
+   74,
+   76,
+   0,
+   79,
+   0,
+   "IMAGE"
+  ],
+  [
+   75,
+   78,
+   0,
+   79,
+   1,
+   "MODEL"
+  ],
+  [
+   76,
+   75,
+   0,
+   79,
+   3,
+   "CONDITIONING"
+  ],
+  [
+   79,
+   78,
+   0,
+   81,
+   1,
+   "MODEL"
+  ],
+  [
+   80,
+   75,
+   0,
+   81,
+   3,
+   "CONDITIONING"
+  ],
+  [
+   90,
+   108,
+   0,
+   89,
+   0,
+   "IMAGE"
+  ],
+  [
+   91,
+   87,
+   0,
+   89,
+   2,
+   "INT"
+  ],
+  [
+   92,
+   85,
+   0,
+   89,
+   3,
+   "INT"
+  ],
+  [
+   94,
+   98,
+   0,
+   90,
+   2,
+   "INT"
+  ],
+  [
+   95,
+   99,
+   0,
+   90,
+   3,
+   "INT"
+  ],
+  [
+   101,
+   112,
+   3,
+   101,
+   0,
+   "VHS_VIDEOINFO"
+  ],
+  [
+   102,
+   101,
+   1,
+   102,
+   0,
+   "INT"
+  ],
+  [
+   103,
+   90,
+   0,
+   103,
+   0,
+   "IMAGE"
+  ],
+  [
+   104,
+   101,
+   0,
+   104,
+   0,
+   "FLOAT"
+  ],
+  [
+   107,
+   112,
+   2,
+   107,
+   0,
+   "AUDIO"
+  ],
+  [
+   112,
+   115,
+   0,
+   113,
+   0,
+   "INT"
+  ],
+  [
+   113,
+   116,
+   0,
+   114,
+   0,
+   "INT"
+  ],
+  [
+   115,
+   118,
+   0,
+   119,
+   1,
+   "AUDIO"
+  ],
+  [
+   116,
+   117,
+   0,
+   119,
+   4,
+   "FLOAT"
+  ],
+  [
+   149,
+   89,
+   0,
+   88,
+   0,
+   "IMAGE"
+  ],
+  [
+   218,
+   79,
+   0,
+   197,
+   0,
+   "SAM3_TRACK_DATA"
+  ],
+  [
+   219,
+   81,
+   0,
+   197,
+   1,
+   "SAM3_TRACK_DATA"
+  ],
+  [
+   220,
+   197,
+   1,
+   198,
+   0,
+   "IMAGE"
+  ],
+  [
+   222,
+   197,
+   0,
+   200,
+   0,
+   "IMAGE"
+  ],
+  [
+   257,
+   197,
+   0,
+   80,
+   0,
+   "IMAGE"
+  ],
+  [
+   258,
+   197,
+   1,
+   84,
+   0,
+   "IMAGE"
+  ],
+  [
+   302,
+   121,
+   0,
+   200,
+   4,
+   "FLOAT"
+  ],
+  [
+   557,
+   332,
+   0,
+   81,
+   0,
+   "IMAGE"
+  ],
+  [
+   642,
+   47,
+   0,
+   347,
+   0,
+   "WANVAE"
+  ],
+  [
+   643,
+   48,
+   0,
+   347,
+   1,
+   "WANVIDIMAGE_CLIPEMBEDS"
+  ],
+  [
+   644,
+   49,
+   0,
+   347,
+   2,
+   "IMAGE"
+  ],
+  [
+   649,
+   51,
+   0,
+   347,
+   8,
+   "IMAGE"
+  ],
+  [
+   650,
+   140,
+   0,
+   347,
+   9,
+   "IMAGE"
+  ],
+  [
+   651,
+   53,
+   0,
+   347,
+   10,
+   "INT"
+  ],
+  [
+   652,
+   54,
+   0,
+   347,
+   11,
+   "INT"
+  ],
+  [
+   653,
+   55,
+   0,
+   347,
+   12,
+   "INT"
+  ],
+  [
+   655,
+   347,
+   0,
+   40,
+   1,
+   "WANVIDIMAGE_EMBEDS"
+  ],
+  [
+   656,
+   45,
+   0,
+   40,
+   20,
+   "INT"
+  ],
+  [
+   657,
+   68,
+   0,
+   350,
+   0,
+   "CLIP_VISION"
+  ],
+  [
+   659,
+   350,
+   0,
+   59,
+   0,
+   "WANVIDIMAGE_CLIPEMBEDS"
+  ],
+  [
+   716,
+   401,
+   0,
+   347,
+   4,
+   "IMAGE"
+  ],
+  [
+   724,
+   112,
+   0,
+   90,
+   0,
+   "IMAGE"
+  ],
+  [
+   757,
+   204,
+   0,
+   197,
+   6,
+   "BOOLEAN"
+  ],
+  [
+   759,
+   440,
+   0,
+   40,
+   5,
+   "WANVIDCONTEXT"
+  ],
+  [
+   764,
+   111,
+   0,
+   112,
+   7,
+   "INT"
+  ],
+  [
+   768,
+   110,
+   0,
+   112,
+   6,
+   "INT"
+  ],
+  [
+   773,
+   379,
+   0,
+   350,
+   1,
+   "IMAGE"
+  ],
+  [
+   781,
+   89,
+   0,
+   466,
+   0,
+   "IMAGE"
+  ],
+  [
+   782,
+   129,
+   0,
+   347,
+   22,
+   "BOOLEAN"
+  ],
+  [
+   783,
+   468,
+   0,
+   467,
+   0,
+   "BOOLEAN"
+  ],
+  [
+   791,
+   55,
+   0,
+   347,
+   13,
+   "INT"
+  ],
+  [
+   794,
+   485,
+   0,
+   484,
+   0,
+   "WANVIDLORA"
+  ],
+  [
+   795,
+   484,
+   0,
+   69,
+   1,
+   "WANVIDLORA"
+  ],
+  [
+   796,
+   487,
+   0,
+   486,
+   0,
+   "*"
+  ],
+  [
+   797,
+   153,
+   0,
+   487,
+   0,
+   "IMAGE"
+  ],
+  [
+   798,
+   486,
+   0,
+   119,
+   0,
+   "IMAGE"
+  ],
+  [
+   799,
+   101,
+   0,
+   488,
+   0,
+   "FLOAT"
+  ],
+  [
+   800,
+   101,
+   1,
+   488,
+   1,
+   "INT"
+  ]
+ ],
  "groups": [
   {
    "id": 33,

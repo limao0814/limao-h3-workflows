@@ -24,7 +24,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 11
     },
     {
      "label": "scheduler",
@@ -60,7 +60,10 @@
      "localized_name": "Sigmas",
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      7,
+      72
+     ]
     }
    ],
    "properties": {
@@ -105,7 +108,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 18
     },
     {
      "label": "mask",
@@ -122,7 +125,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 19
     },
     {
      "label": "height",
@@ -196,14 +199,18 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      24
+     ]
     },
     {
      "label": "width",
      "localized_name": "width",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      22
+     ]
     },
     {
      "label": "height",
@@ -267,7 +274,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 3
     },
     {
      "label": "text",
@@ -285,7 +292,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      4
+     ]
     }
    ],
    "properties": {
@@ -326,7 +335,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 21
     },
     {
      "label": "mask",
@@ -343,7 +352,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 22
     },
     {
      "label": "height",
@@ -417,14 +426,18 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      25
+     ]
     },
     {
      "label": "width",
      "localized_name": "width",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      38
+     ]
     },
     {
      "label": "height",
@@ -488,7 +501,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 206
     },
     {
      "label": "shift",
@@ -506,7 +519,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      11
+     ]
     }
    ],
    "properties": {
@@ -547,7 +562,7 @@
      "localized_name": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "link": null
+     "link": 30
     }
    ],
    "outputs": [
@@ -652,7 +667,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 37
     },
     {
      "label": "mask",
@@ -669,7 +684,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 38
     },
     {
      "label": "height",
@@ -743,7 +758,10 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      44,
+      53
+     ]
     },
     {
      "label": "width",
@@ -810,7 +828,7 @@
      "localized_name": "text",
      "name": "text",
      "type": "STRING",
-     "link": null
+     "link": 52
     }
    ],
    "outputs": [
@@ -858,7 +876,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 102
     },
     {
      "label": "mask",
@@ -875,7 +893,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 104
     },
     {
      "label": "height",
@@ -885,7 +903,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 105
     },
     {
      "label": "upscale_method",
@@ -949,21 +967,27 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      106
+     ]
     },
     {
      "label": "width",
      "localized_name": "width",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      109
+     ]
     },
     {
      "label": "height",
      "localized_name": "height",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      110
+     ]
     },
     {
      "label": "mask",
@@ -1023,7 +1047,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 109
     }
    ],
    "outputs": [
@@ -1071,7 +1095,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 110
     }
    ],
    "outputs": [
@@ -1118,7 +1142,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 64
     },
     {
      "label": "audio",
@@ -1126,7 +1150,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 63
     },
     {
      "label": "meta_batch",
@@ -1301,7 +1325,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 121
     },
     {
      "label": "audio",
@@ -1483,7 +1507,7 @@
      "localized_name": "遮罩",
      "name": "mask",
      "type": "MASK",
-     "link": null
+     "link": 120
     }
    ],
    "outputs": [
@@ -1492,7 +1516,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      121
+     ]
     }
    ],
    "properties": {
@@ -1529,7 +1555,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 209
     },
     {
      "label": "text",
@@ -1547,7 +1573,10 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      60,
+      116
+     ]
     }
    ],
    "properties": {
@@ -1588,7 +1617,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 41
     },
     {
      "label": "mask",
@@ -1605,7 +1634,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 42
     },
     {
      "label": "height",
@@ -1679,7 +1708,10 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      45,
+      195
+     ]
     },
     {
      "label": "width",
@@ -1750,7 +1782,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 192
     },
     {
      "label": "mask",
@@ -1839,14 +1871,24 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      193,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201
+     ]
     },
     {
      "label": "width",
      "localized_name": "width",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      164
+     ]
     },
     {
      "label": "height",
@@ -1907,49 +1949,49 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 68
     },
     {
      "label": "clip",
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 69
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 70
     },
     {
      "label": "sampler",
      "localized_name": "sampler",
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 71
     },
     {
      "label": "sigmas",
      "localized_name": "sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 72
     },
     {
      "label": "clip_vision",
      "localized_name": "clip_vision",
      "name": "clip_vision",
      "type": "CLIP_VISION",
-     "link": null
+     "link": 73
     },
     {
      "label": "pose_video",
      "localized_name": "pose_video",
      "name": "pose_video",
      "type": "IMAGE",
-     "link": null
+     "link": 188
     },
     {
      "label": "sam_model",
@@ -1957,7 +1999,7 @@
      "name": "sam_model",
      "shape": 7,
      "type": "MODEL",
-     "link": null
+     "link": 208
     },
     {
      "label": "sam_conditioning",
@@ -1965,7 +2007,7 @@
      "name": "sam_conditioning",
      "shape": 7,
      "type": "CONDITIONING",
-     "link": null
+     "link": 116
     },
     {
      "label": "reference_1",
@@ -1973,7 +2015,7 @@
      "name": "reference_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 196
     },
     {
      "label": "reference_2",
@@ -1981,7 +2023,7 @@
      "name": "reference_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 197
     },
     {
      "label": "segment_plan",
@@ -1991,7 +2033,7 @@
      "widget": {
       "name": "segment_plan"
      },
-     "link": null
+     "link": 79
     },
     {
      "label": "seed",
@@ -2134,28 +2176,28 @@
      "name": "reference_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 198
     },
     {
      "label": "reference_4",
      "name": "reference_4",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 200
     },
     {
      "label": "reference_5",
      "name": "reference_5",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 199
     },
     {
      "label": "reference_6",
      "name": "reference_6",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 201
     }
    ],
    "outputs": [
@@ -2164,7 +2206,11 @@
      "localized_name": "frames",
      "name": "frames",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      102,
+      111,
+      203
+     ]
     },
     {
      "label": "used_pose_video_mask",
@@ -2242,7 +2288,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 111
     },
     {
      "label": "audio",
@@ -2424,7 +2470,7 @@
      "localized_name": "image_1",
      "name": "image_1",
      "type": "IMAGE,MASK",
-     "link": null
+     "link": 202
     },
     {
      "label": "image_2",
@@ -2432,7 +2478,7 @@
      "name": "image_2",
      "shape": 7,
      "type": "IMAGE,MASK",
-     "link": null
+     "link": 203
     },
     {
      "label": "inputcount",
@@ -2468,7 +2514,9 @@
      "localized_name": "output",
      "name": "output",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      204
+     ]
     }
    ],
    "properties": {
@@ -2510,7 +2558,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 204
     },
     {
      "label": "audio",
@@ -2692,7 +2740,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 113
     },
     {
      "label": "audio",
@@ -2871,7 +2919,7 @@
      "localized_name": "full_body_video",
      "name": "full_body_video",
      "type": "IMAGE",
-     "link": null
+     "link": 55
     },
     {
      "label": "head_masks",
@@ -2886,7 +2934,7 @@
      "name": "sam_model",
      "shape": 7,
      "type": "MODEL",
-     "link": null
+     "link": 207
     },
     {
      "label": "head_conditioning",
@@ -2894,7 +2942,7 @@
      "name": "head_conditioning",
      "shape": 7,
      "type": "CONDITIONING",
-     "link": null
+     "link": 60
     },
     {
      "label": "crop_padding_ratio",
@@ -2993,14 +3041,21 @@
      "localized_name": "face_crop_video",
      "name": "face_crop_video",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      122,
+      162,
+      180
+     ]
     },
     {
      "label": "crop_masks",
      "localized_name": "crop_masks",
      "name": "crop_masks",
      "type": "MASK",
-     "links": []
+     "links": [
+      56,
+      120
+     ]
     },
     {
      "label": "crop_manifest",
@@ -3068,7 +3123,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 162
     }
    ],
    "outputs": [
@@ -3077,14 +3132,18 @@
      "localized_name": "宽度",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      104
+     ]
     },
     {
      "label": "height",
      "localized_name": "高度",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      105
+     ]
     },
     {
      "label": "batch_size",
@@ -3129,7 +3188,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 122
     },
     {
      "label": "mask",
@@ -3146,7 +3205,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 164
     },
     {
      "label": "height",
@@ -3220,7 +3279,11 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      126,
+      188,
+      202
+     ]
     },
     {
      "label": "width",
@@ -3289,7 +3352,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 193
     }
    ],
    "outputs": [
@@ -3710,7 +3773,10 @@
      "localized_name": "segment_plan",
      "name": "segment_plan",
      "type": "STRING",
-     "links": []
+     "links": [
+      67,
+      79
+     ]
     },
     {
      "label": "summary",
@@ -3799,7 +3865,7 @@
      "localized_name": "text",
      "name": "text",
      "type": "STRING",
-     "link": null
+     "link": 67
     }
    ],
    "outputs": [
@@ -3865,7 +3931,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      5
+     ]
     }
    ],
    "properties": {
@@ -3937,7 +4005,10 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      13,
+      69
+     ]
     }
    ],
    "properties": {
@@ -3980,7 +4051,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 5
     },
     {
      "label": "lora_name",
@@ -4007,7 +4078,11 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      6,
+      68,
+      206
+     ]
     }
    ],
    "properties": {
@@ -4060,14 +4135,21 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      1,
+      207,
+      208
+     ]
     },
     {
      "label": "CLIP",
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      3,
+      209
+     ]
     },
     {
      "label": "VAE",
@@ -4125,7 +4207,10 @@
      "localized_name": "CLIP视觉",
      "name": "CLIP_VISION",
      "type": "CLIP_VISION",
-     "links": []
+     "links": [
+      14,
+      73
+     ]
     }
    ],
    "properties": {
@@ -4177,7 +4262,10 @@
      "localized_name": "采样器",
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      9,
+      71
+     ]
     }
    ],
    "properties": {
@@ -4307,7 +4395,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      15
+     ]
     },
     {
      "label": "frame_count",
@@ -4321,14 +4411,20 @@
      "localized_name": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "links": []
+     "links": [
+      28,
+      63,
+      130
+     ]
     },
     {
      "label": "video_info",
      "localized_name": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "links": []
+     "links": [
+      30
+     ]
     }
    ],
    "properties": {
@@ -4389,14 +4485,14 @@
      "localized_name": "face_crop_video",
      "name": "face_crop_video",
      "type": "IMAGE",
-     "link": null
+     "link": 180
     },
     {
      "label": "reference_image",
      "localized_name": "reference_image",
      "name": "reference_image",
      "type": "IMAGE",
-     "link": null
+     "link": 194
     },
     {
      "label": "target_frame_index",
@@ -4540,7 +4636,9 @@
      "localized_name": "aligned_reference_image",
      "name": "aligned_reference_image",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      192
+     ]
     },
     {
      "label": "debug_preview",
@@ -4607,49 +4705,49 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 6
     },
     {
      "label": "clip",
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 13
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 12
     },
     {
      "label": "sampler",
      "localized_name": "sampler",
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 9
     },
     {
      "label": "sigmas",
      "localized_name": "sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 7
     },
     {
      "label": "clip_vision",
      "localized_name": "clip_vision",
      "name": "clip_vision",
      "type": "CLIP_VISION",
-     "link": null
+     "link": 14
     },
     {
      "label": "pose_video",
      "localized_name": "pose_video",
      "name": "pose_video",
      "type": "IMAGE",
-     "link": null
+     "link": 16
     },
     {
      "label": "sam_model",
@@ -4657,7 +4755,7 @@
      "name": "sam_model",
      "shape": 7,
      "type": "MODEL",
-     "link": null
+     "link": 1
     },
     {
      "label": "sam_conditioning",
@@ -4665,7 +4763,7 @@
      "name": "sam_conditioning",
      "shape": 7,
      "type": "CONDITIONING",
-     "link": null
+     "link": 4
     },
     {
      "label": "reference_1",
@@ -4673,7 +4771,7 @@
      "name": "reference_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 24
     },
     {
      "label": "reference_2",
@@ -4681,7 +4779,7 @@
      "name": "reference_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 25
     },
     {
      "label": "segment_plan",
@@ -4691,7 +4789,7 @@
      "widget": {
       "name": "segment_plan"
      },
-     "link": null
+     "link": 26
     },
     {
      "label": "seed",
@@ -4834,28 +4932,28 @@
      "name": "reference_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 45
     },
     {
      "label": "reference_4",
      "name": "reference_4",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 44
     },
     {
      "label": "reference_5",
      "name": "reference_5",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 53
     },
     {
      "label": "reference_6",
      "name": "reference_6",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 195
     }
    ],
    "outputs": [
@@ -4864,7 +4962,12 @@
      "localized_name": "frames",
      "name": "frames",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      50,
+      54,
+      55,
+      127
+     ]
     },
     {
      "label": "used_pose_video_mask",
@@ -4942,7 +5045,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 50
     },
     {
      "label": "audio",
@@ -4950,7 +5053,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 28
     },
     {
      "label": "meta_batch",
@@ -5125,7 +5228,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 126
     },
     {
      "label": "audio",
@@ -5307,21 +5410,21 @@
      "localized_name": "full_body_video",
      "name": "full_body_video",
      "type": "IMAGE",
-     "link": null
+     "link": 54
     },
     {
      "label": "refined_face_video",
      "localized_name": "refined_face_video",
      "name": "refined_face_video",
      "type": "IMAGE",
-     "link": null
+     "link": 106
     },
     {
      "label": "crop_masks",
      "localized_name": "crop_masks",
      "name": "crop_masks",
      "type": "MASK",
-     "link": null
+     "link": 56
     },
     {
      "label": "crop_manifest",
@@ -5427,7 +5530,10 @@
      "localized_name": "frames",
      "name": "frames",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      64,
+      128
+     ]
     },
     {
      "label": "summary",
@@ -5440,7 +5546,9 @@
      "localized_name": "debug_preview",
      "name": "debug_preview",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      113
+     ]
     }
    ],
    "properties": {
@@ -5488,7 +5596,7 @@
      "localized_name": "video",
      "name": "video",
      "type": "IMAGE",
-     "link": null
+     "link": 212
     },
     {
      "label": "planner_summary",
@@ -5496,7 +5604,7 @@
      "name": "planner_summary",
      "shape": 7,
      "type": "STRING",
-     "link": null
+     "link": 213
     },
     {
      "label": "mode",
@@ -5589,7 +5697,9 @@
      "localized_name": "paired_keyframes",
      "name": "paired_keyframes",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      210
+     ]
     },
     {
      "label": "contact_sheet",
@@ -5602,7 +5712,9 @@
      "localized_name": "summary",
      "name": "summary",
      "type": "STRING",
-     "links": []
+     "links": [
+      211
+     ]
     }
    ],
    "properties": {
@@ -5648,14 +5760,14 @@
      "localized_name": "paired_keyframes",
      "name": "paired_keyframes",
      "type": "IMAGE",
-     "link": null
+     "link": 210
     },
     {
      "label": "summary",
      "localized_name": "summary",
      "name": "summary",
      "type": "STRING",
-     "link": null
+     "link": 211
     },
     {
      "label": "filename_prefix",
@@ -5725,7 +5837,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 15
     },
     {
      "label": "mask",
@@ -5814,14 +5926,20 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      16,
+      212
+     ]
     },
     {
      "label": "width",
      "localized_name": "width",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      19,
+      42
+     ]
     },
     {
      "label": "height",
@@ -6254,14 +6372,19 @@
      "localized_name": "segment_plan",
      "name": "segment_plan",
      "type": "STRING",
-     "links": []
+     "links": [
+      26,
+      52
+     ]
     },
     {
      "label": "summary",
      "localized_name": "summary",
      "name": "summary",
      "type": "STRING",
-     "links": []
+     "links": [
+      213
+     ]
     }
    ],
    "properties": {
@@ -6355,7 +6478,10 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      12,
+      70
+     ]
     }
    ],
    "properties": {
@@ -6416,7 +6542,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      18
+     ]
     },
     {
      "label": "MASK",
@@ -6482,7 +6610,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      21
+     ]
     },
     {
      "label": "MASK",
@@ -6548,7 +6678,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      41
+     ]
     },
     {
      "label": "MASK",
@@ -6614,7 +6746,10 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      37,
+      194
+     ]
     },
     {
      "label": "MASK",
@@ -6660,7 +6795,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 129
     },
     {
      "label": "audio",
@@ -6668,7 +6803,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 130
     },
     {
      "label": "meta_batch",
@@ -6843,7 +6978,7 @@
      "localized_name": "image_1",
      "name": "image_1",
      "type": "IMAGE,MASK",
-     "link": null
+     "link": 127
     },
     {
      "label": "image_2",
@@ -6851,7 +6986,7 @@
      "name": "image_2",
      "shape": 7,
      "type": "IMAGE,MASK",
-     "link": null
+     "link": 128
     },
     {
      "label": "inputcount",
@@ -6887,7 +7022,9 @@
      "localized_name": "output",
      "name": "output",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      129
+     ]
     }
    ],
    "properties": {
@@ -7077,11 +7214,147 @@
  ],
  "links": [
   [
+   1,
+   3,
+   0,
+   2,
+   7,
+   "MODEL"
+  ],
+  [
+   3,
+   3,
+   1,
+   5,
+   0,
+   "CLIP"
+  ],
+  [
+   4,
+   5,
+   0,
+   2,
+   8,
+   "CONDITIONING"
+  ],
+  [
+   5,
+   6,
+   0,
+   7,
+   0,
+   "MODEL"
+  ],
+  [
+   6,
+   7,
+   0,
+   2,
+   0,
+   "MODEL"
+  ],
+  [
+   7,
+   8,
+   0,
+   2,
+   4,
+   "SIGMAS"
+  ],
+  [
+   9,
+   9,
+   0,
+   2,
+   3,
+   "SAMPLER"
+  ],
+  [
+   11,
+   10,
+   0,
+   8,
+   0,
+   "MODEL"
+  ],
+  [
+   12,
+   11,
+   0,
+   2,
+   2,
+   "VAE"
+  ],
+  [
+   13,
+   12,
+   0,
+   2,
+   1,
+   "CLIP"
+  ],
+  [
+   14,
+   13,
+   0,
+   2,
+   5,
+   "CLIP_VISION"
+  ],
+  [
+   15,
+   14,
+   0,
+   15,
+   0,
+   "IMAGE"
+  ],
+  [
+   16,
+   15,
+   0,
+   2,
+   6,
+   "IMAGE"
+  ],
+  [
+   18,
+   16,
+   0,
+   18,
+   0,
+   "IMAGE"
+  ],
+  [
+   19,
+   15,
+   1,
+   18,
+   2,
+   "INT"
+  ],
+  [
    20,
    15,
    2,
    18,
    3,
+   "INT"
+  ],
+  [
+   21,
+   17,
+   0,
+   19,
+   0,
+   "IMAGE"
+  ],
+  [
+   22,
+   18,
+   1,
+   19,
+   2,
    "INT"
   ],
   [
@@ -7093,11 +7366,67 @@
    "INT"
   ],
   [
+   24,
+   18,
+   0,
+   2,
+   9,
+   "IMAGE"
+  ],
+  [
+   25,
+   19,
+   0,
+   2,
+   10,
+   "IMAGE"
+  ],
+  [
+   26,
+   20,
+   0,
+   2,
+   11,
+   "STRING"
+  ],
+  [
+   28,
+   14,
+   2,
+   21,
+   1,
+   "AUDIO"
+  ],
+  [
+   30,
+   14,
+   3,
+   22,
+   0,
+   "VHS_VIDEOINFO"
+  ],
+  [
    31,
    22,
    6,
    2,
    15,
+   "INT"
+  ],
+  [
+   37,
+   28,
+   0,
+   29,
+   0,
+   "IMAGE"
+  ],
+  [
+   38,
+   19,
+   1,
+   29,
+   2,
    "INT"
   ],
   [
@@ -7109,6 +7438,22 @@
    "INT"
   ],
   [
+   41,
+   31,
+   0,
+   32,
+   0,
+   "IMAGE"
+  ],
+  [
+   42,
+   15,
+   1,
+   32,
+   2,
+   "INT"
+  ],
+  [
    43,
    15,
    2,
@@ -7117,11 +7462,163 @@
    "INT"
   ],
   [
+   44,
+   29,
+   0,
+   2,
+   28,
+   "IMAGE"
+  ],
+  [
+   45,
+   32,
+   0,
+   2,
+   27,
+   "IMAGE"
+  ],
+  [
+   50,
+   2,
+   0,
+   21,
+   0,
+   "IMAGE"
+  ],
+  [
+   52,
+   20,
+   0,
+   35,
+   0,
+   "STRING"
+  ],
+  [
+   53,
+   29,
+   0,
+   2,
+   29,
+   "IMAGE"
+  ],
+  [
+   54,
+   2,
+   0,
+   37,
+   0,
+   "IMAGE"
+  ],
+  [
+   55,
+   2,
+   0,
+   38,
+   0,
+   "IMAGE"
+  ],
+  [
+   56,
+   38,
+   1,
+   37,
+   2,
+   "MASK"
+  ],
+  [
+   60,
+   40,
+   0,
+   38,
+   3,
+   "CONDITIONING"
+  ],
+  [
    61,
    38,
    2,
    37,
    3,
+   "STRING"
+  ],
+  [
+   63,
+   14,
+   2,
+   41,
+   1,
+   "AUDIO"
+  ],
+  [
+   64,
+   37,
+   0,
+   41,
+   0,
+   "IMAGE"
+  ],
+  [
+   67,
+   44,
+   0,
+   45,
+   0,
+   "STRING"
+  ],
+  [
+   68,
+   7,
+   0,
+   46,
+   0,
+   "MODEL"
+  ],
+  [
+   69,
+   12,
+   0,
+   46,
+   1,
+   "CLIP"
+  ],
+  [
+   70,
+   11,
+   0,
+   46,
+   2,
+   "VAE"
+  ],
+  [
+   71,
+   9,
+   0,
+   46,
+   3,
+   "SAMPLER"
+  ],
+  [
+   72,
+   8,
+   0,
+   46,
+   4,
+   "SIGMAS"
+  ],
+  [
+   73,
+   13,
+   0,
+   46,
+   5,
+   "CLIP_VISION"
+  ],
+  [
+   79,
+   44,
+   0,
+   46,
+   11,
    "STRING"
   ],
   [
@@ -7133,12 +7630,348 @@
    "INT"
   ],
   [
+   102,
+   46,
+   0,
+   53,
+   0,
+   "IMAGE"
+  ],
+  [
+   104,
+   54,
+   0,
+   53,
+   2,
+   "INT"
+  ],
+  [
+   105,
+   54,
+   1,
+   53,
+   3,
+   "INT"
+  ],
+  [
+   106,
+   53,
+   0,
+   37,
+   1,
+   "IMAGE"
+  ],
+  [
+   109,
+   53,
+   1,
+   58,
+   0,
+   "INT"
+  ],
+  [
+   110,
+   53,
+   2,
+   59,
+   0,
+   "INT"
+  ],
+  [
+   111,
+   46,
+   0,
+   60,
+   0,
+   "IMAGE"
+  ],
+  [
+   113,
+   37,
+   2,
+   63,
+   0,
+   "IMAGE"
+  ],
+  [
+   116,
+   40,
+   0,
+   46,
+   8,
+   "CONDITIONING"
+  ],
+  [
+   120,
+   38,
+   1,
+   64,
+   0,
+   "MASK"
+  ],
+  [
+   121,
+   64,
+   0,
+   65,
+   0,
+   "IMAGE"
+  ],
+  [
+   122,
+   38,
+   0,
+   66,
+   0,
+   "IMAGE"
+  ],
+  [
+   126,
+   66,
+   0,
+   43,
+   0,
+   "IMAGE"
+  ],
+  [
+   127,
+   2,
+   0,
+   67,
+   0,
+   "IMAGE"
+  ],
+  [
+   128,
+   37,
+   0,
+   67,
+   1,
+   "IMAGE"
+  ],
+  [
+   129,
+   67,
+   0,
+   68,
+   0,
+   "IMAGE"
+  ],
+  [
+   130,
+   14,
+   2,
+   68,
+   1,
+   "AUDIO"
+  ],
+  [
+   162,
+   38,
+   0,
+   54,
+   0,
+   "IMAGE"
+  ],
+  [
+   164,
+   48,
+   1,
+   66,
+   2,
+   "INT"
+  ],
+  [
    165,
    48,
    2,
    66,
    3,
    "INT"
+  ],
+  [
+   180,
+   38,
+   0,
+   77,
+   0,
+   "IMAGE"
+  ],
+  [
+   188,
+   66,
+   0,
+   46,
+   6,
+   "IMAGE"
+  ],
+  [
+   192,
+   77,
+   0,
+   48,
+   0,
+   "IMAGE"
+  ],
+  [
+   193,
+   48,
+   0,
+   78,
+   0,
+   "IMAGE"
+  ],
+  [
+   194,
+   28,
+   0,
+   77,
+   1,
+   "IMAGE"
+  ],
+  [
+   195,
+   32,
+   0,
+   2,
+   30,
+   "IMAGE"
+  ],
+  [
+   196,
+   48,
+   0,
+   46,
+   9,
+   "IMAGE"
+  ],
+  [
+   197,
+   48,
+   0,
+   46,
+   10,
+   "IMAGE"
+  ],
+  [
+   198,
+   48,
+   0,
+   46,
+   27,
+   "IMAGE"
+  ],
+  [
+   199,
+   48,
+   0,
+   46,
+   29,
+   "IMAGE"
+  ],
+  [
+   200,
+   48,
+   0,
+   46,
+   28,
+   "IMAGE"
+  ],
+  [
+   201,
+   48,
+   0,
+   46,
+   30,
+   "IMAGE"
+  ],
+  [
+   202,
+   66,
+   0,
+   82,
+   0,
+   "IMAGE"
+  ],
+  [
+   203,
+   46,
+   0,
+   82,
+   1,
+   "IMAGE"
+  ],
+  [
+   204,
+   82,
+   0,
+   83,
+   0,
+   "IMAGE"
+  ],
+  [
+   206,
+   7,
+   0,
+   10,
+   0,
+   "MODEL"
+  ],
+  [
+   207,
+   3,
+   0,
+   38,
+   2,
+   "MODEL"
+  ],
+  [
+   208,
+   3,
+   0,
+   46,
+   7,
+   "MODEL"
+  ],
+  [
+   209,
+   3,
+   1,
+   40,
+   0,
+   "CLIP"
+  ],
+  [
+   210,
+   84,
+   2,
+   85,
+   0,
+   "IMAGE"
+  ],
+  [
+   211,
+   84,
+   4,
+   85,
+   1,
+   "STRING"
+  ],
+  [
+   212,
+   15,
+   0,
+   84,
+   0,
+   "IMAGE"
+  ],
+  [
+   213,
+   20,
+   1,
+   84,
+   1,
+   "STRING"
   ]
  ],
  "groups": [

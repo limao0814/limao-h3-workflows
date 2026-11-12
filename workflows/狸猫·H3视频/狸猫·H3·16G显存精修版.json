@@ -38,7 +38,11 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      20,
+      37,
+      121
+     ]
     }
    ],
    "title": "视频 VAE / Video VAE",
@@ -102,7 +106,10 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": []
+     "links": [
+      21,
+      38
+     ]
     }
    ],
    "title": "音频 VAE / Audio VAE",
@@ -187,7 +194,9 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": []
+     "links": [
+      19
+     ]
     }
    ],
    "title": "H3 CLIP / Text Encoder",
@@ -267,7 +276,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      97
+     ]
     }
    ],
    "title": "H3 FL2VA 主模型 / Base Model",
@@ -323,7 +334,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 97
     },
     {
      "label": "lora_name",
@@ -352,7 +363,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      98
+     ]
     }
    ],
    "title": "H3 Turbo 加速 LoRA / Acceleration LoRA",
@@ -408,21 +421,21 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": null
+     "link": 19
     },
     {
      "label": "video_vae",
      "localized_name": "video_vae",
      "name": "video_vae",
      "type": "VAE",
-     "link": null
+     "link": 20
     },
     {
      "label": "audio_vae",
      "localized_name": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": null
+     "link": 21
     },
     {
      "label": "drive_audio",
@@ -462,21 +475,21 @@
      "name": "ref_images.ref_image_0",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 42
     },
     {
      "localized_name": "ref_image_1",
      "name": "ref_images.ref_image_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 57
     },
     {
      "localized_name": "ref_image_2",
      "name": "ref_images.ref_image_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 61
     },
     {
      "label": "ref_videos.ref_video_0",
@@ -524,7 +537,7 @@
      "widget": {
       "name": "prompt"
      },
-     "link": null
+     "link": 82
     },
     {
      "label": "width",
@@ -534,7 +547,7 @@
      "widget": {
       "name": "width"
      },
-     "link": null
+     "link": 125
     },
     {
      "label": "height",
@@ -544,7 +557,7 @@
      "widget": {
       "name": "height"
      },
-     "link": null
+     "link": 126
     },
     {
      "label": "length",
@@ -554,7 +567,7 @@
      "widget": {
       "name": "length"
      },
-     "link": null
+     "link": 49
     },
     {
      "label": "task_type",
@@ -651,14 +664,14 @@
      "name": "ref_images.ref_image_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 134
     },
     {
      "localized_name": "ref_image_4",
      "name": "ref_images.ref_image_4",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 135
     },
     {
      "localized_name": "ref_image_5",
@@ -674,7 +687,9 @@
      "localized_name": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      105
+     ]
     },
     {
      "label": "av_latent",
@@ -851,14 +866,18 @@
      "localized_name": "宽度",
      "name": "width",
      "type": "INT",
-     "links": []
+     "links": [
+      125
+     ]
     },
     {
      "label": "height",
      "localized_name": "高度",
      "name": "height",
      "type": "INT",
-     "links": []
+     "links": [
+      126
+     ]
     }
    ],
    "title": "SelfLift 目标分辨率 / Target Resolution",
@@ -914,7 +933,7 @@
      "localized_name": "a",
      "name": "values.a",
      "type": "FLOAT,INT,BOOLEAN",
-     "link": null
+     "link": 43
     },
     {
      "localized_name": "b",
@@ -947,7 +966,9 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": []
+     "links": [
+      49
+     ]
     },
     {
      "label": "BOOL",
@@ -1024,7 +1045,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      61
+     ]
     },
     {
      "label": "MASK",
@@ -1085,7 +1108,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 140
     },
     {
      "label": "lora_name",
@@ -1114,7 +1137,10 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      115,
+      118
+     ]
     }
    ],
    "title": "SelfLift · Motion Repair · 0.38",
@@ -1165,7 +1191,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 87
     },
     {
      "label": "lora_name",
@@ -1194,7 +1220,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      130
+     ]
     }
    ],
    "title": "SelfLift · Weapon Combat · 0.70",
@@ -1375,7 +1403,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      42
+     ]
     },
     {
      "label": "MASK",
@@ -1460,7 +1490,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      57
+     ]
     },
     {
      "label": "MASK",
@@ -1520,7 +1552,7 @@
      "localized_name": "conditioning",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 105
     },
     {
      "localized_name": "adapter",
@@ -1564,7 +1596,10 @@
      "localized_name": "conditioning",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      117,
+      119
+     ]
     }
    ],
    "title": "BUNNY Conditioning Bridge · SelfLift",
@@ -1613,21 +1648,21 @@
      "localized_name": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
-     "link": null
+     "link": 36
     },
     {
      "label": "video_vae",
      "localized_name": "video_vae",
      "name": "video_vae",
      "type": "VAE",
-     "link": null
+     "link": 37
     },
     {
      "label": "audio_vae",
      "localized_name": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": null
+     "link": 38
     }
    ],
    "outputs": [
@@ -1636,7 +1671,10 @@
      "localized_name": "frames",
      "name": "frames",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      91,
+      143
+     ]
     },
     {
      "label": "generated_audio",
@@ -1697,7 +1735,7 @@
      "localized_name": "视频",
      "name": "video",
      "type": "VIDEO",
-     "link": null
+     "link": 113
     },
     {
      "label": "filename_prefix",
@@ -1816,7 +1854,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 91
     },
     {
      "label": "audio",
@@ -1876,7 +1914,9 @@
      "localized_name": "视频",
      "name": "VIDEO",
      "type": "VIDEO",
-     "links": []
+     "links": [
+      112
+     ]
     }
    ],
    "title": "合成视频 / Create Video",
@@ -1927,7 +1967,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 111
     },
     {
      "label": "卸载模型",
@@ -1956,7 +1996,9 @@
      "localized_name": "输出",
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      113
+     ]
     }
    ],
    "properties": {
@@ -2001,7 +2043,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": null
+     "link": 112
     },
     {
      "label": "清理文件缓存",
@@ -2050,7 +2092,9 @@
      "localized_name": "输出",
      "name": "output",
      "type": "*",
-     "links": []
+     "links": [
+      111
+     ]
     }
    ],
    "properties": {
@@ -2110,7 +2154,9 @@
      "localized_name": "字符串",
      "name": "STRING",
      "type": "STRING",
-     "links": []
+     "links": [
+      82
+     ]
     }
    ],
    "title": "BUNNY 提示词模板 / Prompt Template",
@@ -2168,7 +2214,9 @@
      "localized_name": "浮点",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": []
+     "links": [
+      43
+     ]
     }
    ],
    "title": "视频时长（秒）/ Duration (Seconds)",
@@ -2228,7 +2276,9 @@
      "localized_name": "采样器",
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": []
+     "links": [
+      123
+     ]
     }
    ],
    "title": "Standard Euler · SelfLift required",
@@ -2278,7 +2328,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 115
     },
     {
      "label": "scheduler",
@@ -2317,7 +2367,9 @@
      "localized_name": "Sigmas",
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      116
+     ]
     }
    ],
    "title": "8-step simple base schedule",
@@ -2371,7 +2423,7 @@
      "localized_name": "sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 116
     },
     {
      "label": "extra_steps",
@@ -2420,7 +2472,9 @@
      "localized_name": "sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "links": []
+     "links": [
+      124
+     ]
     }
    ],
    "title": "H3 refine +1 · total 9 NFE",
@@ -2473,7 +2527,7 @@
      "localized_name": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": null
+     "link": 117
     }
    ],
    "outputs": [
@@ -2482,7 +2536,9 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": []
+     "links": [
+      120
+     ]
     }
    ],
    "title": "CFG 1 negative placeholder",
@@ -2526,28 +2582,28 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 118
     },
     {
      "label": "positive",
      "localized_name": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": null
+     "link": 119
     },
     {
      "label": "negative",
      "localized_name": "negative",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": null
+     "link": 120
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": null
+     "link": 121
     },
     {
      "label": "latent_image",
@@ -2561,14 +2617,14 @@
      "localized_name": "sampler",
      "name": "sampler",
      "type": "SAMPLER",
-     "link": null
+     "link": 123
     },
     {
      "label": "sigmas",
      "localized_name": "sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": null
+     "link": 124
     },
     {
      "localized_name": "model_hires",
@@ -2705,7 +2761,9 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": []
+     "links": [
+      36
+     ]
     }
    ],
    "title": "SelfLift 2MP · 固定2分块稳定模式",
@@ -2773,7 +2831,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 127
     },
     {
      "localized_name": "tau_profile",
@@ -2997,7 +3055,9 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "links": []
+     "links": [
+      87
+     ]
     }
    ],
    "title": "Sol-Attn 稀疏注意力（JR TST关闭）",
@@ -3086,7 +3146,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 98
     },
     {
      "localized_name": "tau",
@@ -3112,7 +3172,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      127
+     ]
     }
    ],
    "title": "SelfLift TST · Sol稠密回退路径 · 0.20",
@@ -3160,7 +3222,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 130
     },
     {
      "label": "lora_name",
@@ -3189,7 +3251,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      139
+     ]
     }
    ],
    "title": "H3 Motion Speed Slider · 0.65",
@@ -3261,7 +3325,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      134
+     ]
     },
     {
      "label": "MASK",
@@ -3346,7 +3412,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      135
+     ]
     },
     {
      "label": "MASK",
@@ -3409,7 +3477,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 138
     },
     {
      "label": "lora_name",
@@ -3438,7 +3506,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      140
+     ]
     }
    ],
    "title": "H3 Turbo 加速 LoRA / Acceleration LoRA",
@@ -3494,7 +3564,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": null
+     "link": 139
     },
     {
      "label": "lora_name",
@@ -3523,7 +3593,9 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": []
+     "links": [
+      138
+     ]
     }
    ],
    "title": "H3 Turbo 加速 LoRA / Acceleration LoRA",
@@ -3579,7 +3651,7 @@
      "localized_name": "图片",
      "name": "images",
      "type": "IMAGE",
-     "link": null
+     "link": 141
     },
     {
      "label": "文件名前缀",
@@ -3644,7 +3716,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 143
     },
     {
      "label": "遮罩",
@@ -3682,7 +3754,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "slot_index": 0,
-     "links": []
+     "links": [
+      142
+     ]
     },
     {
      "label": "MASK",
@@ -3739,7 +3813,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": null
+     "link": 142
     },
     {
      "label": "缩放方法",
@@ -3768,7 +3842,9 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": []
+     "links": [
+      141
+     ]
     }
    ],
    "properties": {
@@ -3843,6 +3919,46 @@
  ],
  "links": [
   [
+   36,
+   79,
+   0,
+   20,
+   0,
+   "LATENT"
+  ],
+  [
+   37,
+   1,
+   0,
+   20,
+   1,
+   "VAE"
+  ],
+  [
+   38,
+   2,
+   0,
+   20,
+   2,
+   "VAE"
+  ],
+  [
+   87,
+   81,
+   0,
+   47,
+   0,
+   "MODEL"
+  ],
+  [
+   91,
+   20,
+   0,
+   51,
+   0,
+   "IMAGE"
+  ],
+  [
    92,
    20,
    1,
@@ -3851,12 +3967,300 @@
    "AUDIO"
   ],
   [
+   97,
+   4,
+   0,
+   5,
+   0,
+   "MODEL"
+  ],
+  [
+   98,
+   5,
+   0,
+   82,
+   0,
+   "MODEL"
+  ],
+  [
+   105,
+   14,
+   0,
+   70,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   111,
+   73,
+   0,
+   74,
+   0,
+   "*"
+  ],
+  [
+   112,
+   51,
+   0,
+   73,
+   0,
+   "VIDEO"
+  ],
+  [
+   115,
+   45,
+   0,
+   76,
+   0,
+   "MODEL"
+  ],
+  [
+   116,
+   76,
+   0,
+   77,
+   0,
+   "SIGMAS"
+  ],
+  [
+   117,
+   70,
+   0,
+   78,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   118,
+   45,
+   0,
+   79,
+   0,
+   "MODEL"
+  ],
+  [
+   119,
+   70,
+   0,
+   79,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   120,
+   78,
+   0,
+   79,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   121,
+   1,
+   0,
+   79,
+   3,
+   "VAE"
+  ],
+  [
    122,
    14,
    1,
    79,
    4,
    "LATENT"
+  ],
+  [
+   123,
+   75,
+   0,
+   79,
+   5,
+   "SAMPLER"
+  ],
+  [
+   124,
+   77,
+   0,
+   79,
+   6,
+   "SIGMAS"
+  ],
+  [
+   127,
+   82,
+   0,
+   81,
+   0,
+   "MODEL"
+  ],
+  [
+   130,
+   47,
+   0,
+   83,
+   0,
+   "MODEL"
+  ],
+  [
+   138,
+   88,
+   0,
+   87,
+   0,
+   "MODEL"
+  ],
+  [
+   139,
+   83,
+   0,
+   88,
+   0,
+   "MODEL"
+  ],
+  [
+   140,
+   87,
+   0,
+   45,
+   0,
+   "MODEL"
+  ],
+  [
+   141,
+   91,
+   0,
+   89,
+   0,
+   "IMAGE"
+  ],
+  [
+   142,
+   90,
+   0,
+   91,
+   0,
+   "IMAGE"
+  ],
+  [
+   143,
+   20,
+   0,
+   90,
+   0,
+   "IMAGE"
+  ],
+  [
+   43,
+   27,
+   0,
+   30,
+   0,
+   "FLOAT,INT,BOOLEAN"
+  ],
+  [
+   113,
+   74,
+   0,
+   53,
+   0,
+   "VIDEO"
+  ],
+  [
+   19,
+   3,
+   0,
+   14,
+   0,
+   "CLIP"
+  ],
+  [
+   20,
+   1,
+   0,
+   14,
+   1,
+   "VAE"
+  ],
+  [
+   21,
+   2,
+   0,
+   14,
+   2,
+   "VAE"
+  ],
+  [
+   42,
+   6,
+   0,
+   14,
+   7,
+   "IMAGE"
+  ],
+  [
+   57,
+   35,
+   0,
+   14,
+   8,
+   "IMAGE"
+  ],
+  [
+   61,
+   37,
+   0,
+   14,
+   9,
+   "IMAGE"
+  ],
+  [
+   82,
+   49,
+   0,
+   14,
+   15,
+   "STRING"
+  ],
+  [
+   125,
+   29,
+   0,
+   14,
+   16,
+   "INT"
+  ],
+  [
+   126,
+   29,
+   1,
+   14,
+   17,
+   "INT"
+  ],
+  [
+   49,
+   30,
+   1,
+   14,
+   18,
+   "INT"
+  ],
+  [
+   134,
+   85,
+   0,
+   14,
+   28,
+   "IMAGE"
+  ],
+  [
+   135,
+   86,
+   0,
+   14,
+   29,
+   "IMAGE"
   ]
  ],
  "groups": [
