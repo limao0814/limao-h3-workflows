@@ -62,7 +62,10 @@ class LimaoVAEChunkDecode:
     def _to_image_bhwc(self, out):
         # 统一转换 VAE.decode 输出 → ComfyUI IMAGE [N,H,W,C]
         if out.dim() == 5:
-            if out.shape[1] == 3:   # [B,C,T,H,W]（通道在前，MiniMax H3）→ [B*T,H,W,C]
+            if out.shape[-1] == 3:  # [B,T,H,W,C] 通道在后（MiniMax H3 VAE 实测输出）
+                b, t, h, w, c = out.shape
+                out = out.reshape(b * t, h, w, c)
+            elif out.shape[1] == 3:   # [B,C,T,H,W]（通道在前）→ [B*T,H,W,C]
                 b, c, t, h, w = out.shape
                 out = out.permute(0, 2, 3, 4, 1).reshape(b * t, h, w, c)
             else:                   # [B,T,C,H,W] → [B*T,H,W,C]
