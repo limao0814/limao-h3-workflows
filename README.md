@@ -47,11 +47,9 @@
 
 ## ✨ 主打特性
 
-- **高动态三采放大**：一采 768p → 二采 1.5MP → 三采高清，全链路显存治理
-  （MiniMaxLowVRAMAttention head 分块 + MiniMaxChunkFeedForward + LimaoVAEChunkDecode + LimaoVRAMGuard）
-- **武戏一键多参**：内置官方 H3_Combat_V2 / Motion_Repair_V2 / GunFu 战斗 LoRA 体系
-  （触发词 `prfight2` 高强度 / `prfin1` 重特技）
-- **全部模型齐备**：41 个工作流经过逐节点校验，LoRA 缺失清零，无敏感模型引用
+- **低配显卡也能跑长视频**：招牌「高动态三采放大」工作流，从 768p 草稿到高清成片一步到位，全程自动治理显存，消费级显卡即可上手
+- **武戏一键出片**：打斗、特技动作内置专属 LoRA，选好模板发即用，不用手动调参
+- **拿来就能用**：41 个工作流逐一实测校验，模型依赖齐备、开箱即跑
 
 ## 🚀 安装
 
