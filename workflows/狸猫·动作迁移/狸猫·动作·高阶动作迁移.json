@@ -1131,7 +1131,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "B站 :https://space.bilibili.com/389291683",
+   "title": "B站 :https://space..com/389291683",
    "properties": {
     "fontSize": 50,
     "fontFamily": "Arial",
@@ -1211,7 +1211,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "By:三层楼的小肥猴",
+   "title": "By:三层楼的",
    "properties": {
     "fontSize": 50,
     "fontFamily": "Arial",
@@ -4794,7 +4794,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "交流分享入群加微信：fx-feihou  Q群：1091593367（请备注来意：加群、商务）",
+   "title": "交流分享入群加微信：fx-feihou  Q群：（请备注来意：加群、商务）",
    "properties": {
     "fontSize": 50,
     "fontFamily": "Arial",
@@ -7959,12 +7959,12 @@
      "link": null
     },
     {
-     "localized_name": "by wuwukasi（bilibili）",
-     "name": "by wuwukasi（bilibili）",
+     "localized_name": "Reserved (keep ON)",
+     "name": "Reserved (keep ON)",
      "shape": 7,
      "type": "BOOLEAN",
      "widget": {
-      "name": "by wuwukasi（bilibili）"
+      "name": "Reserved (keep ON)"
      },
      "link": null
     }
@@ -10289,7 +10289,7 @@
    "order": 139,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "P25-肥猴Scail-2动作迁移-高阶Plus工作流v4.2",
+   "title": "肥猴Scail-2动作迁移-高阶Plus工作流v4.2",
    "size": [
     2984.326171875,
     150
@@ -10329,7 +10329,7 @@
    "order": 140,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "云端镜像https://autodl.art/app/market/252?v=709",
+   "title": "https:///app/?v=709",
    "size": [
     1736.484375,
     80
@@ -10369,7 +10369,7 @@
    "order": 141,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "AUTODL🐧🔴1群1046279436🔴2群1102535136🟢3群1053358977🟢4群541575695",
+   "title": "🐧🔴1🔴2🟢3🟢4",
    "size": [
     1614.8046875,
     80

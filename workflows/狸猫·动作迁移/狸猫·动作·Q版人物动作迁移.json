@@ -5040,7 +5040,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "By:三层楼的小肥猴",
+   "title": "By:三层楼的",
    "properties": {
     "fontSize": 50,
     "fontFamily": "Arial",
@@ -5080,7 +5080,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "B站 :https://space.bilibili.com/389291683",
+   "title": "B站 :https://space..com/389291683",
    "properties": {
     "fontSize": 50,
     "fontFamily": "Arial",
@@ -7564,12 +7564,12 @@
      "link": null
     },
     {
-     "localized_name": "Prefix & Transition Video by wuwukasi(bilibili)",
-     "name": "Prefix & Transition Video by wuwukasi(bilibili)",
+     "localized_name": "Prefix & Transition Video",
+     "name": "Prefix & Transition Video",
      "shape": 7,
      "type": "BOOLEAN",
      "widget": {
-      "name": "Prefix & Transition Video by wuwukasi(bilibili)"
+      "name": "Prefix & Transition Video"
      },
      "link": null
     }
@@ -8919,7 +8919,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "Wan2.2 Animate 动作迁移天花板级工作流",
+   "title": "Wan2.2 Animate 动作迁移工作流",
    "properties": {
     "fontSize": 200,
     "fontFamily": "Arial",
@@ -9156,7 +9156,7 @@
     "limao_lic": "LM-058C-4539"
    },
    "widgets_values": [
-    "B站：[三层楼的小肥猴](https://space.bilibili.com/389291683)\n\n\n常用模型及整合包下载：\n（常用的vae、text、clip等自行选择）\n\n\n**模型及LoRA下载地址**\n- [夸克网盘下载](https://pan.quark.cn/s/27fe4727197b)\n\n**必装节点**\n- [https://github.com/kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)\n- [https://github.com/kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)\n- [https://github.com/kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)"
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源），无需手动下载\n- 显存不足时：优先使用「H3·16G显存精修版」，或保持工作流内显存治理节点开启\n- 工作流内紫色 MarkdownNote 为狸猫使用提示，可按需隐藏\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
    ],
    "color": "#e100a9",
    "bgcolor": "#7b005d"
@@ -11437,7 +11437,7 @@
    "order": 140,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "P18-Wan2.2-Animate-动作迁移天花板级工作流-支持Q版人物-小动物等V5",
+   "title": "Wan2.2-Animate-动作迁移工作流-支持Q版人物-小动物等V5",
    "size": [
     2984.326171875,
     150
@@ -11477,7 +11477,7 @@
    "order": 141,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "云端镜像https://autodl.art/app/market/252?v=709",
+   "title": "https:///app/?v=709",
    "size": [
     1736.484375,
     80
@@ -11517,7 +11517,7 @@
    "order": 142,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "AUTODL🐧🔴1群1046279436🔴2群1102535136🟢3群1053358977🟢4群541575695",
+   "title": "🐧🔴1🔴2🟢3🟢4",
    "size": [
     1614.8046875,
     80

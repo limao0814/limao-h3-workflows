@@ -31,7 +31,7 @@
     "limao_lic": "LM-858A-1825"
    },
    "widgets_values": [
-    "wan2.2 本地部署：模型+插件+工作流=网盘链接：https://pan.quark.cn/s/f7418799b0e8（手机端转存官方赠送1T网盘空间）\n\nB站：艾橘溪。https://space.bilibili.com/486814801\n\n如有疑问，可联系作者技术指导：由于程序插件环境搭建、效果调试等非常耗时间耗精力，因此如需远程技术指导，需微信付费技术指导。加微信：abinsz，备注：Ai指导\n\n工作流在线运行：https://www.runninghub.cn/user-center/1838157905546661890?inviteCode=kol01-rh055"
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源），无需手动下载\n- 显存不足时：优先使用「H3·16G显存精修版」，或保持工作流内显存治理节点开启\n- 工作流内紫色 MarkdownNote 为狸猫使用提示，可按需隐藏\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
    ],
    "color": "#432",
    "bgcolor": "#653",
@@ -3828,7 +3828,7 @@
    "order": 38,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "云端镜像https://autodl.art/app/market/252?v=709",
+   "title": "https:///app/?v=709",
    "size": [
     1736.484375,
     80
@@ -3868,7 +3868,7 @@
    "order": 39,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "AUTODL🐧🔴1群1046279436🔴2群1102535136🟢3群1053358977🟢4群541575695",
+   "title": "🐧🔴1🔴2🟢3🟢4",
    "size": [
     1614.8046875,
     80

@@ -3077,10 +3077,10 @@
     "limao_lic": "LM-16FD-5103"
    },
    "widgets_values": [
-    "https://github.com/bhardwajRahul/ComfyUI-Viggle-Animate-H3\n\nhttps://huggingface.co/drbaph/Viggle-Animate-ComfyUI\n\n\n\n模型链接：https://pan.quark.cn/s/173d47038ea8\n\n模型会识别参考图\n如果参考图为四视图，则自动人物替换\n如果参考图为参考视频的场景，则动作迁移（听说快四分之一速度）"
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源），无需手动下载\n- 显存不足时：优先使用「H3·16G显存精修版」，或保持工作流内显存治理节点开启\n- 工作流内紫色 MarkdownNote 为狸猫使用提示，可按需隐藏\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
    ],
    "widgets_values_named": {
-    "text": "https://github.com/bhardwajRahul/ComfyUI-Viggle-Animate-H3\n\nhttps://huggingface.co/drbaph/Viggle-Animate-ComfyUI\n\n\n\n模型链接：https://pan.quark.cn/s/173d47038ea8\n\n模型会识别参考图\n如果参考图为四视图，则自动人物替换\n如果参考图为参考视频的场景，则动作迁移（听说快四分之一速度）"
+    "text": "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源），无需手动下载\n- 显存不足时：优先使用「H3·16G显存精修版」，或保持工作流内显存治理节点开启\n- 工作流内紫色 MarkdownNote 为狸猫使用提示，可按需隐藏\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
    },
    "color": "#432",
    "bgcolor": "#653"

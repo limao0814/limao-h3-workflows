@@ -6044,7 +6044,7 @@
     "limao_lic": "LM-A436-2772"
    },
    "widgets_values": [
-    "B站：[三层楼的小肥猴](https://space.bilibili.com/389291683)\n\n\n常用模型及整合包下载：\n（常用的vae、text、clip等自行选择）\n\n\n**模型及LoRA下载地址**\n- [夸克网盘下载](https://pan.quark.cn/s/27fe4727197b)\n\n**必装节点**\n- [https://github.com/kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper)\n- [https://github.com/kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)\n- [https://github.com/kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess)\n- [https://github.com/yolain/ComfyUI-Easy-Sam3](https://github.com/yolain/ComfyUI-Easy-Sam3)\n- [https://github.com/judian17/ComfyUI-SDPose-OOD](https://github.com/judian17/ComfyUI-SDPose-OOD)"
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源），无需手动下载\n- 显存不足时：优先使用「H3·16G显存精修版」，或保持工作流内显存治理节点开启\n- 工作流内紫色 MarkdownNote 为狸猫使用提示，可按需隐藏\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
    ],
    "color": "#432",
    "bgcolor": "#653"
@@ -11228,7 +11228,7 @@
    "order": 143,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "云端镜像https://autodl.art/app/market/252?v=709",
+   "title": "https:///app/?v=709",
    "size": [
     1736.484375,
     80
@@ -11268,7 +11268,7 @@
    "order": 144,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "AUTODL🐧🔴1群1046279436🔴2群1102535136🟢3群1053358977🟢4群541575695",
+   "title": "🐧🔴1🔴2🟢3🟢4",
    "size": [
     1614.8046875,
     80
@@ -12542,7 +12542,7 @@
   },
   {
    "id": 61,
-   "title": "工作流作者视频讲解https://www.bilibili.com/video/BV1P4rkBcEZR/?spm_id_from=333.1387.homepage.video_card.click&vd_source=30b3fed7dfde8379c4ba83f85224199b",
+   "title": "工作流作者视频讲解",
    "bounding": [
     -3571.958121210753,
     -4367.335062382593,

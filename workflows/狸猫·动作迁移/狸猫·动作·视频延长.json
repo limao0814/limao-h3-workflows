@@ -1095,7 +1095,7 @@
     "limao_lic": "LM-17E9-1170"
    },
    "widgets_values": [
-    "### 🐏 [Wan2.2 Animate: The Ultimate Solution for Motion Transfer and Character Replacement.](https://www.youtube.com/watch?v=N6YLUYUl1Fg&t=1s)\n\n### 🐏 [Wan2.2 Animate：动作迁移和角色替换的最佳方案。轻松复刻任意小姐姐跳舞视频！](https://www.bilibili.com/video/BV1bcnfzJE66?)"
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源），无需手动下载\n- 显存不足时：优先使用「H3·16G显存精修版」，或保持工作流内显存治理节点开启\n- 工作流内紫色 MarkdownNote 为狸猫使用提示，可按需隐藏\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
    ],
    "color": "#222",
    "bgcolor": "#000"
@@ -5040,7 +5040,7 @@
    "order": 49,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "云端镜像https://autodl.art/app/market/252?v=709",
+   "title": "https:///app/?v=709",
    "size": [
     1736.484375,
     80
@@ -5080,7 +5080,7 @@
    "order": 50,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "AUTODL🐧🔴1群1046279436🔴2群1102535136🟢3群1053358977🟢4群541575695",
+   "title": "🐧🔴1🔴2🟢3🟢4",
    "size": [
     1614.8046875,
     80

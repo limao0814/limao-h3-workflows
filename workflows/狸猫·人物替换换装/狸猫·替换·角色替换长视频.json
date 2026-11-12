@@ -3197,7 +3197,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "B站解说https://www.bilibili.com/video/BV1CqE16JERa",
+   "title": "B站解说https://www..com/video/BV1CqE16JERa",
    "properties": {
     "fontSize": 120,
     "fontFamily": "Arial",
@@ -5337,12 +5337,12 @@
      "link": null
     },
     {
-     "localized_name": "by wuwukasi（bilibili）",
-     "name": "by wuwukasi（bilibili）",
+     "localized_name": "Reserved (keep ON)",
+     "name": "Reserved (keep ON)",
      "shape": 7,
      "type": "BOOLEAN",
      "widget": {
-      "name": "by wuwukasi（bilibili）"
+      "name": "Reserved (keep ON)"
      },
      "link": null
     }
@@ -5433,7 +5433,7 @@
    "order": 62,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "云端镜像https://autodl.art/app/market/252?v=709",
+   "title": "https:///app/?v=709",
    "size": [
     1736.484375,
     80
@@ -5473,7 +5473,7 @@
    "order": 63,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "AUTODL🐧🔴1群1046279436🔴2群1102535136🟢3群1053358977🟢4群541575695",
+   "title": "🐧🔴1🔴2🟢3🟢4",
    "size": [
     1614.8046875,
     80

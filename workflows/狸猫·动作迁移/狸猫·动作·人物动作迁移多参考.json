@@ -9378,13 +9378,13 @@
      "link": null
     },
     {
-     "label": "Prefix & Transition Video by wuwukasi(bilibili)",
-     "localized_name": "Prefix & Transition Video by wuwukasi(bilibili)",
-     "name": "Prefix & Transition Video by wuwukasi(bilibili)",
+     "label": "Prefix & Transition Video",
+     "localized_name": "Prefix & Transition Video",
+     "name": "Prefix & Transition Video",
      "shape": 7,
      "type": "BOOLEAN",
      "widget": {
-      "name": "Prefix & Transition Video by wuwukasi(bilibili)"
+      "name": "Prefix & Transition Video"
      }
     }
    ],
@@ -16367,7 +16367,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "云端镜像https://autodl.art/app/market/252?v=709",
+   "title": "https:///app/?v=709",
    "properties": {
     "fontSize": 80,
     "fontFamily": "Arial",
@@ -16407,7 +16407,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "西北区4090-48G显卡或以上才能运行",
+   "title": "显卡或以上才能运行",
    "properties": {
     "fontSize": 100,
     "fontFamily": "Arial",
@@ -16446,7 +16446,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "AUTODL🐧🔴1群1046279436🔴2群1102535136🟢3群1053358977🟢4群541575695",
+   "title": "🐧🔴1🔴2🟢3🟢4",
    "properties": {
     "fontSize": 60,
     "fontFamily": "Arial",
@@ -16487,7 +16487,7 @@
    "inputs": [],
    "outputs": [],
    "properties": {
-    "text": "建议观看B站教程后使用，下地址为B站个人空间\nhttps://space.bilibili.com/477349877?spm_id_from=333.1007.0.0",
+    "text": "",
     "fontSize": 20,
     "fontColor": "#ffffff",
     "backgroundColor": "#1B4669",
@@ -16883,7 +16883,7 @@
    "order": 221,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "P20-动作迁移-Wan2.2-Animate-动作迁移V9-多参考图",
+   "title": "动作迁移-Wan2.2-Animate-动作迁移V9-多参考图",
    "size": [
     2984.326171875,
     150
