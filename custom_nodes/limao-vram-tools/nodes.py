@@ -61,9 +61,13 @@ class LimaoVAEChunkDecode:
 
     def _to_image_bhwc(self, out):
         # 统一转换 VAE.decode 输出 → ComfyUI IMAGE [N,H,W,C]
-        if out.dim() == 5:      # [B,T,C,H,W] → [B*T,H,W,C]
-            b, t, c, h, w = out.shape
-            out = out.permute(0, 1, 3, 4, 2).reshape(b * t, h, w, c)
+        if out.dim() == 5:
+            if out.shape[1] == 3:   # [B,C,T,H,W]（通道在前，MiniMax H3）→ [B*T,H,W,C]
+                b, c, t, h, w = out.shape
+                out = out.permute(0, 2, 3, 4, 1).reshape(b * t, h, w, c)
+            else:                   # [B,T,C,H,W] → [B*T,H,W,C]
+                b, t, c, h, w = out.shape
+                out = out.permute(0, 1, 3, 4, 2).reshape(b * t, h, w, c)
         elif out.dim() == 4:    # [B,C,H,W] → [B,H,W,C]
             out = out.permute(0, 2, 3, 1)
         return out
@@ -73,8 +77,14 @@ class LimaoVAEChunkDecode:
         meta = {k: v for k, v in video_latent.items() if k != "samples"}
         n = samples.dim()
         if n == 5:
-            b, c, t, h, w = samples.shape
-            dim_t = 2
+            if samples.shape[2] > samples.shape[1]:
+                # [B,C,T,H,W] 通道在前（MiniMax H3 视频 latent）
+                b, c, t, h, w = samples.shape
+                dim_t = 2
+            else:
+                # [B,T,C,H,W] 时间在前
+                b, t, c, h, w = samples.shape
+                dim_t = 2
         elif n == 4:
             b, c, h, w = samples.shape
             t, dim_t = 1, None
@@ -94,8 +104,16 @@ class LimaoVAEChunkDecode:
         target_dtype = want_dtype or vae_dtype
 
         def decode_chunk(chunk):
-            ld = dict(meta); ld["samples"] = chunk
-            out = video_vae.decode(ld)
+            out = video_vae.decode(chunk)
+            try:
+                import json as _json, os as _os
+                _log = _os.path.join(_os.path.expanduser('~'), 'limao-decode-shapes.log')
+                open(_log, 'a').write(_json.dumps({
+                    'latent_shape': list(samples.shape), 'chunk_shape': list(chunk.shape),
+                    'out_shape': list(out.shape) if hasattr(out, 'shape') else str(type(out)),
+                    'meta_keys': sorted(meta.keys())}) + '\n')
+            except Exception:
+                pass
             if not torch.is_tensor(out):
                 out = out[0]
             if target_dtype is not None and out.dim() >= 2:
