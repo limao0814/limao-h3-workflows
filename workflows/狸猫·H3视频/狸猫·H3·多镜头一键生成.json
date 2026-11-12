@@ -8,8 +8,8 @@
    "id": 6,
    "type": "CreateVideo",
    "pos": [
-    260.8492790310978,
-    -31.745960836869774
+    2091.0623084278063,
+    0
    ],
    "size": [
     260,
@@ -23,7 +23,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": 5
+     "link": null
     },
     {
      "localized_name": "音频",
@@ -57,9 +57,7 @@
      "localized_name": "视频",
      "name": "VIDEO",
      "type": "VIDEO",
-     "links": [
-      7
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -86,8 +84,8 @@
    "id": 3,
    "type": "VAELoader",
    "pos": [
-    -667.4822822822822,
-    279.2060060060066
+    701.309616616118,
+    1235.4038410288656
    ],
    "size": [
     415.75855855855866,
@@ -112,9 +110,7 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      3
-     ]
+     "links": []
     }
    ],
    "title": "Video VAE",
@@ -140,8 +136,8 @@
    "id": 4,
    "type": "VAELoader",
    "pos": [
-    -668.8960960960962,
-    397.9987987987996
+    701.309616616118,
+    1355.4038410288656
    ],
    "size": [
     417.17237237237237,
@@ -166,9 +162,7 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      4
-     ]
+     "links": []
     }
    ],
    "title": "Audio VAE",
@@ -194,8 +188,8 @@
    "id": 1,
    "type": "H3ModelLoaderAny",
    "pos": [
-    -666.068468468469,
-    26.907075670711997
+    1366.7175636830616,
+    0
    ],
    "size": [
     414.34474474474484,
@@ -230,9 +224,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      18
-     ]
+     "links": []
     }
    ],
    "title": "H3 Model (safetensors or GGUF)",
@@ -257,8 +249,8 @@
    "id": 11,
    "type": "H3ClipLoaderAny",
    "pos": [
-    -668.0669237077784,
-    148.14167304675712
+    701.309616616118,
+    1106.5609821700068
    ],
    "size": [
     415.6476163194443,
@@ -292,9 +284,7 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": [
-      9
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -319,8 +309,8 @@
    "id": 8,
    "type": "MarkdownNote",
    "pos": [
-    -226.25021715930947,
-    -268.315588315588
+    0,
+    1561.2710363934966
    ],
    "size": [
     364.8544412180778,
@@ -351,8 +341,8 @@
    "id": 19,
    "type": "LoadAudio",
    "pos": [
-    -494.2589108501387,
-    854.9891457756554
+    0,
+    1801.5288975604487
    ],
    "size": [
     581.309616616118,
@@ -396,9 +386,7 @@
      "name": "AUDIO",
      "type": "AUDIO",
      "slot_index": 0,
-     "links": [
-      19
-     ]
+     "links": []
     }
    ],
    "title": "VOICE ANCHOR (muted) - unmute + pick a file, or use self_anchor_voice",
@@ -422,8 +410,8 @@
    "id": 9,
    "type": "MarkdownNote",
    "pos": [
-    281.9557246906224,
-    268.3746768338
+    0,
+    470
    ],
    "size": [
     236.8296875,
@@ -454,8 +442,8 @@
    "id": 7,
    "type": "SaveVideo",
    "pos": [
-    531.6228625319526,
-    -31.745960836869756
+    2091.0623084278063,
+    278.44444444444446
    ],
    "size": [
     584.8695876116503,
@@ -469,7 +457,7 @@
      "localized_name": "视频",
      "name": "video",
      "type": "VIDEO",
-     "link": 7
+     "link": null
     },
     {
      "localized_name": "文件名前缀",
@@ -534,8 +522,8 @@
    "id": 17,
    "type": "H3OptionalImage",
    "pos": [
-    -967.104501465949,
-    -11.423858405561937
+    701.309616616118,
+    1473.9900272150517
    ],
    "size": [
     270.7258054913775,
@@ -550,7 +538,7 @@
      "name": "image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 16
+     "link": null
     },
     {
      "localized_name": "enabled",
@@ -567,9 +555,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "links": [
-      17
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -592,8 +578,8 @@
    "id": 18,
    "type": "H3LoraStack",
    "pos": [
-    -735.9307318967432,
-    530.1879076858926
+    701.309616616118,
+    796.9735776347327
    ],
    "size": [
     495.4079470669436,
@@ -607,7 +593,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 18
+     "link": null
     },
     {
      "localized_name": "lora_1",
@@ -688,9 +674,7 @@
      "name": "model",
      "type": "MODEL",
      "slot_index": 0,
-     "links": [
-      1
-     ]
+     "links": []
     }
    ],
    "title": "LoRA stack (empty = stock)",
@@ -719,8 +703,8 @@
    "id": 5,
    "type": "H3MultishotSampler",
    "pos": [
-    -222.19907360403252,
-    -38.28163249650818
+    701.309616616118,
+    0
    ],
    "size": [
     468.41215370141026,
@@ -734,39 +718,39 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 1
+     "link": null
     },
     {
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": 9
+     "link": null
     },
     {
      "localized_name": "video_vae",
      "name": "video_vae",
      "type": "VAE",
-     "link": 3
+     "link": null
     },
     {
      "localized_name": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": 4
+     "link": null
     },
     {
      "localized_name": "start_image",
      "name": "start_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 17
+     "link": null
     },
     {
      "localized_name": "voice_ref",
      "name": "voice_ref",
      "shape": 7,
      "type": "AUDIO",
-     "link": 19
+     "link": null
     },
     {
      "localized_name": "sampler_override",
@@ -890,9 +874,7 @@
      "localized_name": "master_frames",
      "name": "master_frames",
      "type": "IMAGE",
-     "links": [
-      5
-     ]
+     "links": []
     },
     {
      "localized_name": "master_audio",
@@ -948,8 +930,8 @@
    "id": 12,
    "type": "LoadImage",
    "pos": [
-    -1292.2602162988821,
-    -7.866507843924879
+    0,
+    927.2710363934965
    ],
    "size": [
     282.798828125,
@@ -983,9 +965,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      16
-     ]
+     "links": []
     },
     {
      "localized_name": "遮罩",
@@ -1018,8 +998,8 @@
    "id": 20,
    "type": "MarkdownNote",
    "pos": [
-    -1292.2602162988821,
-    -568.315588315588
+    0,
+    1281.2710363934966
    ],
    "size": [
     520,
@@ -1036,109 +1016,78 @@
    "widgets_values": [
     "# 狸猫AI 专属工作流\n\n**本文件由狸猫AI平台独家装配与调优**\n\n- 授权标识：`LM-499A-1469`\n- 版本：`LIMAO-WF-20261112-R1`\n- 指纹：`499a5bf9a61294c2`\n\n> 本工作流嵌入狸猫AI数字指纹，可溯源。**禁止**未经授权的二次开发、复制、转发、公开分享或发布至任何其他平台。"
    ]
+  },
+  {
+   "id": 21,
+   "type": "MarkdownNote",
+   "title": "狸猫AI·使用说明",
+   "pos": [
+    0,
+    -560
+   ],
+   "size": [
+    400,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 左侧框：需要你修改的输入与参数\n- 中间框：核心处理区（参数已调好，慎动）\n- 右侧框：输出结果\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源）\n- 显存不足：优先「H3·16G显存精修版」，保持显存治理节点开启\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
+   ]
   }
  ],
  "links": [
   [
-   1,
-   18,
-   0,
-   5,
-   0,
-   "MODEL"
-  ],
-  [
-   3,
-   3,
-   0,
-   5,
-   2,
-   "VAE"
-  ],
-  [
-   4,
-   4,
-   0,
-   5,
-   3,
-   "VAE"
-  ],
-  [
-   5,
-   5,
-   0,
-   6,
-   0,
-   "IMAGE"
-  ],
-  [
    6,
    5,
    1,
    6,
    1,
-   "AUDIO"
-  ],
-  [
-   7,
-   6,
-   0,
-   7,
-   0,
-   "VIDEO"
-  ],
-  [
-   9,
-   11,
-   0,
-   5,
-   1,
-   "CLIP"
-  ],
-  [
-   16,
-   12,
-   0,
-   17,
-   0,
-   "IMAGE"
-  ],
-  [
-   17,
-   17,
-   0,
-   5,
-   4,
-   "IMAGE"
-  ],
-  [
-   18,
-   1,
-   0,
-   18,
-   0,
-   "MODEL"
-  ],
-  [
-   19,
-   19,
-   0,
-   5,
-   5,
    "AUDIO"
   ]
  ],
  "groups": [
   {
-   "id": 1,
-   "title": "MODELS",
+   "id": 2,
+   "title": "📥 输入区（改这里）",
    "bounding": [
-    -680.6198198198203,
-    -51.51711711711722,
-    442.03363363363417,
-    542.8600600600614
+    -50,
+    -120,
+    681.309616616118,
+    2095.319584199441
    ],
-   "color": "#3f5159",
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 3,
+   "title": "⚙️ 核心处理（参数已调好，慎动）",
+   "bounding": [
+    651.309616616118,
+    -120,
+    1349.7526918116882,
+    1722.6122196554256
+   ],
+   "color": "#8f6e48",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 4,
+   "title": "📤 输出区",
+   "bounding": [
+    2041.0623084278063,
+    -120,
+    684.8695876116503,
+    524.4444444444445
+   ],
+   "color": "#4a6b3f",
+   "font_size": 24,
    "flags": {}
   }
  ],

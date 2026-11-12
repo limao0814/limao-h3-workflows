@@ -8,8 +8,8 @@
    "id": 12,
    "type": "SetNode",
    "pos": [
-    2810,
-    -1270
+    3104.326171875,
+    5075.486251831055
    ],
    "size": [
     210,
@@ -25,7 +25,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "link": 168
+     "link": null
     }
    ],
    "outputs": [
@@ -59,8 +59,8 @@
    "id": 8,
    "type": "SetNode",
    "pos": [
-    2810,
-    -1520
+    3104.326171875,
+    5761.486251831055
    ],
    "size": [
     210,
@@ -76,7 +76,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "link": 5
+     "link": null
     }
    ],
    "outputs": [
@@ -110,8 +110,8 @@
    "id": 14,
    "type": "SetNode",
    "pos": [
-    2040,
-    -1350
+    3104.326171875,
+    5851.486251831055
    ],
    "size": [
     210,
@@ -127,7 +127,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "link": 12
+     "link": null
     }
    ],
    "outputs": [
@@ -161,8 +161,8 @@
    "id": 35,
    "type": "SetNode",
    "pos": [
-    2251.01513671875,
-    -2386.578125
+    3104.326171875,
+    5941.486251831055
    ],
    "size": [
     210,
@@ -178,7 +178,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": 29
+     "link": null
     }
    ],
    "outputs": [
@@ -212,8 +212,8 @@
    "id": 36,
    "type": "SetNode",
    "pos": [
-    2491.01513671875,
-    -2386.578125
+    3104.326171875,
+    6031.486251831055
    ],
    "size": [
     210,
@@ -229,7 +229,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": 30
+     "link": null
     }
    ],
    "outputs": [
@@ -263,8 +263,8 @@
    "id": 37,
    "type": "INTConstant",
    "pos": [
-    2694.796630859375,
-    -2495.3515625
+    0,
+    2264.288330078125
    ],
    "size": [
     210,
@@ -290,9 +290,7 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": [
-      31
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -318,8 +316,8 @@
    "id": 44,
    "type": "SetNode",
    "pos": [
-    2020,
-    -2370
+    3104.326171875,
+    5173.486251831055
    ],
    "size": [
     210,
@@ -335,7 +333,7 @@
      "label": "MASK",
      "name": "MASK",
      "type": "MASK",
-     "link": 36
+     "link": null
     }
    ],
    "outputs": [
@@ -369,8 +367,8 @@
    "id": 45,
    "type": "SetNode",
    "pos": [
-    2030,
-    -2110
+    3104.326171875,
+    5271.486251831055
    ],
    "size": [
     210,
@@ -386,7 +384,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 37
+     "link": null
     }
    ],
    "outputs": [
@@ -420,8 +418,8 @@
    "id": 47,
    "type": "SetNode",
    "pos": [
-    2030,
-    -2000
+    3104.326171875,
+    5369.486251831055
    ],
    "size": [
     210,
@@ -437,7 +435,7 @@
      "label": "MASK",
      "name": "MASK",
      "type": "MASK",
-     "link": 38
+     "link": null
     }
    ],
    "outputs": [
@@ -471,8 +469,8 @@
    "id": 52,
    "type": "GetNode",
    "pos": [
-    4090,
-    -2430
+    0,
+    2852.288330078125
    ],
    "size": [
     210,
@@ -489,9 +487,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      49
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -516,8 +512,8 @@
    "id": 54,
    "type": "GetNode",
    "pos": [
-    4090,
-    -2360
+    0,
+    2942.288330078125
    ],
    "size": [
     210,
@@ -534,9 +530,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      51
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -559,8 +553,8 @@
    "id": 38,
    "type": "SetNode",
    "pos": [
-    2732.27490234375,
-    -2383.002685546875
+    3104.326171875,
+    6121.486251831055
    ],
    "size": [
     210,
@@ -576,7 +570,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "link": 31
+     "link": null
     }
    ],
    "outputs": [
@@ -610,8 +604,8 @@
    "id": 134,
    "type": "ConditioningZeroOut",
    "pos": [
-    2390,
-    -1300
+    3104.326171875,
+    7611.486251831055
    ],
    "size": [
     204.134765625,
@@ -626,7 +620,7 @@
      "localized_name": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": 167
+     "link": null
     }
    ],
    "outputs": [
@@ -635,9 +629,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      168
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -659,8 +651,8 @@
    "id": 16,
    "type": "SetNode",
    "pos": [
-    2100,
-    -1250
+    3104.326171875,
+    6211.486251831055
    ],
    "size": [
     210,
@@ -676,7 +668,7 @@
      "label": "MODEL_PATCH",
      "name": "MODEL_PATCH",
      "type": "MODEL_PATCH",
-     "link": 13
+     "link": null
     }
    ],
    "outputs": [
@@ -708,8 +700,8 @@
    "id": 7,
    "type": "CLIPTextEncode",
    "pos": [
-    2150,
-    -1550
+    3104.326171875,
+    3761.5094299316406
    ],
    "size": [
     381.27728271484375,
@@ -724,7 +716,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": 4
+     "link": null
     },
     {
      "label": "text",
@@ -742,10 +734,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      5,
-      167
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -771,8 +760,8 @@
    "id": 43,
    "type": "SetNode",
    "pos": [
-    2020,
-    -2482.288330078125
+    3104.326171875,
+    6301.486251831055
    ],
    "size": [
     210,
@@ -788,7 +777,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 35
+     "link": null
     }
    ],
    "outputs": [
@@ -822,8 +811,8 @@
    "id": 136,
    "type": "CLIPVisionEncode",
    "pos": [
-    2210,
-    -2200
+    3104.326171875,
+    4839.486251831055
    ],
    "size": [
     270,
@@ -838,14 +827,14 @@
      "localized_name": "clip视觉",
      "name": "clip_vision",
      "type": "CLIP_VISION",
-     "link": 172
+     "link": null
     },
     {
      "label": "图像",
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": 173
+     "link": null
     },
     {
      "label": "crop",
@@ -863,9 +852,7 @@
      "localized_name": "CLIP视觉输出",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "links": [
-      174
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -889,8 +876,8 @@
    "id": 139,
    "type": "SetNode",
    "pos": [
-    2552.682861328125,
-    -2163.474365234375
+    3104.326171875,
+    6391.486251831055
    ],
    "size": [
     215.378515625,
@@ -906,7 +893,7 @@
      "label": "CLIP_VISION_OUTPUT",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "link": 174
+     "link": null
     }
    ],
    "outputs": [
@@ -938,8 +925,8 @@
    "id": 142,
    "type": "CLIPVisionEncode",
    "pos": [
-    2230,
-    -1920
+    3104.326171875,
+    4957.486251831055
    ],
    "size": [
     270,
@@ -954,14 +941,14 @@
      "localized_name": "clip视觉",
      "name": "clip_vision",
      "type": "CLIP_VISION",
-     "link": 179
+     "link": null
     },
     {
      "label": "图像",
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": 178
+     "link": null
     },
     {
      "label": "crop",
@@ -979,9 +966,7 @@
      "localized_name": "CLIP视觉输出",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "links": [
-      175
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1005,8 +990,8 @@
    "id": 140,
    "type": "SetNode",
    "pos": [
-    2570,
-    -1890
+    3104.326171875,
+    6481.486251831055
    ],
    "size": [
     215.378515625,
@@ -1022,7 +1007,7 @@
      "label": "CLIP_VISION_OUTPUT",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "link": 175
+     "link": null
     }
    ],
    "outputs": [
@@ -1054,8 +1039,8 @@
    "id": 24,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2538.540283203125
+    0,
+    2362.288330078125
    ],
    "size": [
     210,
@@ -1072,9 +1057,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      327
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1099,8 +1082,8 @@
    "id": 25,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2485.474609375
+    0,
+    3032.288330078125
    ],
    "size": [
     210,
@@ -1117,9 +1100,7 @@
      "label": "MODEL_PATCH",
      "name": "MODEL_PATCH",
      "type": "MODEL_PATCH",
-     "links": [
-      328
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1142,8 +1123,8 @@
    "id": 26,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2433.669921875
+    0,
+    3122.288330078125
    ],
    "size": [
     210,
@@ -1160,9 +1141,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      329
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1187,8 +1166,8 @@
    "id": 27,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2385.016845703125
+    0,
+    3212.288330078125
    ],
    "size": [
     210,
@@ -1205,9 +1184,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      330
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1232,8 +1209,8 @@
    "id": 28,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2334.472900390625
+    0,
+    3302.288330078125
    ],
    "size": [
     210,
@@ -1250,9 +1227,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      331
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1277,8 +1252,8 @@
    "id": 39,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2180
+    0,
+    3392.288330078125
    ],
    "size": [
     210,
@@ -1295,9 +1270,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      335
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1322,8 +1295,8 @@
    "id": 40,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2130
+    0,
+    3482.288330078125
    ],
    "size": [
     210,
@@ -1340,9 +1313,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      336
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1367,8 +1338,8 @@
    "id": 32,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2230
+    0,
+    3572.288330078125
    ],
    "size": [
     210,
@@ -1385,9 +1356,7 @@
      "label": "AUDIO_ENCODER_OUTPUT",
      "name": "AUDIO_ENCODER_OUTPUT",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "links": [
-      332
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1410,8 +1379,8 @@
    "id": 143,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2285.68212890625
+    0,
+    3662.288330078125
    ],
    "size": [
     210,
@@ -1428,9 +1397,7 @@
      "label": "CLIP_VISION_OUTPUT",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "links": [
-      333
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1453,8 +1420,8 @@
    "id": 48,
    "type": "GetNode",
    "pos": [
-    3170,
-    -2030.63037109375
+    0,
+    2164.288330078125
    ],
    "size": [
     210,
@@ -1471,9 +1438,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      334
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1498,8 +1463,8 @@
    "id": 148,
    "type": "GetNode",
    "pos": [
-    4114.30712890625,
-    -1690.6151123046875
+    0,
+    3842.288330078125
    ],
    "size": [
     210,
@@ -1516,9 +1481,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      221
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1543,8 +1506,8 @@
    "id": 150,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1800.6151123046875
+    0,
+    3916.288330078125
    ],
    "size": [
     210,
@@ -1561,9 +1524,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      342
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1588,8 +1549,8 @@
    "id": 151,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1750.6151123046875
+    0,
+    3990.288330078125
    ],
    "size": [
     210,
@@ -1606,9 +1567,7 @@
      "label": "MODEL_PATCH",
      "name": "MODEL_PATCH",
      "type": "MODEL_PATCH",
-     "links": [
-      343
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1631,8 +1590,8 @@
    "id": 152,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1700.6151123046875
+    0,
+    4064.288330078125
    ],
    "size": [
     210,
@@ -1649,9 +1608,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      344
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1676,8 +1633,8 @@
    "id": 153,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1650.6151123046875
+    0,
+    4138.288330078125
    ],
    "size": [
     210,
@@ -1694,9 +1651,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      345
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1721,8 +1676,8 @@
    "id": 154,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1600.6151123046875
+    0,
+    4212.288330078125
    ],
    "size": [
     210,
@@ -1739,9 +1694,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      346
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1766,8 +1719,8 @@
    "id": 155,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1440.6151123046875
+    0,
+    4286.288330078125
    ],
    "size": [
     210,
@@ -1784,9 +1737,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      351
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1811,8 +1762,8 @@
    "id": 156,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1390.6151123046875
+    0,
+    4360.288330078125
    ],
    "size": [
     210,
@@ -1829,9 +1780,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      352
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1856,8 +1805,8 @@
    "id": 157,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1340.6151123046875
+    0,
+    4434.288330078125
    ],
    "size": [
     210,
@@ -1874,9 +1823,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      353
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1901,8 +1848,8 @@
    "id": 158,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1490.6151123046875
+    0,
+    4508.288330078125
    ],
    "size": [
     210,
@@ -1919,9 +1866,7 @@
      "label": "AUDIO_ENCODER_OUTPUT",
      "name": "AUDIO_ENCODER_OUTPUT",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "links": [
-      347
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1944,8 +1889,8 @@
    "id": 159,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1550.6151123046875
+    0,
+    4582.288330078125
    ],
    "size": [
     210,
@@ -1962,9 +1907,7 @@
      "label": "CLIP_VISION_OUTPUT",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "links": [
-      348
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1987,8 +1930,8 @@
    "id": 160,
    "type": "GetNode",
    "pos": [
-    3194.306884765625,
-    -1290.6151123046875
+    0,
+    4656.288330078125
    ],
    "size": [
     210,
@@ -2005,9 +1948,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      349
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2032,8 +1973,8 @@
    "id": 71,
    "type": "GetNode",
    "pos": [
-    4114.9697265625,
-    -1626.9058837890625
+    0,
+    4730.288330078125
    ],
    "size": [
     210,
@@ -2050,9 +1991,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      74
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2075,8 +2014,8 @@
    "id": 73,
    "type": "ImageFromBatch",
    "pos": [
-    4269.34521484375,
-    -1798.580322265625
+    3104.326171875,
+    4229.486251831055
    ],
    "size": [
     210,
@@ -2091,7 +2030,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": 222
+     "link": null
     },
     {
      "label": "batch_index",
@@ -2101,7 +2040,7 @@
      "widget": {
       "name": "batch_index"
      },
-     "link": 358
+     "link": null
     },
     {
      "label": "length",
@@ -2119,9 +2058,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      76
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2157,8 +2094,8 @@
    "id": 163,
    "type": "VAEDecode",
    "pos": [
-    4110.615234375,
-    -1801.5380859375
+    3104.326171875,
+    6751.486251831055
    ],
    "size": [
     140,
@@ -2173,14 +2110,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": 233
+     "link": null
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 221
+     "link": null
     }
    ],
    "outputs": [
@@ -2189,9 +2126,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      222
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2213,8 +2148,8 @@
    "id": 165,
    "type": "KSampler",
    "pos": [
-    3796.31689453125,
-    -1819.9912109375
+    3104.326171875,
+    2347.5094299316406
    ],
    "size": [
     270,
@@ -2229,14 +2164,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 354
+     "link": null
     },
     {
      "label": "正面条件",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 355
+     "link": null
     },
     {
      "label": "负面条件",
@@ -2313,9 +2248,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      233
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2344,8 +2277,8 @@
    "id": 167,
    "type": "GetNode",
    "pos": [
-    4126.3271484375,
-    -948.3746337890625
+    0,
+    4804.288330078125
    ],
    "size": [
     210,
@@ -2362,9 +2295,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      244
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2389,8 +2320,8 @@
    "id": 168,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -1058.3746337890625
+    0,
+    4878.288330078125
    ],
    "size": [
     210,
@@ -2407,9 +2338,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      359
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2434,8 +2363,8 @@
    "id": 169,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -1008.3746337890625
+    0,
+    4952.288330078125
    ],
    "size": [
     210,
@@ -2452,9 +2381,7 @@
      "label": "MODEL_PATCH",
      "name": "MODEL_PATCH",
      "type": "MODEL_PATCH",
-     "links": [
-      360
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2477,8 +2404,8 @@
    "id": 170,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -958.3746337890625
+    0,
+    5026.288330078125
    ],
    "size": [
     210,
@@ -2495,9 +2422,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      361
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2522,8 +2447,8 @@
    "id": 171,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -908.3746337890625
+    0,
+    5100.288330078125
    ],
    "size": [
     210,
@@ -2540,9 +2465,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      362
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2567,8 +2490,8 @@
    "id": 172,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -858.3746337890625
+    0,
+    5174.288330078125
    ],
    "size": [
     210,
@@ -2585,9 +2508,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      363
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2612,8 +2533,8 @@
    "id": 173,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -698.3746337890625
+    0,
+    5248.288330078125
    ],
    "size": [
     210,
@@ -2630,9 +2551,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      368
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2657,8 +2576,8 @@
    "id": 174,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -648.3746337890625
+    0,
+    5322.288330078125
    ],
    "size": [
     210,
@@ -2675,9 +2594,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      369
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2702,8 +2619,8 @@
    "id": 175,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -598.3746337890625
+    0,
+    5396.288330078125
    ],
    "size": [
     210,
@@ -2720,9 +2637,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      370
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2747,8 +2662,8 @@
    "id": 176,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -748.3746337890625
+    0,
+    5470.288330078125
    ],
    "size": [
     210,
@@ -2765,9 +2680,7 @@
      "label": "AUDIO_ENCODER_OUTPUT",
      "name": "AUDIO_ENCODER_OUTPUT",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "links": [
-      364
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2790,8 +2703,8 @@
    "id": 177,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -808.3746337890625
+    0,
+    5544.288330078125
    ],
    "size": [
     210,
@@ -2808,9 +2721,7 @@
      "label": "CLIP_VISION_OUTPUT",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "links": [
-      365
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2833,8 +2744,8 @@
    "id": 178,
    "type": "GetNode",
    "pos": [
-    3206.3271484375,
-    -548.3746337890625
+    0,
+    5618.288330078125
    ],
    "size": [
     210,
@@ -2851,9 +2762,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      366
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2878,8 +2787,8 @@
    "id": 179,
    "type": "GetNode",
    "pos": [
-    4126.3271484375,
-    -888.3746337890625
+    0,
+    5692.288330078125
    ],
    "size": [
     210,
@@ -2896,9 +2805,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      239
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2921,8 +2828,8 @@
    "id": 180,
    "type": "ImageFromBatch",
    "pos": [
-    4276.3271484375,
-    -1058.3746337890625
+    3104.326171875,
+    4351.486251831055
    ],
    "size": [
     210,
@@ -2937,7 +2844,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": 240
+     "link": null
     },
     {
      "label": "batch_index",
@@ -2947,7 +2854,7 @@
      "widget": {
       "name": "batch_index"
      },
-     "link": 375
+     "link": null
     },
     {
      "label": "length",
@@ -2965,9 +2872,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      242
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3003,8 +2908,8 @@
    "id": 182,
    "type": "VAEDecode",
    "pos": [
-    4116.3271484375,
-    -1058.3746337890625
+    3104.326171875,
+    6837.486251831055
    ],
    "size": [
     140,
@@ -3019,14 +2924,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": 243
+     "link": null
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 244
+     "link": null
     }
    ],
    "outputs": [
@@ -3035,9 +2940,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      240
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3059,8 +2962,8 @@
    "id": 184,
    "type": "KSampler",
    "pos": [
-    3806.3271484375,
-    -1078.3746337890625
+    3104.326171875,
+    2649.5094299316406
    ],
    "size": [
     270,
@@ -3075,14 +2978,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 371
+     "link": null
     },
     {
      "label": "正面条件",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 372
+     "link": null
     },
     {
      "label": "负面条件",
@@ -3159,9 +3062,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      243
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3190,8 +3091,8 @@
    "id": 51,
    "type": "VAEDecode",
    "pos": [
-    4090,
-    -2540
+    3104.326171875,
+    6923.486251831055
    ],
    "size": [
     140,
@@ -3206,14 +3107,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": 228
+     "link": null
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 49
+     "link": null
     }
    ],
    "outputs": [
@@ -3222,11 +3123,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      50,
-      101,
-      350
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3248,8 +3145,8 @@
    "id": 74,
    "type": "ImageBatch",
    "pos": [
-    4285.64111328125,
-    -1664.7406005859375
+    3104.326171875,
+    7009.486251831055
    ],
    "size": [
     189.9739532470703,
@@ -3264,14 +3161,14 @@
      "localized_name": "图像1",
      "name": "image1",
      "type": "IMAGE",
-     "link": 101
+     "link": null
     },
     {
      "label": "图像2",
      "localized_name": "图像2",
      "name": "image2",
      "type": "IMAGE",
-     "link": 76
+     "link": null
     }
    ],
    "outputs": [
@@ -3280,11 +3177,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      134,
-      260,
-      367
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3315,8 +3208,8 @@
    "id": 10,
    "type": "ModelSamplingSD3",
    "pos": [
-    2150,
-    -1710
+    3104.326171875,
+    5467.486251831055
    ],
    "size": [
     270,
@@ -3331,7 +3224,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 8
+     "link": null
     },
     {
      "label": "shift",
@@ -3349,9 +3242,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      9
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3375,8 +3266,8 @@
    "id": 5,
    "type": "SetNode",
    "pos": [
-    2810,
-    -1680
+    3104.326171875,
+    5565.486251831055
    ],
    "size": [
     210,
@@ -3392,7 +3283,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "link": 3
+     "link": null
     }
    ],
    "outputs": [
@@ -3426,8 +3317,8 @@
    "id": 6,
    "type": "CLIPLoader",
    "pos": [
-    1725.14599609375,
-    -1561.3868408203125
+    3104.326171875,
+    3952.9690856933594
    ],
    "size": [
     345.514892578125,
@@ -3472,9 +3363,7 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": [
-      4
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3502,8 +3391,8 @@
    "id": 13,
    "type": "VAELoader",
    "pos": [
-    1730,
-    -1380
+    3104.326171875,
+    5663.486251831055
    ],
    "size": [
     270,
@@ -3529,9 +3418,7 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      12
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3557,8 +3444,8 @@
    "id": 15,
    "type": "ModelPatchLoader",
    "pos": [
-    1720,
-    -1270
+    0,
+    2064
    ],
    "size": [
     329.49658203125,
@@ -3584,9 +3471,7 @@
      "localized_name": "模型补丁",
      "name": "MODEL_PATCH",
      "type": "MODEL_PATCH",
-     "links": [
-      13
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3612,8 +3497,8 @@
    "id": 164,
    "type": "KSampler",
    "pos": [
-    3787.407958984375,
-    -2542.637939453125
+    3104.326171875,
+    0
    ],
    "size": [
     270,
@@ -3628,14 +3513,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 338
+     "link": null
     },
     {
      "label": "正面条件",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 339
+     "link": null
     },
     {
      "label": "负面条件",
@@ -3712,9 +3597,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      228
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3743,8 +3626,8 @@
    "id": 46,
    "type": "LoadImage",
    "pos": [
-    1710,
-    -2140
+    0,
+    470
    ],
    "size": [
     270,
@@ -3779,19 +3662,14 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      37,
-      178
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
      "localized_name": "遮罩",
      "name": "MASK",
      "type": "MASK",
-     "links": [
-      38
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3816,8 +3694,8 @@
    "id": 3,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    2470,
-    -1710
+    3655.6034545898438,
+    125.15196990966797
    ],
    "size": [
     270,
@@ -3832,7 +3710,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 9
+     "link": null
     },
     {
      "label": "lora_name",
@@ -3859,9 +3737,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      3
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3886,8 +3762,8 @@
    "id": 41,
    "type": "GetNode",
    "pos": [
-    3171.287353515625,
-    -2079.356201171875
+    0,
+    3752.288330078125
    ],
    "size": [
     210,
@@ -3904,9 +3780,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      337
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3931,8 +3805,8 @@
    "id": 191,
    "type": "WanInfiniteTalkToVideo",
    "pos": [
-    3429.35302734375,
-    -2537.87939453125
+    3104.326171875,
+    457.5094299316406
    ],
    "size": [
     242.23828125,
@@ -3947,42 +3821,42 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 327
+     "link": null
     },
     {
      "label": "model_patch",
      "localized_name": "模型补丁",
      "name": "model_patch",
      "type": "MODEL_PATCH",
-     "link": 328
+     "link": null
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 329
+     "link": null
     },
     {
      "label": "negative",
      "localized_name": "负向提示",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": 330
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 331
+     "link": null
     },
     {
      "label": "audio_encoder_output_1",
      "localized_name": "音频编码器输出1",
      "name": "audio_encoder_output_1",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "link": 332
+     "link": null
     },
     {
      "label": "clip_vision_output",
@@ -3990,7 +3864,7 @@
      "name": "clip_vision_output",
      "shape": 7,
      "type": "CLIP_VISION_OUTPUT",
-     "link": 333
+     "link": null
     },
     {
      "label": "start_image",
@@ -3998,7 +3872,7 @@
      "name": "start_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 334
+     "link": null
     },
     {
      "label": "previous_frames",
@@ -4024,7 +3898,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 335
+     "link": null
     },
     {
      "label": "height",
@@ -4034,7 +3908,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 336
+     "link": null
     },
     {
      "label": "length",
@@ -4044,7 +3918,7 @@
      "widget": {
       "name": "length"
      },
-     "link": 337
+     "link": null
     },
     {
      "label": "motion_frame_count",
@@ -4071,18 +3945,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      338
-     ]
+     "links": []
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": [
-      339
-     ]
+     "links": []
     },
     {
      "label": "negative",
@@ -4134,8 +4004,8 @@
    "id": 192,
    "type": "WanInfiniteTalkToVideo",
    "pos": [
-    3454.306884765625,
-    -1830.6151123046875
+    3104.326171875,
+    835.5094299316406
    ],
    "size": [
     242.23828125,
@@ -4150,42 +4020,42 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 342
+     "link": null
     },
     {
      "label": "model_patch",
      "localized_name": "模型补丁",
      "name": "model_patch",
      "type": "MODEL_PATCH",
-     "link": 343
+     "link": null
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 344
+     "link": null
     },
     {
      "label": "negative",
      "localized_name": "负向提示",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": 345
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 346
+     "link": null
     },
     {
      "label": "audio_encoder_output_1",
      "localized_name": "音频编码器输出1",
      "name": "audio_encoder_output_1",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "link": 347
+     "link": null
     },
     {
      "label": "clip_vision_output",
@@ -4193,7 +4063,7 @@
      "name": "clip_vision_output",
      "shape": 7,
      "type": "CLIP_VISION_OUTPUT",
-     "link": 348
+     "link": null
     },
     {
      "label": "start_image",
@@ -4201,7 +4071,7 @@
      "name": "start_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 349
+     "link": null
     },
     {
      "label": "previous_frames",
@@ -4209,7 +4079,7 @@
      "name": "previous_frames",
      "shape": 7,
      "type": "IMAGE",
-     "link": 350
+     "link": null
     },
     {
      "label": "mode",
@@ -4228,7 +4098,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 351
+     "link": null
     },
     {
      "label": "height",
@@ -4238,7 +4108,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 352
+     "link": null
     },
     {
      "label": "length",
@@ -4248,7 +4118,7 @@
      "widget": {
       "name": "length"
      },
-     "link": 353
+     "link": null
     },
     {
      "label": "motion_frame_count",
@@ -4275,18 +4145,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      354
-     ]
+     "links": []
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": [
-      355
-     ]
+     "links": []
     },
     {
      "label": "negative",
@@ -4311,9 +4177,7 @@
      "localized_name": "裁剪图像",
      "name": "trim_image",
      "type": "INT",
-     "links": [
-      358
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4341,8 +4205,8 @@
    "id": 193,
    "type": "WanInfiniteTalkToVideo",
    "pos": [
-    3458.7880859375,
-    -1064.8143310546875
+    3104.326171875,
+    1213.5094299316406
    ],
    "size": [
     242.23828125,
@@ -4357,42 +4221,42 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 359
+     "link": null
     },
     {
      "label": "model_patch",
      "localized_name": "模型补丁",
      "name": "model_patch",
      "type": "MODEL_PATCH",
-     "link": 360
+     "link": null
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 361
+     "link": null
     },
     {
      "label": "negative",
      "localized_name": "负向提示",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": 362
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 363
+     "link": null
     },
     {
      "label": "audio_encoder_output_1",
      "localized_name": "音频编码器输出1",
      "name": "audio_encoder_output_1",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "link": 364
+     "link": null
     },
     {
      "label": "clip_vision_output",
@@ -4400,7 +4264,7 @@
      "name": "clip_vision_output",
      "shape": 7,
      "type": "CLIP_VISION_OUTPUT",
-     "link": 365
+     "link": null
     },
     {
      "label": "start_image",
@@ -4408,7 +4272,7 @@
      "name": "start_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 366
+     "link": null
     },
     {
      "label": "previous_frames",
@@ -4416,7 +4280,7 @@
      "name": "previous_frames",
      "shape": 7,
      "type": "IMAGE",
-     "link": 367
+     "link": null
     },
     {
      "label": "mode",
@@ -4435,7 +4299,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 368
+     "link": null
     },
     {
      "label": "height",
@@ -4445,7 +4309,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 369
+     "link": null
     },
     {
      "label": "length",
@@ -4455,7 +4319,7 @@
      "widget": {
       "name": "length"
      },
-     "link": 370
+     "link": null
     },
     {
      "label": "motion_frame_count",
@@ -4482,18 +4346,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      371
-     ]
+     "links": []
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": [
-      372
-     ]
+     "links": []
     },
     {
      "label": "negative",
@@ -4518,9 +4378,7 @@
      "localized_name": "裁剪图像",
      "name": "trim_image",
      "type": "INT",
-     "links": [
-      375
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4548,8 +4406,8 @@
    "id": 33,
    "type": "INTConstant",
    "pos": [
-    2211.01513671875,
-    -2506.578125
+    0,
+    2460.288330078125
    ],
    "size": [
     210,
@@ -4575,9 +4433,7 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": [
-      29
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4603,8 +4459,8 @@
    "id": 34,
    "type": "INTConstant",
    "pos": [
-    2461.01513671875,
-    -2506.578125
+    0,
+    2558.288330078125
    ],
    "size": [
     210,
@@ -4630,9 +4486,7 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": [
-      30
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4658,8 +4512,8 @@
    "id": 18,
    "type": "AudioSeparation",
    "pos": [
-    1724.8973388671875,
-    -909.979248046875
+    3104.326171875,
+    3555.5094299316406
    ],
    "size": [
     270,
@@ -4674,7 +4528,7 @@
      "localized_name": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "link": 376
+     "link": null
     },
     {
      "label": "chunk_fade_shape",
@@ -4731,10 +4585,7 @@
      "localized_name": "Vocals",
      "name": "Vocals",
      "type": "AUDIO",
-     "links": [
-      15,
-      25
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4762,8 +4613,8 @@
    "id": 21,
    "type": "AudioCrop",
    "pos": [
-    2015.512939453125,
-    -1106.314208984375
+    3104.326171875,
+    4473.486251831055
    ],
    "size": [
     270,
@@ -4778,7 +4629,7 @@
      "localized_name": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "link": 17
+     "link": null
     },
     {
      "label": "start_time",
@@ -4805,10 +4656,7 @@
      "localized_name": "音频",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      18,
-      376
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4835,8 +4683,8 @@
    "id": 30,
    "type": "AudioEncoderLoader",
    "pos": [
-    2018.1536865234375,
-    -973.1979370117188
+    0,
+    2656.288330078125
    ],
    "size": [
     270,
@@ -4862,9 +4710,7 @@
      "localized_name": "音频编码器",
      "name": "AUDIO_ENCODER",
      "type": "AUDIO_ENCODER",
-     "links": [
-      26
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4890,8 +4736,8 @@
    "id": 29,
    "type": "AudioEncoderEncode",
    "pos": [
-    2328.741943359375,
-    -971.0135498046875
+    3104.326171875,
+    7095.486251831055
    ],
    "size": [
     285.169921875,
@@ -4906,14 +4752,14 @@
      "localized_name": "音频编码器",
      "name": "audio_encoder",
      "type": "AUDIO_ENCODER",
-     "link": 26
+     "link": null
     },
     {
      "label": "audio",
      "localized_name": "音频",
      "name": "audio",
      "type": "AUDIO",
-     "link": 25
+     "link": null
     }
    ],
    "outputs": [
@@ -4922,9 +4768,7 @@
      "localized_name": "音频编码器输出",
      "name": "AUDIO_ENCODER_OUTPUT",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "links": [
-      27
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4948,8 +4792,8 @@
    "id": 20,
    "type": "SetNode",
    "pos": [
-    2402.1953125,
-    -1076.7740478515625
+    3104.326171875,
+    6571.486251831055
    ],
    "size": [
     210,
@@ -4965,7 +4809,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "link": 18
+     "link": null
     }
    ],
    "outputs": [
@@ -4997,8 +4841,8 @@
    "id": 31,
    "type": "SetNode",
    "pos": [
-    2377.038818359375,
-    -765.9783935546875
+    3104.326171875,
+    6661.486251831055
    ],
    "size": [
     250.4947265625,
@@ -5014,7 +4858,7 @@
      "label": "AUDIO_ENCODER_OUTPUT",
      "name": "AUDIO_ENCODER_OUTPUT",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "link": 27
+     "link": null
     }
    ],
    "outputs": [
@@ -5046,8 +4890,8 @@
    "id": 19,
    "type": "PreviewAudio",
    "pos": [
-    2030.69482421875,
-    -832.6123657226562
+    3104.326171875,
+    4101.486251831055
    ],
    "size": [
     270,
@@ -5062,7 +4906,7 @@
      "localized_name": "音频",
      "name": "audio",
      "type": "AUDIO",
-     "link": 15
+     "link": null
     },
     {
      "label": "audioUI",
@@ -5103,8 +4947,8 @@
    "id": 72,
    "type": "VHS_VideoCombine",
    "pos": [
-    4578.74267578125,
-    -1894.829345703125
+    4336.466522216797,
+    0
    ],
    "size": [
     226.5576171875,
@@ -5119,7 +4963,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 134
+     "link": null
     },
     {
      "label": "音频",
@@ -5127,7 +4971,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": 74
+     "link": null
     },
     {
      "label": "批次管理",
@@ -5289,8 +5133,8 @@
    "id": 53,
    "type": "VHS_VideoCombine",
    "pos": [
-    4576.4736328125,
-    -2678.97607421875
+    4336.466522216797,
+    374
    ],
    "size": [
     226.5576171875,
@@ -5305,7 +5149,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 50
+     "link": null
     },
     {
      "label": "音频",
@@ -5313,7 +5157,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": 51
+     "link": null
     },
     {
      "label": "批次管理",
@@ -5475,8 +5319,8 @@
    "id": 166,
    "type": "VHS_VideoCombine",
    "pos": [
-    4572.66552734375,
-    -1119.6639404296875
+    4336.466522216797,
+    748
    ],
    "size": [
     226.5576171875,
@@ -5491,7 +5335,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 238
+     "link": null
     },
     {
      "label": "音频",
@@ -5499,7 +5343,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": 239
+     "link": null
     },
     {
      "label": "批次管理",
@@ -5661,8 +5505,8 @@
    "id": 194,
    "type": "GetNode",
    "pos": [
-    4130,
-    -220
+    0,
+    5766.288330078125
    ],
    "size": [
     210,
@@ -5679,9 +5523,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      380
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5706,8 +5548,8 @@
    "id": 195,
    "type": "GetNode",
    "pos": [
-    3210,
-    -330
+    0,
+    5840.288330078125
    ],
    "size": [
     210,
@@ -5724,9 +5566,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      386
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5751,8 +5591,8 @@
    "id": 196,
    "type": "GetNode",
    "pos": [
-    3210,
-    -280
+    0,
+    5914.288330078125
    ],
    "size": [
     210,
@@ -5769,9 +5609,7 @@
      "label": "MODEL_PATCH",
      "name": "MODEL_PATCH",
      "type": "MODEL_PATCH",
-     "links": [
-      387
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5794,8 +5632,8 @@
    "id": 197,
    "type": "GetNode",
    "pos": [
-    3210,
-    -230
+    0,
+    5988.288330078125
    ],
    "size": [
     210,
@@ -5812,9 +5650,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      388
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5839,8 +5675,8 @@
    "id": 198,
    "type": "GetNode",
    "pos": [
-    3210,
-    -180
+    0,
+    6062.288330078125
    ],
    "size": [
     210,
@@ -5857,9 +5693,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      389
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5884,8 +5718,8 @@
    "id": 199,
    "type": "GetNode",
    "pos": [
-    3210,
-    -130
+    0,
+    6136.288330078125
    ],
    "size": [
     210,
@@ -5902,9 +5736,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      390
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5929,8 +5761,8 @@
    "id": 200,
    "type": "GetNode",
    "pos": [
-    3210,
-    30
+    0,
+    6210.288330078125
    ],
    "size": [
     210,
@@ -5947,9 +5779,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      394
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5974,8 +5804,8 @@
    "id": 201,
    "type": "GetNode",
    "pos": [
-    3210,
-    80
+    0,
+    6284.288330078125
    ],
    "size": [
     210,
@@ -5992,9 +5822,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      395
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6019,8 +5847,8 @@
    "id": 202,
    "type": "GetNode",
    "pos": [
-    3210,
-    130
+    0,
+    6358.288330078125
    ],
    "size": [
     210,
@@ -6037,9 +5865,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      396
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6064,8 +5890,8 @@
    "id": 203,
    "type": "GetNode",
    "pos": [
-    3210,
-    -20
+    0,
+    6432.288330078125
    ],
    "size": [
     210,
@@ -6082,9 +5908,7 @@
      "label": "AUDIO_ENCODER_OUTPUT",
      "name": "AUDIO_ENCODER_OUTPUT",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "links": [
-      391
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6107,8 +5931,8 @@
    "id": 204,
    "type": "GetNode",
    "pos": [
-    3210,
-    -80
+    0,
+    6506.288330078125
    ],
    "size": [
     210,
@@ -6125,9 +5949,7 @@
      "label": "CLIP_VISION_OUTPUT",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "links": [
-      392
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6150,8 +5972,8 @@
    "id": 205,
    "type": "GetNode",
    "pos": [
-    3210,
-    180
+    0,
+    6580.288330078125
    ],
    "size": [
     210,
@@ -6168,9 +5990,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      393
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6195,8 +6015,8 @@
    "id": 206,
    "type": "GetNode",
    "pos": [
-    4130,
-    -160
+    0,
+    6654.288330078125
    ],
    "size": [
     210,
@@ -6213,9 +6033,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      398
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6238,8 +6056,8 @@
    "id": 207,
    "type": "ImageFromBatch",
    "pos": [
-    4280,
-    -330
+    3104.326171875,
+    4595.486251831055
    ],
    "size": [
     210,
@@ -6254,7 +6072,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": 377
+     "link": null
     },
     {
      "label": "batch_index",
@@ -6264,7 +6082,7 @@
      "widget": {
       "name": "batch_index"
      },
-     "link": 378
+     "link": null
     },
     {
      "label": "length",
@@ -6282,9 +6100,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      385
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6320,8 +6136,8 @@
    "id": 208,
    "type": "VAEDecode",
    "pos": [
-    4120,
-    -330
+    3104.326171875,
+    7181.486251831055
    ],
    "size": [
     140,
@@ -6336,14 +6152,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": 379
+     "link": null
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 380
+     "link": null
     }
    ],
    "outputs": [
@@ -6352,9 +6168,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      377
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6376,8 +6190,8 @@
    "id": 209,
    "type": "KSampler",
    "pos": [
-    3810,
-    -350
+    3104.326171875,
+    2951.5094299316406
    ],
    "size": [
     270,
@@ -6392,14 +6206,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 381
+     "link": null
     },
     {
      "label": "正面条件",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 382
+     "link": null
     },
     {
      "label": "负面条件",
@@ -6476,9 +6290,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      379
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6507,8 +6319,8 @@
    "id": 211,
    "type": "WanInfiniteTalkToVideo",
    "pos": [
-    3460,
-    -330
+    3104.326171875,
+    1591.5094299316406
    ],
    "size": [
     242.23828125,
@@ -6523,42 +6335,42 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 386
+     "link": null
     },
     {
      "label": "model_patch",
      "localized_name": "模型补丁",
      "name": "model_patch",
      "type": "MODEL_PATCH",
-     "link": 387
+     "link": null
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 388
+     "link": null
     },
     {
      "label": "negative",
      "localized_name": "负向提示",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": 389
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 390
+     "link": null
     },
     {
      "label": "audio_encoder_output_1",
      "localized_name": "音频编码器输出1",
      "name": "audio_encoder_output_1",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "link": 391
+     "link": null
     },
     {
      "label": "clip_vision_output",
@@ -6566,7 +6378,7 @@
      "name": "clip_vision_output",
      "shape": 7,
      "type": "CLIP_VISION_OUTPUT",
-     "link": 392
+     "link": null
     },
     {
      "label": "start_image",
@@ -6574,7 +6386,7 @@
      "name": "start_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 393
+     "link": null
     },
     {
      "label": "previous_frames",
@@ -6582,7 +6394,7 @@
      "name": "previous_frames",
      "shape": 7,
      "type": "IMAGE",
-     "link": 399
+     "link": null
     },
     {
      "label": "mode",
@@ -6601,7 +6413,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 394
+     "link": null
     },
     {
      "label": "height",
@@ -6611,7 +6423,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 395
+     "link": null
     },
     {
      "label": "length",
@@ -6621,7 +6433,7 @@
      "widget": {
       "name": "length"
      },
-     "link": 396
+     "link": null
     },
     {
      "label": "motion_frame_count",
@@ -6648,18 +6460,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      381
-     ]
+     "links": []
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": [
-      382
-     ]
+     "links": []
     },
     {
      "label": "negative",
@@ -6684,9 +6492,7 @@
      "localized_name": "裁剪图像",
      "name": "trim_image",
      "type": "INT",
-     "links": [
-      378
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6714,8 +6520,8 @@
    "id": 212,
    "type": "VHS_VideoCombine",
    "pos": [
-    4570,
-    -320
+    4336.466522216797,
+    1122
    ],
    "size": [
     226.5576171875,
@@ -6730,7 +6536,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 397
+     "link": null
     },
     {
      "label": "音频",
@@ -6738,7 +6544,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": 398
+     "link": null
     },
     {
      "label": "批次管理",
@@ -6900,8 +6706,8 @@
    "id": 181,
    "type": "ImageBatch",
    "pos": [
-    4289.7724609375,
-    -921.4676513671875
+    3104.326171875,
+    7267.486251831055
    ],
    "size": [
     189.9739532470703,
@@ -6916,14 +6722,14 @@
      "localized_name": "图像1",
      "name": "image1",
      "type": "IMAGE",
-     "link": 260
+     "link": null
     },
     {
      "label": "图像2",
      "localized_name": "图像2",
      "name": "image2",
      "type": "IMAGE",
-     "link": 242
+     "link": null
     }
    ],
    "outputs": [
@@ -6932,11 +6738,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      238,
-      399,
-      400
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6967,8 +6769,8 @@
    "id": 213,
    "type": "GetNode",
    "pos": [
-    4130,
-    560
+    0,
+    6728.288330078125
    ],
    "size": [
     210,
@@ -6985,9 +6787,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      404
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7012,8 +6812,8 @@
    "id": 214,
    "type": "GetNode",
    "pos": [
-    3210,
-    450
+    0,
+    6802.288330078125
    ],
    "size": [
     210,
@@ -7030,9 +6830,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      410
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7057,8 +6855,8 @@
    "id": 215,
    "type": "GetNode",
    "pos": [
-    3210,
-    500
+    0,
+    6876.288330078125
    ],
    "size": [
     210,
@@ -7075,9 +6873,7 @@
      "label": "MODEL_PATCH",
      "name": "MODEL_PATCH",
      "type": "MODEL_PATCH",
-     "links": [
-      411
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7100,8 +6896,8 @@
    "id": 216,
    "type": "GetNode",
    "pos": [
-    3210,
-    550
+    0,
+    6950.288330078125
    ],
    "size": [
     210,
@@ -7118,9 +6914,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      412
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7145,8 +6939,8 @@
    "id": 217,
    "type": "GetNode",
    "pos": [
-    3210,
-    600
+    0,
+    7024.288330078125
    ],
    "size": [
     210,
@@ -7163,9 +6957,7 @@
      "label": "CONDITIONING",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      413
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7190,8 +6982,8 @@
    "id": 218,
    "type": "GetNode",
    "pos": [
-    3210,
-    650
+    0,
+    7098.288330078125
    ],
    "size": [
     210,
@@ -7208,9 +7000,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      414
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7235,8 +7025,8 @@
    "id": 219,
    "type": "GetNode",
    "pos": [
-    3210,
-    810
+    0,
+    7172.288330078125
    ],
    "size": [
     210,
@@ -7253,9 +7043,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      418
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7280,8 +7068,8 @@
    "id": 220,
    "type": "GetNode",
    "pos": [
-    3210,
-    860
+    0,
+    7246.288330078125
    ],
    "size": [
     210,
@@ -7298,9 +7086,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      419
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7325,8 +7111,8 @@
    "id": 221,
    "type": "GetNode",
    "pos": [
-    3210,
-    910
+    0,
+    7320.288330078125
    ],
    "size": [
     210,
@@ -7343,9 +7129,7 @@
      "label": "INT",
      "name": "INT",
      "type": "INT",
-     "links": [
-      420
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7370,8 +7154,8 @@
    "id": 222,
    "type": "GetNode",
    "pos": [
-    3210,
-    760
+    0,
+    7394.288330078125
    ],
    "size": [
     210,
@@ -7388,9 +7172,7 @@
      "label": "AUDIO_ENCODER_OUTPUT",
      "name": "AUDIO_ENCODER_OUTPUT",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "links": [
-      415
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7413,8 +7195,8 @@
    "id": 223,
    "type": "GetNode",
    "pos": [
-    3210,
-    700
+    0,
+    7468.288330078125
    ],
    "size": [
     210,
@@ -7431,9 +7213,7 @@
      "label": "CLIP_VISION_OUTPUT",
      "name": "CLIP_VISION_OUTPUT",
      "type": "CLIP_VISION_OUTPUT",
-     "links": [
-      416
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7456,8 +7236,8 @@
    "id": 224,
    "type": "GetNode",
    "pos": [
-    3210,
-    960
+    0,
+    7542.288330078125
    ],
    "size": [
     210,
@@ -7474,9 +7254,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      417
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7501,8 +7279,8 @@
    "id": 225,
    "type": "GetNode",
    "pos": [
-    4130,
-    620
+    0,
+    7616.288330078125
    ],
    "size": [
     210,
@@ -7519,9 +7297,7 @@
      "label": "AUDIO",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      422
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7544,8 +7320,8 @@
    "id": 226,
    "type": "ImageFromBatch",
    "pos": [
-    4280,
-    450
+    3104.326171875,
+    4717.486251831055
    ],
    "size": [
     210,
@@ -7560,7 +7336,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": 401
+     "link": null
     },
     {
      "label": "batch_index",
@@ -7570,7 +7346,7 @@
      "widget": {
       "name": "batch_index"
      },
-     "link": 402
+     "link": null
     },
     {
      "label": "length",
@@ -7588,9 +7364,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      409
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7626,8 +7400,8 @@
    "id": 227,
    "type": "VAEDecode",
    "pos": [
-    4120,
-    450
+    3104.326171875,
+    7353.486251831055
    ],
    "size": [
     140,
@@ -7642,14 +7416,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": 403
+     "link": null
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 404
+     "link": null
     }
    ],
    "outputs": [
@@ -7658,9 +7432,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      401
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7682,8 +7454,8 @@
    "id": 228,
    "type": "KSampler",
    "pos": [
-    3810,
-    430
+    3104.326171875,
+    3253.5094299316406
    ],
    "size": [
     270,
@@ -7698,14 +7470,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 405
+     "link": null
     },
     {
      "label": "正面条件",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 406
+     "link": null
     },
     {
      "label": "负面条件",
@@ -7782,9 +7554,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      403
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7813,8 +7583,8 @@
    "id": 229,
    "type": "ImageBatch",
    "pos": [
-    4290,
-    580
+    3104.326171875,
+    7439.486251831055
    ],
    "size": [
     189.9739532470703,
@@ -7829,14 +7599,14 @@
      "localized_name": "图像1",
      "name": "image1",
      "type": "IMAGE",
-     "link": 424
+     "link": null
     },
     {
      "label": "图像2",
      "localized_name": "图像2",
      "name": "image2",
      "type": "IMAGE",
-     "link": 409
+     "link": null
     }
    ],
    "outputs": [
@@ -7845,9 +7615,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      421
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7878,8 +7646,8 @@
    "id": 230,
    "type": "WanInfiniteTalkToVideo",
    "pos": [
-    3460,
-    440
+    3104.326171875,
+    1969.5094299316406
    ],
    "size": [
     242.23828125,
@@ -7894,42 +7662,42 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 410
+     "link": null
     },
     {
      "label": "model_patch",
      "localized_name": "模型补丁",
      "name": "model_patch",
      "type": "MODEL_PATCH",
-     "link": 411
+     "link": null
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 412
+     "link": null
     },
     {
      "label": "negative",
      "localized_name": "负向提示",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": 413
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 414
+     "link": null
     },
     {
      "label": "audio_encoder_output_1",
      "localized_name": "音频编码器输出1",
      "name": "audio_encoder_output_1",
      "type": "AUDIO_ENCODER_OUTPUT",
-     "link": 415
+     "link": null
     },
     {
      "label": "clip_vision_output",
@@ -7937,7 +7705,7 @@
      "name": "clip_vision_output",
      "shape": 7,
      "type": "CLIP_VISION_OUTPUT",
-     "link": 416
+     "link": null
     },
     {
      "label": "start_image",
@@ -7945,7 +7713,7 @@
      "name": "start_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 417
+     "link": null
     },
     {
      "label": "previous_frames",
@@ -7953,7 +7721,7 @@
      "name": "previous_frames",
      "shape": 7,
      "type": "IMAGE",
-     "link": 423
+     "link": null
     },
     {
      "label": "mode",
@@ -7972,7 +7740,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 418
+     "link": null
     },
     {
      "label": "height",
@@ -7982,7 +7750,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 419
+     "link": null
     },
     {
      "label": "length",
@@ -7992,7 +7760,7 @@
      "widget": {
       "name": "length"
      },
-     "link": 420
+     "link": null
     },
     {
      "label": "motion_frame_count",
@@ -8019,18 +7787,14 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      405
-     ]
+     "links": []
     },
     {
      "label": "positive",
      "localized_name": "正向提示",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": [
-      406
-     ]
+     "links": []
     },
     {
      "label": "negative",
@@ -8055,9 +7819,7 @@
      "localized_name": "裁剪图像",
      "name": "trim_image",
      "type": "INT",
-     "links": [
-      402
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -8085,8 +7847,8 @@
    "id": 231,
    "type": "VHS_VideoCombine",
    "pos": [
-    4570,
-    460
+    4336.466522216797,
+    1496
    ],
    "size": [
     226.5576171875,
@@ -8101,7 +7863,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 421
+     "link": null
     },
     {
      "label": "音频",
@@ -8109,7 +7871,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": 422
+     "link": null
     },
     {
      "label": "批次管理",
@@ -8271,8 +8033,8 @@
    "id": 210,
    "type": "ImageBatch",
    "pos": [
-    4290.8779296875,
-    -193.42103576660156
+    3104.326171875,
+    7525.486251831055
    ],
    "size": [
     189.9739532470703,
@@ -8287,14 +8049,14 @@
      "localized_name": "图像1",
      "name": "image1",
      "type": "IMAGE",
-     "link": 400
+     "link": null
     },
     {
      "label": "图像2",
      "localized_name": "图像2",
      "name": "image2",
      "type": "IMAGE",
-     "link": 385
+     "link": null
     }
    ],
    "outputs": [
@@ -8303,11 +8065,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      397,
-      423,
-      424
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -8338,8 +8096,8 @@
    "id": 42,
    "type": "LoadImage",
    "pos": [
-    1710,
-    -2510
+    0,
+    824
    ],
    "size": [
     270,
@@ -8374,19 +8132,14 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      35,
-      173
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
      "localized_name": "遮罩",
      "name": "MASK",
      "type": "MASK",
-     "links": [
-      36
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -8411,8 +8164,8 @@
    "id": 17,
    "type": "LoadAudio",
    "pos": [
-    1714.2303466796875,
-    -1115.236572265625
+    0,
+    1648
    ],
    "size": [
     273.9583435058594,
@@ -8456,9 +8209,7 @@
      "localized_name": "音频",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      17
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -8493,8 +8244,8 @@
    "id": 137,
    "type": "CLIPVisionLoader",
    "pos": [
-    2210,
-    -2310
+    0,
+    2754.288330078125
    ],
    "size": [
     270,
@@ -8520,10 +8271,7 @@
      "localized_name": "CLIP视觉",
      "name": "CLIP_VISION",
      "type": "CLIP_VISION",
-     "links": [
-      172,
-      179
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -8547,8 +8295,8 @@
    "id": 2,
    "type": "UNETLoader",
    "pos": [
-    1720,
-    -1720
+    3655.6034545898438,
+    0
    ],
    "size": [
     370.8630676269531,
@@ -8583,9 +8331,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      8
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -8644,8 +8390,8 @@
     "limao_lic": "LM-E16E-5187"
    },
    "pos": [
-    1710.0,
-    -3098.97607421875
+    0,
+    1458
    ]
   },
   {
@@ -8653,7 +8399,7 @@
    "order": 132,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "https:///app/?v=709",
+   "title": "https:///709",
    "size": [
     1736.484375,
     80
@@ -8684,8 +8430,8 @@
     "limao_lic": "LM-E16E-5187"
    },
    "pos": [
-    1710.0,
-    -2908.124760910698
+    0,
+    1824
    ]
   },
   {
@@ -8724,16 +8470,16 @@
     "limao_lic": "LM-E16E-5187"
    },
    "pos": [
-    1710.0,
-    -2770.1247609107004
+    0,
+    1944
    ]
   },
   {
    "id": 236,
    "type": "MarkdownNote",
    "pos": [
-    1710.0,
-    -3398.97607421875
+    0,
+    1178
    ],
    "size": [
     520,
@@ -8750,481 +8496,31 @@
    "widgets_values": [
     "# 狸猫AI 专属工作流\n\n**本文件由狸猫AI平台独家装配与调优**\n\n- 授权标识：`LM-E16E-5187`\n- 版本：`LIMAO-WF-20261112-R1`\n- 指纹：`e16ee3983ee1b407`\n\n> 本工作流嵌入狸猫AI数字指纹，文件内容可溯源。**禁止**未经授权的二次开发、复制、转发、公开分享或发布至任何其他平台。违者将追究相应责任。\n\n狸猫AI · 让创作更简单"
    ]
+  },
+  {
+   "id": 237,
+   "type": "MarkdownNote",
+   "title": "狸猫AI·使用说明",
+   "pos": [
+    0,
+    -560
+   ],
+   "size": [
+    400,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 左侧框：需要你修改的输入与参数\n- 中间框：核心处理区（参数已调好，慎动）\n- 右侧框：输出结果\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源）\n- 显存不足：优先「H3·16G显存精修版」，保持显存治理节点开启\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
+   ]
   }
  ],
  "links": [
-  [
-   3,
-   3,
-   0,
-   5,
-   0,
-   "MODEL"
-  ],
-  [
-   4,
-   6,
-   0,
-   7,
-   0,
-   "CLIP"
-  ],
-  [
-   5,
-   7,
-   0,
-   8,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   8,
-   2,
-   0,
-   10,
-   0,
-   "MODEL"
-  ],
-  [
-   9,
-   10,
-   0,
-   3,
-   0,
-   "MODEL"
-  ],
-  [
-   12,
-   13,
-   0,
-   14,
-   0,
-   "VAE"
-  ],
-  [
-   13,
-   15,
-   0,
-   16,
-   0,
-   "MODEL_PATCH"
-  ],
-  [
-   15,
-   18,
-   3,
-   19,
-   0,
-   "AUDIO"
-  ],
-  [
-   17,
-   17,
-   0,
-   21,
-   0,
-   "AUDIO"
-  ],
-  [
-   18,
-   21,
-   0,
-   20,
-   0,
-   "AUDIO"
-  ],
-  [
-   25,
-   18,
-   3,
-   29,
-   1,
-   "AUDIO"
-  ],
-  [
-   26,
-   30,
-   0,
-   29,
-   0,
-   "AUDIO_ENCODER"
-  ],
-  [
-   27,
-   29,
-   0,
-   31,
-   0,
-   "AUDIO_ENCODER_OUTPUT"
-  ],
-  [
-   29,
-   33,
-   0,
-   35,
-   0,
-   "INT"
-  ],
-  [
-   30,
-   34,
-   0,
-   36,
-   0,
-   "INT"
-  ],
-  [
-   31,
-   37,
-   0,
-   38,
-   0,
-   "INT"
-  ],
-  [
-   35,
-   42,
-   0,
-   43,
-   0,
-   "IMAGE"
-  ],
-  [
-   36,
-   42,
-   1,
-   44,
-   0,
-   "MASK"
-  ],
-  [
-   37,
-   46,
-   0,
-   45,
-   0,
-   "IMAGE"
-  ],
-  [
-   38,
-   46,
-   1,
-   47,
-   0,
-   "MASK"
-  ],
-  [
-   49,
-   52,
-   0,
-   51,
-   1,
-   "VAE"
-  ],
-  [
-   50,
-   51,
-   0,
-   53,
-   0,
-   "IMAGE"
-  ],
-  [
-   51,
-   54,
-   0,
-   53,
-   1,
-   "AUDIO"
-  ],
-  [
-   74,
-   71,
-   0,
-   72,
-   1,
-   "AUDIO"
-  ],
-  [
-   76,
-   73,
-   0,
-   74,
-   1,
-   "IMAGE"
-  ],
-  [
-   101,
-   51,
-   0,
-   74,
-   0,
-   "IMAGE"
-  ],
-  [
-   134,
-   74,
-   0,
-   72,
-   0,
-   "IMAGE"
-  ],
-  [
-   167,
-   7,
-   0,
-   134,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   168,
-   134,
-   0,
-   12,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   172,
-   137,
-   0,
-   136,
-   0,
-   "CLIP_VISION"
-  ],
-  [
-   173,
-   42,
-   0,
-   136,
-   1,
-   "IMAGE"
-  ],
-  [
-   174,
-   136,
-   0,
-   139,
-   0,
-   "CLIP_VISION_OUTPUT"
-  ],
-  [
-   175,
-   142,
-   0,
-   140,
-   0,
-   "CLIP_VISION_OUTPUT"
-  ],
-  [
-   178,
-   46,
-   0,
-   142,
-   1,
-   "IMAGE"
-  ],
-  [
-   179,
-   137,
-   0,
-   142,
-   0,
-   "CLIP_VISION"
-  ],
-  [
-   221,
-   148,
-   0,
-   163,
-   1,
-   "VAE"
-  ],
-  [
-   222,
-   163,
-   0,
-   73,
-   0,
-   "IMAGE"
-  ],
-  [
-   228,
-   164,
-   0,
-   51,
-   0,
-   "LATENT"
-  ],
-  [
-   233,
-   165,
-   0,
-   163,
-   0,
-   "LATENT"
-  ],
-  [
-   238,
-   181,
-   0,
-   166,
-   0,
-   "IMAGE"
-  ],
-  [
-   239,
-   179,
-   0,
-   166,
-   1,
-   "AUDIO"
-  ],
-  [
-   240,
-   182,
-   0,
-   180,
-   0,
-   "IMAGE"
-  ],
-  [
-   242,
-   180,
-   0,
-   181,
-   1,
-   "IMAGE"
-  ],
-  [
-   243,
-   184,
-   0,
-   182,
-   0,
-   "LATENT"
-  ],
-  [
-   244,
-   167,
-   0,
-   182,
-   1,
-   "VAE"
-  ],
-  [
-   260,
-   74,
-   0,
-   181,
-   0,
-   "IMAGE"
-  ],
-  [
-   327,
-   24,
-   0,
-   191,
-   0,
-   "MODEL"
-  ],
-  [
-   328,
-   25,
-   0,
-   191,
-   1,
-   "MODEL_PATCH"
-  ],
-  [
-   329,
-   26,
-   0,
-   191,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   330,
-   27,
-   0,
-   191,
-   3,
-   "CONDITIONING"
-  ],
-  [
-   331,
-   28,
-   0,
-   191,
-   4,
-   "VAE"
-  ],
-  [
-   332,
-   32,
-   0,
-   191,
-   5,
-   "AUDIO_ENCODER_OUTPUT"
-  ],
-  [
-   333,
-   143,
-   0,
-   191,
-   6,
-   "CLIP_VISION_OUTPUT"
-  ],
-  [
-   334,
-   48,
-   0,
-   191,
-   7,
-   "IMAGE"
-  ],
-  [
-   335,
-   39,
-   0,
-   191,
-   10,
-   "INT"
-  ],
-  [
-   336,
-   40,
-   0,
-   191,
-   11,
-   "INT"
-  ],
-  [
-   337,
-   41,
-   0,
-   191,
-   12,
-   "INT"
-  ],
-  [
-   338,
-   191,
-   0,
-   164,
-   0,
-   "MODEL"
-  ],
-  [
-   339,
-   191,
-   1,
-   164,
-   1,
-   "CONDITIONING"
-  ],
   [
    340,
    191,
@@ -9240,118 +8536,6 @@
    164,
    3,
    "LATENT"
-  ],
-  [
-   342,
-   150,
-   0,
-   192,
-   0,
-   "MODEL"
-  ],
-  [
-   343,
-   151,
-   0,
-   192,
-   1,
-   "MODEL_PATCH"
-  ],
-  [
-   344,
-   152,
-   0,
-   192,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   345,
-   153,
-   0,
-   192,
-   3,
-   "CONDITIONING"
-  ],
-  [
-   346,
-   154,
-   0,
-   192,
-   4,
-   "VAE"
-  ],
-  [
-   347,
-   158,
-   0,
-   192,
-   5,
-   "AUDIO_ENCODER_OUTPUT"
-  ],
-  [
-   348,
-   159,
-   0,
-   192,
-   6,
-   "CLIP_VISION_OUTPUT"
-  ],
-  [
-   349,
-   160,
-   0,
-   192,
-   7,
-   "IMAGE"
-  ],
-  [
-   350,
-   51,
-   0,
-   192,
-   8,
-   "IMAGE"
-  ],
-  [
-   351,
-   155,
-   0,
-   192,
-   10,
-   "INT"
-  ],
-  [
-   352,
-   156,
-   0,
-   192,
-   11,
-   "INT"
-  ],
-  [
-   353,
-   157,
-   0,
-   192,
-   12,
-   "INT"
-  ],
-  [
-   354,
-   192,
-   0,
-   165,
-   0,
-   "MODEL"
-  ],
-  [
-   355,
-   192,
-   1,
-   165,
-   1,
-   "CONDITIONING"
   ],
   [
    356,
@@ -9370,126 +8554,6 @@
    "LATENT"
   ],
   [
-   358,
-   192,
-   4,
-   73,
-   1,
-   "INT"
-  ],
-  [
-   359,
-   168,
-   0,
-   193,
-   0,
-   "MODEL"
-  ],
-  [
-   360,
-   169,
-   0,
-   193,
-   1,
-   "MODEL_PATCH"
-  ],
-  [
-   361,
-   170,
-   0,
-   193,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   362,
-   171,
-   0,
-   193,
-   3,
-   "CONDITIONING"
-  ],
-  [
-   363,
-   172,
-   0,
-   193,
-   4,
-   "VAE"
-  ],
-  [
-   364,
-   176,
-   0,
-   193,
-   5,
-   "AUDIO_ENCODER_OUTPUT"
-  ],
-  [
-   365,
-   177,
-   0,
-   193,
-   6,
-   "CLIP_VISION_OUTPUT"
-  ],
-  [
-   366,
-   178,
-   0,
-   193,
-   7,
-   "IMAGE"
-  ],
-  [
-   367,
-   74,
-   0,
-   193,
-   8,
-   "IMAGE"
-  ],
-  [
-   368,
-   173,
-   0,
-   193,
-   10,
-   "INT"
-  ],
-  [
-   369,
-   174,
-   0,
-   193,
-   11,
-   "INT"
-  ],
-  [
-   370,
-   175,
-   0,
-   193,
-   12,
-   "INT"
-  ],
-  [
-   371,
-   193,
-   0,
-   184,
-   0,
-   "MODEL"
-  ],
-  [
-   372,
-   193,
-   1,
-   184,
-   1,
-   "CONDITIONING"
-  ],
-  [
    373,
    193,
    2,
@@ -9504,70 +8568,6 @@
    184,
    3,
    "LATENT"
-  ],
-  [
-   375,
-   193,
-   4,
-   180,
-   1,
-   "INT"
-  ],
-  [
-   376,
-   21,
-   0,
-   18,
-   0,
-   "AUDIO"
-  ],
-  [
-   377,
-   208,
-   0,
-   207,
-   0,
-   "IMAGE"
-  ],
-  [
-   378,
-   211,
-   4,
-   207,
-   1,
-   "INT"
-  ],
-  [
-   379,
-   209,
-   0,
-   208,
-   0,
-   "LATENT"
-  ],
-  [
-   380,
-   194,
-   0,
-   208,
-   1,
-   "VAE"
-  ],
-  [
-   381,
-   211,
-   0,
-   209,
-   0,
-   "MODEL"
-  ],
-  [
-   382,
-   211,
-   1,
-   209,
-   1,
-   "CONDITIONING"
   ],
   [
    383,
@@ -9586,182 +8586,6 @@
    "LATENT"
   ],
   [
-   385,
-   207,
-   0,
-   210,
-   1,
-   "IMAGE"
-  ],
-  [
-   386,
-   195,
-   0,
-   211,
-   0,
-   "MODEL"
-  ],
-  [
-   387,
-   196,
-   0,
-   211,
-   1,
-   "MODEL_PATCH"
-  ],
-  [
-   388,
-   197,
-   0,
-   211,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   389,
-   198,
-   0,
-   211,
-   3,
-   "CONDITIONING"
-  ],
-  [
-   390,
-   199,
-   0,
-   211,
-   4,
-   "VAE"
-  ],
-  [
-   391,
-   203,
-   0,
-   211,
-   5,
-   "AUDIO_ENCODER_OUTPUT"
-  ],
-  [
-   392,
-   204,
-   0,
-   211,
-   6,
-   "CLIP_VISION_OUTPUT"
-  ],
-  [
-   393,
-   205,
-   0,
-   211,
-   7,
-   "IMAGE"
-  ],
-  [
-   394,
-   200,
-   0,
-   211,
-   10,
-   "INT"
-  ],
-  [
-   395,
-   201,
-   0,
-   211,
-   11,
-   "INT"
-  ],
-  [
-   396,
-   202,
-   0,
-   211,
-   12,
-   "INT"
-  ],
-  [
-   397,
-   210,
-   0,
-   212,
-   0,
-   "IMAGE"
-  ],
-  [
-   398,
-   206,
-   0,
-   212,
-   1,
-   "AUDIO"
-  ],
-  [
-   399,
-   181,
-   0,
-   211,
-   8,
-   "IMAGE"
-  ],
-  [
-   400,
-   181,
-   0,
-   210,
-   0,
-   "IMAGE"
-  ],
-  [
-   401,
-   227,
-   0,
-   226,
-   0,
-   "IMAGE"
-  ],
-  [
-   402,
-   230,
-   4,
-   226,
-   1,
-   "INT"
-  ],
-  [
-   403,
-   228,
-   0,
-   227,
-   0,
-   "LATENT"
-  ],
-  [
-   404,
-   213,
-   0,
-   227,
-   1,
-   "VAE"
-  ],
-  [
-   405,
-   230,
-   0,
-   228,
-   0,
-   "MODEL"
-  ],
-  [
-   406,
-   230,
-   1,
-   228,
-   1,
-   "CONDITIONING"
-  ],
-  [
    407,
    230,
    2,
@@ -9776,255 +8600,46 @@
    228,
    3,
    "LATENT"
-  ],
-  [
-   409,
-   226,
-   0,
-   229,
-   1,
-   "IMAGE"
-  ],
-  [
-   410,
-   214,
-   0,
-   230,
-   0,
-   "MODEL"
-  ],
-  [
-   411,
-   215,
-   0,
-   230,
-   1,
-   "MODEL_PATCH"
-  ],
-  [
-   412,
-   216,
-   0,
-   230,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   413,
-   217,
-   0,
-   230,
-   3,
-   "CONDITIONING"
-  ],
-  [
-   414,
-   218,
-   0,
-   230,
-   4,
-   "VAE"
-  ],
-  [
-   415,
-   222,
-   0,
-   230,
-   5,
-   "AUDIO_ENCODER_OUTPUT"
-  ],
-  [
-   416,
-   223,
-   0,
-   230,
-   6,
-   "CLIP_VISION_OUTPUT"
-  ],
-  [
-   417,
-   224,
-   0,
-   230,
-   7,
-   "IMAGE"
-  ],
-  [
-   418,
-   219,
-   0,
-   230,
-   10,
-   "INT"
-  ],
-  [
-   419,
-   220,
-   0,
-   230,
-   11,
-   "INT"
-  ],
-  [
-   420,
-   221,
-   0,
-   230,
-   12,
-   "INT"
-  ],
-  [
-   421,
-   229,
-   0,
-   231,
-   0,
-   "IMAGE"
-  ],
-  [
-   422,
-   225,
-   0,
-   231,
-   1,
-   "AUDIO"
-  ],
-  [
-   423,
-   210,
-   0,
-   230,
-   8,
-   "IMAGE"
-  ],
-  [
-   424,
-   210,
-   0,
-   229,
-   0,
-   "IMAGE"
   ]
  ],
  "groups": [
   {
-   "id": 1,
-   "title": "模型及提示词",
+   "id": 12,
+   "title": "📥 输入区（改这里）",
    "bounding": [
-    1702.344970703125,
-    -1795.918212890625,
-    1258.669921875,
-    594.8871459960938
+    -50,
+    -120,
+    3084.326171875,
+    7790.288330078125
    ],
    "color": "#3f789e",
+   "font_size": 24,
    "flags": {}
   },
   {
-   "id": 2,
-   "title": "音频处理",
+   "id": 13,
+   "title": "⚙️ 核心处理（参数已调好，慎动）",
    "bounding": [
-    1703.6976318359375,
-    -1184.5146484375,
-    932.3163452148438,
-    452.069580078125
+    3054.326171875,
+    -120,
+    1192.1403503417969,
+    7817.486251831055
    ],
-   "color": "#3f789e",
+   "color": "#8f6e48",
+   "font_size": 24,
    "flags": {}
   },
   {
-   "id": 3,
-   "title": "尺寸设置",
+   "id": 14,
+   "title": "📤 输出区",
    "bounding": [
-    2201.01513671875,
-    -2576.578125,
-    470.5205078125,
-    207.0353546142578
+    4286.466522216797,
+    -120,
+    326.5576171875,
+    1970
    ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 4,
-   "title": "分段帧数设置",
-   "bounding": [
-    2684.796630859375,
-    -2575.3515625,
-    230,
-    213.60000610351562
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 5,
-   "title": "图片上传",
-   "bounding": [
-    1700,
-    -2580,
-    479.412109375,
-    767.5999755859375
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 6,
-   "title": "采样1",
-   "bounding": [
-    3150,
-    -2623.60009765625,
-    1109.395751953125,
-    664.3284301757812
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 7,
-   "title": "采样2",
-   "bounding": [
-    3150.2529296875,
-    -1898.26904296875,
-    1343.9296875,
-    662.4321899414062
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 9,
-   "title": "采样2",
-   "bounding": [
-    3156.3271484375,
-    -1158.3746337890625,
-    1336.8228759765625,
-    663.4474487304688
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 10,
-   "title": "采样3",
-   "bounding": [
-    3160,
-    -430,
-    1336.8228759765625,
-    663.4474487304688
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 11,
-   "title": "采样2",
-   "bounding": [
-    3160,
-    350,
-    1336.8228759765625,
-    663.4474487304688
-   ],
-   "color": "#3f789e",
+   "color": "#4a6b3f",
+   "font_size": 24,
    "flags": {}
   }
  ],

@@ -8,8 +8,8 @@
    "id": 4,
    "type": "TextEncodeQwenImage21",
    "pos": [
-    420,
-    20
+    2740.2392578125,
+    0
    ],
    "size": [
     480,
@@ -22,13 +22,13 @@
     {
      "name": "clip",
      "type": "CLIP",
-     "link": 15
+     "link": null
     },
     {
      "name": "images.image_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": 3
+     "link": null
     },
     {
      "name": "images.image_2",
@@ -46,30 +46,24 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": 13
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "links": [
-      5
-     ]
+     "links": []
     },
     {
      "name": "negative",
      "type": "CONDITIONING",
-     "links": [
-      6
-     ]
+     "links": []
     },
     {
      "name": "latent",
      "type": "LATENT",
-     "links": [
-      9
-     ]
+     "links": []
     }
    ],
    "title": "2.1编辑条件 · 提示词＋参考图＋VAE",
@@ -100,8 +94,8 @@
    "id": 5,
    "type": "KSamplerSelect",
    "pos": [
-    942.4095738971781,
-    613.507566813352
+    0,
+    1542
    ],
    "size": [
     334.29322743372336,
@@ -115,9 +109,7 @@
     {
      "name": "SAMPLER",
      "type": "SAMPLER",
-     "links": [
-      7
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -143,8 +135,8 @@
    "id": 6,
    "type": "ManualSigmas",
    "pos": [
-    950.9960287646234,
-    399.8948159278737
+    0,
+    1152
    ],
    "size": [
     330,
@@ -158,9 +150,7 @@
     {
      "name": "SIGMAS",
      "type": "SIGMAS",
-     "links": [
-      8
-     ]
+     "links": []
     }
    ],
    "title": "官方8步Sigma · 末尾0",
@@ -187,8 +177,8 @@
    "id": 7,
    "type": "SamplerCustom",
    "pos": [
-    960,
-    20
+    2740.2392578125,
+    580
    ],
    "size": [
     330,
@@ -201,41 +191,39 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": 16
+     "link": null
     },
     {
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 5
+     "link": null
     },
     {
      "name": "negative",
      "type": "CONDITIONING",
-     "link": 6
+     "link": null
     },
     {
      "name": "sampler",
      "type": "SAMPLER",
-     "link": 7
+     "link": null
     },
     {
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": 8
+     "link": null
     },
     {
      "name": "latent_image",
      "type": "LATENT",
-     "link": 9
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "output",
      "type": "LATENT",
-     "links": [
-      10
-     ]
+     "links": []
     },
     {
      "name": "denoised_output",
@@ -273,8 +261,8 @@
    "id": 8,
    "type": "VAEDecode",
    "pos": [
-    1320,
-    20
+    2740.2392578125,
+    940
    ],
    "size": [
     330,
@@ -287,21 +275,19 @@
     {
      "name": "samples",
      "type": "LATENT",
-     "link": 10
+     "link": null
     },
     {
      "name": "vae",
      "type": "VAE",
-     "link": 14
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      12
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -321,8 +307,8 @@
    "id": 9,
    "type": "SaveImage",
    "pos": [
-    1324.2932274337231,
-    260.7856606203713
+    3530.2392578125,
+    0
    ],
    "size": [
     330,
@@ -335,7 +321,7 @@
     {
      "name": "images",
      "type": "IMAGE",
-     "link": 12
+     "link": null
     }
    ],
    "outputs": [
@@ -368,8 +354,8 @@
    "id": 21,
    "type": "LoadImage",
    "pos": [
-    65.07888805409466,
-    24.31469357089199
+    0,
+    470
    ],
    "size": [
     330,
@@ -383,9 +369,7 @@
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      3
-     ]
+     "links": []
     },
     {
      "name": "MASK",
@@ -420,8 +404,8 @@
    "id": 22,
    "type": "6afdfe0f-148e-4a7f-b1bf-3922718f59a7",
    "pos": [
-    967.2056455940746,
-    -100.77771814961909
+    0,
+    1791.1617473435656
    ],
    "size": [
     140,
@@ -435,24 +419,17 @@
     {
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      13,
-      14
-     ]
+     "links": []
     },
     {
      "name": "CLIP",
      "type": "CLIP",
-     "links": [
-      15
-     ]
+     "links": []
     },
     {
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      16
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -472,8 +449,8 @@
    "id": 23,
    "type": "Label (rgthree)",
    "pos": [
-    53.593649051191505,
-    -535.7896482942842
+    0,
+    1352
    ],
    "size": [
     2620.2392578125,
@@ -512,8 +489,8 @@
    "id": 24,
    "type": "Label (rgthree)",
    "pos": [
-    61.23376536884257,
-    -366.83010704363045
+    0,
+    1671.1617473435656
    ],
    "size": [
     1736.484375,
@@ -526,7 +503,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "https:///app/?v=709",
+   "title": "https:///709",
    "properties": {
     "fontSize": 80,
     "fontFamily": "Arial",
@@ -552,8 +529,8 @@
    "id": 25,
    "type": "Label (rgthree)",
    "pos": [
-    60.645927876374344,
-    -245.43231408385066
+    0,
+    1897.1617473435656
    ],
    "size": [
     2324.619140625,
@@ -592,8 +569,8 @@
    "id": 26,
    "type": "MarkdownNote",
    "pos": [
-    53.593649051191505,
-    -835.7896482942842
+    0,
+    872
    ],
    "size": [
     520,
@@ -610,107 +587,72 @@
    "widgets_values": [
     "# 狸猫AI 专属工作流\n\n**本文件由狸猫AI平台独家装配与调优**\n\n- 授权标识：`LM-5291-7938`\n- 版本：`LIMAO-WF-20261112-R1`\n- 指纹：`5291130384cb26be`\n\n> 本工作流嵌入狸猫AI数字指纹，文件内容可溯源。**禁止**未经授权的二次开发、复制、转发、公开分享或发布至任何其他平台。违者将追究相应责任。\n\n狸猫AI · 让创作更简单"
    ]
+  },
+  {
+   "id": 27,
+   "type": "MarkdownNote",
+   "title": "狸猫AI·使用说明",
+   "pos": [
+    0,
+    -560
+   ],
+   "size": [
+    400,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 左侧框：需要你修改的输入与参数\n- 中间框：核心处理区（参数已调好，慎动）\n- 右侧框：输出结果\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源）\n- 显存不足：优先「H3·16G显存精修版」，保持显存治理节点开启\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
+   ]
   }
  ],
- "links": [
-  [
-   5,
-   4,
-   0,
-   7,
-   1,
-   "CONDITIONING"
-  ],
-  [
-   6,
-   4,
-   1,
-   7,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   7,
-   5,
-   0,
-   7,
-   3,
-   "SAMPLER"
-  ],
-  [
-   8,
-   6,
-   0,
-   7,
-   4,
-   "SIGMAS"
-  ],
-  [
-   9,
-   4,
-   2,
-   7,
-   5,
-   "LATENT"
-  ],
-  [
-   10,
-   7,
-   0,
-   8,
-   0,
-   "LATENT"
-  ],
-  [
-   12,
-   8,
-   0,
-   9,
-   0,
-   "IMAGE"
-  ],
-  [
-   14,
-   22,
-   0,
-   8,
-   1,
-   "VAE"
-  ],
-  [
-   16,
-   22,
-   2,
-   7,
-   0,
-   "MODEL"
-  ],
-  [
-   15,
-   22,
-   1,
-   4,
-   0,
-   "CLIP"
-  ],
-  [
-   3,
-   21,
-   0,
-   4,
-   1,
-   "IMAGE"
-  ],
-  [
-   13,
-   22,
-   0,
-   4,
-   4,
-   "VAE"
-  ]
+ "links": [],
+ "groups": [
+  {
+   "id": 1,
+   "title": "📥 输入区（改这里）",
+   "bounding": [
+    -50,
+    -120,
+    2720.2392578125,
+    2097.1617473435654
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 2,
+   "title": "⚙️ 核心处理（参数已调好，慎动）",
+   "bounding": [
+    2690.2392578125,
+    -120,
+    750.0,
+    1280
+   ],
+   "color": "#8f6e48",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 3,
+   "title": "📤 输出区",
+   "bounding": [
+    3480.2392578125,
+    -120,
+    430,
+    460
+   ],
+   "color": "#4a6b3f",
+   "font_size": 24,
+   "flags": {}
+  }
  ],
- "groups": [],
  "definitions": {
   "subgraphs": [
    {

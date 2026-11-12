@@ -8,8 +8,8 @@
    "id": 208,
    "type": "GetNode",
    "pos": [
-    -2750,
-    -2970
+    0,
+    6820
    ],
    "size": [
     210,
@@ -27,9 +27,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1278
-     ]
+     "links": []
     }
    ],
    "title": "Get_高度",
@@ -55,8 +53,8 @@
    "id": 148,
    "type": "SetNode",
    "pos": [
-    -330,
-    -2480
+    3846.66015625,
+    11688
    ],
    "size": [
     210,
@@ -73,7 +71,7 @@
      "localized_name": "输入",
      "name": "AUDIO",
      "type": "AUDIO",
-     "link": 255
+     "link": null
     }
    ],
    "outputs": [
@@ -108,8 +106,8 @@
    "id": 250,
    "type": "GetNode",
    "pos": [
-    350,
-    -2760
+    0,
+    6920
    ],
    "size": [
     210,
@@ -127,9 +125,7 @@
      "localized_name": "输出",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": [
-      502
-     ]
+     "links": []
     }
    ],
    "title": "Get_帧率",
@@ -155,8 +151,8 @@
    "id": 741,
    "type": "VHS_VideoCombine",
    "pos": [
-    0,
-    -3080
+    4776.66015625,
+    1260
    ],
    "size": [
     230,
@@ -171,7 +167,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1167
+     "link": null
     },
     {
      "label": "音频",
@@ -202,7 +198,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": 1139
+     "link": null
     },
     {
      "label": "循环次数",
@@ -347,8 +343,8 @@
    "id": 153,
    "type": "SetNode",
    "pos": [
-    -4570,
-    -3610
+    3846.66015625,
+    11788
    ],
    "size": [
     210,
@@ -365,7 +361,7 @@
      "localized_name": "输入",
      "name": "INT",
      "type": "INT",
-     "link": 263
+     "link": null
     }
    ],
    "outputs": [
@@ -400,8 +396,8 @@
    "id": 154,
    "type": "SetNode",
    "pos": [
-    -4560,
-    -3470
+    3846.66015625,
+    11888
    ],
    "size": [
     210,
@@ -418,7 +414,7 @@
      "localized_name": "输入",
      "name": "INT",
      "type": "INT",
-     "link": 264
+     "link": null
     }
    ],
    "outputs": [
@@ -453,8 +449,8 @@
    "id": 911,
    "type": "LayerUtility: PurgeVRAM V2",
    "pos": [
-    -3600,
-    -2530
+    3846.66015625,
+    11076
    ],
    "size": [
     280,
@@ -469,7 +465,7 @@
      "localized_name": "任意内容",
      "name": "anything",
      "type": "*",
-     "link": 1968
+     "link": null
     },
     {
      "label": "purge_cache",
@@ -521,8 +517,8 @@
    "id": 207,
    "type": "GetNode",
    "pos": [
-    -2750,
-    -3010
+    0,
+    7020
    ],
    "size": [
     210,
@@ -540,9 +536,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1277
-     ]
+     "links": []
     }
    ],
    "title": "Get_宽度",
@@ -568,8 +562,8 @@
    "id": 210,
    "type": "GetNode",
    "pos": [
-    -920,
-    -2680
+    0,
+    7120
    ],
    "size": [
     210,
@@ -587,9 +581,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1170
-     ]
+     "links": []
     }
    ],
    "title": "Get_高度",
@@ -615,8 +607,8 @@
    "id": 128,
    "type": "SetNode",
    "pos": [
-    -2620,
-    -2720
+    3846.66015625,
+    11988
    ],
    "size": [
     210,
@@ -633,7 +625,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 995
+     "link": null
     }
    ],
    "outputs": [
@@ -668,8 +660,8 @@
    "id": 801,
    "type": "GetNode",
    "pos": [
-    -4190,
-    -2930
+    0,
+    7220
    ],
    "size": [
     210,
@@ -687,9 +679,7 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1268
-     ]
+     "links": []
     }
    ],
    "title": "Get_输入视频",
@@ -715,8 +705,8 @@
    "id": 548,
    "type": "GetNode",
    "pos": [
-    -4190,
-    -2820
+    0,
+    7320
    ],
    "size": [
     210,
@@ -734,9 +724,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      853
-     ]
+     "links": []
     }
    ],
    "title": "Get_宽度",
@@ -762,8 +750,8 @@
    "id": 549,
    "type": "GetNode",
    "pos": [
-    -4190,
-    -2710
+    0,
+    7420
    ],
    "size": [
     210,
@@ -781,9 +769,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      854
-     ]
+     "links": []
     }
    ],
    "title": "Get_高度",
@@ -809,8 +795,8 @@
    "id": 544,
    "type": "GetNode",
    "pos": [
-    -4190,
-    -3040
+    0,
+    7520
    ],
    "size": [
     210,
@@ -828,9 +814,7 @@
      "localized_name": "输出",
      "name": "WANVAE",
      "type": "WANVAE",
-     "links": [
-      1966
-     ]
+     "links": []
     }
    ],
    "title": "Get_VAE",
@@ -856,8 +840,8 @@
    "id": 475,
    "type": "Note",
    "pos": [
-    -4630,
-    -2050
+    0,
+    6190
    ],
    "size": [
     360,
@@ -888,8 +872,8 @@
    "id": 64,
    "type": "ImageResizeKJv2",
    "pos": [
-    -2620,
-    -3100
+    3846.66015625,
+    3936
    ],
    "size": [
     210,
@@ -904,7 +888,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": 1132
+     "link": null
     },
     {
      "label": "遮罩",
@@ -921,7 +905,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 1277
+     "link": null
     },
     {
      "label": "高度",
@@ -931,7 +915,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 1278
+     "link": null
     },
     {
      "label": "缩放方法",
@@ -995,10 +979,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      994,
-      995
-     ]
+     "links": []
     },
     {
      "label": "宽度",
@@ -1057,8 +1038,8 @@
    "id": 751,
    "type": "ImageResizeKJv2",
    "pos": [
-    -340,
-    -3130
+    3846.66015625,
+    4316
    ],
    "size": [
     270,
@@ -1073,7 +1054,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": 1166
+     "link": null
     },
     {
      "label": "遮罩",
@@ -1090,7 +1071,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 1169
+     "link": null
     },
     {
      "label": "高度",
@@ -1100,7 +1081,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 1170
+     "link": null
     },
     {
      "label": "缩放方法",
@@ -1164,10 +1145,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1167,
-      1168
-     ]
+     "links": []
     },
     {
      "label": "宽度",
@@ -1227,8 +1205,8 @@
    "id": 1062,
    "type": "BBoxYOLO",
    "pos": [
-    -2990,
-    -3440
+    3846.66015625,
+    11328
    ],
    "size": [
     290,
@@ -1242,13 +1220,13 @@
      "localized_name": "yolo_model",
      "name": "yolo_model",
      "type": "YOLO_MODEL",
-     "link": 1626
+     "link": null
     },
     {
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1627
+     "link": null
     },
     {
      "localized_name": "confidence_threshold",
@@ -1265,9 +1243,7 @@
      "localized_name": "边界框",
      "name": "BOUNDING_BOX",
      "type": "BOUNDING_BOX",
-     "links": [
-      1637
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1292,8 +1268,8 @@
    "id": 1063,
    "type": "YOLOModelLoader",
    "pos": [
-    -2990,
-    -3310
+    3846.66015625,
+    12088
    ],
    "size": [
     290,
@@ -1320,9 +1296,7 @@
      "localized_name": "YOLO_MODEL",
      "name": "YOLO_MODEL",
      "type": "YOLO_MODEL",
-     "links": [
-      1626
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1348,8 +1322,8 @@
    "id": 1064,
    "type": "PreviewImage",
    "pos": [
-    -1610,
-    -4130
+    4776.66015625,
+    3130
    ],
    "size": [
     230,
@@ -1363,7 +1337,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": 1628
+     "link": null
     }
    ],
    "outputs": [],
@@ -1385,8 +1359,8 @@
    "id": 1065,
    "type": "PreviewImage",
    "pos": [
-    -1610,
-    -3630
+    4776.66015625,
+    3500
    ],
    "size": [
     230,
@@ -1400,7 +1374,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": 1629
+     "link": null
     }
    ],
    "outputs": [],
@@ -1422,8 +1396,8 @@
    "id": 1066,
    "type": "VHS_VideoCombine",
    "pos": [
-    -1300,
-    -4120
+    4776.66015625,
+    1634
    ],
    "size": [
     240,
@@ -1438,7 +1412,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1630
+     "link": null
     },
     {
      "label": "音频",
@@ -1472,7 +1446,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": 1631
+     "link": null
     },
     {
      "label": "循环次数",
@@ -1640,8 +1614,8 @@
    "id": 1068,
    "type": "SDPoseKeypointExtractor",
    "pos": [
-    -2980,
-    -4120
+    3846.66015625,
+    9586
    ],
    "size": [
     290,
@@ -1656,21 +1630,21 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 1634
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 1635
+     "link": null
     },
     {
      "label": "image",
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": 1636
+     "link": null
     },
     {
      "label": "bboxes",
@@ -1678,7 +1652,7 @@
      "name": "bboxes",
      "shape": 7,
      "type": "BOUNDING_BOX",
-     "link": 1637
+     "link": null
     },
     {
      "label": "batch_size",
@@ -1697,10 +1671,7 @@
      "localized_name": "keypoints",
      "name": "keypoints",
      "type": "POSE_KEYPOINT",
-     "links": [
-      1650,
-      1654
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1728,8 +1699,8 @@
    "id": 1069,
    "type": "SDPoseKeypointExtractor",
    "pos": [
-    -3350,
-    -4130
+    3846.66015625,
+    9746
    ],
    "size": [
     290,
@@ -1744,21 +1715,21 @@
      "localized_name": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 1638
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 1639
+     "link": null
     },
     {
      "label": "image",
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": 1640
+     "link": null
     },
     {
      "label": "bboxes",
@@ -1766,7 +1737,7 @@
      "name": "bboxes",
      "shape": 7,
      "type": "BOUNDING_BOX",
-     "link": 1641
+     "link": null
     },
     {
      "label": "batch_size",
@@ -1785,10 +1756,7 @@
      "localized_name": "keypoints",
      "name": "keypoints",
      "type": "POSE_KEYPOINT",
-     "links": [
-      1649,
-      1657
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1816,8 +1784,8 @@
    "id": 1072,
    "type": "SetNode",
    "pos": [
-    -4000,
-    -3680
+    3846.66015625,
+    12188
    ],
    "size": [
     210,
@@ -1834,7 +1802,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 1644
+     "link": null
     }
    ],
    "outputs": [
@@ -1870,8 +1838,8 @@
    "id": 1073,
    "type": "GetNode",
    "pos": [
-    -4220,
-    -3820
+    0,
+    9490
    ],
    "size": [
     210,
@@ -1889,9 +1857,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1663
-     ]
+     "links": []
     }
    ],
    "title": "Get_宽度",
@@ -1917,8 +1883,8 @@
    "id": 1074,
    "type": "GetNode",
    "pos": [
-    -4220,
-    -4000
+    0,
+    9570
    ],
    "size": [
     210,
@@ -1936,11 +1902,7 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1640,
-      1646,
-      1662
-     ]
+     "links": []
     }
    ],
    "title": "Get_输入视频",
@@ -1966,8 +1928,8 @@
    "id": 1075,
    "type": "GetNode",
    "pos": [
-    -4220,
-    -3940
+    0,
+    9650
    ],
    "size": [
     210,
@@ -1985,11 +1947,7 @@
      "localized_name": "输出",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": [
-      1631,
-      1633,
-      1643
-     ]
+     "links": []
     }
    ],
    "title": "Get_帧率",
@@ -2015,8 +1973,8 @@
    "id": 1076,
    "type": "GetNode",
    "pos": [
-    -4220,
-    -3880
+    0,
+    9730
    ],
    "size": [
     210,
@@ -2034,10 +1992,7 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1627,
-      1636
-     ]
+     "links": []
     }
    ],
    "title": "Get_输入图像",
@@ -2063,8 +2018,8 @@
    "id": 1077,
    "type": "BBoxYOLO",
    "pos": [
-    -3350,
-    -3440
+    3846.66015625,
+    11448
    ],
    "size": [
     290,
@@ -2078,13 +2033,13 @@
      "localized_name": "yolo_model",
      "name": "yolo_model",
      "type": "YOLO_MODEL",
-     "link": 1645
+     "link": null
     },
     {
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1646
+     "link": null
     },
     {
      "localized_name": "confidence_threshold",
@@ -2101,9 +2056,7 @@
      "localized_name": "边界框",
      "name": "BOUNDING_BOX",
      "type": "BOUNDING_BOX",
-     "links": [
-      1641
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2128,8 +2081,8 @@
    "id": 1079,
    "type": "PoseKeypointPreview",
    "pos": [
-    -2390,
-    -3480
+    3846.66015625,
+    7776
    ],
    "size": [
     210,
@@ -2143,7 +2096,7 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "link": 1647
+     "link": null
     },
     {
      "localized_name": "pretty_format",
@@ -2184,8 +2137,8 @@
    "id": 1080,
    "type": "PoseKeypointPreview",
    "pos": [
-    -1890,
-    -3480
+    3846.66015625,
+    8046
    ],
    "size": [
     210,
@@ -2199,7 +2152,7 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "link": 1648
+     "link": null
     },
     {
      "localized_name": "pretty_format",
@@ -2240,8 +2193,8 @@
    "id": 1081,
    "type": "PoseJSONToPoseKeypoint",
    "pos": [
-    -2120,
-    -3480
+    0,
+    2610
    ],
    "size": [
     210,
@@ -2266,9 +2219,7 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "links": [
-      1652
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2292,8 +2243,8 @@
    "id": 1089,
    "type": "GetNode",
    "pos": [
-    -4220,
-    -3760
+    0,
+    9810
    ],
    "size": [
     210,
@@ -2311,9 +2262,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1664
-     ]
+     "links": []
     }
    ],
    "title": "Get_高度",
@@ -2339,8 +2288,8 @@
    "id": 1090,
    "type": "GetNode",
    "pos": [
-    -3330,
-    -3580
+    0,
+    9890
    ],
    "size": [
     210,
@@ -2358,9 +2307,7 @@
      "localized_name": "输出",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": [
-      1660
-     ]
+     "links": []
     }
    ],
    "title": "Get_姿态切换",
@@ -2386,8 +2333,8 @@
    "id": 1092,
    "type": "PoseAndFaceDetection",
    "pos": [
-    -4010,
-    -3930
+    3846.66015625,
+    8806
    ],
    "size": [
     290,
@@ -2402,14 +2349,14 @@
      "localized_name": "model",
      "name": "model",
      "type": "POSEMODEL",
-     "link": 1661
+     "link": null
     },
     {
      "label": "图像",
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1662
+     "link": null
     },
     {
      "label": "重定向图像",
@@ -2427,7 +2374,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 1663
+     "link": null
     },
     {
      "label": "高度",
@@ -2437,7 +2384,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 1664
+     "link": null
     },
     {
      "localized_name": "face_padding",
@@ -2463,10 +2410,7 @@
      "localized_name": "face_images",
      "name": "face_images",
      "type": "IMAGE",
-     "links": [
-      1642,
-      1644
-     ]
+     "links": []
     },
     {
      "label": "关键帧身体点",
@@ -2522,8 +2466,8 @@
    "id": 1095,
    "type": "CheckpointLoaderSimple",
    "pos": [
-    -4010,
-    -3450
+    3846.66015625,
+    10656
    ],
    "size": [
     290,
@@ -2550,10 +2494,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      1634,
-      1638
-     ]
+     "links": []
     },
     {
      "label": "CLIP",
@@ -2566,10 +2507,7 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      1635,
-      1639
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2597,8 +2535,8 @@
    "id": 1096,
    "type": "SetNode",
    "pos": [
-    -3810,
-    -3260
+    3846.66015625,
+    13758
    ],
    "size": [
     210,
@@ -2615,7 +2553,7 @@
      "localized_name": "输入",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "link": 1665
+     "link": null
     }
    ],
    "outputs": [
@@ -2648,8 +2586,8 @@
    "id": 1107,
    "type": "GetNode",
    "pos": [
-    -1600,
-    -3000
+    0,
+    9970
    ],
    "size": [
     210,
@@ -2666,9 +2604,7 @@
      "label": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1670
-     ]
+     "links": []
     }
    ],
    "title": "Get_高度",
@@ -2694,8 +2630,8 @@
    "id": 1105,
    "type": "GetNode",
    "pos": [
-    -1600,
-    -3060
+    0,
+    10050
    ],
    "size": [
     210,
@@ -2712,9 +2648,7 @@
      "label": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1669
-     ]
+     "links": []
     }
    ],
    "title": "Get_宽度",
@@ -2740,8 +2674,8 @@
    "id": 1084,
    "type": "Note",
    "pos": [
-    -2230,
-    -3790
+    0,
+    4690
    ],
    "size": [
     560,
@@ -2771,8 +2705,8 @@
    "id": 1078,
    "type": "PoseJSONToPoseKeypoint",
    "pos": [
-    -2620,
-    -3480
+    0,
+    2890
    ],
    "size": [
     210,
@@ -2797,9 +2731,7 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "links": [
-      1651
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2823,8 +2755,8 @@
    "id": 1061,
    "type": "YOLOModelLoader",
    "pos": [
-    -3350,
-    -3310
+    3846.66015625,
+    12288
    ],
    "size": [
     290,
@@ -2851,9 +2783,7 @@
      "localized_name": "YOLO_MODEL",
      "name": "YOLO_MODEL",
      "type": "YOLO_MODEL",
-     "links": [
-      1645
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2879,8 +2809,8 @@
    "id": 1083,
    "type": "SetNode",
    "pos": [
-    -2940,
-    -3610
+    3846.66015625,
+    12388
    ],
    "size": [
     210,
@@ -2897,7 +2827,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 1677
+     "link": null
     }
    ],
    "outputs": [
@@ -2932,8 +2862,8 @@
    "id": 1091,
    "type": "ImpactConditionalBranch",
    "pos": [
-    -3150,
-    -3580
+    3846.66015625,
+    11568
    ],
    "size": [
     230,
@@ -2950,14 +2880,14 @@
      "localized_name": "tt_value",
      "name": "tt_value",
      "type": "IMAGE",
-     "link": 1658
+     "link": null
     },
     {
      "label": "假",
      "localized_name": "ff_value",
      "name": "ff_value",
      "type": "IMAGE",
-     "link": 1659
+     "link": null
     },
     {
      "label": "条件",
@@ -2967,7 +2897,7 @@
      "widget": {
       "name": "cond"
      },
-     "link": 1660
+     "link": null
     }
    ],
    "outputs": [
@@ -2976,9 +2906,7 @@
      "localized_name": "*",
      "name": "*",
      "type": "IMAGE",
-     "links": [
-      1677
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3003,8 +2931,8 @@
    "id": 1086,
    "type": "BodyRatioMapperSDPoseRender",
    "pos": [
-    -1940,
-    -4130
+    3846.66015625,
+    5816
    ],
    "size": [
     270,
@@ -3021,7 +2949,7 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "link": 1655
+     "link": null
     },
     {
      "label": "resolution_x",
@@ -3149,9 +3077,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "links": [
-      1628
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3187,8 +3113,8 @@
    "id": 1087,
    "type": "BodyRatioMapperSDPoseRender",
    "pos": [
-    -2230,
-    -4130
+    3846.66015625,
+    6156
    ],
    "size": [
     270,
@@ -3203,7 +3129,7 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "link": 1656
+     "link": null
     },
     {
      "label": "resolution_x",
@@ -3331,10 +3257,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "links": [
-      1632,
-      1658
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3370,8 +3293,8 @@
    "id": 1085,
    "type": "BodyRatioMapperSDPoseRender",
    "pos": [
-    -2970,
-    -3950
+    3846.66015625,
+    6496
    ],
    "size": [
     290,
@@ -3385,7 +3308,7 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "link": 1654
+     "link": null
     },
     {
      "localized_name": "resolution_x",
@@ -3503,9 +3426,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "links": [
-      1629
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3541,8 +3462,8 @@
    "id": 1088,
    "type": "BodyRatioMapperSDPoseRender",
    "pos": [
-    -3350,
-    -3950
+    3846.66015625,
+    6836
    ],
    "size": [
     300,
@@ -3556,7 +3477,7 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "link": 1657
+     "link": null
     },
     {
      "localized_name": "resolution_x",
@@ -3674,10 +3595,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "links": [
-      1630,
-      1659
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3713,8 +3631,8 @@
    "id": 1067,
    "type": "VHS_VideoCombine",
    "pos": [
-    -980,
-    -4120
+    4776.66015625,
+    2008
    ],
    "size": [
     240,
@@ -3729,7 +3647,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1632
+     "link": null
     },
     {
      "label": "音频",
@@ -3763,7 +3681,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": 1633
+     "link": null
     },
     {
      "label": "循环次数",
@@ -3931,8 +3849,8 @@
    "id": 1093,
    "type": "Fast Groups Bypasser (rgthree)",
    "pos": [
-    -3660,
-    -3500
+    0,
+    7620
    ],
    "size": [
     250,
@@ -3975,8 +3893,8 @@
    "id": 500,
    "type": "VHS_VideoInfoLoaded",
    "pos": [
-    -340,
-    -2750
+    3846.66015625,
+    9906
    ],
    "size": [
     270,
@@ -3991,7 +3909,7 @@
      "localized_name": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "link": 779
+     "link": null
     }
    ],
    "outputs": [
@@ -4000,19 +3918,14 @@
      "localized_name": "fps🟦",
      "name": "fps🟦",
      "type": "FLOAT",
-     "links": [
-      780,
-      1139
-     ]
+     "links": []
     },
     {
      "label": "帧数🟦",
      "localized_name": "frame_count🟦",
      "name": "frame_count🟦",
      "type": "INT",
-     "links": [
-      985
-     ]
+     "links": []
     },
     {
      "label": "时长🟦",
@@ -4056,8 +3969,8 @@
    "id": 144,
    "type": "SetNode",
    "pos": [
-    -320,
-    -2580
+    3846.66015625,
+    12488
    ],
    "size": [
     210,
@@ -4074,7 +3987,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 1168
+     "link": null
     }
    ],
    "outputs": [
@@ -4110,8 +4023,8 @@
    "id": 664,
    "type": "SetNode",
    "pos": [
-    -330,
-    -2530
+    3846.66015625,
+    12588
    ],
    "size": [
     210,
@@ -4128,7 +4041,7 @@
      "localized_name": "输入",
      "name": "INT",
      "type": "INT",
-     "link": 985
+     "link": null
     }
    ],
    "outputs": [
@@ -4163,8 +4076,8 @@
    "id": 1094,
    "type": "Fast Groups Bypasser (rgthree)",
    "pos": [
-    -3660,
-    -3400
+    0,
+    7720
    ],
    "size": [
     250,
@@ -4207,8 +4120,8 @@
    "id": 150,
    "type": "INTConstant",
    "pos": [
-    -4590,
-    -3640
+    0,
+    7820
    ],
    "size": [
     210,
@@ -4234,9 +4147,7 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": [
-      263
-     ]
+     "links": []
     }
    ],
    "title": "宽",
@@ -4263,8 +4174,8 @@
    "id": 151,
    "type": "INTConstant",
    "pos": [
-    -4590,
-    -3520
+    0,
+    7920
    ],
    "size": [
     210,
@@ -4292,9 +4203,7 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": [
-      264
-     ]
+     "links": []
     }
    ],
    "title": "高",
@@ -4321,8 +4230,8 @@
    "id": 1070,
    "type": "OnnxDetectionModelLoader",
    "pos": [
-    -4010,
-    -4110
+    3846.66015625,
+    10056
    ],
    "size": [
     290,
@@ -4369,9 +4278,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "POSEMODEL",
-     "links": [
-      1661
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4404,8 +4311,8 @@
    "id": 1082,
    "type": "BodyRatioMapperProportionTransfer",
    "pos": [
-    -2620,
-    -4130
+    3846.66015625,
+    2438
    ],
    "size": [
     370,
@@ -4419,28 +4326,28 @@
      "localized_name": "pose_keypoint",
      "name": "pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "link": 1649
+     "link": null
     },
     {
      "localized_name": "ref_pose_keypoint",
      "name": "ref_pose_keypoint",
      "shape": 7,
      "type": "POSE_KEYPOINT",
-     "link": 1650
+     "link": null
     },
     {
      "localized_name": "manual_anchor_pose",
      "name": "manual_anchor_pose",
      "shape": 7,
      "type": "POSE_KEYPOINT",
-     "link": 1651
+     "link": null
     },
     {
      "localized_name": "manual_first_frame",
      "name": "manual_first_frame",
      "shape": 7,
      "type": "POSE_KEYPOINT",
-     "link": 1652
+     "link": null
     },
     {
      "localized_name": "enable_rpca",
@@ -4638,26 +4545,19 @@
      "localized_name": "changed_pose_keypoint",
      "name": "changed_pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "links": [
-      1656
-     ]
+     "links": []
     },
     {
      "localized_name": "anchor_pose_keypoint",
      "name": "anchor_pose_keypoint",
      "type": "POSE_KEYPOINT",
-     "links": [
-      1647,
-      1655
-     ]
+     "links": []
     },
     {
      "localized_name": "first_frame_output",
      "name": "first_frame_output",
      "type": "POSE_KEYPOINT",
-     "links": [
-      1648
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4701,8 +4601,8 @@
    "id": 1110,
    "type": "SetNode",
    "pos": [
-    -1280,
-    -3070
+    3846.66015625,
+    12688
    ],
    "size": [
     210,
@@ -4717,7 +4617,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 1672
+     "link": null
     }
    ],
    "outputs": [
@@ -4752,8 +4652,8 @@
    "id": 1109,
    "type": "PreviewImage",
    "pos": [
-    -1290,
-    -2930
+    4776.66015625,
+    730
    ],
    "size": [
     310,
@@ -4767,7 +4667,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": 1671
+     "link": null
     }
    ],
    "outputs": [],
@@ -4791,8 +4691,8 @@
    "id": 1128,
    "type": "VHS_LoadVideo",
    "pos": [
-    -640,
-    -4130
+    0,
+    1660
    ],
    "size": [
     270,
@@ -4906,9 +4806,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1732
-     ]
+     "links": []
     },
     {
      "label": "帧计数",
@@ -4929,9 +4827,7 @@
      "localized_name": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "links": [
-      1729
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4986,8 +4882,8 @@
    "id": 931,
    "type": "Label (rgthree)",
    "pos": [
-    -3230,
-    -4510
+    0,
+    6050
    ],
    "size": [
     2472.802734375,
@@ -5026,8 +4922,8 @@
    "id": 726,
    "type": "Label (rgthree)",
    "pos": [
-    -3660,
-    -4370
+    0,
+    9220
    ],
    "size": [
     422.2412109375,
@@ -5066,8 +4962,8 @@
    "id": 731,
    "type": "Label (rgthree)",
    "pos": [
-    -3210,
-    -4370
+    0,
+    9310
    ],
    "size": [
     903.2958984375,
@@ -5106,8 +5002,8 @@
    "id": 206,
    "type": "PreviewImage",
    "pos": [
-    -2380,
-    -3070
+    4776.66015625,
+    0
    ],
    "size": [
     410,
@@ -5122,7 +5018,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": 994
+     "link": null
     }
    ],
    "outputs": [
@@ -5154,8 +5050,8 @@
    "id": 1216,
    "type": "VHS_LoadImagesPath",
    "pos": [
-    -1900,
-    -3070
+    0,
+    4920
    ],
    "size": [
     260,
@@ -5223,9 +5119,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1919
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -5279,8 +5173,8 @@
    "id": 949,
    "type": "Note",
    "pos": [
-    -920,
-    -2570
+    0,
+    3450
    ],
    "size": [
     210,
@@ -5311,8 +5205,8 @@
    "id": 209,
    "type": "GetNode",
    "pos": [
-    -920,
-    -2800
+    0,
+    8020
    ],
    "size": [
     210,
@@ -5330,9 +5224,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1169
-     ]
+     "links": []
     }
    ],
    "title": "Get_宽度",
@@ -5358,8 +5250,8 @@
    "id": 245,
    "type": "SetNode",
    "pos": [
-    -330,
-    -2420
+    3846.66015625,
+    12788
    ],
    "size": [
     210,
@@ -5376,7 +5268,7 @@
      "localized_name": "输入",
      "name": "FLOAT",
      "type": "FLOAT",
-     "link": 780
+     "link": null
     }
    ],
    "outputs": [
@@ -5411,8 +5303,8 @@
    "id": 448,
    "type": "GetNode",
    "pos": [
-    350,
-    -3110
+    0,
+    9400
    ],
    "size": [
     210,
@@ -5430,9 +5322,7 @@
      "localized_name": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1928
-     ]
+     "links": []
     }
    ],
    "title": "Get_视频输出",
@@ -5458,8 +5348,8 @@
    "id": 149,
    "type": "GetNode",
    "pos": [
-    350,
-    -2810
+    0,
+    8120
    ],
    "size": [
     210,
@@ -5477,9 +5367,7 @@
      "localized_name": "输出",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      1572
-     ]
+     "links": []
     }
    ],
    "title": "Get_输入音频",
@@ -5505,8 +5393,8 @@
    "id": 1230,
    "type": "SetNode",
    "pos": [
-    -2430,
-    -1950
+    3846.66015625,
+    12888
    ],
    "size": [
     210,
@@ -5522,7 +5410,7 @@
      "label": "输入",
      "name": "WANVIDIMAGE_CLIPEMBEDS",
      "type": "WANVIDIMAGE_CLIPEMBEDS",
-     "link": 1931
+     "link": null
     }
    ],
    "outputs": [
@@ -5556,8 +5444,8 @@
    "id": 1231,
    "type": "Note",
    "pos": [
-    -40,
-    -1980
+    0,
+    6320
    ],
    "size": [
     270,
@@ -5588,8 +5476,8 @@
    "id": 1233,
    "type": "WanVideoContextOptions",
    "pos": [
-    -2070,
-    -1700
+    0,
+    3710
    ],
    "size": [
     370,
@@ -5685,9 +5573,7 @@
      "localized_name": "context_options",
      "name": "context_options",
      "type": "WANVIDCONTEXT",
-     "links": [
-      1945
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5728,8 +5614,8 @@
    "id": 1234,
    "type": "WanAnimatePlus SetLoRAs",
    "pos": [
-    -2700,
-    -2210
+    3846.66015625,
+    13488
    ],
    "size": [
     220,
@@ -5743,14 +5629,14 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": 1932
+     "link": null
     },
     {
      "localized_name": "lora",
      "name": "lora",
      "shape": 7,
      "type": "WANVIDLORA",
-     "link": 1933
+     "link": null
     }
    ],
    "outputs": [
@@ -5758,9 +5644,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": [
-      1940
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5783,8 +5667,8 @@
    "id": 1236,
    "type": "WanAnimatePlus ClipVisionEncode",
    "pos": [
-    -2430,
-    -1810
+    3846.66015625,
+    7176
    ],
    "size": [
     280,
@@ -5798,13 +5682,13 @@
      "localized_name": "clip_vision",
      "name": "clip_vision",
      "type": "CLIP_VISION",
-     "link": 1934
+     "link": null
     },
     {
      "localized_name": "image_1",
      "name": "image_1",
      "type": "IMAGE",
-     "link": 1935
+     "link": null
     },
     {
      "localized_name": "image_2",
@@ -5891,9 +5775,7 @@
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_CLIPEMBEDS",
-     "links": [
-      1931
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5924,8 +5806,8 @@
    "id": 1241,
    "type": "SetNode",
    "pos": [
-    -3050,
-    -1820
+    3846.66015625,
+    12988
    ],
    "size": [
     210,
@@ -5941,7 +5823,7 @@
      "label": "输入",
      "name": "WANVAE",
      "type": "WANVAE",
-     "link": 1938
+     "link": null
     }
    ],
    "outputs": [
@@ -5975,8 +5857,8 @@
    "id": 1242,
    "type": "WanAnimatePlus VAELoader",
    "pos": [
-    -3480,
-    -1840
+    3846.66015625,
+    9246
    ],
    "size": [
     290,
@@ -6038,9 +5920,7 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "WANVAE",
-     "links": [
-      1938
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6068,8 +5948,8 @@
    "id": 1243,
    "type": "SetNode",
    "pos": [
-    -2430,
-    -2080
+    3846.66015625,
+    13088
    ],
    "size": [
     210,
@@ -6085,7 +5965,7 @@
      "label": "输入",
      "name": "WANVIDEOMODEL",
      "type": "WANVIDEOMODEL",
-     "link": 1939
+     "link": null
     }
    ],
    "outputs": [
@@ -6119,8 +5999,8 @@
    "id": 1244,
    "type": "WanAnimatePlus SetBlockSwap",
    "pos": [
-    -2430,
-    -2210
+    3846.66015625,
+    13578
    ],
    "size": [
     260,
@@ -6134,14 +6014,14 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": 1940
+     "link": null
     },
     {
      "localized_name": "block_swap_args",
      "name": "block_swap_args",
      "shape": 7,
      "type": "BLOCKSWAPARGS",
-     "link": 1941
+     "link": null
     }
    ],
    "outputs": [
@@ -6149,9 +6029,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": [
-      1939
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -6174,8 +6052,8 @@
    "id": 1246,
    "type": "GetNode",
    "pos": [
-    -2710,
-    -1550
+    0,
+    8220
    ],
    "size": [
     210,
@@ -6192,9 +6070,7 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1935
-     ]
+     "links": []
     }
    ],
    "title": "Get_输入图像",
@@ -6220,8 +6096,8 @@
    "id": 1247,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -2200
+    0,
+    10130
    ],
    "size": [
     210,
@@ -6238,9 +6114,7 @@
      "label": "输出",
      "name": "WANVIDEOMODEL",
      "type": "WANVIDEOMODEL",
-     "links": [
-      1942
-     ]
+     "links": []
     }
    ],
    "title": "Get_模型",
@@ -6266,8 +6140,8 @@
    "id": 1248,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -2150
+    0,
+    10210
    ],
    "size": [
     210,
@@ -6284,10 +6158,7 @@
      "label": "输出",
      "name": "WANVAE",
      "type": "WANVAE",
-     "links": [
-      1950,
-      1952
-     ]
+     "links": []
     }
    ],
    "title": "Get_VAE",
@@ -6313,8 +6184,8 @@
    "id": 1249,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -2100
+    0,
+    10290
    ],
    "size": [
     210,
@@ -6331,9 +6202,7 @@
      "label": "输出",
      "name": "WANVIDIMAGE_CLIPEMBEDS",
      "type": "WANVIDIMAGE_CLIPEMBEDS",
-     "links": [
-      1953
-     ]
+     "links": []
     }
    ],
    "title": "Get_视觉clip",
@@ -6359,8 +6228,8 @@
    "id": 1250,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -2050
+    0,
+    10370
    ],
    "size": [
     210,
@@ -6377,9 +6246,7 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1954
-     ]
+     "links": []
     }
    ],
    "title": "Get_输入图像",
@@ -6405,8 +6272,8 @@
    "id": 1251,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -2000
+    0,
+    10450
    ],
    "size": [
     210,
@@ -6423,9 +6290,7 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1955
-     ]
+     "links": []
     }
    ],
    "title": "Get_SDPose姿态图",
@@ -6451,8 +6316,8 @@
    "id": 1252,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -1950
+    0,
+    10530
    ],
    "size": [
     210,
@@ -6469,9 +6334,7 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1956
-     ]
+     "links": []
     }
    ],
    "title": "Get_面部图",
@@ -6497,8 +6360,8 @@
    "id": 1253,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -1900
+    0,
+    10610
    ],
    "size": [
     210,
@@ -6515,9 +6378,7 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1957
-     ]
+     "links": []
     }
    ],
    "title": "Get_多图参考",
@@ -6542,8 +6403,8 @@
    "id": 1254,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -1850
+    0,
+    10690
    ],
    "size": [
     210,
@@ -6560,9 +6421,7 @@
      "label": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1958
-     ]
+     "links": []
     }
    ],
    "title": "Get_宽度",
@@ -6588,8 +6447,8 @@
    "id": 1255,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -1800
+    0,
+    10770
    ],
    "size": [
     210,
@@ -6606,9 +6465,7 @@
      "label": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1959
-     ]
+     "links": []
     }
    ],
    "title": "Get_高度",
@@ -6634,8 +6491,8 @@
    "id": 1256,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -1750
+    0,
+    10850
    ],
    "size": [
     210,
@@ -6652,10 +6509,7 @@
      "label": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1960,
-      1961
-     ]
+     "links": []
     }
    ],
    "title": "Get_总帧数",
@@ -6681,8 +6535,8 @@
    "id": 1257,
    "type": "GetNode",
    "pos": [
-    -1590,
-    -1700
+    0,
+    10930
    ],
    "size": [
     210,
@@ -6699,9 +6553,7 @@
      "label": "输出",
      "name": "UNI3C_EMBEDS",
      "type": "UNI3C_EMBEDS",
-     "links": [
-      1946
-     ]
+     "links": []
     }
    ],
    "title": "Get_Uni3C",
@@ -6725,8 +6577,8 @@
    "id": 1259,
    "type": "WanAnimatePlus SamplerSettings",
    "pos": [
-    -850,
-    -2250
+    3846.66015625,
+    0
    ],
    "size": [
     330,
@@ -6740,20 +6592,20 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "link": 1942
+     "link": null
     },
     {
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_EMBEDS",
-     "link": 1943
+     "link": null
     },
     {
      "localized_name": "text_embeds",
      "name": "text_embeds",
      "shape": 7,
      "type": "WANVIDEOTEXTEMBEDS",
-     "link": 1944
+     "link": null
     },
     {
      "localized_name": "samples",
@@ -6774,7 +6626,7 @@
      "name": "context_options",
      "shape": 7,
      "type": "WANVIDCONTEXT",
-     "link": 1945
+     "link": null
     },
     {
      "localized_name": "cache_args",
@@ -6837,7 +6689,7 @@
      "name": "uni3c_embeds",
      "shape": 7,
      "type": "UNI3C_EMBEDS",
-     "link": 1946
+     "link": null
     },
     {
      "localized_name": "multitalk_embeds",
@@ -6887,7 +6739,7 @@
      "widget": {
       "name": "seed"
      },
-     "link": 1947
+     "link": null
     },
     {
      "localized_name": "force_offload",
@@ -7082,9 +6934,7 @@
      "localized_name": "sampler_inputs",
      "name": "sampler_inputs",
      "type": "SAMPLER_ARGS",
-     "links": [
-      1948
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7132,8 +6982,8 @@
    "id": 1260,
    "type": "WanAnimatePlus SamplerFromSettings",
    "pos": [
-    -450,
-    -2240
+    3846.66015625,
+    1778
    ],
    "size": [
     330,
@@ -7147,7 +6997,7 @@
      "localized_name": "sampler_inputs",
      "name": "sampler_inputs",
      "type": "SAMPLER_ARGS",
-     "link": 1948
+     "link": null
     }
    ],
    "outputs": [
@@ -7155,9 +7005,7 @@
      "localized_name": "samples",
      "name": "samples",
      "type": "LATENT",
-     "links": [
-      1951
-     ]
+     "links": []
     },
     {
      "localized_name": "denoised_samples",
@@ -7186,8 +7034,8 @@
    "id": 1261,
    "type": "PlaySound|pysssss",
    "pos": [
-    -40,
-    -1710
+    3846.66015625,
+    10206
    ],
    "size": [
     270,
@@ -7204,7 +7052,7 @@
      "localized_name": "any",
      "name": "any",
      "type": "*",
-     "link": 1949
+     "link": null
     },
     {
      "label": "模式",
@@ -7275,8 +7123,8 @@
    "id": 1262,
    "type": "WanAnimatePlus Decode",
    "pos": [
-    -40,
-    -2240
+    3846.66015625,
+    8566
    ],
    "size": [
     270,
@@ -7290,13 +7138,13 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "WANVAE",
-     "link": 1950
+     "link": null
     },
     {
      "localized_name": "samples",
      "name": "samples",
      "type": "LATENT",
-     "link": 1951
+     "link": null
     },
     {
      "localized_name": "enable_vae_tiling",
@@ -7359,9 +7207,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "links": [
-      1962
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7391,8 +7237,8 @@
    "id": 1263,
    "type": "WanAnimatePlus AnimateEmbeds",
    "pos": [
-    -1330,
-    -2190
+    3846.66015625,
+    3028
    ],
    "size": [
     370,
@@ -7406,35 +7252,35 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "WANVAE",
-     "link": 1952
+     "link": null
     },
     {
      "localized_name": "clip_embeds",
      "name": "clip_embeds",
      "shape": 7,
      "type": "WANVIDIMAGE_CLIPEMBEDS",
-     "link": 1953
+     "link": null
     },
     {
      "localized_name": "ref_images",
      "name": "ref_images",
      "shape": 7,
      "type": "IMAGE",
-     "link": 1954
+     "link": null
     },
     {
      "localized_name": "pose_images",
      "name": "pose_images",
      "shape": 7,
      "type": "IMAGE",
-     "link": 1955
+     "link": null
     },
     {
      "localized_name": "face_images",
      "name": "face_images",
      "shape": 7,
      "type": "IMAGE",
-     "link": 1956
+     "link": null
     },
     {
      "localized_name": "bg_images",
@@ -7469,7 +7315,7 @@
      "name": "prefix_frames",
      "shape": 7,
      "type": "IMAGE",
-     "link": 1957
+     "link": null
     },
     {
      "localized_name": "width",
@@ -7478,7 +7324,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 1958
+     "link": null
     },
     {
      "localized_name": "height",
@@ -7487,7 +7333,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 1959
+     "link": null
     },
     {
      "localized_name": "num_frames",
@@ -7496,7 +7342,7 @@
      "widget": {
       "name": "num_frames"
      },
-     "link": 1960
+     "link": null
     },
     {
      "localized_name": "force_offload",
@@ -7514,7 +7360,7 @@
      "widget": {
       "name": "frame_window_size"
      },
-     "link": 1961
+     "link": null
     },
     {
      "localized_name": "colormatch",
@@ -7579,9 +7425,7 @@
      "localized_name": "image_embeds",
      "name": "image_embeds",
      "type": "WANVIDIMAGE_EMBEDS",
-     "links": [
-      1943
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7616,8 +7460,8 @@
    "id": 1264,
    "type": "SetNode",
    "pos": [
-    -40,
-    -1830
+    3846.66015625,
+    13188
    ],
    "size": [
     210,
@@ -7633,7 +7477,7 @@
      "label": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 1962
+     "link": null
     }
    ],
    "outputs": [
@@ -7641,9 +7485,7 @@
      "label": "输出",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1949
-     ]
+     "links": []
     }
    ],
    "title": "Set_视频输出",
@@ -7670,8 +7512,8 @@
    "id": 1237,
    "type": "WanAnimatePlus BlockSwap",
    "pos": [
-    -2710,
-    -2100
+    0,
+    3960
    ],
    "size": [
     230,
@@ -7754,9 +7596,7 @@
      "localized_name": "block_swap_args",
      "name": "block_swap_args",
      "type": "BLOCKSWAPARGS",
-     "links": [
-      1941
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -7787,8 +7627,8 @@
    "id": 1108,
    "type": "ImageResizeKJv2",
    "pos": [
-    -1600,
-    -2950
+    3846.66015625,
+    4696
    ],
    "size": [
     270,
@@ -7803,7 +7643,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": 1919
+     "link": null
     },
     {
      "label": "遮罩",
@@ -7821,7 +7661,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 1669
+     "link": null
     },
     {
      "label": "高度",
@@ -7831,7 +7671,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 1670
+     "link": null
     },
     {
      "label": "缩放方法",
@@ -7901,10 +7741,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1671,
-      1672
-     ]
+     "links": []
     },
     {
      "label": "宽度",
@@ -7963,8 +7800,8 @@
    "id": 1229,
    "type": "Note",
    "pos": [
-    -2710,
-    -1830
+    0,
+    6450
    ],
    "size": [
     230,
@@ -7995,8 +7832,8 @@
    "id": 1258,
    "type": "Seed (rgthree)",
    "pos": [
-    -1270,
-    -1600
+    0,
+    5730
    ],
    "size": [
     260,
@@ -8013,9 +7850,7 @@
      "name": "SEED",
      "shape": 3,
      "type": "INT",
-     "links": [
-      1947
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -8045,8 +7880,8 @@
    "id": 1239,
    "type": "WanAnimatePlus LoraSelectMulti",
    "pos": [
-    -4210,
-    -1830
+    0,
+    1270
    ],
    "size": [
     620,
@@ -8186,9 +8021,7 @@
      "localized_name": "lora",
      "name": "lora",
      "type": "WANVIDLORA",
-     "links": [
-      1937
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -8224,8 +8057,8 @@
    "id": 1130,
    "type": "SimpleMath+",
    "pos": [
-    -10,
-    -4130
+    3846.66015625,
+    10796
    ],
    "size": [
     270,
@@ -8241,7 +8074,7 @@
      "name": "a",
      "shape": 7,
      "type": "*",
-     "link": 1730
+     "link": null
     },
     {
      "label": "B",
@@ -8249,7 +8082,7 @@
      "name": "b",
      "shape": 7,
      "type": "*",
-     "link": 1912
+     "link": null
     },
     {
      "localized_name": "c",
@@ -8275,9 +8108,7 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1731
-     ]
+     "links": []
     },
     {
      "label": "浮点",
@@ -8309,8 +8140,8 @@
    "id": 1129,
    "type": "VHS_VideoInfo",
    "pos": [
-    -320,
-    -4130
+    3846.66015625,
+    8316
    ],
    "size": [
     270,
@@ -8325,7 +8156,7 @@
      "localized_name": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "link": 1729
+     "link": null
     }
    ],
    "outputs": [
@@ -8341,9 +8172,7 @@
      "localized_name": "source_frame_count🟨",
      "name": "source_frame_count🟨",
      "type": "INT",
-     "links": [
-      1730
-     ]
+     "links": []
     },
     {
      "label": "初始时长🟨",
@@ -8422,8 +8251,8 @@
    "id": 1196,
    "type": "INTConstant",
    "pos": [
-    -320,
-    -3860
+    0,
+    8320
    ],
    "size": [
     270,
@@ -8450,9 +8279,7 @@
      "localized_name": "value",
      "name": "value",
      "type": "INT",
-     "links": [
-      1912
-     ]
+     "links": []
     }
    ],
    "title": "抛弃尾部帧数",
@@ -8478,8 +8305,8 @@
    "id": 1131,
    "type": "GetImageRangeFromBatch",
    "pos": [
-    -10,
-    -3970
+    3846.66015625,
+    10356
    ],
    "size": [
     289.7056640625,
@@ -8495,7 +8322,7 @@
      "name": "images",
      "shape": 7,
      "type": "IMAGE",
-     "link": 1732
+     "link": null
     },
     {
      "label": "遮罩",
@@ -8513,7 +8340,7 @@
      "widget": {
       "name": "start_index"
      },
-     "link": 1731
+     "link": null
     },
     {
      "label": "帧数",
@@ -8532,9 +8359,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1917
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -8567,8 +8392,8 @@
    "id": 1211,
    "type": "SetNode",
    "pos": [
-    -10,
-    -3810
+    3846.66015625,
+    13288
    ],
    "size": [
     270,
@@ -8583,7 +8408,7 @@
      "localized_name": "输入",
      "name": "IMAGE",
      "type": "IMAGE",
-     "link": 1917
+     "link": null
     }
    ],
    "outputs": [
@@ -8618,8 +8443,8 @@
    "id": 1265,
    "type": "Note",
    "pos": [
-    -1600,
-    -2550
+    0,
+    5900
    ],
    "size": [
     270,
@@ -8650,8 +8475,8 @@
    "id": 1266,
    "type": "Note",
    "pos": [
-    -310,
-    -3630
+    0,
+    2010
    ],
    "size": [
     570,
@@ -8682,8 +8507,8 @@
    "id": 1226,
    "type": "GetImageRangeFromBatch",
    "pos": [
-    350,
-    -2970
+    3846.66015625,
+    10506
    ],
    "size": [
     289.7056640625,
@@ -8701,7 +8526,7 @@
      "name": "images",
      "shape": 7,
      "type": "IMAGE",
-     "link": 1928
+     "link": null
     },
     {
      "label": "遮罩",
@@ -8729,7 +8554,7 @@
      "widget": {
       "name": "num_frames"
      },
-     "link": 1927
+     "link": null
     }
    ],
    "outputs": [
@@ -8738,9 +8563,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1971
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -8773,8 +8596,8 @@
    "id": 1228,
    "type": "GetNode",
    "pos": [
-    350,
-    -3070
+    0,
+    8420
    ],
    "size": [
     210,
@@ -8792,9 +8615,7 @@
      "localized_name": "输出",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1927
-     ]
+     "links": []
     }
    ],
    "title": "Get_读取帧数",
@@ -8819,8 +8640,8 @@
    "id": 1227,
    "type": "SetNode",
    "pos": [
-    -910,
-    -2870
+    3846.66015625,
+    13668
    ],
    "size": [
     210,
@@ -8837,7 +8658,7 @@
      "localized_name": "输入",
      "name": "INT",
      "type": "INT",
-     "link": 1926
+     "link": null
     }
    ],
    "outputs": [
@@ -8872,8 +8693,8 @@
    "id": 661,
    "type": "MarkdownNote",
    "pos": [
-    -4530,
-    -4020
+    0,
+    4210
    ],
    "size": [
     260,
@@ -8905,8 +8726,8 @@
    "id": 727,
    "type": "Label (rgthree)",
    "pos": [
-    -3830,
-    -4750
+    0,
+    4450
    ],
    "size": [
     3726.66015625,
@@ -8945,8 +8766,8 @@
    "id": 1218,
    "type": "Fast Groups Bypasser (rgthree)",
    "pos": [
-    -4660,
-    -3080
+    0,
+    8520
    ],
    "size": [
     340,
@@ -8989,8 +8810,8 @@
    "id": 1232,
    "type": "WanVideoTextEncodeCached",
    "pos": [
-    -2070,
-    -2240
+    0,
+    740
    ],
    "size": [
     370,
@@ -9085,9 +8906,7 @@
      "localized_name": "text_embeds",
      "name": "text_embeds",
      "type": "WANVIDEOTEXTEMBEDS",
-     "links": [
-      1944
-     ]
+     "links": []
     },
     {
      "label": "负面文本嵌入",
@@ -9132,12 +8951,12 @@
    "id": 408,
    "type": "MarkdownNote",
    "pos": [
-    -4630,
-    -2270
+    0,
+    -560
    ],
    "size": [
-    360,
-    170
+    400,
+    430
    ],
    "flags": {},
    "order": 64,
@@ -9165,8 +8984,8 @@
    "id": 1245,
    "type": "CLIPVisionLoader",
    "pos": [
-    -2710,
-    -1670
+    0,
+    8620
    ],
    "size": [
     230,
@@ -9192,9 +9011,7 @@
      "localized_name": "CLIP视觉",
      "name": "CLIP_VISION",
      "type": "CLIP_VISION",
-     "links": [
-      1934
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -9220,8 +9037,8 @@
    "id": 1071,
    "type": "VHS_VideoCombine",
    "pos": [
-    -3660,
-    -4110
+    4776.66015625,
+    2382
    ],
    "size": [
     230,
@@ -9236,7 +9053,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1642
+     "link": null
     },
     {
      "label": "音频",
@@ -9270,7 +9087,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": 1643
+     "link": null
     },
     {
      "label": "循环次数",
@@ -9438,8 +9255,8 @@
    "id": 1225,
    "type": "SimpleMath+",
    "pos": [
-    -910,
-    -2920
+    3846.66015625,
+    10936
    ],
    "size": [
     210,
@@ -9457,7 +9274,7 @@
      "name": "a",
      "shape": 7,
      "type": "*",
-     "link": 1923
+     "link": null
     },
     {
      "label": "B",
@@ -9491,9 +9308,7 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1963
-     ]
+     "links": []
     },
     {
      "label": "浮点",
@@ -9525,8 +9340,8 @@
    "id": 1224,
    "type": "Int",
    "pos": [
-    -920,
-    -3090
+    0,
+    8720
    ],
    "size": [
     210,
@@ -9552,10 +9367,7 @@
      "localized_name": "整数",
      "name": "INT",
      "type": "INT",
-     "links": [
-      1923,
-      1926
-     ]
+     "links": []
     }
    ],
    "title": "读取帧数",
@@ -9581,8 +9393,8 @@
    "id": 1240,
    "type": "WanAnimatePlus LoraSelectMulti",
    "pos": [
-    -4210,
-    -2250
+    3846.66015625,
+    3546
    ],
    "size": [
     620,
@@ -9597,7 +9409,7 @@
      "name": "prev_lora",
      "shape": 7,
      "type": "WANVIDLORA",
-     "link": 1937
+     "link": null
     },
     {
      "localized_name": "blocks",
@@ -9722,9 +9534,7 @@
      "localized_name": "lora",
      "name": "lora",
      "type": "WANVIDLORA",
-     "links": [
-      1933
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -9760,8 +9570,8 @@
    "id": 1104,
    "type": "Fast Groups Bypasser (rgthree)",
    "pos": [
-    -4660,
-    -3210
+    0,
+    8820
    ],
    "size": [
     340,
@@ -9804,8 +9614,8 @@
    "id": 1235,
    "type": "WanAnimatePlus TorchCompileSettings",
    "pos": [
-    -3480,
-    -2210
+    0,
+    2320
    ],
    "size": [
     370,
@@ -9905,9 +9715,7 @@
      "localized_name": "torch_compile_args",
      "name": "torch_compile_args",
      "type": "WANCOMPILEARGS",
-     "links": [
-      1936
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -9940,8 +9748,8 @@
    "id": 1097,
    "type": "PrimitiveBoolean",
    "pos": [
-    -3930,
-    -3290
+    0,
+    8920
    ],
    "size": [
     390,
@@ -9966,9 +9774,7 @@
      "localized_name": "布尔",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": [
-      1665
-     ]
+     "links": []
     }
    ],
    "title": "姿态对齐开关：ture=姿态对齐 | false=原视频姿态",
@@ -9994,8 +9800,8 @@
    "id": 537,
    "type": "ImageResizeKJv2",
    "pos": [
-    -3920,
-    -3060
+    3846.66015625,
+    5076
    ],
    "size": [
     280,
@@ -10010,7 +9816,7 @@
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": 1268
+     "link": null
     },
     {
      "label": "遮罩",
@@ -10027,7 +9833,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 853
+     "link": null
     },
     {
      "label": "高度",
@@ -10037,7 +9843,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 854
+     "link": null
     },
     {
      "label": "缩放方法",
@@ -10101,9 +9907,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1967
-     ]
+     "links": []
     },
     {
      "label": "宽度",
@@ -10174,8 +9978,8 @@
    "id": 588,
    "type": "Fast Groups Bypasser (rgthree)",
    "pos": [
-    -4660,
-    -3340
+    0,
+    9020
    ],
    "size": [
     340,
@@ -10218,8 +10022,8 @@
    "id": 1268,
    "type": "WanAnimatePlus Encode",
    "pos": [
-    -3580,
-    -3070
+    3846.66015625,
+    7486
    ],
    "size": [
     280,
@@ -10233,13 +10037,13 @@
      "localized_name": "vae",
      "name": "vae",
      "type": "WANVAE",
-     "link": 1966
+     "link": null
     },
     {
      "localized_name": "image",
      "name": "image",
      "type": "IMAGE",
-     "link": 1967
+     "link": null
     },
     {
      "localized_name": "mask",
@@ -10319,9 +10123,7 @@
      "localized_name": "samples",
      "name": "samples",
      "type": "LATENT",
-     "links": [
-      1964
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -10352,8 +10154,8 @@
    "id": 1267,
    "type": "WanAnimatePlus Uni3C Embeds",
    "pos": [
-    -3570,
-    -2770
+    3846.66015625,
+    9036
    ],
    "size": [
     260,
@@ -10367,14 +10169,14 @@
      "localized_name": "controlnet",
      "name": "controlnet",
      "type": "WANVIDEOCONTROLNET",
-     "link": 1965
+     "link": null
     },
     {
      "localized_name": "render_latent",
      "name": "render_latent",
      "shape": 7,
      "type": "LATENT",
-     "link": 1964
+     "link": null
     },
     {
      "localized_name": "render_mask",
@@ -10426,10 +10228,7 @@
      "localized_name": "uni3c_embeds",
      "name": "uni3c_embeds",
      "type": "UNI3C_EMBEDS",
-     "links": [
-      1968,
-      1969
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -10457,8 +10256,8 @@
    "id": 589,
    "type": "SetNode",
    "pos": [
-    -3880,
-    -2440
+    3846.66015625,
+    13388
    ],
    "size": [
     210,
@@ -10475,7 +10274,7 @@
      "localized_name": "输入",
      "name": "UNI3C_EMBEDS",
      "type": "UNI3C_EMBEDS",
-     "link": 1969
+     "link": null
     }
    ],
    "outputs": [
@@ -10510,8 +10309,8 @@
    "id": 1269,
    "type": "WanAnimatePlus Uni3C ControlnetLoader",
    "pos": [
-    -3950,
-    -2670
+    0,
+    5340
    ],
    "size": [
     320,
@@ -10579,9 +10378,7 @@
      "localized_name": "controlnet",
      "name": "controlnet",
      "type": "WANVIDEOCONTROLNET",
-     "links": [
-      1965
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -10610,8 +10407,8 @@
    "id": 1238,
    "type": "WanAnimatePlus ModelLoader",
    "pos": [
-    -3070,
-    -2210
+    3846.66015625,
+    5456
    ],
    "size": [
     310,
@@ -10626,7 +10423,7 @@
      "name": "compile_args",
      "shape": 7,
      "type": "WANCOMPILEARGS",
-     "link": 1936
+     "link": null
     },
     {
      "localized_name": "block_swap_args",
@@ -10739,9 +10536,7 @@
      "localized_name": "model",
      "name": "model",
      "type": "WANVIDEOMODEL",
-     "links": [
-      1932
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -10771,8 +10566,8 @@
    "id": 63,
    "type": "VHS_LoadVideo",
    "pos": [
-    -670,
-    -3120
+    3846.66015625,
+    970
    ],
    "size": [
     270,
@@ -10840,7 +10635,7 @@
      "widget": {
       "name": "frame_load_cap"
      },
-     "link": 1963
+     "link": null
     },
     {
      "label": "跳过前X帧",
@@ -10877,9 +10672,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1166
-     ]
+     "links": []
     },
     {
      "label": "帧计数",
@@ -10893,18 +10686,14 @@
      "localized_name": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "links": [
-      255
-     ]
+     "links": []
     },
     {
      "label": "视频信息",
      "localized_name": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "links": [
-      779
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -10959,8 +10748,8 @@
    "id": 948,
    "type": "Label (rgthree)",
    "pos": [
-    -2266.1358467060113,
-    -4371.0465181646205
+    0,
+    9120
    ],
    "size": [
     1786.81640625,
@@ -10999,8 +10788,8 @@
    "id": 651,
    "type": "LoadImage",
    "pos": [
-    -3220,
-    -3100
+    0,
+    0
    ],
    "size": [
     450,
@@ -11035,9 +10824,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1132
-     ]
+     "links": []
     },
     {
      "label": "MASK",
@@ -11074,8 +10861,8 @@
    "id": 1270,
    "type": "VRAMCleanup",
    "pos": [
-    762.0504200336494,
-    -3363.3996881772846
+    3846.66015625,
+    11206
    ],
    "size": [
     270,
@@ -11090,7 +10877,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": 1971
+     "link": null
     },
     {
      "localized_name": "offload_model",
@@ -11116,9 +10903,7 @@
      "localized_name": "output",
      "name": "output",
      "type": "*",
-     "links": [
-      1970
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -11144,8 +10929,8 @@
    "id": 312,
    "type": "VHS_VideoCombine",
    "pos": [
-    730,
-    -3090
+    4776.66015625,
+    2756
    ],
    "size": [
     730,
@@ -11160,7 +10945,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1972
+     "link": null
     },
     {
      "label": "音频",
@@ -11168,7 +10953,7 @@
      "name": "audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": 1572
+     "link": null
     },
     {
      "label": "批次管理",
@@ -11192,7 +10977,7 @@
      "widget": {
       "name": "frame_rate"
      },
-     "link": 502
+     "link": null
     },
     {
      "label": "循环次数",
@@ -11346,8 +11131,8 @@
    "id": 1271,
    "type": "RAMCleanup",
    "pos": [
-    1060.3142605268463,
-    -3376.386675816666
+    3846.66015625,
+    9416
    ],
    "size": [
     270,
@@ -11362,7 +11147,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": 1970
+     "link": null
     },
     {
      "localized_name": "clean_file_cache",
@@ -11406,9 +11191,7 @@
      "localized_name": "output",
      "name": "output",
      "type": "*",
-     "links": [
-      1972
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -11468,8 +11251,8 @@
     "limao_lic": "LM-058C-4539"
    },
    "pos": [
-    -4660.0,
-    -5170.0
+    0,
+    5540
    ]
   },
   {
@@ -11477,7 +11260,7 @@
    "order": 141,
    "mode": 0,
    "type": "Label (rgthree)",
-   "title": "https:///app/?v=709",
+   "title": "https:///709",
    "size": [
     1736.484375,
     80
@@ -11508,8 +11291,8 @@
     "limao_lic": "LM-058C-4539"
    },
    "pos": [
-    -4660.0,
-    -4979.148686691948
+    0,
+    6580
    ]
   },
   {
@@ -11548,16 +11331,16 @@
     "limao_lic": "LM-058C-4539"
    },
    "pos": [
-    -4660.0,
-    -4841.14868669195
+    0,
+    6700
    ]
   },
   {
    "id": 1275,
    "type": "MarkdownNote",
    "pos": [
-    -4660.0,
-    -5470.0
+    0,
+    3170
    ],
    "size": [
     520,
@@ -11576,1271 +11359,45 @@
    ]
   }
  ],
- "links": [
-  [
-   255,
-   63,
-   2,
-   148,
-   0,
-   "*"
-  ],
-  [
-   263,
-   150,
-   0,
-   153,
-   0,
-   "*"
-  ],
-  [
-   264,
-   151,
-   0,
-   154,
-   0,
-   "*"
-  ],
-  [
-   502,
-   250,
-   0,
-   312,
-   4,
-   "FLOAT"
-  ],
-  [
-   779,
-   63,
-   3,
-   500,
-   0,
-   "VHS_VIDEOINFO"
-  ],
-  [
-   780,
-   500,
-   0,
-   245,
-   0,
-   "FLOAT"
-  ],
-  [
-   853,
-   548,
-   0,
-   537,
-   2,
-   "INT"
-  ],
-  [
-   854,
-   549,
-   0,
-   537,
-   3,
-   "INT"
-  ],
-  [
-   985,
-   500,
-   1,
-   664,
-   0,
-   "INT"
-  ],
-  [
-   994,
-   64,
-   0,
-   206,
-   0,
-   "IMAGE"
-  ],
-  [
-   995,
-   64,
-   0,
-   128,
-   0,
-   "IMAGE"
-  ],
-  [
-   1132,
-   651,
-   0,
-   64,
-   0,
-   "IMAGE"
-  ],
-  [
-   1139,
-   500,
-   0,
-   741,
-   4,
-   "FLOAT"
-  ],
-  [
-   1166,
-   63,
-   0,
-   751,
-   0,
-   "IMAGE"
-  ],
-  [
-   1167,
-   751,
-   0,
-   741,
-   0,
-   "IMAGE"
-  ],
-  [
-   1168,
-   751,
-   0,
-   144,
-   0,
-   "IMAGE"
-  ],
-  [
-   1169,
-   209,
-   0,
-   751,
-   2,
-   "INT"
-  ],
-  [
-   1170,
-   210,
-   0,
-   751,
-   3,
-   "INT"
-  ],
-  [
-   1268,
-   801,
-   0,
-   537,
-   0,
-   "IMAGE"
-  ],
-  [
-   1277,
-   207,
-   0,
-   64,
-   2,
-   "INT"
-  ],
-  [
-   1278,
-   208,
-   0,
-   64,
-   3,
-   "INT"
-  ],
-  [
-   1572,
-   149,
-   0,
-   312,
-   1,
-   "AUDIO"
-  ],
-  [
-   1626,
-   1063,
-   0,
-   1062,
-   0,
-   "YOLO_MODEL"
-  ],
-  [
-   1627,
-   1076,
-   0,
-   1062,
-   1,
-   "IMAGE"
-  ],
-  [
-   1628,
-   1086,
-   0,
-   1064,
-   0,
-   "IMAGE"
-  ],
-  [
-   1629,
-   1085,
-   0,
-   1065,
-   0,
-   "IMAGE"
-  ],
-  [
-   1630,
-   1088,
-   0,
-   1066,
-   0,
-   "IMAGE"
-  ],
-  [
-   1631,
-   1075,
-   0,
-   1066,
-   4,
-   "FLOAT"
-  ],
-  [
-   1632,
-   1087,
-   0,
-   1067,
-   0,
-   "IMAGE"
-  ],
-  [
-   1633,
-   1075,
-   0,
-   1067,
-   4,
-   "FLOAT"
-  ],
-  [
-   1634,
-   1095,
-   0,
-   1068,
-   0,
-   "MODEL"
-  ],
-  [
-   1635,
-   1095,
-   2,
-   1068,
-   1,
-   "VAE"
-  ],
-  [
-   1636,
-   1076,
-   0,
-   1068,
-   2,
-   "IMAGE"
-  ],
-  [
-   1637,
-   1062,
-   0,
-   1068,
-   3,
-   "BOUNDING_BOX"
-  ],
-  [
-   1638,
-   1095,
-   0,
-   1069,
-   0,
-   "MODEL"
-  ],
-  [
-   1639,
-   1095,
-   2,
-   1069,
-   1,
-   "VAE"
-  ],
-  [
-   1640,
-   1074,
-   0,
-   1069,
-   2,
-   "IMAGE"
-  ],
-  [
-   1641,
-   1077,
-   0,
-   1069,
-   3,
-   "BOUNDING_BOX"
-  ],
-  [
-   1642,
-   1092,
-   1,
-   1071,
-   0,
-   "IMAGE"
-  ],
-  [
-   1643,
-   1075,
-   0,
-   1071,
-   4,
-   "FLOAT"
-  ],
-  [
-   1644,
-   1092,
-   1,
-   1072,
-   0,
-   "IMAGE"
-  ],
-  [
-   1645,
-   1061,
-   0,
-   1077,
-   0,
-   "YOLO_MODEL"
-  ],
-  [
-   1646,
-   1074,
-   0,
-   1077,
-   1,
-   "IMAGE"
-  ],
-  [
-   1647,
-   1082,
-   1,
-   1079,
-   0,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1648,
-   1082,
-   2,
-   1080,
-   0,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1649,
-   1069,
-   0,
-   1082,
-   0,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1650,
-   1068,
-   0,
-   1082,
-   1,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1651,
-   1078,
-   0,
-   1082,
-   2,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1652,
-   1081,
-   0,
-   1082,
-   3,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1654,
-   1068,
-   0,
-   1085,
-   0,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1655,
-   1082,
-   1,
-   1086,
-   0,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1656,
-   1082,
-   0,
-   1087,
-   0,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1657,
-   1069,
-   0,
-   1088,
-   0,
-   "POSE_KEYPOINT"
-  ],
-  [
-   1658,
-   1087,
-   0,
-   1091,
-   0,
-   "IMAGE"
-  ],
-  [
-   1659,
-   1088,
-   0,
-   1091,
-   1,
-   "IMAGE"
-  ],
-  [
-   1660,
-   1090,
-   0,
-   1091,
-   2,
-   "BOOLEAN"
-  ],
-  [
-   1661,
-   1070,
-   0,
-   1092,
-   0,
-   "POSEMODEL"
-  ],
-  [
-   1662,
-   1074,
-   0,
-   1092,
-   1,
-   "IMAGE"
-  ],
-  [
-   1663,
-   1073,
-   0,
-   1092,
-   3,
-   "INT"
-  ],
-  [
-   1664,
-   1089,
-   0,
-   1092,
-   4,
-   "INT"
-  ],
-  [
-   1665,
-   1097,
-   0,
-   1096,
-   0,
-   "BOOLEAN"
-  ],
-  [
-   1669,
-   1105,
-   0,
-   1108,
-   2,
-   "INT"
-  ],
-  [
-   1670,
-   1107,
-   0,
-   1108,
-   3,
-   "INT"
-  ],
-  [
-   1671,
-   1108,
-   0,
-   1109,
-   0,
-   "IMAGE"
-  ],
-  [
-   1672,
-   1108,
-   0,
-   1110,
-   0,
-   "IMAGE"
-  ],
-  [
-   1677,
-   1091,
-   0,
-   1083,
-   0,
-   "IMAGE"
-  ],
-  [
-   1729,
-   1128,
-   3,
-   1129,
-   0,
-   "VHS_VIDEOINFO"
-  ],
-  [
-   1730,
-   1129,
-   1,
-   1130,
-   0,
-   "INT"
-  ],
-  [
-   1731,
-   1130,
-   0,
-   1131,
-   2,
-   "INT"
-  ],
-  [
-   1732,
-   1128,
-   0,
-   1131,
-   0,
-   "IMAGE"
-  ],
-  [
-   1912,
-   1196,
-   0,
-   1130,
-   1,
-   "INT"
-  ],
-  [
-   1917,
-   1131,
-   0,
-   1211,
-   0,
-   "IMAGE"
-  ],
-  [
-   1919,
-   1216,
-   0,
-   1108,
-   0,
-   "IMAGE"
-  ],
-  [
-   1923,
-   1224,
-   0,
-   1225,
-   0,
-   "INT"
-  ],
-  [
-   1926,
-   1224,
-   0,
-   1227,
-   0,
-   "INT"
-  ],
-  [
-   1927,
-   1228,
-   0,
-   1226,
-   3,
-   "INT"
-  ],
-  [
-   1928,
-   448,
-   0,
-   1226,
-   0,
-   "IMAGE"
-  ],
-  [
-   1931,
-   1236,
-   0,
-   1230,
-   0,
-   "WANVIDIMAGE_CLIPEMBEDS"
-  ],
-  [
-   1932,
-   1238,
-   0,
-   1234,
-   0,
-   "WANVIDEOMODEL"
-  ],
-  [
-   1933,
-   1240,
-   0,
-   1234,
-   1,
-   "WANVIDLORA"
-  ],
-  [
-   1934,
-   1245,
-   0,
-   1236,
-   0,
-   "CLIP_VISION"
-  ],
-  [
-   1935,
-   1246,
-   0,
-   1236,
-   1,
-   "IMAGE"
-  ],
-  [
-   1936,
-   1235,
-   0,
-   1238,
-   0,
-   "WANCOMPILEARGS"
-  ],
-  [
-   1937,
-   1239,
-   0,
-   1240,
-   0,
-   "WANVIDLORA"
-  ],
-  [
-   1938,
-   1242,
-   0,
-   1241,
-   0,
-   "WANVAE"
-  ],
-  [
-   1939,
-   1244,
-   0,
-   1243,
-   0,
-   "WANVIDEOMODEL"
-  ],
-  [
-   1940,
-   1234,
-   0,
-   1244,
-   0,
-   "WANVIDEOMODEL"
-  ],
-  [
-   1941,
-   1237,
-   0,
-   1244,
-   1,
-   "BLOCKSWAPARGS"
-  ],
-  [
-   1942,
-   1247,
-   0,
-   1259,
-   0,
-   "WANVIDEOMODEL"
-  ],
-  [
-   1943,
-   1263,
-   0,
-   1259,
-   1,
-   "WANVIDIMAGE_EMBEDS"
-  ],
-  [
-   1944,
-   1232,
-   0,
-   1259,
-   2,
-   "WANVIDEOTEXTEMBEDS"
-  ],
-  [
-   1945,
-   1233,
-   0,
-   1259,
-   5,
-   "WANVIDCONTEXT"
-  ],
-  [
-   1946,
-   1257,
-   0,
-   1259,
-   14,
-   "UNI3C_EMBEDS"
-  ],
-  [
-   1947,
-   1258,
-   0,
-   1259,
-   20,
-   "INT"
-  ],
-  [
-   1948,
-   1259,
-   0,
-   1260,
-   0,
-   "SAMPLER_ARGS"
-  ],
-  [
-   1949,
-   1264,
-   0,
-   1261,
-   0,
-   "*"
-  ],
-  [
-   1950,
-   1248,
-   0,
-   1262,
-   0,
-   "WANVAE"
-  ],
-  [
-   1951,
-   1260,
-   0,
-   1262,
-   1,
-   "LATENT"
-  ],
-  [
-   1952,
-   1248,
-   0,
-   1263,
-   0,
-   "WANVAE"
-  ],
-  [
-   1953,
-   1249,
-   0,
-   1263,
-   1,
-   "WANVIDIMAGE_CLIPEMBEDS"
-  ],
-  [
-   1954,
-   1250,
-   0,
-   1263,
-   2,
-   "IMAGE"
-  ],
-  [
-   1955,
-   1251,
-   0,
-   1263,
-   3,
-   "IMAGE"
-  ],
-  [
-   1956,
-   1252,
-   0,
-   1263,
-   4,
-   "IMAGE"
-  ],
-  [
-   1957,
-   1253,
-   0,
-   1263,
-   9,
-   "IMAGE"
-  ],
-  [
-   1958,
-   1254,
-   0,
-   1263,
-   10,
-   "INT"
-  ],
-  [
-   1959,
-   1255,
-   0,
-   1263,
-   11,
-   "INT"
-  ],
-  [
-   1960,
-   1256,
-   0,
-   1263,
-   12,
-   "INT"
-  ],
-  [
-   1961,
-   1256,
-   0,
-   1263,
-   14,
-   "INT"
-  ],
-  [
-   1962,
-   1262,
-   0,
-   1264,
-   0,
-   "IMAGE"
-  ],
-  [
-   1963,
-   1225,
-   0,
-   63,
-   6,
-   "INT"
-  ],
-  [
-   1964,
-   1268,
-   0,
-   1267,
-   1,
-   "LATENT"
-  ],
-  [
-   1965,
-   1269,
-   0,
-   1267,
-   0,
-   "WANVIDEOCONTROLNET"
-  ],
-  [
-   1966,
-   544,
-   0,
-   1268,
-   0,
-   "WANVAE"
-  ],
-  [
-   1967,
-   537,
-   0,
-   1268,
-   1,
-   "IMAGE"
-  ],
-  [
-   1968,
-   1267,
-   0,
-   911,
-   0,
-   "UNI3C_EMBEDS"
-  ],
-  [
-   1969,
-   1267,
-   0,
-   589,
-   0,
-   "UNI3C_EMBEDS"
-  ],
-  [
-   1970,
-   1270,
-   0,
-   1271,
-   0,
-   "*"
-  ],
-  [
-   1971,
-   1226,
-   0,
-   1270,
-   0,
-   "IMAGE"
-  ],
-  [
-   1972,
-   1271,
-   0,
-   312,
-   0,
-   "IMAGE"
-  ]
- ],
+ "links": [],
  "groups": [
   {
-   "id": 1,
-   "title": "图像载入",
+   "id": 118,
+   "title": "📥 输入区（改这里）",
    "bounding": [
-    -3250,
-    -3200,
-    1310,
-    860
-   ],
-   "color": "#8ea794",
-   "flags": {}
-  },
-  {
-   "id": 6,
-   "title": "视频载入",
-   "bounding": [
-    -950,
-    -3200,
-    1240,
-    860
-   ],
-   "color": "#3d8b5e",
-   "flags": {}
-  },
-  {
-   "id": 7,
-   "title": "全局数值",
-   "bounding": [
-    -4720,
-    -3770,
-    450,
-    830
-   ],
-   "color": "#d4b496",
-   "flags": {}
-  },
-  {
-   "id": 11,
-   "title": "预览区",
-   "bounding": [
-    310,
-    -3200,
-    1240,
-    1760
-   ],
-   "color": "#f693ce",
-   "flags": {}
-  },
-  {
-   "id": 34,
-   "title": "Uni3C-动作迁移增加运镜效果",
-   "bounding": [
-    -4240,
-    -3200,
-    980,
-    860
-   ],
-   "color": "#e3b886",
-   "flags": {}
-  },
-  {
-   "id": 54,
-   "title": "参考图预览",
-   "bounding": [
-    -2390,
-    -3140,
-    430,
-    773.5999755859375
-   ],
-   "color": "#8ea794",
-   "flags": {}
-  },
-  {
-   "id": 55,
-   "title": "参考视频预览",
-   "bounding": [
-    -40,
-    -3150,
-    310,
-    800
-   ],
-   "color": "#3d8b5e",
-   "flags": {}
-  },
-  {
-   "id": 97,
-   "title": "面部&姿态区",
-   "bounding": [
-    -4240,
-    -4250,
-    3550,
-    1040
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 98,
-   "title": "视频姿态检测",
-   "bounding": [
-    -3380,
-    -4200,
-    350,
-    660
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 99,
-   "title": "参考图姿态检测",
-   "bounding": [
-    -3010,
-    -4200,
-    350,
-    660
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 100,
-   "title": "姿态对齐",
-   "bounding": [
-    -2640,
-    -4200,
-    980,
-    620
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 101,
-   "title": "Anchor帧姿态图",
-   "bounding": [
-    -1640,
-    -4200,
-    290,
-    470
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 102,
-   "title": "参考视频姿态",
-   "bounding": [
-    -1330,
-    -4200,
-    300,
-    970
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 103,
-   "title": "对齐参考图姿态",
-   "bounding": [
-    -1010,
-    -4200,
-    290,
-    970
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 104,
-   "title": "参考图姿态",
-   "bounding": [
-    -1640,
-    -3710,
-    290,
-    480
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 105,
-   "title": "人脸表情检测",
-   "bounding": [
-    -4050,
-    -4200,
-    650,
-    660
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 106,
-   "title": "加载SDPose模型",
-   "bounding": [
-    -4050,
-    -3520,
-    370,
-    180
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 107,
-   "title": "多人检测",
-   "bounding": [
-    -3380,
-    -3520,
-    720,
-    290
-   ],
-   "color": "#639bc6",
-   "flags": {}
-  },
-  {
-   "id": 108,
-   "title": "手动Anchor帧设置",
-   "bounding": [
-    -2640,
-    -3560,
-    480,
-    330
+    -50,
+    -120,
+    3826.66015625,
+    11110
    ],
    "color": "#3f789e",
+   "font_size": 24,
    "flags": {}
   },
   {
-   "id": 109,
-   "title": "手动首帧设置",
+   "id": 119,
+   "title": "⚙️ 核心处理（参数已调好，慎动）",
    "bounding": [
-    -2140,
-    -3560,
-    480,
-    330
+    3796.66015625,
+    -120,
+    890.0,
+    13978
    ],
-   "color": "#3f789e",
+   "color": "#8f6e48",
+   "font_size": 24,
    "flags": {}
   },
   {
-   "id": 110,
-   "title": "多图参考",
+   "id": 120,
+   "title": "📤 输出区",
    "bounding": [
-    -1930,
-    -3200,
-    970,
-    860
+    4726.66015625,
+    -120,
+    830,
+    3970
    ],
-   "color": "#6eb27b",
-   "flags": {}
-  },
-  {
-   "id": 111,
-   "title": "Transition Video",
-   "bounding": [
-    -680,
-    -4250,
-    970,
-    1040
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 114,
-   "title": "模型加载区",
-   "bounding": [
-    -3560,
-    -2330,
-    1440,
-    890
-   ],
-   "color": "#bb92ed",
-   "flags": {}
-  },
-  {
-   "id": 115,
-   "title": "采样区",
-   "bounding": [
-    -2110,
-    -2330,
-    2400,
-    890
-   ],
-   "color": "#ffb8bf",
-   "flags": {}
-  },
-  {
-   "id": 116,
-   "title": "LORA加载区",
-   "bounding": [
-    -4240,
-    -2330,
-    670,
-    890
-   ],
-   "color": "#bb92ed",
-   "flags": {}
-  },
-  {
-   "id": 117,
-   "title": "动作迁移-嵌入处理",
-   "bounding": [
-    -1610,
-    -2280,
-    680,
-    610
-   ],
-   "color": "#ffb8bf",
+   "color": "#4a6b3f",
+   "font_size": 24,
    "flags": {}
   }
  ],

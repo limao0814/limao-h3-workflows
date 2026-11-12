@@ -8,8 +8,8 @@
    "id": 96,
    "type": "FluxKontextMultiReferenceLatentMethod",
    "pos": [
-    -1473.2741340731181,
-    1046.6706603904572
+    2444.619140625,
+    2619.188316345215
    ],
    "size": [
     309.6734313964844,
@@ -24,7 +24,7 @@
      "localized_name": "条件化",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": 229
+     "link": null
     },
     {
      "label": "reference_latents_method",
@@ -42,9 +42,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      241
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -80,8 +78,8 @@
    "id": 97,
    "type": "FluxKontextMultiReferenceLatentMethod",
    "pos": [
-    -1473.2741340731181,
-    916.6706556220856
+    2444.619140625,
+    2729.188316345215
    ],
    "size": [
     309.6734313964844,
@@ -96,7 +94,7 @@
      "localized_name": "条件化",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": 256
+     "link": null
     },
     {
      "label": "reference_latents_method",
@@ -114,9 +112,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      240
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -152,8 +148,8 @@
    "id": 98,
    "type": "CFGNorm",
    "pos": [
-    -1473.2741340731181,
-    788.337312116226
+    2444.619140625,
+    2497.188316345215
    ],
    "size": [
     309.6734313964844,
@@ -168,7 +164,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 231
+     "link": null
     },
     {
      "label": "strength",
@@ -196,9 +192,7 @@
      "localized_name": "模型",
      "name": "patched_model",
      "type": "MODEL",
-     "links": [
-      239
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -234,8 +228,8 @@
    "id": 101,
    "type": "Note",
    "pos": [
-    -1473.2741340731181,
-    1176.6706632514788
+    0,
+    1827.4115792236314
    ],
    "size": [
     309.6734313964844,
@@ -269,8 +263,8 @@
    "id": 112,
    "type": "TextEncodeQwenImageEditPlus",
    "pos": [
-    -1995.0138570385707,
-    665.8533219447181
+    2444.619140625,
+    1356.62841796875
    ],
    "size": [
     426.6275939941406,
@@ -285,7 +279,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": 253
+     "link": null
     },
     {
      "label": "vae",
@@ -293,7 +287,7 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": 254
+     "link": null
     },
     {
      "label": "image1",
@@ -301,7 +295,7 @@
      "name": "image1",
      "shape": 7,
      "type": "IMAGE",
-     "link": 255
+     "link": null
     },
     {
      "label": "image2",
@@ -325,7 +319,7 @@
      "widget": {
       "name": "prompt"
      },
-     "link": 270
+     "link": null
     }
    ],
    "outputs": [
@@ -334,9 +328,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      256
-     ]
+     "links": []
     }
    ],
    "title": "TextEncodeQwenImageEditPlus (Positive)",
@@ -375,8 +367,8 @@
    "id": 108,
    "type": "UNETLoader",
    "pos": [
-    -2449.020920514399,
-    654.073949447526
+    2444.619140625,
+    2087.1883239746094
    ],
    "size": [
     396.1328125,
@@ -412,9 +404,7 @@
      "name": "MODEL",
      "type": "MODEL",
      "slot_index": 0,
-     "links": [
-      257
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -458,8 +448,8 @@
    "id": 41,
    "type": "LoadImage",
    "pos": [
-    -1964.2141140996741,
-    -320.1087343102242
+    0,
+    0
    ],
    "size": [
     467.5038520874082,
@@ -494,10 +484,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      247,
-      269
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -541,8 +528,8 @@
    "id": 106,
    "type": "KSampler",
    "pos": [
-    -1147.4305671785876,
-    661.6735853095854
+    2444.619140625,
+    0
    ],
    "size": [
     314.2265625,
@@ -557,28 +544,28 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 239
+     "link": null
     },
     {
      "label": "正面条件",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 240
+     "link": null
     },
     {
      "label": "负面条件",
      "localized_name": "负面条件",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": 241
+     "link": null
     },
     {
      "label": "Latent",
      "localized_name": "Latent图像",
      "name": "latent_image",
      "type": "LATENT",
-     "link": 242
+     "link": null
     },
     {
      "label": "seed",
@@ -641,9 +628,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      244
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -689,8 +674,8 @@
    "id": 109,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    -2449.020920514399,
-    791.0091061200089
+    2444.619140625,
+    2223.8549880981445
    ],
    "size": [
     396.1328125,
@@ -705,7 +690,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 257
+     "link": null
     },
     {
      "label": "lora_name",
@@ -732,9 +717,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      258
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -779,8 +762,8 @@
    "id": 102,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    -2450.5387281929884,
-    941.6045471585828
+    2444.619140625,
+    2360.5216522216797
    ],
    "size": [
     396.1328125,
@@ -795,7 +778,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 258
+     "link": null
     },
     {
      "label": "lora_name",
@@ -822,9 +805,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      228
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -867,8 +848,8 @@
    "id": 93,
    "type": "CLIPLoader",
    "pos": [
-    -2449.020920514399,
-    1090.6821728891719
+    2444.619140625,
+    1922.1883239746094
    ],
    "size": [
     396.1328125,
@@ -913,10 +894,7 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": [
-      232,
-      253
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -962,8 +940,8 @@
    "id": 95,
    "type": "VAELoader",
    "pos": [
-    -2444.467497478632,
-    1263.539719089853
+    2444.619140625,
+    2839.188316345215
    ],
    "size": [
     396.1328125,
@@ -990,12 +968,7 @@
      "name": "VAE",
      "type": "VAE",
      "slot_index": 0,
-     "links": [
-      233,
-      236,
-      245,
-      254
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1037,8 +1010,8 @@
    "id": 107,
    "type": "FluxKontextImageScale",
    "pos": [
-    -2444.4674974786317,
-    1378.2127629708332
+    2444.619140625,
+    3241.8549880981445
    ],
    "size": [
     396.1328125,
@@ -1053,7 +1026,7 @@
      "localized_name": "图像",
      "name": "image",
      "type": "IMAGE",
-     "link": 247
+     "link": null
     }
    ],
    "outputs": [
@@ -1062,11 +1035,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      234,
-      235,
-      255
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1094,8 +1063,8 @@
    "id": 94,
    "type": "ModelSamplingAuraFlow",
    "pos": [
-    -1473.2741340731181,
-    660.0039991279448
+    2444.619140625,
+    2947.5216522216797
    ],
    "size": [
     309.6734313964844,
@@ -1110,7 +1079,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 228
+     "link": null
     },
     {
      "label": "shift",
@@ -1128,9 +1097,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      231
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1164,8 +1131,8 @@
    "id": 123,
    "type": "QwenMultiangleCameraNode",
    "pos": [
-    -2409.6229370179253,
-    -164.80899411872443
+    2444.619140625,
+    768.62841796875
    ],
    "size": [
     410.71230714356216,
@@ -1181,7 +1148,7 @@
      "name": "image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 269
+     "link": null
     },
     {
      "label": "horizontal_angle",
@@ -1239,9 +1206,7 @@
      "localized_name": "Prompt",
      "name": "Prompt",
      "type": "STRING",
-     "links": [
-      270
-     ]
+     "links": []
     },
     {
      "localized_name": "Camera Info",
@@ -1284,8 +1249,8 @@
    "id": 103,
    "type": "VAEDecode",
    "pos": [
-    -1989.1702977734344,
-    1267.2554368128808
+    2444.619140625,
+    3155.8549880981445
    ],
    "size": [
     424.95800554769266,
@@ -1302,14 +1267,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": 244
+     "link": null
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 245
+     "link": null
     }
    ],
    "outputs": [
@@ -1319,9 +1284,7 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "slot_index": 0,
-     "links": [
-      246
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1349,8 +1312,8 @@
    "id": 100,
    "type": "TextEncodeQwenImageEditPlus",
    "pos": [
-    -1995.0138570385707,
-    991.4132203211834
+    2444.619140625,
+    1662.1883239746094
    ],
    "size": [
     418.2796517619008,
@@ -1365,7 +1328,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": 232
+     "link": null
     },
     {
      "label": "vae",
@@ -1373,7 +1336,7 @@
      "name": "vae",
      "shape": 7,
      "type": "VAE",
-     "link": 233
+     "link": null
     },
     {
      "label": "image1",
@@ -1381,7 +1344,7 @@
      "name": "image1",
      "shape": 7,
      "type": "IMAGE",
-     "link": 234
+     "link": null
     },
     {
      "label": "image2",
@@ -1413,9 +1376,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      229
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1451,8 +1412,8 @@
    "id": 105,
    "type": "VAEEncode",
    "pos": [
-    -1481.622076305358,
-    1319.9923018362924
+    2444.619140625,
+    3055.8549880981445
    ],
    "size": [
     309.6734313964844,
@@ -1467,14 +1428,14 @@
      "localized_name": "像素",
      "name": "pixels",
      "type": "IMAGE",
-     "link": 235
+     "link": null
     },
     {
      "label": "VAE",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 236
+     "link": null
     }
    ],
    "outputs": [
@@ -1483,9 +1444,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      242
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1513,8 +1472,8 @@
    "id": 9,
    "type": "SaveImage",
    "pos": [
-    -1468.3000881597272,
-    -319.71506400993167
+    3181.2467346191406,
+    0
    ],
    "size": [
     499.0507507324219,
@@ -1529,7 +1488,7 @@
      "localized_name": "图片",
      "name": "images",
      "type": "IMAGE",
-     "link": 246
+     "link": null
     },
     {
      "label": "filename_prefix",
@@ -1582,8 +1541,8 @@
    "id": 125,
    "type": "Label (rgthree)",
    "pos": [
-    -2449.6750304644734,
-    -588.8684013862892
+    0,
+    1957.4115792236314
    ],
    "size": [
     1736.484375,
@@ -1596,7 +1555,7 @@
    "mode": 0,
    "inputs": [],
    "outputs": [],
-   "title": "https:///app/?v=709",
+   "title": "https:///709",
    "properties": {
     "fontSize": 80,
     "fontFamily": "Arial",
@@ -1622,8 +1581,8 @@
    "id": 127,
    "type": "Label (rgthree)",
    "pos": [
-    -2449.6750304644734,
-    -779.7197146943411
+    0,
+    1637.4115792236314
    ],
    "size": [
     2014.6728515625,
@@ -1662,8 +1621,8 @@
    "id": 126,
    "type": "Label (rgthree)",
    "pos": [
-    -2440.7861415755847,
-    -484.2017347196249
+    0,
+    2077.4115792236316
    ],
    "size": [
     2324.619140625,
@@ -1702,8 +1661,8 @@
    "id": 128,
    "type": "MarkdownNote",
    "pos": [
-    -2450.5387281929884,
-    -1079.719714694341
+    0,
+    1357.4115792236314
    ],
    "size": [
     520,
@@ -1720,273 +1679,69 @@
    "widgets_values": [
     "# 狸猫AI 专属工作流\n\n**本文件由狸猫AI平台独家装配与调优**\n\n- 授权标识：`LM-E3F5-5386`\n- 版本：`LIMAO-WF-20261112-R1`\n- 指纹：`e3f527e06a395f6c`\n\n> 本工作流嵌入狸猫AI数字指纹，文件内容可溯源。**禁止**未经授权的二次开发、复制、转发、公开分享或发布至任何其他平台。违者将追究相应责任。\n\n狸猫AI · 让创作更简单"
    ]
+  },
+  {
+   "id": 129,
+   "type": "MarkdownNote",
+   "title": "狸猫AI·使用说明",
+   "pos": [
+    0,
+    -560
+   ],
+   "size": [
+    400,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 左侧框：需要你修改的输入与参数\n- 中间框：核心处理区（参数已调好，慎动）\n- 右侧框：输出结果\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源）\n- 显存不足：优先「H3·16G显存精修版」，保持显存治理节点开启\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
+   ]
   }
  ],
- "links": [
-  [
-   228,
-   102,
-   0,
-   94,
-   0,
-   "MODEL"
-  ],
-  [
-   229,
-   100,
-   0,
-   96,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   231,
-   94,
-   0,
-   98,
-   0,
-   "MODEL"
-  ],
-  [
-   232,
-   93,
-   0,
-   100,
-   0,
-   "CLIP"
-  ],
-  [
-   233,
-   95,
-   0,
-   100,
-   1,
-   "VAE"
-  ],
-  [
-   234,
-   107,
-   0,
-   100,
-   2,
-   "IMAGE"
-  ],
-  [
-   235,
-   107,
-   0,
-   105,
-   0,
-   "IMAGE"
-  ],
-  [
-   236,
-   95,
-   0,
-   105,
-   1,
-   "VAE"
-  ],
-  [
-   239,
-   98,
-   0,
-   106,
-   0,
-   "MODEL"
-  ],
-  [
-   240,
-   97,
-   0,
-   106,
-   1,
-   "CONDITIONING"
-  ],
-  [
-   241,
-   96,
-   0,
-   106,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   242,
-   105,
-   0,
-   106,
-   3,
-   "LATENT"
-  ],
-  [
-   244,
-   106,
-   0,
-   103,
-   0,
-   "LATENT"
-  ],
-  [
-   245,
-   95,
-   0,
-   103,
-   1,
-   "VAE"
-  ],
-  [
-   246,
-   103,
-   0,
-   9,
-   0,
-   "IMAGE"
-  ],
-  [
-   247,
-   41,
-   0,
-   107,
-   0,
-   "IMAGE"
-  ],
-  [
-   253,
-   93,
-   0,
-   112,
-   0,
-   "CLIP"
-  ],
-  [
-   254,
-   95,
-   0,
-   112,
-   1,
-   "VAE"
-  ],
-  [
-   255,
-   107,
-   0,
-   112,
-   2,
-   "IMAGE"
-  ],
-  [
-   256,
-   112,
-   0,
-   97,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   257,
-   108,
-   0,
-   109,
-   0,
-   "MODEL"
-  ],
-  [
-   258,
-   109,
-   0,
-   102,
-   0,
-   "MODEL"
-  ],
-  [
-   269,
-   41,
-   0,
-   123,
-   0,
-   "IMAGE"
-  ],
-  [
-   270,
-   123,
-   0,
-   112,
-   5,
-   "STRING"
-  ]
- ],
+ "links": [],
  "groups": [
   {
-   "id": 2,
-   "title": "提示词控制",
+   "id": 8,
+   "title": "📥 输入区（改这里）",
    "bounding": [
-    -2025.8135854321242,
-    583.3489274134672,
-    504.15643310546875,
-    834.5245971679688
+    -50,
+    -120,
+    2424.619140625,
+    2277.4115792236316
    ],
    "color": "#3f789e",
+   "font_size": 24,
    "flags": {}
   },
   {
-   "id": 3,
-   "title": "可视化控制角度",
+   "id": 9,
+   "title": "⚙️ 核心处理（参数已调好，慎动）",
    "bounding": [
-    -2454.010963379437,
-    -395.77193273551785,
-    471.42887285276447,
-    930.6615089087252
+    2394.619140625,
+    -120,
+    696.6275939941406,
+    3447.8549880981445
    ],
-   "color": "#3f789e",
+   "color": "#8f6e48",
+   "font_size": 24,
    "flags": {}
   },
   {
-   "id": 4,
-   "title": "角色图",
+   "id": 10,
+   "title": "📤 输出区",
    "bounding": [
-    -1974.2141140996741,
-    -393.7087404137398,
-    486.2494655761777,
-    929.7571682983382
+    3131.2467346191406,
+    -120,
+    599.0507507324219,
+    985.5258178710938
    ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 5,
-   "title": "模型加载",
-   "bounding": [
-    -2459.020920514399,
-    580.4739433440094,
-    419.16842785717836,
-    838.2922731801696
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 6,
-   "title": "核心采样区",
-   "bounding": [
-    -1509.0768646091306,
-    584.8861853458393,
-    738.9961286811622,
-    832.1117023969746
-   ],
-   "color": "#3f789e",
-   "flags": {}
-  },
-  {
-   "id": 7,
-   "title": "出图结果",
-   "bounding": [
-    -1478.3000881597275,
-    -393.31510063102564,
-    519.0507202148438,
-    929.1257934570312
-   ],
-   "color": "#3f789e",
+   "color": "#4a6b3f",
+   "font_size": 24,
    "flags": {}
   }
  ],

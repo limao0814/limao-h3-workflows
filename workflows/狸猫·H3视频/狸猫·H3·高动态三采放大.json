@@ -8,8 +8,8 @@
    "id": 89,
    "type": "LoadImage",
    "pos": [
-    6095.2255859375,
-    1946.22314453125
+    0,
+    3096.2693786621094
    ],
    "size": [
     270,
@@ -43,11 +43,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      133,
-      138,
-      224
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -72,8 +68,8 @@
    "id": 88,
    "type": "LoadImage",
    "pos": [
-    5782.9990234375,
-    1957.4229736328125
+    0,
+    3450.269500732422
    ],
    "size": [
     270,
@@ -107,11 +103,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      132,
-      137,
-      223
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -136,8 +128,8 @@
    "id": 87,
    "type": "LoadImage",
    "pos": [
-    6393.1083984375,
-    1572.9019775390625
+    0,
+    3804.2696228027344
    ],
    "size": [
     270,
@@ -171,11 +163,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      131,
-      136,
-      222
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -200,8 +188,8 @@
    "id": 86,
    "type": "LoadImage",
    "pos": [
-    6082.6474609375,
-    1578.4193115234375
+    0,
+    4158.269744873047
    ],
    "size": [
     270,
@@ -235,11 +223,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      130,
-      135,
-      221
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -264,8 +248,8 @@
    "id": 37,
    "type": "LoadImage",
    "pos": [
-    5777.79736328125,
-    1562.5648193359375
+    0,
+    1599.3753662109375
    ],
    "size": [
     273.8184814453125,
@@ -300,11 +284,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      60,
-      61,
-      220
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -340,8 +320,8 @@
    "id": 6,
    "type": "LoadImage",
    "pos": [
-    5785.9052734375,
-    1203.226318359375
+    0,
+    2729.8509521484375
    ],
    "size": [
     265.6973876953125,
@@ -375,11 +355,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      41,
-      42,
-      217
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -415,8 +391,8 @@
    "id": 35,
    "type": "LoadImage",
    "pos": [
-    6078.69775390625,
-    1204.0169677734375
+    0,
+    2358.0851135253906
    ],
    "size": [
     272.8067626953125,
@@ -451,11 +427,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      56,
-      57,
-      218
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -491,8 +463,8 @@
    "id": 36,
    "type": "LoadImage",
    "pos": [
-    6381.18359375,
-    1202.3966064453125
+    0,
+    1982.1798095703125
    ],
    "size": [
     273.0255126953125,
@@ -527,11 +499,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      58,
-      59,
-      219
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -567,8 +535,8 @@
    "id": 68,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    2208.22900390625,
-    356.3511047363281
+    1155.1781005859375,
+    12329.33268737793
    ],
    "size": [
     270,
@@ -584,7 +552,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 396
+     "link": null
     },
     {
      "label": "lora_name",
@@ -608,9 +576,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      257
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -628,8 +594,8 @@
    "id": 27,
    "type": "PrimitiveFloat",
    "pos": [
-    5386.361328125,
-    1464.7176513671875
+    0,
+    6364.200164794922
    ],
    "size": [
     300,
@@ -655,11 +621,7 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": [
-      43,
-      123,
-      127
-     ]
+     "links": []
     }
    ],
    "title": "视频时长（秒）/ Duration (Seconds)",
@@ -688,8 +650,8 @@
    "id": 29,
    "type": "ResolutionSelector",
    "pos": [
-    5386.46435546875,
-    1574.5858154296875
+    0,
+    5944.213043212891
    ],
    "size": [
     361.84356689453125,
@@ -738,17 +700,13 @@
      "label": "width",
      "name": "width",
      "type": "INT",
-     "links": [
-      44
-     ]
+     "links": []
     },
     {
      "label": "height",
      "name": "height",
      "type": "INT",
-     "links": [
-      45
-     ]
+     "links": []
     }
    ],
    "title": "一采基础分辨率 / Stage 1 Base Resolution",
@@ -781,8 +739,8 @@
    "id": 83,
    "type": "ComfyMathExpression",
    "pos": [
-    5371.31591796875,
-    939.9779663085938
+    1155.1781005859375,
+    10775.808502197266
    ],
    "size": [
     225,
@@ -799,7 +757,7 @@
      "label": "values.a",
      "name": "values.a",
      "type": "FLOAT,INT,BOOLEAN",
-     "link": 127
+     "link": null
     },
     {
      "label": "values.b",
@@ -828,8 +786,7 @@
      "name": "INT",
      "type": "INT",
      "links": [
-      124,
-      291
+      124
      ]
     },
     {
@@ -862,8 +819,8 @@
    "id": 82,
    "type": "ComfyMathExpression",
    "pos": [
-    5373.39794921875,
-    997.3485717773438
+    1155.1781005859375,
+    10931.808502197266
    ],
    "size": [
     225,
@@ -880,7 +837,7 @@
      "label": "values.a",
      "name": "values.a",
      "type": "FLOAT,INT,BOOLEAN",
-     "link": 123
+     "link": null
     },
     {
      "label": "values.b",
@@ -909,7 +866,6 @@
      "name": "INT",
      "type": "INT",
      "links": [
-      122,
       146
      ]
     },
@@ -943,8 +899,8 @@
    "id": 2,
    "type": "VAELoader",
    "pos": [
-    1506.907470703125,
-    1042.100341796875
+    2825.1781005859375,
+    0
    ],
    "size": [
     360,
@@ -971,11 +927,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      4,
-      21,
-      425
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1004,8 +956,8 @@
    "id": 1,
    "type": "VAELoader",
    "pos": [
-    1500.5792236328125,
-    1137.293701171875
+    2295.1781005859375,
+    0
    ],
    "size": [
     360,
@@ -1032,12 +984,7 @@
      "label": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      3,
-      20,
-      424,
-      433
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1066,8 +1013,8 @@
    "id": 3,
    "type": "CLIPLoader",
    "pos": [
-    1126.5731201171875,
-    1063.600341796875
+    3355.1781005859375,
+    0
    ],
    "size": [
     360,
@@ -1111,10 +1058,7 @@
      "label": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": [
-      2,
-      19
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1149,8 +1093,8 @@
    "id": 90,
    "type": "LoadImage",
    "pos": [
-    6409.5830078125,
-    1945.1961669921875
+    0,
+    4512.269866943359
    ],
    "size": [
     270,
@@ -1184,11 +1128,7 @@
      "label": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      134,
-      139,
-      225
-     ]
+     "links": []
     },
     {
      "label": "遮罩",
@@ -1213,8 +1153,8 @@
    "id": 7,
    "type": "MiniMaxH3AudioConditioningT8",
    "pos": [
-    1140.5015869140625,
-    1305.732177734375
+    1155.1781005859375,
+    1706
    ],
    "size": [
     430,
@@ -1231,19 +1171,19 @@
      "label": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": 2
+     "link": null
     },
     {
      "label": "video_vae",
      "name": "video_vae",
      "type": "VAE",
-     "link": 3
+     "link": null
     },
     {
      "label": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": 4
+     "link": null
     },
     {
      "label": "drive_audio",
@@ -1274,63 +1214,63 @@
      "name": "ref_images.ref_image_0",
      "shape": 7,
      "type": "IMAGE",
-     "link": 41
+     "link": null
     },
     {
      "label": "ref_images.ref_image_1",
      "name": "ref_images.ref_image_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": 56
+     "link": null
     },
     {
      "label": "ref_images.ref_image_2",
      "name": "ref_images.ref_image_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": 58
+     "link": null
     },
     {
      "label": "ref_images.ref_image_3",
      "name": "ref_images.ref_image_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": 60
+     "link": null
     },
     {
      "label": "ref_images.ref_image_4",
      "name": "ref_images.ref_image_4",
      "shape": 7,
      "type": "IMAGE",
-     "link": 130
+     "link": null
     },
     {
      "label": "ref_images.ref_image_5",
      "name": "ref_images.ref_image_5",
      "shape": 7,
      "type": "IMAGE",
-     "link": 131
+     "link": null
     },
     {
      "label": "ref_images.ref_image_6",
      "name": "ref_images.ref_image_6",
      "shape": 7,
      "type": "IMAGE",
-     "link": 132
+     "link": null
     },
     {
      "label": "ref_images.ref_image_7",
      "name": "ref_images.ref_image_7",
      "shape": 7,
      "type": "IMAGE",
-     "link": 133
+     "link": null
     },
     {
      "label": "ref_images.ref_image_8",
      "name": "ref_images.ref_image_8",
      "shape": 7,
      "type": "IMAGE",
-     "link": 134
+     "link": null
     },
     {
      "label": "ref_videos.ref_video_0",
@@ -1349,21 +1289,21 @@
      "name": "ref_audios.ref_audio_0",
      "shape": 7,
      "type": "AUDIO",
-     "link": 147
+     "link": null
     },
     {
      "label": "ref_audios.ref_audio_1",
      "name": "ref_audios.ref_audio_1",
      "shape": 7,
      "type": "AUDIO",
-     "link": 187
+     "link": null
     },
     {
      "label": "ref_audios.ref_audio_2",
      "name": "ref_audios.ref_audio_2",
      "shape": 7,
      "type": "AUDIO",
-     "link": 189
+     "link": null
     },
     {
      "label": "semantic_bridge",
@@ -1378,7 +1318,7 @@
      "widget": {
       "name": "prompt"
      },
-     "link": 418
+     "link": null
     },
     {
      "label": "width",
@@ -1387,7 +1327,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 44
+     "link": null
     },
     {
      "label": "height",
@@ -1396,7 +1336,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 45
+     "link": null
     },
     {
      "label": "length",
@@ -1405,7 +1345,7 @@
      "widget": {
       "name": "length"
      },
-     "link": 122
+     "link": null
     },
     {
      "label": "task_type",
@@ -1492,17 +1432,14 @@
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": [
-      243
-     ]
+     "links": []
     },
     {
      "label": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
      "links": [
-      7,
-      15
+      7
      ]
     },
     {
@@ -1587,8 +1524,8 @@
    "id": 14,
    "type": "MiniMaxH3AudioConditioningT8",
    "pos": [
-    2701.4697265625,
-    1309.32421875
+    1155.1781005859375,
+    2582
    ],
    "size": [
     430,
@@ -1605,19 +1542,19 @@
      "label": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": 19
+     "link": null
     },
     {
      "label": "video_vae",
      "name": "video_vae",
      "type": "VAE",
-     "link": 20
+     "link": null
     },
     {
      "label": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": 21
+     "link": null
     },
     {
      "label": "drive_audio",
@@ -1648,63 +1585,63 @@
      "name": "ref_images.ref_image_0",
      "shape": 7,
      "type": "IMAGE",
-     "link": 42
+     "link": null
     },
     {
      "label": "ref_images.ref_image_1",
      "name": "ref_images.ref_image_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": 57
+     "link": null
     },
     {
      "label": "ref_images.ref_image_2",
      "name": "ref_images.ref_image_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": 59
+     "link": null
     },
     {
      "label": "ref_images.ref_image_3",
      "name": "ref_images.ref_image_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": 61
+     "link": null
     },
     {
      "label": "ref_images.ref_image_4",
      "name": "ref_images.ref_image_4",
      "shape": 7,
      "type": "IMAGE",
-     "link": 135
+     "link": null
     },
     {
      "label": "ref_images.ref_image_5",
      "name": "ref_images.ref_image_5",
      "shape": 7,
      "type": "IMAGE",
-     "link": 136
+     "link": null
     },
     {
      "label": "ref_images.ref_image_6",
      "name": "ref_images.ref_image_6",
      "shape": 7,
      "type": "IMAGE",
-     "link": 137
+     "link": null
     },
     {
      "label": "ref_images.ref_image_7",
      "name": "ref_images.ref_image_7",
      "shape": 7,
      "type": "IMAGE",
-     "link": 138
+     "link": null
     },
     {
      "label": "ref_images.ref_image_8",
      "name": "ref_images.ref_image_8",
      "shape": 7,
      "type": "IMAGE",
-     "link": 139
+     "link": null
     },
     {
      "label": "ref_videos.ref_video_0",
@@ -1723,21 +1660,21 @@
      "name": "ref_audios.ref_audio_0",
      "shape": 7,
      "type": "AUDIO",
-     "link": 148
+     "link": null
     },
     {
      "label": "ref_audios.ref_audio_1",
      "name": "ref_audios.ref_audio_1",
      "shape": 7,
      "type": "AUDIO",
-     "link": 188
+     "link": null
     },
     {
      "label": "ref_audios.ref_audio_2",
      "name": "ref_audios.ref_audio_2",
      "shape": 7,
      "type": "AUDIO",
-     "link": 190
+     "link": null
     },
     {
      "label": "semantic_bridge",
@@ -1752,7 +1689,7 @@
      "widget": {
       "name": "prompt"
      },
-     "link": 417
+     "link": null
     },
     {
      "label": "width",
@@ -1761,7 +1698,7 @@
      "widget": {
       "name": "width"
      },
-     "link": 17
+     "link": null
     },
     {
      "label": "height",
@@ -1770,7 +1707,7 @@
      "widget": {
       "name": "height"
      },
-     "link": 18
+     "link": null
     },
     {
      "label": "length",
@@ -1779,7 +1716,7 @@
      "widget": {
       "name": "length"
      },
-     "link": 291
+     "link": null
     },
     {
      "label": "task_type",
@@ -1860,9 +1797,7 @@
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "links": [
-      241
-     ]
+     "links": []
     },
     {
      "label": "av_latent",
@@ -1954,8 +1889,8 @@
    "id": 139,
    "type": "T8PerformanceDirectorConfig",
    "pos": [
-    6707.9052734375,
-    1079.268310546875
+    0,
+    6584.200164794922
    ],
    "size": [
     381.5269470214844,
@@ -1981,9 +1916,7 @@
      "label": "performance_director_config",
      "name": "performance_director_config",
      "type": "T8_PERFORMANCE_DIRECTOR_CONFIG",
-     "links": [
-      215
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2000,8 +1933,8 @@
    "id": 146,
    "type": "RegexReplace",
    "pos": [
-    7999.24462890625,
-    616.4725341796875
+    1155.1781005859375,
+    8206.808502197266
    ],
    "size": [
     210,
@@ -2020,7 +1953,7 @@
      "widget": {
       "name": "string"
      },
-     "link": 230
+     "link": null
     },
     {
      "label": "regex_pattern",
@@ -2080,9 +2013,7 @@
      "label": "STRING",
      "name": "STRING",
      "type": "STRING",
-     "links": [
-      233
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2105,8 +2036,8 @@
    "id": 17,
    "type": "BasicGuider",
    "pos": [
-    3481.458251953125,
-    1358.9698486328125
+    1155.1781005859375,
+    13427.33268737793
    ],
    "size": [
     400,
@@ -2123,7 +2054,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 126
+     "link": null
     },
     {
      "label": "条件",
@@ -2137,9 +2068,7 @@
      "label": "引导",
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": [
-      32
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2162,8 +2091,8 @@
    "id": 71,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    3015.26611328125,
-    357.8240661621094
+    1155.1781005859375,
+    12451.33268737793
    ],
    "size": [
     275.7017822265625,
@@ -2179,7 +2108,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 259
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2203,9 +2132,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      105
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2223,8 +2150,8 @@
    "id": 75,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    2946.804931640625,
-    777.9454956054688
+    1155.1781005859375,
+    12573.33268737793
    ],
    "size": [
     270,
@@ -2240,7 +2167,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 324
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2264,9 +2191,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      423
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2284,8 +2209,8 @@
    "id": 74,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    2959.6162109375,
-    635.1026000976562
+    1155.1781005859375,
+    12075.975959777832
    ],
    "size": [
     252.09365844726562,
@@ -2301,7 +2226,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 287
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2325,9 +2250,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      176
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2345,8 +2268,8 @@
    "id": 149,
    "type": "MiniMaxH3SemanticBridgeConfigT8",
    "pos": [
-    4064.500244140625,
-    1002.4984130859375
+    0,
+    5146.269989013672
    ],
    "size": [
     373.0365905761719,
@@ -2421,10 +2344,7 @@
      "label": "semantic_bridge",
      "name": "semantic_bridge",
      "type": "T8_SEMANTIC_BRIDGE",
-     "links": [
-      236,
-      245
-     ]
+     "links": []
     },
     {
      "label": "report_json",
@@ -2452,8 +2372,8 @@
    "id": 69,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    2216.769287109375,
-    494.8424987792969
+    1155.1781005859375,
+    12695.33268737793
    ],
    "size": [
     270,
@@ -2469,7 +2389,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 397
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2493,9 +2413,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      258
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2513,8 +2431,8 @@
    "id": 70,
    "type": "LoraLoaderBypassModelOnly",
    "pos": [
-    2528.7431640625,
-    493.7286071777344
+    1155.1781005859375,
+    12817.33268737793
    ],
    "size": [
     454.9439392089844,
@@ -2530,7 +2448,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 258
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2554,9 +2472,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      260
-     ]
+     "links": []
     }
    ],
    "title": "LightX2V FL2V Turbo · corrected alpha8 · quantized-model bypass",
@@ -2579,8 +2495,8 @@
    "id": 80,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    3015.91650390625,
-    480.447021484375
+    1155.1781005859375,
+    11808.814476013184
    ],
    "size": [
     267.0567626953125,
@@ -2596,7 +2512,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 260
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2620,9 +2536,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      106
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2640,8 +2554,8 @@
    "id": 54,
    "type": "PrimitiveFloat",
    "pos": [
-    5385.95458984375,
-    1343.6502685546875
+    0,
+    6474.200164794922
    ],
    "size": [
     300,
@@ -2667,9 +2581,7 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": [
-      93
-     ]
+     "links": []
     }
    ],
    "title": "放大倍率 / Upscale Scale",
@@ -2698,8 +2610,8 @@
    "id": 72,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    2267.622314453125,
-    649.2052001953125
+    1155.1781005859375,
+    12939.33268737793
    ],
    "size": [
     270,
@@ -2715,7 +2627,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 105
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2739,9 +2651,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      286
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2759,8 +2669,8 @@
    "id": 73,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    2274.17041015625,
-    782.0260009765625
+    1155.1781005859375,
+    13061.33268737793
    ],
    "size": [
     270,
@@ -2776,7 +2686,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 106
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2800,9 +2710,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      324
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2820,8 +2728,8 @@
    "id": 79,
    "type": "LoraLoaderBypassModelOnly",
    "pos": [
-    2532.1591796875,
-    351.8768615722656
+    1155.1781005859375,
+    11533.808502197266
    ],
    "size": [
     454.9439392089844,
@@ -2837,7 +2745,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 257
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2861,9 +2769,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      259
-     ]
+     "links": []
     }
    ],
    "title": "LightX2V FL2V Turbo · corrected alpha8 · quantized-model bypass",
@@ -2886,8 +2792,8 @@
    "id": 170,
    "type": "Float",
    "pos": [
-    2622.39697265625,
-    791.51611328125
+    0,
+    6682.200164794922
    ],
    "size": [
     270,
@@ -2913,9 +2819,7 @@
      "label": "浮点",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": [
-      283
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2932,8 +2836,8 @@
    "id": 172,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    2602.89892578125,
-    644.4241333007812
+    1155.1781005859375,
+    11674.374282836914
    ],
    "size": [
     328.0542297363281,
@@ -2949,7 +2853,7 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 286
+     "link": null
     },
     {
      "label": "lora_name",
@@ -2966,7 +2870,7 @@
      "widget": {
       "name": "strength_model"
      },
-     "link": 283
+     "link": null
     }
    ],
    "outputs": [
@@ -2974,9 +2878,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      287
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -2994,8 +2896,8 @@
    "id": 55,
    "type": "MarkdownNote",
    "pos": [
-    5218.06787109375,
-    467.54736328125
+    0,
+    6114.200164794922
    ],
    "size": [
     392.3335876464844,
@@ -3028,8 +2930,8 @@
    "id": 67,
    "type": "LoraLoaderBypassModelOnly",
    "pos": [
-    1771.7232666015625,
-    748.8880615234375
+    1155.1781005859375,
+    13183.33268737793
    ],
    "size": [
     415.0899658203125,
@@ -3046,7 +2948,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 373
+     "link": null
     },
     {
      "label": "lora_name",
@@ -3070,9 +2972,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      394
-     ]
+     "links": []
     }
    ],
    "title": "H3 Turbo 加速 LoRA / Acceleration LoRA",
@@ -3105,8 +3005,8 @@
    "id": 76,
    "type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
    "pos": [
-    1780.162109375,
-    423.5374450683594
+    1155.1781005859375,
+    13937.33268737793
    ],
    "size": [
     357.1148376464844,
@@ -3122,7 +3022,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 395
+     "link": null
     }
    ],
    "outputs": [
@@ -3130,10 +3030,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      396,
-      397
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3150,8 +3047,8 @@
    "id": 66,
    "type": "UNETLoader",
    "pos": [
-    1767.063232421875,
-    626.14697265625
+    1155.1781005859375,
+    13305.33268737793
    ],
    "size": [
     412.4195861816406,
@@ -3185,9 +3082,7 @@
      "label": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      373
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3209,8 +3104,8 @@
    "id": 197,
    "type": "ModelAttentionBackend",
    "pos": [
-    1779.846923828125,
-    520.1249389648438
+    1155.1781005859375,
+    13667.33268737793
    ],
    "size": [
     357.36322021484375,
@@ -3226,7 +3121,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 394
+     "link": null
     },
     {
      "label": "attention",
@@ -3242,9 +3137,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      395
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -3263,8 +3156,8 @@
    "id": 141,
    "type": "MiniMaxH3PromptEnhancerT8",
    "pos": [
-    7106.19482421875,
-    617.4140625
+    1155.1781005859375,
+    0
    ],
    "size": [
     425.8990173339844,
@@ -3293,63 +3186,63 @@
      "name": "reference_images.reference_image_0",
      "shape": 7,
      "type": "IMAGE",
-     "link": 217
+     "link": null
     },
     {
      "label": "reference_images.reference_image_1",
      "name": "reference_images.reference_image_1",
      "shape": 7,
      "type": "IMAGE",
-     "link": 218
+     "link": null
     },
     {
      "label": "reference_images.reference_image_2",
      "name": "reference_images.reference_image_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": 219
+     "link": null
     },
     {
      "label": "reference_images.reference_image_3",
      "name": "reference_images.reference_image_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": 220
+     "link": null
     },
     {
      "label": "reference_images.reference_image_4",
      "name": "reference_images.reference_image_4",
      "shape": 7,
      "type": "IMAGE",
-     "link": 221
+     "link": null
     },
     {
      "label": "reference_images.reference_image_5",
      "name": "reference_images.reference_image_5",
      "shape": 7,
      "type": "IMAGE",
-     "link": 222
+     "link": null
     },
     {
      "label": "reference_images.reference_image_6",
      "name": "reference_images.reference_image_6",
      "shape": 7,
      "type": "IMAGE",
-     "link": 223
+     "link": null
     },
     {
      "label": "reference_images.reference_image_7",
      "name": "reference_images.reference_image_7",
      "shape": 7,
      "type": "IMAGE",
-     "link": 224
+     "link": null
     },
     {
      "label": "reference_images.reference_image_8",
      "name": "reference_images.reference_image_8",
      "shape": 7,
      "type": "IMAGE",
-     "link": 225
+     "link": null
     },
     {
      "label": "reference_videos.reference_video_0",
@@ -3368,7 +3261,7 @@
      "name": "performance_director_config",
      "shape": 7,
      "type": "T8_PERFORMANCE_DIRECTOR_CONFIG",
-     "link": 215
+     "link": null
     },
     {
      "label": "provider_config",
@@ -3723,10 +3616,7 @@
      "label": "enhanced_prompt",
      "name": "enhanced_prompt",
      "type": "STRING",
-     "links": [
-      213,
-      214
-     ]
+     "links": []
     },
     {
      "label": "global_prompt",
@@ -3812,8 +3702,8 @@
    "id": 135,
    "type": "easy showAnything",
    "pos": [
-    7546.60302734375,
-    618.7763671875
+    1155.1781005859375,
+    5009.88720703125
    ],
    "size": [
     439.4621276855469,
@@ -3830,52 +3720,7 @@
      "name": "anything",
      "shape": 7,
      "type": "*",
-     "link": 213
-    }
-   ],
-   "outputs": [
-    {
-     "label": "output",
-     "name": "output",
-     "type": "*",
-     "links": [
-      230
-     ]
-    }
-   ],
-   "properties": {
-    "Node name for S&R": "easy showAnything",
-    "widget_ue_connectable": {},
-    "limao_fp": "66ae54bf383c6b30",
-    "limao_lic": "LM-66AE-2601"
-   },
-   "widgets_values": [
-    "subject_definitions:\n<Subject 1> is Bai Ye in <Picture 1>, a three-view character sheet with front, side and back views: a sixteen-year-old girl with long straight black hair turning silver-white toward the loose ends, silver-grey eyes with the lower lid line drawn taut, cool pale white porcelain skin, a cropped silver-white jacket with embossed panel lines worn open over a black high-neck top, a black asymmetric dress cut short at the front and long at the back with hanging straps and silver hardware, a thin silver chain with a small cross-dagger pendant at the collarbone, white mid-calf socks and chunky silver sneakers. Only the design is taken from the sheet; the figure is lit and graded at film quality in this torch-lit arena night.\n<Subject 2> is the universe-will in <Picture 2>, a three-view character sheet with front, side and back views: an eight-year-old child whose proportions stay a stocky toddler's in its shortened torso, thick short limbs, wide low-set head and rounded belly, and who stands a clear head shorter than <Subject 1> when the two are in one frame; a dark-matter particle nebula body whose surface and interior are two separate layers of slowly migrating nebula, its edges trailing off into columns of particle smoke, its interior lit by a violet-galaxy glow that shows through its chest cavity. Every surface of it drifts at all times in two layers that run against each other, through every pose, every strike that lands and every gap torn in it. Only the design is taken from the sheet; it carries its own light inside it, and it is lit and graded at film quality in this arena at night.\n<Subject 3> is the ruined arena at night in <Picture 3>, a four-view reference sheet of one single place seen from four positions: the arena floor with pale frost crusting the flagstones, the broken stone wall with its ruined archway and torch brackets, the tiered stands under the empty night sky, and the floor circle carved into the stones as dark unlit rock with frost gathered in its grooves. Only the architecture, the frost, the archway, the torches and the night sky are taken from the sheet.\n<Subject 4> is the shard effect sheet in <Picture 4>, three arrangements of one single substance on a pale ground: a burst of jagged leaf-like hard black facets exploding from a point, a standing column of the same facets packed and cascading, and a black core sphere of rough packed facets with a thin silver-white glow lining its rim. From this sheet is taken the substance of <Subject 1>'s power: jagged hard black facets whose core holds one flat value of black with a thin silver-white glow lining every edge, every facet tumbling with lit and shaded faces. The sheathing that loads onto her forearms, the fans that burst off her impacts and the core sphere of her final strike are all made of this substance; the pale ground belongs to the sheet alone.\n<Subject 5> is the form sheet of <Subject 2> in <Picture 5>, four attack forms of the same dark-matter body on a pale ground: a tendril cluster of packed dark strands streaked with violet, a spiral vortex with a violet lightning-veined funnel, the deep-space sphere with a violet star-filled interior and a bright violet-white rim, and a violet-white halo ring with a white-hot inner edge. From this sheet are taken the four attack forms of <Subject 2> and nothing else; the pale ground belongs to the sheet alone.\n\nsummary:\n[reference generation] The target video opens with the fight already on: three tendril columns of <Subject 5> whip across the arena floor of <Subject 3>, and <Subject 1> blinks through them - a faint silhouette appearing ahead of the sweeps, filling and solidifying with a crack of displaced air already inside their arc, both forearms sheathed in jagged black facets - and the sweeps break over her crossed guard. A fast close chain follows: a rising palm bursts the first tendril from inside, a turning elbow cracks across the second as it scatters back, a sinking knee shatters the third thrown up to block her, and the chain closes in a double-palm cross-shear driven point-blank into the violet core in the chest of <Subject 2>, tearing a jagged crack open in the core. <Subject 2> pours into the vortex form and the spin hauls her up; she blinks through the funnel wall and lands back on her spot. The vortex collapses into the deep-space sphere and drops on her; she takes it on crossed forearms, the recoil throwing her back, the crack still visible on the sphere face. One short blink puts her already loading at its flank, and <Subject 2> drops its own violet-white halo down around her; the side of the ring facing its wounded chest runs thin. She condenses a small black core sphere above one palm, blinks through the thin line and drives the sphere into it, and the ring fails along the whole line. The sphere of shards detonates in the biggest burst of the segment - a storm of black facets filling the frame - while <Subject 2> caves back into the deep-space sphere and retreats up into a torn seam high over the far wall, the seam closing behind it, the shard rain settling around her as the arena goes quiet. Eleven shots: the blink into the guard, three fast strikes, the chest-core shear, the vortex drag, the blink out, the sphere block, the flank blink, the halo breach, and the burst with the retreat through the seam.\n\nretention_analysis:\n<Subject 1> (appears in every shot): fully_preserved - the black hair silver-white toward the loose ends, the silver-grey eyes, the cool pale white porcelain skin, the cropped silver-white jacket, the black asymmetric dress, the silver chain and pendant, the white socks and silver sneakers are retained through every appearance; <Subject 1> stays airborne with the feet clear of the frost from the first frame to the last, keeps the left of the frame, and faces frame right toward <Subject 2> in every shot; the shard sheathing on her forearms and hands exists only while lit, restated in every shot that shows it.\n<Subject 2> (appears in every shot): fully_preserved - the stocky child proportions with the shortened torso, thick short limbs, wide low-set head and rounded belly, the two-layer nebula migration, the particle-smoke edge columns and the violet interior glow through the chest cavity are retained; <Subject 2> keeps the right of the frame, hangs higher than <Subject 1> with its feet a full span farther off the frost than hers, and stays a clear head shorter than her in every shared frame; the jagged crack torn into its chest core in [Shot 5] stays open in every later shot that shows the chest or the sphere face, its light leaking thinner around the crack; all four of its attack forms are taken from the <Subject 5> sheet.\n<Subject 3> (appears in every shot): fully_preserved - the frosted flagstones, the broken wall with its archway and torch brackets, the tiered stands and the night sky remain the continuous setting; the floor circle stays carved and unlit throughout; every trace of damage stays where it was made - the radiating frost cracks of [Shot 2] and [Shot 8], and the dead dark fragments of the broken halo settling where they fell from [Shot 10] onward.\n<Subject 4> (appears in [Shot 1], [Shot 2], [Shot 3], [Shot 4], [Shot 5], [Shot 6], [Shot 8], [Shot 9], [Shot 10], [Shot 11]): fully_preserved - the substance rules hold everywhere: jagged hard black facets, one flat value of black at the core, a thin silver-white glow lining every edge, every facet tumbling with lit and shaded faces; the sheathing on <Subject 1>'s forearms, the impact fans and the final core sphere are made of this substance and exist only while lit; the dead fragments of the broken halo belong to <Subject 2>'s ring with their light gone out of them, separate from this substance.\n<Subject 5> (appears in [Shot 1], [Shot 6], [Shot 8], [Shot 10], [Shot 11]): fully_preserved - the tendril cluster in [Shot 1] through [Shot 4], the vortex in [Shot 6] and [Shot 7], the deep-space sphere in [Shot 8] and [Shot 11] and the halo in [Shot 10] match the sheet forms; all four belong to <Subject 2> alone and appear only as energy bodies in the arena air.\n\ndetailed_description:\nA hyper-realistic fantasy film rendered in polished, state-of-the-art CG, its characters idealized to feature-film quality: every surface reads as perfect matter under designed lighting; shading stays continuous-tone throughout, with flawless subsurface scattering on skin and clean material separation. Skin carries the polished CG finish: a smooth, even base with visible pores across the nose, cheeks and forehead kept subtle, and fine downy hairs catching the rim light. Hair is strand-based, thousands of individual fibres that stay separate, with a wide anisotropic highlight running along the strand direction and loose flyaway strands breaking the edge of the silhouette. Cloth is real layered fabric with weight: her matte white-and-silver-grey utility jacket and black dress hang heavy and drink the torchlight, the pale fabric warming only where firelight falls on it; the stone of the arena is frost-glazed, the frost uneven in thickness and packed into hairline cracks, every surface carrying a faint cold specular film. The lighting is designed like a film set: torch flames cast hard orange pools with long shadows, and each flame throws a soft volumetric glow into the cold air, visible as light haze around every flame; a thin cold rim light outlines her figure against the dark; a low blue ambient fill keeps the shadows alive without flattening them; atmospheric depth separates her from the background, the air itself faintly hazy between the light islands. Snow shows only where light catches it - hard bright grains inside each torch beam, the near grains thick and fast, the far ones dissolving into low drift. True depth of field with round, optically-correct bokeh, subtle bloom on the brightest highlights, 35mm film grain, cinematic filmic tonemapping. Grade: near-black shadows with a cold blue cast, orange saturated only inside the torch pools, the silver-white of her jacket reading only where the scene light falls on it.\n\nEvery energy body in this segment is also a real light source, and its light lands on things: the violet interior of <Subject 2> throws a live violet bounce onto the frost and onto her jacket and jawline whenever the two come within a couple of paces, the silver-white facet edges of <Subject 1>'s power throw thin moving specular lines across the stones as her arms sweep, the black facets cast small hard shadows that slide with them, and every burst whitens the frost around its point for a beat before the orange crawls back in. High-speed moments freeze crisp instead of blurring: every impact holds its frames sharp with the contact point readable. Every shockwave is compressed air made visible: a low vapor ring that bends the torchlight behind it as it passes. The facets have weight: they leave fast and shed speed through the air, tumble with lit and shaded faces, and the largest ones bounce once off the frost before settling. The whole segment keeps <Subject 1> on the frame-left half and <Subject 2> on the frame-right half, <Subject 1> facing frame right toward <Subject 2> and <Subject 2> facing left toward her; <Subject 2> hangs higher than her, its feet a full span farther off the frosted floor, and it reads a clear head shorter than her in every shared frame, measured against the carved circle below them both. Both figures ride a float clear of the frost from the first frame to the last. The power of <Subject 1> loads as jagged hard black facets sheathing both forearms and the backs of her hands, and the sheathing exists only while lit: every shot that shows a strike restates it live on her arms. The crack torn into the chest core of <Subject 2> in [Shot 5] stays open in every later shot that shows the chest or the sphere face, its violet light leaking thinner around the crack. Every burst answers into the arena: the frost cracks in radiating lines, the torch flames press flat for one beat, the snow lifts and falls back.\n\nBetween exchanges <Subject 1> never holds a pose: she rides a slow vertical float of about one hand-span that runs on through every beat, the hair and the long back of the dress lag a beat behind every move of the body and keep moving after the body has stopped, and between strikes her weight tips back with both arms hanging low and open, fingertips loose, one knee drawn up a little. <Subject 2> stays dead-calm by contrast: its two nebula layers keep migrating against each other through every pose, every hit and every gap torn in it, its edge columns lifting and re-forming on their own slow loop, its face an unreadable smooth black. Both figures stay angled off square to the camera through the whole segment.\n\nThis segment starts on its own first frame.\n[Shot 1] At 00:00.000, 24mm wide from low along the diagonal of the floor, set a little below the frost and about thirty degrees off the line between the two figures, the camera bolted to one fixed position and framing for the entire shot. <Subject 1> hangs at the left third and <Subject 2> at the right third, the carved circle slanting between them, both whole and visible from head to feet. <Subject 2> strikes first: three tendril columns of packed dark particles streaked with violet whip across the gap in sequence, low sweeps aimed at her hips and knees. A faint translucent silhouette of <Subject 1> appears first at a spot inside the arcs of the sweeps, colorless and silent; it fills with color and solidifies into her true body with a hard crack of displaced air, and the solidified figure is already inside their reach - both forearms crossed in front of her and sheathed live in jagged black facets, thin silver-white glow lining every edge. The three sweeps break over the crossed guard one after another: each impact bursts a small fan of black facets off the crossing, the tendrils rebound high, the torch flames press flat for one beat and the snow lifts off the floor and falls back. Her guard rides the first impact down and springs back up to meet the second, the jaw setting, the eyes tracking each tendril as it comes. The camera holds perfectly still and keeps the exact same framing while the tendrils whip through the frame.\n[Shot 2] At 00:01.600, the shot cuts to a 35mm two-shot from the side of the line, on her right-hand side about ninety degrees off the direction she faces, at the height of the contact, tracking sideways at the speed of her advance and stopping when she stops. <Subject 1> at the left and <Subject 2> at the right, both whole in frame. The first strike goes in behind the rebound: a rising palm drives up under the nearest tendril, sheathed to the fingertips, and bursts it apart from inside in a fan of black facets that sheet out, shed speed and drift; the body of <Subject 2> jolts a half-step back around the loss, the two nebula layers inside still turning through it. Violet bounce light from its chest rolls across her jacket and jaw as she closes. The frost under her path cracks in thin radiating lines. The camera keeps both figures whole and the contact point readable.\n[Shot 3] At 00:02.400, still in the same sideways tracking move, the second stroke lands: a turning elbow cracks across the midline of <Subject 2> as its upper torso scatters into particles to avoid it whole - the elbow tears through the scatter anyway, throwing a fan of facets through the drifting particles, and the body closes back a half-step farther off, its back coming against the broken-wall side of the frame. The elbow carries through the hit and hauls her upper body past the line before pulling back. Silver-white edge light draws one hard line through the dark with the stroke. The camera holds both figures in frame through the exchange.\n[Shot 4] At 00:03.600, the shot cuts to a 50mm medium-close insert at the height of her knee, locked in the same framing: the third stroke is a sinking knee, and <Subject 2> throws one whole tendril up under it to take the blow. The knee shatters the tendril on contact - the packed particles split along a jagged line, both halves whipping away dead - and"
-   ]
-  },
-  {
-   "id": 147,
-   "type": "easy showAnything",
-   "pos": [
-    7545.638671875,
-    1294.984130859375
-   ],
-   "size": [
-    443.59918212890625,
-    589.5833129882812
-   ],
-   "flags": {
-    "pinned": true
-   },
-   "order": 37,
-   "mode": 4,
-   "inputs": [
-    {
-     "label": "输入任何",
-     "name": "anything",
-     "shape": 7,
-     "type": "*",
-     "link": 233
+     "link": null
     }
    ],
    "outputs": [
@@ -3897,59 +3742,54 @@
    ]
   },
   {
-   "id": 136,
-   "type": "ShellAgentPluginOutputText",
+   "id": 147,
+   "type": "easy showAnything",
    "pos": [
-    7556.22509765625,
-    577.5667114257812
+    1155.1781005859375,
+    6334.4052734375
    ],
    "size": [
-    441.4915466308594,
-    84.75965118408203
+    443.59918212890625,
+    589.5833129882812
    ],
    "flags": {
-    "pinned": true,
-    "collapsed": true
+    "pinned": true
    },
-   "order": 32,
+   "order": 37,
    "mode": 4,
    "inputs": [
     {
-     "label": "text",
-     "name": "text",
-     "type": "STRING",
-     "widget": {
-      "name": "text"
-     },
-     "link": 214
-    },
-    {
-     "label": "output_name",
-     "name": "output_name",
-     "type": "STRING",
-     "widget": {
-      "name": "output_name"
-     }
+     "label": "输入任何",
+     "name": "anything",
+     "shape": 7,
+     "type": "*",
+     "link": null
     }
    ],
-   "outputs": [],
+   "outputs": [
+    {
+     "label": "output",
+     "name": "output",
+     "type": "*",
+     "links": []
+    }
+   ],
    "properties": {
-    "Node name for S&R": "ShellAgentPluginOutputText",
+    "Node name for S&R": "easy showAnything",
     "widget_ue_connectable": {},
     "limao_fp": "66ae54bf383c6b30",
     "limao_lic": "LM-66AE-2601"
    },
    "widgets_values": [
-    "",
-    "output_text"
+    "subject_definitions:\n<Subject 1> is Bai Ye in <Picture 1>, a three-view character sheet with front, side and back views: a sixteen-year-old girl with long straight black hair turning silver-white toward the loose ends, silver-grey eyes with the lower lid line drawn taut, cool pale white porcelain skin, a cropped silver-white jacket with embossed panel lines worn open over a black high-neck top, a black asymmetric dress cut short at the front and long at the back with hanging straps and silver hardware, a thin silver chain with a small cross-dagger pendant at the collarbone, white mid-calf socks and chunky silver sneakers. Only the design is taken from the sheet; the figure is lit and graded at film quality in this torch-lit arena night.\n<Subject 2> is the universe-will in <Picture 2>, a three-view character sheet with front, side and back views: an eight-year-old child whose proportions stay a stocky toddler's in its shortened torso, thick short limbs, wide low-set head and rounded belly, and who stands a clear head shorter than <Subject 1> when the two are in one frame; a dark-matter particle nebula body whose surface and interior are two separate layers of slowly migrating nebula, its edges trailing off into columns of particle smoke, its interior lit by a violet-galaxy glow that shows through its chest cavity. Every surface of it drifts at all times in two layers that run against each other, through every pose, every strike that lands and every gap torn in it. Only the design is taken from the sheet; it carries its own light inside it, and it is lit and graded at film quality in this arena at night.\n<Subject 3> is the ruined arena at night in <Picture 3>, a four-view reference sheet of one single place seen from four positions: the arena floor with pale frost crusting the flagstones, the broken stone wall with its ruined archway and torch brackets, the tiered stands under the empty night sky, and the floor circle carved into the stones as dark unlit rock with frost gathered in its grooves. Only the architecture, the frost, the archway, the torches and the night sky are taken from the sheet.\n<Subject 4> is the shard effect sheet in <Picture 4>, three arrangements of one single substance on a pale ground: a burst of jagged leaf-like hard black facets exploding from a point, a standing column of the same facets packed and cascading, and a black core sphere of rough packed facets with a thin silver-white glow lining its rim. From this sheet is taken the substance of <Subject 1>'s power: jagged hard black facets whose core holds one flat value of black with a thin silver-white glow lining every edge, every facet tumbling with lit and shaded faces. The sheathing that loads onto her forearms, the fans that burst off her impacts and the core sphere of her final strike are all made of this substance; the pale ground belongs to the sheet alone.\n<Subject 5> is the form sheet of <Subject 2> in <Picture 5>, four attack forms of the same dark-matter body on a pale ground: a tendril cluster of packed dark strands streaked with violet, a spiral vortex with a violet lightning-veined funnel, the deep-space sphere with a violet star-filled interior and a bright violet-white rim, and a violet-white halo ring with a white-hot inner edge. From this sheet are taken the four attack forms of <Subject 2> and nothing else; the pale ground belongs to the sheet alone.\n\nsummary:\n[reference generation] The target video opens with the fight already on: three tendril columns of <Subject 5> whip across the arena floor of <Subject 3>, and <Subject 1> blinks through them - a faint silhouette appearing ahead of the sweeps, filling and solidifying with a crack of displaced air already inside their arc, both forearms sheathed in jagged black facets - and the sweeps break over her crossed guard. A fast close chain follows: a rising palm bursts the first tendril from inside, a turning elbow cracks across the second as it scatters back, a sinking knee shatters the third thrown up to block her, and the chain closes in a double-palm cross-shear driven point-blank into the violet core in the chest of <Subject 2>, tearing a jagged crack open in the core. <Subject 2> pours into the vortex form and the spin hauls her up; she blinks through the funnel wall and lands back on her spot. The vortex collapses into the deep-space sphere and drops on her; she takes it on crossed forearms, the recoil throwing her back, the crack still visible on the sphere face. One short blink puts her already loading at its flank, and <Subject 2> drops its own violet-white halo down around her; the side of the ring facing its wounded chest runs thin. She condenses a small black core sphere above one palm, blinks through the thin line and drives the sphere into it, and the ring fails along the whole line. The sphere of shards detonates in the biggest burst of the segment - a storm of black facets filling the frame - while <Subject 2> caves back into the deep-space sphere and retreats up into a torn seam high over the far wall, the seam closing behind it, the shard rain settling around her as the arena goes quiet. Eleven shots: the blink into the guard, three fast strikes, the chest-core shear, the vortex drag, the blink out, the sphere block, the flank blink, the halo breach, and the burst with the retreat through the seam.\n\nretention_analysis:\n<Subject 1> (appears in every shot): fully_preserved - the black hair silver-white toward the loose ends, the silver-grey eyes, the cool pale white porcelain skin, the cropped silver-white jacket, the black asymmetric dress, the silver chain and pendant, the white socks and silver sneakers are retained through every appearance; <Subject 1> stays airborne with the feet clear of the frost from the first frame to the last, keeps the left of the frame, and faces frame right toward <Subject 2> in every shot; the shard sheathing on her forearms and hands exists only while lit, restated in every shot that shows it.\n<Subject 2> (appears in every shot): fully_preserved - the stocky child proportions with the shortened torso, thick short limbs, wide low-set head and rounded belly, the two-layer nebula migration, the particle-smoke edge columns and the violet interior glow through the chest cavity are retained; <Subject 2> keeps the right of the frame, hangs higher than <Subject 1> with its feet a full span farther off the frost than hers, and stays a clear head shorter than her in every shared frame; the jagged crack torn into its chest core in [Shot 5] stays open in every later shot that shows the chest or the sphere face, its light leaking thinner around the crack; all four of its attack forms are taken from the <Subject 5> sheet.\n<Subject 3> (appears in every shot): fully_preserved - the frosted flagstones, the broken wall with its archway and torch brackets, the tiered stands and the night sky remain the continuous setting; the floor circle stays carved and unlit throughout; every trace of damage stays where it was made - the radiating frost cracks of [Shot 2] and [Shot 8], and the dead dark fragments of the broken halo settling where they fell from [Shot 10] onward.\n<Subject 4> (appears in [Shot 1], [Shot 2], [Shot 3], [Shot 4], [Shot 5], [Shot 6], [Shot 8], [Shot 9], [Shot 10], [Shot 11]): fully_preserved - the substance rules hold everywhere: jagged hard black facets, one flat value of black at the core, a thin silver-white glow lining every edge, every facet tumbling with lit and shaded faces; the sheathing on <Subject 1>'s forearms, the impact fans and the final core sphere are made of this substance and exist only while lit; the dead fragments of the broken halo belong to <Subject 2>'s ring with their light gone out of them, separate from this substance.\n<Subject 5> (appears in [Shot 1], [Shot 6], [Shot 8], [Shot 10], [Shot 11]): fully_preserved - the tendril cluster in [Shot 1] through [Shot 4], the vortex in [Shot 6] and [Shot 7], the deep-space sphere in [Shot 8] and [Shot 11] and the halo in [Shot 10] match the sheet forms; all four belong to <Subject 2> alone and appear only as energy bodies in the arena air.\n\ndetailed_description:\nA hyper-realistic fantasy film rendered in polished, state-of-the-art CG, its characters idealized to feature-film quality: every surface reads as perfect matter under designed lighting; shading stays continuous-tone throughout, with flawless subsurface scattering on skin and clean material separation. Skin carries the polished CG finish: a smooth, even base with visible pores across the nose, cheeks and forehead kept subtle, and fine downy hairs catching the rim light. Hair is strand-based, thousands of individual fibres that stay separate, with a wide anisotropic highlight running along the strand direction and loose flyaway strands breaking the edge of the silhouette. Cloth is real layered fabric with weight: her matte white-and-silver-grey utility jacket and black dress hang heavy and drink the torchlight, the pale fabric warming only where firelight falls on it; the stone of the arena is frost-glazed, the frost uneven in thickness and packed into hairline cracks, every surface carrying a faint cold specular film. The lighting is designed like a film set: torch flames cast hard orange pools with long shadows, and each flame throws a soft volumetric glow into the cold air, visible as light haze around every flame; a thin cold rim light outlines her figure against the dark; a low blue ambient fill keeps the shadows alive without flattening them; atmospheric depth separates her from the background, the air itself faintly hazy between the light islands. Snow shows only where light catches it - hard bright grains inside each torch beam, the near grains thick and fast, the far ones dissolving into low drift. True depth of field with round, optically-correct bokeh, subtle bloom on the brightest highlights, 35mm film grain, cinematic filmic tonemapping. Grade: near-black shadows with a cold blue cast, orange saturated only inside the torch pools, the silver-white of her jacket reading only where the scene light falls on it.\n\nEvery energy body in this segment is also a real light source, and its light lands on things: the violet interior of <Subject 2> throws a live violet bounce onto the frost and onto her jacket and jawline whenever the two come within a couple of paces, the silver-white facet edges of <Subject 1>'s power throw thin moving specular lines across the stones as her arms sweep, the black facets cast small hard shadows that slide with them, and every burst whitens the frost around its point for a beat before the orange crawls back in. High-speed moments freeze crisp instead of blurring: every impact holds its frames sharp with the contact point readable. Every shockwave is compressed air made visible: a low vapor ring that bends the torchlight behind it as it passes. The facets have weight: they leave fast and shed speed through the air, tumble with lit and shaded faces, and the largest ones bounce once off the frost before settling. The whole segment keeps <Subject 1> on the frame-left half and <Subject 2> on the frame-right half, <Subject 1> facing frame right toward <Subject 2> and <Subject 2> facing left toward her; <Subject 2> hangs higher than her, its feet a full span farther off the frosted floor, and it reads a clear head shorter than her in every shared frame, measured against the carved circle below them both. Both figures ride a float clear of the frost from the first frame to the last. The power of <Subject 1> loads as jagged hard black facets sheathing both forearms and the backs of her hands, and the sheathing exists only while lit: every shot that shows a strike restates it live on her arms. The crack torn into the chest core of <Subject 2> in [Shot 5] stays open in every later shot that shows the chest or the sphere face, its violet light leaking thinner around the crack. Every burst answers into the arena: the frost cracks in radiating lines, the torch flames press flat for one beat, the snow lifts and falls back.\n\nBetween exchanges <Subject 1> never holds a pose: she rides a slow vertical float of about one hand-span that runs on through every beat, the hair and the long back of the dress lag a beat behind every move of the body and keep moving after the body has stopped, and between strikes her weight tips back with both arms hanging low and open, fingertips loose, one knee drawn up a little. <Subject 2> stays dead-calm by contrast: its two nebula layers keep migrating against each other through every pose, every hit and every gap torn in it, its edge columns lifting and re-forming on their own slow loop, its face an unreadable smooth black. Both figures stay angled off square to the camera through the whole segment.\n\nThis segment starts on its own first frame.\n[Shot 1] At 00:00.000, 24mm wide from low along the diagonal of the floor, set a little below the frost and about thirty degrees off the line between the two figures, the camera bolted to one fixed position and framing for the entire shot. <Subject 1> hangs at the left third and <Subject 2> at the right third, the carved circle slanting between them, both whole and visible from head to feet. <Subject 2> strikes first: three tendril columns of packed dark particles streaked with violet whip across the gap in sequence, low sweeps aimed at her hips and knees. A faint translucent silhouette of <Subject 1> appears first at a spot inside the arcs of the sweeps, colorless and silent; it fills with color and solidifies into her true body with a hard crack of displaced air, and the solidified figure is already inside their reach - both forearms crossed in front of her and sheathed live in jagged black facets, thin silver-white glow lining every edge. The three sweeps break over the crossed guard one after another: each impact bursts a small fan of black facets off the crossing, the tendrils rebound high, the torch flames press flat for one beat and the snow lifts off the floor and falls back. Her guard rides the first impact down and springs back up to meet the second, the jaw setting, the eyes tracking each tendril as it comes. The camera holds perfectly still and keeps the exact same framing while the tendrils whip through the frame.\n[Shot 2] At 00:01.600, the shot cuts to a 35mm two-shot from the side of the line, on her right-hand side about ninety degrees off the direction she faces, at the height of the contact, tracking sideways at the speed of her advance and stopping when she stops. <Subject 1> at the left and <Subject 2> at the right, both whole in frame. The first strike goes in behind the rebound: a rising palm drives up under the nearest tendril, sheathed to the fingertips, and bursts it apart from inside in a fan of black facets that sheet out, shed speed and drift; the body of <Subject 2> jolts a half-step back around the loss, the two nebula layers inside still turning through it. Violet bounce light from its chest rolls across her jacket and jaw as she closes. The frost under her path cracks in thin radiating lines. The camera keeps both figures whole and the contact point readable.\n[Shot 3] At 00:02.400, still in the same sideways tracking move, the second stroke lands: a turning elbow cracks across the midline of <Subject 2> as its upper torso scatters into particles to avoid it whole - the elbow tears through the scatter anyway, throwing a fan of facets through the drifting particles, and the body closes back a half-step farther off, its back coming against the broken-wall side of the frame. The elbow carries through the hit and hauls her upper body past the line before pulling back. Silver-white edge light draws one hard line through the dark with the stroke. The camera holds both figures in frame through the exchange.\n[Shot 4] At 00:03.600, the shot cuts to a 50mm medium-close insert at the height of her knee, locked in the same framing: the third stroke is a sinking knee, and <Subject 2> throws one whole tendril up under it to take the blow. The knee shatters the tendril on contact - the packed particles split along a jagged line, both halves whipping away dead - and"
    ]
   },
   {
    "id": 148,
    "type": "MiniMaxH3SemanticBridgeApplyT8",
    "pos": [
-    3163.881103515625,
-    1311.868896484375
+    1155.1781005859375,
+    13765.33268737793
    ],
    "size": [
     293.5269470214844,
@@ -3966,13 +3806,13 @@
      "label": "conditioning",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": 241
+     "link": null
     },
     {
      "label": "semantic_bridge",
      "name": "semantic_bridge",
      "type": "T8_SEMANTIC_BRIDGE",
-     "link": 236
+     "link": null
     }
    ],
    "outputs": [
@@ -3980,9 +3820,7 @@
      "label": "conditioning",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "links": [
-      242
-     ]
+     "links": []
     },
     {
      "label": "report_json",
@@ -4002,8 +3840,8 @@
    "id": 13,
    "type": "MiniMaxH3LearnedLatentUpscaleT8Advanced",
    "pos": [
-    3350.473388671875,
-    38.0369758605957
+    1155.1781005859375,
+    6963.988586425781
    ],
    "size": [
     714.71875,
@@ -4019,7 +3857,7 @@
      "label": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
-     "link": 434
+     "link": null
     },
     {
      "label": "model_name",
@@ -4044,7 +3882,7 @@
      "widget": {
       "name": "scale_by"
      },
-     "link": 93
+     "link": null
     },
     {
      "label": "target_megapixels",
@@ -4108,25 +3946,19 @@
      "label": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
-     "links": [
-      23
-     ]
+     "links": []
     },
     {
      "label": "width",
      "name": "width",
      "type": "INT",
-     "links": [
-      17
-     ]
+     "links": []
     },
     {
      "label": "height",
      "name": "height",
      "type": "INT",
-     "links": [
-      18
-     ]
+     "links": []
     },
     {
      "label": "report_json",
@@ -4188,8 +4020,8 @@
    "id": 19,
    "type": "SamplerCustomAdvanced",
    "pos": [
-    3789.982666015625,
-    1284.6944580078125
+    1155.1781005859375,
+    11387.808502197266
    ],
    "size": [
     650.890625,
@@ -4206,13 +4038,13 @@
      "label": "噪波生成",
      "name": "noise",
      "type": "NOISE",
-     "link": 50
+     "link": null
     },
     {
      "label": "引导",
      "name": "guider",
      "type": "GUIDER",
-     "link": 32
+     "link": null
     },
     {
      "label": "采样器",
@@ -4230,7 +4062,7 @@
      "label": "Latent",
      "name": "latent_image",
      "type": "LATENT",
-     "link": 35
+     "link": null
     }
    ],
    "outputs": [
@@ -4238,9 +4070,7 @@
      "label": "输出",
      "name": "output",
      "type": "LATENT",
-     "links": [
-      426
-     ]
+     "links": []
     },
     {
      "label": "降噪输出",
@@ -4268,8 +4098,8 @@
    "id": 127,
    "type": "LoadAudio",
    "pos": [
-    6709.2041015625,
-    1362.8846435546875
+    0,
+    5408.269989013672
    ],
    "size": [
     371.0823669433594,
@@ -4311,10 +4141,7 @@
      "label": "音频",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      187,
-      188
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4333,8 +4160,8 @@
    "id": 128,
    "type": "LoadAudio",
    "pos": [
-    6707.59716796875,
-    1554.78857421875
+    0,
+    5592.213043212891
    ],
    "size": [
     364.7247009277344,
@@ -4376,10 +4203,7 @@
      "label": "音频",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      189,
-      190
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4398,8 +4222,8 @@
    "id": 51,
    "type": "CreateVideo",
    "pos": [
-    4717.33447265625,
-    1330.7890625
+    4025.1781005859375,
+    788.8929443359375
    ],
    "size": [
     210,
@@ -4416,7 +4240,7 @@
      "label": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 430
+     "link": null
     },
     {
      "label": "audio",
@@ -4466,9 +4290,7 @@
      "label": "VIDEO",
      "name": "VIDEO",
      "type": "VIDEO",
-     "links": [
-      323
-     ]
+     "links": []
     }
    ],
    "title": "合成视频 / Create Video",
@@ -4494,8 +4316,8 @@
    "id": 216,
    "type": "MiniMaxH3AVDecodeT8",
    "pos": [
-    4471.04345703125,
-    1330.2991943359375
+    1155.1781005859375,
+    11943.133850097656
    ],
    "size": [
     247.13827514648438,
@@ -4512,19 +4334,19 @@
      "label": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
-     "link": 426
+     "link": null
     },
     {
      "label": "video_vae",
      "name": "video_vae",
      "type": "VAE",
-     "link": 424
+     "link": null
     },
     {
      "label": "audio_vae",
      "name": "audio_vae",
      "type": "VAE",
-     "link": 425
+     "link": null
     }
    ],
    "outputs": [
@@ -4546,9 +4368,7 @@
      "label": "video_latent",
      "name": "video_latent",
      "type": "LATENT",
-     "links": [
-      431
-     ]
+     "links": []
     },
     {
      "label": "audio_latent",
@@ -4575,8 +4395,8 @@
    "id": 15,
    "type": "MiniMaxH3TwoPassLatentReconcileT8Advanced",
    "pos": [
-    3457.130859375,
-    1313.9075927734375
+    1155.1781005859375,
+    8538.808502197266
    ],
    "size": [
     470,
@@ -4593,7 +4413,7 @@
      "label": "learned_latent",
      "name": "learned_latent",
      "type": "LATENT",
-     "link": 23
+     "link": null
     },
     {
      "label": "highres_template",
@@ -4605,7 +4425,7 @@
      "label": "positive",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 242
+     "link": null
     },
     {
      "label": "audio_policy",
@@ -4639,10 +4459,7 @@
      "label": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
-     "links": [
-      27,
-      35
-     ]
+     "links": []
     },
     {
      "label": "positive",
@@ -4689,8 +4506,8 @@
    "id": 150,
    "type": "MiniMaxH3SemanticBridgeApplyT8",
    "pos": [
-    1586.72705078125,
-    1338.050048828125
+    1155.1781005859375,
+    13851.33268737793
    ],
    "size": [
     293.5269470214844,
@@ -4707,13 +4524,13 @@
      "label": "conditioning",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": 243
+     "link": null
     },
     {
      "label": "semantic_bridge",
      "name": "semantic_bridge",
      "type": "T8_SEMANTIC_BRIDGE",
-     "link": 245
+     "link": null
     }
    ],
    "outputs": [
@@ -4721,9 +4538,7 @@
      "label": "conditioning",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "links": [
-      244
-     ]
+     "links": []
     },
     {
      "label": "report_json",
@@ -4743,8 +4558,8 @@
    "id": 10,
    "type": "BasicGuider",
    "pos": [
-    1886.0052490234375,
-    1336.2652587890625
+    1155.1781005859375,
+    13547.33268737793
    ],
    "size": [
     390,
@@ -4761,13 +4576,13 @@
      "label": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 120
+     "link": null
     },
     {
      "label": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": 244
+     "link": null
     }
    ],
    "outputs": [
@@ -4775,9 +4590,7 @@
      "label": "引导",
      "name": "GUIDER",
      "type": "GUIDER",
-     "links": [
-      12
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4800,8 +4613,8 @@
    "id": 12,
    "type": "SamplerCustomAdvanced",
    "pos": [
-    1680.107666015625,
-    1824.718017578125
+    1155.1781005859375,
+    7500.808502197266
    ],
    "size": [
     970,
@@ -4818,13 +4631,13 @@
      "label": "噪波生成",
      "name": "noise",
      "type": "NOISE",
-     "link": 11
+     "link": null
     },
     {
      "label": "引导",
      "name": "guider",
      "type": "GUIDER",
-     "link": 12
+     "link": null
     },
     {
      "label": "采样器",
@@ -4836,13 +4649,13 @@
      "label": "Sigmas",
      "name": "sigmas",
      "type": "SIGMAS",
-     "link": 14
+     "link": null
     },
     {
      "label": "Latent",
      "name": "latent_image",
      "type": "LATENT",
-     "link": 15
+     "link": null
     }
    ],
    "outputs": [
@@ -4850,17 +4663,13 @@
      "label": "输出",
      "name": "output",
      "type": "LATENT",
-     "links": [
-      16
-     ]
+     "links": []
     },
     {
      "label": "降噪输出",
      "name": "denoised_output",
      "type": "LATENT",
-     "links": [
-      16
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -4883,8 +4692,8 @@
    "id": 84,
    "type": "ModelPreviewOverrideKJ",
    "pos": [
-    3697.56103515625,
-    1456.7606201171875
+    1155.1781005859375,
+    3438
    ],
    "size": [
     751.1736450195312,
@@ -4901,7 +4710,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 125
+     "link": null
     },
     {
      "label": "vae",
@@ -4971,9 +4780,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      126
-     ]
+     "links": []
     }
    ],
    "title": "二采实时预览 / Stage 2 Live Preview",
@@ -5001,8 +4808,8 @@
    "id": 81,
    "type": "ModelPreviewOverrideKJ",
    "pos": [
-    2932.93896484375,
-    1461.1922607421875
+    1155.1781005859375,
+    4223.943603515625
    ],
    "size": [
     751.1736450195312,
@@ -5019,7 +4826,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 119
+     "link": null
     },
     {
      "label": "vae",
@@ -5089,9 +4896,7 @@
      "label": "MODEL",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      120
-     ]
+     "links": []
     }
    ],
    "title": "一采实时预览 / Stage 1 Live Preview",
@@ -5119,8 +4924,8 @@
    "id": 97,
    "type": "LoadAudio",
    "pos": [
-    6709.29833984375,
-    1178.3599853515625
+    0,
+    5768.213043212891
    ],
    "size": [
     381.45806884765625,
@@ -5160,10 +4965,7 @@
      "label": "音频",
      "name": "AUDIO",
      "type": "AUDIO",
-     "links": [
-      147,
-      148
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5182,8 +4984,8 @@
    "id": 49,
    "type": "PrimitiveStringMultiline",
    "pos": [
-    5631.10986328125,
-    461.2673034667969
+    0,
+    0
    ],
    "size": [
     1035.1781005859375,
@@ -5209,10 +5011,7 @@
      "label": "STRING",
      "name": "STRING",
      "type": "STRING",
-     "links": [
-      417,
-      418
-     ]
+     "links": []
     }
    ],
    "title": "BUNNY 提示词模板 / Prompt Template",
@@ -5237,8 +5036,8 @@
    "id": 8,
    "type": "MiniMaxH3DualClockSamplerT8",
    "pos": [
-    1628.6512451171875,
-    1427.7344970703125
+    1155.1781005859375,
+    9460.808502197266
    ],
    "size": [
     408.62017822265625,
@@ -5255,7 +5054,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 436
+     "link": null
     },
     {
      "label": "av_latent",
@@ -5311,10 +5110,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      8,
-      119
-     ]
+     "links": []
     },
     {
      "label": "sampler",
@@ -5369,8 +5165,8 @@
    "id": 16,
    "type": "MiniMaxH3TwoPassDetailMixerT8Advanced",
    "pos": [
-    2391.49755859375,
-    1287.9163818359375
+    1155.1781005859375,
+    5688.4051513671875
    ],
    "size": [
     650,
@@ -5387,13 +5183,13 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 438
+     "link": null
     },
     {
      "label": "av_latent",
      "name": "av_latent",
      "type": "LATENT",
-     "link": 27
+     "link": null
     },
     {
      "label": "refine_sigmas",
@@ -5559,9 +5355,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      125
-     ]
+     "links": []
     },
     {
      "label": "sampler",
@@ -5677,8 +5471,8 @@
    "id": 9,
    "type": "MiniMaxH3LearnedTwoPassParityPlanT8Advanced",
    "pos": [
-    2061.7666015625,
-    1424.3377685546875
+    1155.1781005859375,
+    8858.808502197266
    ],
    "size": [
     520,
@@ -5695,7 +5489,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 8
+     "link": null
     },
     {
      "label": "base_steps",
@@ -5727,9 +5521,7 @@
      "label": "coarse_sigmas",
      "name": "coarse_sigmas",
      "type": "SIGMAS",
-     "links": [
-      14
-     ]
+     "links": []
     },
     {
      "label": "refine_sigmas",
@@ -5778,8 +5570,8 @@
    "id": 11,
    "type": "RandomNoise",
    "pos": [
-    2056.633544921875,
-    1277.234130859375
+    0,
+    6242.200164794922
    ],
    "size": [
     300,
@@ -5806,10 +5598,7 @@
      "label": "噪波生成",
      "name": "NOISE",
      "type": "NOISE",
-     "links": [
-      11,
-      50
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5839,8 +5628,8 @@
    "id": 214,
    "type": "BlockSparseAttention",
    "pos": [
-    3249.0400390625,
-    777.1607055664062
+    1155.1781005859375,
+    9178.808502197266
    ],
    "size": [
     210,
@@ -5857,7 +5646,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "link": 423
+     "link": null
     },
     {
      "label": "selection",
@@ -5929,9 +5718,7 @@
      "label": "model",
      "name": "model",
      "type": "MODEL",
-     "links": [
-      421
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -5958,8 +5745,8 @@
    "id": 30,
    "type": "ComfyMathExpression",
    "pos": [
-    5358.845703125,
-    1042.3896484375
+    1155.1781005859375,
+    9965.808502197266
    ],
    "size": [
     330,
@@ -5976,7 +5763,7 @@
      "label": "values.a",
      "name": "values.a",
      "type": "FLOAT,INT,BOOLEAN",
-     "link": 43
+     "link": null
     },
     {
      "label": "values.b",
@@ -6035,8 +5822,8 @@
    "id": 98,
    "type": "SaveVideo",
    "pos": [
-    4479.37109375,
-    1465.1788330078125
+    4025.1781005859375,
+    0
    ],
    "size": [
     783.7313232421875,
@@ -6052,7 +5839,7 @@
      "label": "video",
      "name": "video",
      "type": "VIDEO",
-     "link": 323
+     "link": null
     },
     {
      "label": "filename_prefix",
@@ -6109,8 +5896,8 @@
    "id": 500,
    "type": "RIFE VFI",
    "pos": [
-    4297.33447265625,
-    1370.7890625
+    1155.1781005859375,
+    7866.808502197266
    ],
    "size": [
     380,
@@ -6123,16 +5910,14 @@
     {
      "name": "frames",
      "type": "IMAGE",
-     "link": 427
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      430
-     ],
+     "links": [],
      "slot_index": 0
     }
    ],
@@ -6157,8 +5942,8 @@
    "id": 501,
    "type": "MarkdownNote",
    "pos": [
-    1628.6512451171875,
-    1007.7344970703125
+    0,
+    1199.3753662109375
    ],
    "size": [
     640,
@@ -6180,8 +5965,8 @@
    "id": 502,
    "type": "MarkdownNote",
    "pos": [
-    2288.6512451171875,
-    1007.7344970703125
+    0,
+    4866.269989013672
    ],
    "size": [
     520,
@@ -6205,8 +5990,8 @@
    "id": 504,
    "type": "LimaoVRAMGuard",
    "pos": [
-    3837.33447265625,
-    1370.7890625
+    1155.1781005859375,
+    11087.808502197266
    ],
    "size": [
     300,
@@ -6219,16 +6004,14 @@
     {
      "name": "anything",
      "type": "*",
-     "link": 431
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "passthrough",
      "type": "*",
-     "links": [
-      432
-     ],
+     "links": [],
      "slot_index": 0
     }
    ],
@@ -6245,8 +6028,8 @@
    "id": 503,
    "type": "LimaoVAEChunkDecode",
    "pos": [
-    4167.33447265625,
-    1370.7890625
+    1155.1781005859375,
+    9735.808502197266
    ],
    "size": [
     340,
@@ -6259,21 +6042,19 @@
     {
      "name": "video_latent",
      "type": "LATENT",
-     "link": 432
+     "link": null
     },
     {
      "name": "video_vae",
      "type": "VAE",
-     "link": 433
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "frames",
      "type": "IMAGE",
-     "links": [
-      427
-     ],
+     "links": [],
      "slot_index": 0
     }
    ],
@@ -6292,8 +6073,8 @@
    "id": 505,
    "type": "LimaoVRAMGuard",
    "pos": [
-    2990.473388671875,
-    38.0369758605957
+    1155.1781005859375,
+    11237.808502197266
    ],
    "size": [
     300,
@@ -6306,16 +6087,14 @@
     {
      "name": "anything",
      "type": "*",
-     "link": 16
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "passthrough",
      "type": "*",
-     "links": [
-      434
-     ],
+     "links": [],
      "slot_index": 0
     }
    ],
@@ -6332,8 +6111,8 @@
    "id": 506,
    "type": "MiniMaxLowVRAMAttention",
    "pos": [
-    3279.6162109375,
-    515.1026000976562
+    1155.1781005859375,
+    10135.808502197266
    ],
    "size": [
     320,
@@ -6346,16 +6125,14 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": 176
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "model",
      "type": "MODEL",
-     "links": [
-      435
-     ],
+     "links": [],
      "slot_index": 0
     }
    ],
@@ -6372,8 +6149,8 @@
    "id": 507,
    "type": "MiniMaxChunkFeedForward",
    "pos": [
-    3599.6162109375,
-    515.1026000976562
+    1155.1781005859375,
+    10295.808502197266
    ],
    "size": [
     320,
@@ -6386,16 +6163,14 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": 435
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "model",
      "type": "MODEL",
-     "links": [
-      436
-     ],
+     "links": [],
      "slot_index": 0
     }
    ],
@@ -6413,8 +6188,8 @@
    "id": 508,
    "type": "MiniMaxLowVRAMAttention",
    "pos": [
-    3589.0400390625,
-    637.1607055664062
+    1155.1781005859375,
+    10455.808502197266
    ],
    "size": [
     320,
@@ -6427,16 +6202,14 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": 421
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "model",
      "type": "MODEL",
-     "links": [
-      437
-     ],
+     "links": [],
      "slot_index": 0
     }
    ],
@@ -6453,8 +6226,8 @@
    "id": 509,
    "type": "MiniMaxChunkFeedForward",
    "pos": [
-    3909.0400390625,
-    637.1607055664062
+    1155.1781005859375,
+    10615.808502197266
    ],
    "size": [
     320,
@@ -6467,16 +6240,14 @@
     {
      "name": "model",
      "type": "MODEL",
-     "link": 437
+     "link": null
     }
    ],
    "outputs": [
     {
      "name": "model",
      "type": "MODEL",
-     "links": [
-      438
-     ],
+     "links": [],
      "slot_index": 0
     }
    ],
@@ -6489,33 +6260,31 @@
     4,
     4096
    ]
+  },
+  {
+   "id": 510,
+   "type": "MarkdownNote",
+   "title": "狸猫AI·使用说明",
+   "pos": [
+    0,
+    -560
+   ],
+   "size": [
+    400,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 左侧框：需要你修改的输入与参数\n- 中间框：核心处理区（参数已调好，慎动）\n- 右侧框：输出结果\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源）\n- 显存不足：优先「H3·16G显存精修版」，保持显存治理节点开启\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
+   ]
   }
  ],
  "links": [
-  [
-   2,
-   3,
-   0,
-   7,
-   0,
-   "CLIP"
-  ],
-  [
-   3,
-   1,
-   0,
-   7,
-   1,
-   "VAE"
-  ],
-  [
-   4,
-   2,
-   0,
-   7,
-   2,
-   "VAE"
-  ],
   [
    7,
    7,
@@ -6523,30 +6292,6 @@
    8,
    1,
    "LATENT"
-  ],
-  [
-   8,
-   8,
-   0,
-   9,
-   0,
-   "MODEL"
-  ],
-  [
-   11,
-   11,
-   0,
-   12,
-   0,
-   "NOISE"
-  ],
-  [
-   12,
-   10,
-   0,
-   12,
-   1,
-   "GUIDER"
   ],
   [
    13,
@@ -6557,82 +6302,10 @@
    "SAMPLER"
   ],
   [
-   14,
-   9,
-   0,
-   12,
-   3,
-   "SIGMAS"
-  ],
-  [
-   15,
-   7,
-   1,
-   12,
-   4,
-   "LATENT"
-  ],
-  [
-   17,
-   13,
-   1,
-   14,
-   23,
-   "INT"
-  ],
-  [
-   18,
-   13,
-   2,
-   14,
-   24,
-   "INT"
-  ],
-  [
-   19,
-   3,
-   0,
-   14,
-   0,
-   "CLIP"
-  ],
-  [
-   20,
-   1,
-   0,
-   14,
-   1,
-   "VAE"
-  ],
-  [
-   21,
-   2,
-   0,
-   14,
-   2,
-   "VAE"
-  ],
-  [
-   23,
-   13,
-   0,
-   15,
-   0,
-   "LATENT"
-  ],
-  [
    24,
    14,
    1,
    15,
-   1,
-   "LATENT"
-  ],
-  [
-   27,
-   15,
-   0,
-   16,
    1,
    "LATENT"
   ],
@@ -6643,14 +6316,6 @@
    16,
    2,
    "SIGMAS"
-  ],
-  [
-   32,
-   17,
-   0,
-   19,
-   1,
-   "GUIDER"
   ],
   [
    33,
@@ -6669,166 +6334,6 @@
    "SIGMAS"
   ],
   [
-   35,
-   15,
-   0,
-   19,
-   4,
-   "LATENT"
-  ],
-  [
-   41,
-   6,
-   0,
-   7,
-   7,
-   "IMAGE"
-  ],
-  [
-   42,
-   6,
-   0,
-   14,
-   7,
-   "IMAGE"
-  ],
-  [
-   43,
-   27,
-   0,
-   30,
-   0,
-   "FLOAT,INT,BOOLEAN"
-  ],
-  [
-   44,
-   29,
-   0,
-   7,
-   23,
-   "INT"
-  ],
-  [
-   45,
-   29,
-   1,
-   7,
-   24,
-   "INT"
-  ],
-  [
-   50,
-   11,
-   0,
-   19,
-   0,
-   "NOISE"
-  ],
-  [
-   56,
-   35,
-   0,
-   7,
-   8,
-   "IMAGE"
-  ],
-  [
-   57,
-   35,
-   0,
-   14,
-   8,
-   "IMAGE"
-  ],
-  [
-   58,
-   36,
-   0,
-   7,
-   9,
-   "IMAGE"
-  ],
-  [
-   59,
-   36,
-   0,
-   14,
-   9,
-   "IMAGE"
-  ],
-  [
-   60,
-   37,
-   0,
-   7,
-   10,
-   "IMAGE"
-  ],
-  [
-   61,
-   37,
-   0,
-   14,
-   10,
-   "IMAGE"
-  ],
-  [
-   93,
-   54,
-   0,
-   13,
-   3,
-   "FLOAT"
-  ],
-  [
-   105,
-   71,
-   0,
-   72,
-   0,
-   "MODEL"
-  ],
-  [
-   106,
-   80,
-   0,
-   73,
-   0,
-   "MODEL"
-  ],
-  [
-   119,
-   8,
-   0,
-   81,
-   0,
-   "MODEL"
-  ],
-  [
-   120,
-   81,
-   0,
-   10,
-   0,
-   "MODEL"
-  ],
-  [
-   122,
-   82,
-   1,
-   7,
-   25,
-   "INT"
-  ],
-  [
-   123,
-   27,
-   0,
-   82,
-   0,
-   "FLOAT,INT,BOOLEAN"
-  ],
-  [
    124,
    83,
    1,
@@ -6837,292 +6342,12 @@
    "INT"
   ],
   [
-   125,
-   16,
-   0,
-   84,
-   0,
-   "MODEL"
-  ],
-  [
-   126,
-   84,
-   0,
-   17,
-   0,
-   "MODEL"
-  ],
-  [
-   127,
-   27,
-   0,
-   83,
-   0,
-   "FLOAT,INT,BOOLEAN"
-  ],
-  [
-   130,
-   86,
-   0,
-   7,
-   11,
-   "IMAGE"
-  ],
-  [
-   131,
-   87,
-   0,
-   7,
-   12,
-   "IMAGE"
-  ],
-  [
-   132,
-   88,
-   0,
-   7,
-   13,
-   "IMAGE"
-  ],
-  [
-   133,
-   89,
-   0,
-   7,
-   14,
-   "IMAGE"
-  ],
-  [
-   134,
-   90,
-   0,
-   7,
-   15,
-   "IMAGE"
-  ],
-  [
-   135,
-   86,
-   0,
-   14,
-   11,
-   "IMAGE"
-  ],
-  [
-   136,
-   87,
-   0,
-   14,
-   12,
-   "IMAGE"
-  ],
-  [
-   137,
-   88,
-   0,
-   14,
-   13,
-   "IMAGE"
-  ],
-  [
-   138,
-   89,
-   0,
-   14,
-   14,
-   "IMAGE"
-  ],
-  [
-   139,
-   90,
-   0,
-   14,
-   15,
-   "IMAGE"
-  ],
-  [
    146,
    82,
    1,
    81,
    6,
    "INT"
-  ],
-  [
-   147,
-   97,
-   0,
-   7,
-   18,
-   "AUDIO"
-  ],
-  [
-   148,
-   97,
-   0,
-   14,
-   18,
-   "AUDIO"
-  ],
-  [
-   176,
-   74,
-   0,
-   506,
-   0,
-   "MODEL"
-  ],
-  [
-   187,
-   127,
-   0,
-   7,
-   19,
-   "AUDIO"
-  ],
-  [
-   188,
-   127,
-   0,
-   14,
-   19,
-   "AUDIO"
-  ],
-  [
-   189,
-   128,
-   0,
-   7,
-   20,
-   "AUDIO"
-  ],
-  [
-   190,
-   128,
-   0,
-   14,
-   20,
-   "AUDIO"
-  ],
-  [
-   213,
-   141,
-   0,
-   135,
-   0,
-   "*"
-  ],
-  [
-   214,
-   141,
-   0,
-   136,
-   0,
-   "STRING"
-  ],
-  [
-   215,
-   139,
-   0,
-   141,
-   13,
-   "T8_PERFORMANCE_DIRECTOR_CONFIG"
-  ],
-  [
-   217,
-   6,
-   0,
-   141,
-   2,
-   "IMAGE"
-  ],
-  [
-   218,
-   35,
-   0,
-   141,
-   3,
-   "IMAGE"
-  ],
-  [
-   219,
-   36,
-   0,
-   141,
-   4,
-   "IMAGE"
-  ],
-  [
-   220,
-   37,
-   0,
-   141,
-   5,
-   "IMAGE"
-  ],
-  [
-   221,
-   86,
-   0,
-   141,
-   6,
-   "IMAGE"
-  ],
-  [
-   222,
-   87,
-   0,
-   141,
-   7,
-   "IMAGE"
-  ],
-  [
-   223,
-   88,
-   0,
-   141,
-   8,
-   "IMAGE"
-  ],
-  [
-   224,
-   89,
-   0,
-   141,
-   9,
-   "IMAGE"
-  ],
-  [
-   225,
-   90,
-   0,
-   141,
-   10,
-   "IMAGE"
-  ],
-  [
-   230,
-   135,
-   0,
-   146,
-   0,
-   "STRING"
-  ],
-  [
-   233,
-   146,
-   0,
-   147,
-   0,
-   "*"
-  ],
-  [
-   236,
-   149,
-   0,
-   148,
-   1,
-   "T8_SEMANTIC_BRIDGE"
   ],
   [
    240,
@@ -7133,393 +6358,53 @@
    "CONDITIONING"
   ],
   [
-   241,
-   14,
-   0,
-   148,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   242,
-   148,
-   0,
-   15,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   243,
-   7,
-   0,
-   150,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   244,
-   150,
-   0,
-   10,
-   1,
-   "CONDITIONING"
-  ],
-  [
-   245,
-   149,
-   0,
-   150,
-   1,
-   "T8_SEMANTIC_BRIDGE"
-  ],
-  [
-   257,
-   68,
-   0,
-   79,
-   0,
-   "MODEL"
-  ],
-  [
-   258,
-   69,
-   0,
-   70,
-   0,
-   "MODEL"
-  ],
-  [
-   259,
-   79,
-   0,
-   71,
-   0,
-   "MODEL"
-  ],
-  [
-   260,
-   70,
-   0,
-   80,
-   0,
-   "MODEL"
-  ],
-  [
-   283,
-   170,
-   0,
-   172,
-   2,
-   "FLOAT"
-  ],
-  [
-   286,
-   72,
-   0,
-   172,
-   0,
-   "MODEL"
-  ],
-  [
-   287,
-   172,
-   0,
-   74,
-   0,
-   "MODEL"
-  ],
-  [
-   291,
-   83,
-   1,
-   14,
-   25,
-   "INT"
-  ],
-  [
-   323,
-   51,
-   0,
-   98,
-   0,
-   "VIDEO"
-  ],
-  [
-   324,
-   73,
-   0,
-   75,
-   0,
-   "MODEL"
-  ],
-  [
-   373,
-   66,
-   0,
-   67,
-   0,
-   "MODEL"
-  ],
-  [
-   394,
-   67,
-   0,
-   197,
-   0,
-   "MODEL"
-  ],
-  [
-   395,
-   197,
-   0,
-   76,
-   0,
-   "MODEL"
-  ],
-  [
-   396,
-   76,
-   0,
-   68,
-   0,
-   "MODEL"
-  ],
-  [
-   397,
-   76,
-   0,
-   69,
-   0,
-   "MODEL"
-  ],
-  [
-   417,
-   49,
-   0,
-   14,
-   22,
-   "STRING"
-  ],
-  [
-   418,
-   49,
-   0,
-   7,
-   22,
-   "STRING"
-  ],
-  [
-   421,
-   214,
-   0,
-   508,
-   0,
-   "MODEL"
-  ],
-  [
-   423,
-   75,
-   0,
-   214,
-   0,
-   "MODEL"
-  ],
-  [
-   424,
-   1,
-   0,
-   216,
-   1,
-   "VAE"
-  ],
-  [
-   425,
-   2,
-   0,
-   216,
-   2,
-   "VAE"
-  ],
-  [
-   426,
-   19,
-   0,
-   216,
-   0,
-   "LATENT"
-  ],
-  [
    428,
    216,
    1,
    51,
    1,
    "AUDIO"
-  ],
-  [
-   430,
-   500,
-   0,
-   51,
-   0,
-   "IMAGE"
-  ],
-  [
-   427,
-   503,
-   0,
-   500,
-   0,
-   "IMAGE"
-  ],
-  [
-   431,
-   216,
-   2,
-   504,
-   0,
-   "LATENT"
-  ],
-  [
-   432,
-   504,
-   0,
-   503,
-   0,
-   "LATENT"
-  ],
-  [
-   433,
-   1,
-   0,
-   503,
-   1,
-   "VAE"
-  ],
-  [
-   16,
-   12,
-   0,
-   505,
-   0,
-   "LATENT"
-  ],
-  [
-   434,
-   505,
-   0,
-   13,
-   0,
-   "LATENT"
-  ],
-  [
-   435,
-   506,
-   0,
-   507,
-   0,
-   "MODEL"
-  ],
-  [
-   436,
-   507,
-   0,
-   8,
-   0,
-   "MODEL"
-  ],
-  [
-   437,
-   508,
-   0,
-   509,
-   0,
-   "MODEL"
-  ],
-  [
-   438,
-   509,
-   0,
-   16,
-   0,
-   "MODEL"
   ]
  ],
  "groups": [
   {
-   "id": 22,
-   "title": "01·一采/二采双LoRA",
+   "id": 27,
+   "title": "📥 输入区（改这里）",
    "bounding": [
-    1756.224853515625,
-    -29.072208404541016,
-    1550,
-    925
+    -50,
+    -120,
+    1135.1781005859375,
+    6880.200164794922
    ],
-   "color": "#8a4f91",
+   "color": "#3f789e",
    "font_size": 24,
-   "flags": {
-    "pinned": true
-   }
+   "flags": {}
   },
   {
-   "id": 23,
-   "title": "02·一采动作结构",
+   "id": 28,
+   "title": "⚙️ 核心处理（参数已调好，慎动）",
    "bounding": [
-    1124.97705078125,
-    1237.68994140625,
-    1544.4444580078125,
-    1093.888916015625
+    1105.1781005859375,
+    -120,
+    2830.0,
+    14143.33268737793
    ],
-   "color": "#88A",
+   "color": "#8f6e48",
    "font_size": 24,
-   "flags": {
-    "pinned": true
-   }
+   "flags": {}
   },
   {
-   "id": 24,
-   "title": "03·3D潜空间放大",
+   "id": 29,
+   "title": "📤 输出区",
    "bounding": [
-    3334.768798828125,
-    -41.26130676269531,
-    756.2703247070312,
-    617.4386596679688
+    3975.1781005859375,
+    -120,
+    883.7313232421875,
+    1118.3559265136719
    ],
-   "color": "#88A",
+   "color": "#4a6b3f",
    "font_size": 24,
-   "flags": {
-    "pinned": true
-   }
-  },
-  {
-   "id": 25,
-   "title": "04·二采HQ精修（必开）",
-   "bounding": [
-    2683.02685546875,
-    1233.138916015625,
-    1764.4444580078125,
-    1127.22216796875
-   ],
-   "color": "#8a4f91",
-   "font_size": 24,
-   "flags": {
-    "pinned": true
-   }
-  },
-  {
-   "id": 26,
-   "title": "05·补帧与成片输出",
-   "bounding": [
-    4465.43798828125,
-    1229.61474609375,
-    1120,
-    1140
-   ],
-   "color": "#355f73",
-   "font_size": 24,
-   "flags": {
-    "pinned": true
-   }
+   "flags": {}
   }
  ],
  "config": {},

@@ -8,8 +8,8 @@
    "id": 826,
    "type": "PrimitiveStringMultiline",
    "pos": [
-    920,
-    710
+    0,
+    1149
    ],
    "size": [
     600,
@@ -36,9 +36,7 @@
      "label": "STRING",
      "name": "STRING",
      "type": "STRING",
-     "links": [
-      455
-     ]
+     "links": []
     }
    ],
    "title": "08 | Generic prompt / 通用提示词",
@@ -61,8 +59,8 @@
    "id": 10020,
    "type": "PrimitiveFloat",
    "pos": [
-    40,
-    710
+    0,
+    2788.342179016133
    ],
    "size": [
     350,
@@ -89,9 +87,7 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": [
-      456
-     ]
+     "links": []
     }
    ],
    "title": "03 | Shared output MP / 统一输出MP",
@@ -114,8 +110,8 @@
    "id": 70100,
    "type": "PrimitiveBoolean",
    "pos": [
-    40,
-    870
+    0,
+    2928.342179016133
    ],
    "size": [
     350,
@@ -142,9 +138,7 @@
      "label": "BOOLEAN",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": [
-      459
-     ]
+     "links": []
     }
    ],
    "title": "05 | Keep original audio / 保留原音频",
@@ -167,8 +161,8 @@
    "id": 72000,
    "type": "PrimitiveBoolean",
    "pos": [
-    440,
-    870
+    0,
+    3068.342179016133
    ],
    "size": [
     420,
@@ -195,9 +189,7 @@
      "label": "BOOLEAN",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": [
-      460
-     ]
+     "links": []
     }
    ],
    "title": "06 | Carry motion across segments / 跨段续接",
@@ -220,8 +212,8 @@
    "id": 10019,
    "type": "PrimitiveBoolean",
    "pos": [
-    440,
-    710
+    0,
+    3208.342179016133
    ],
    "size": [
     420,
@@ -248,9 +240,7 @@
      "label": "BOOLEAN",
      "name": "BOOLEAN",
      "type": "BOOLEAN",
-     "links": [
-      461
-     ]
+     "links": []
     }
    ],
    "title": "04 | Reference size: ON 720P · OFF 480P",
@@ -273,8 +263,8 @@
    "id": 74000,
    "type": "PrimitiveFloat",
    "pos": [
-    40,
-    1030
+    0,
+    2638.342179016133
    ],
    "size": [
     350,
@@ -301,9 +291,7 @@
      "label": "FLOAT",
      "name": "FLOAT",
      "type": "FLOAT",
-     "links": [
-      465
-     ]
+     "links": []
     }
    ],
    "title": "07 | Color stability: 0 = OFF / 调色强度",
@@ -326,8 +314,8 @@
    "id": 70057,
    "type": "SaveVideo",
    "pos": [
-    1590,
-    100
+    1620,
+    0
    ],
    "size": [
     500,
@@ -343,7 +331,7 @@
      "label": "video",
      "name": "video",
      "type": "VIDEO",
-     "link": 464
+     "link": null
     },
     {
      "label": "filename_prefix",
@@ -423,8 +411,8 @@
    "id": 70000,
    "type": "VHS_LoadVideoFFmpeg",
    "pos": [
-    440,
-    100
+    0,
+    0
    ],
    "size": [
     420,
@@ -529,9 +517,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      458
-     ]
+     "links": []
     },
     {
      "label": "mask",
@@ -543,17 +529,13 @@
      "label": "audio",
      "name": "audio",
      "type": "AUDIO",
-     "links": [
-      463
-     ]
+     "links": []
     },
     {
      "label": "video_info",
      "name": "video_info",
      "type": "VHS_VIDEOINFO",
-     "links": [
-      457
-     ]
+     "links": []
     }
    ],
    "title": "02 | Main video ≤27s / 主视频",
@@ -620,8 +602,8 @@
    "id": 349,
    "type": "LoadImage",
    "pos": [
-    40,
-    100
+    0,
+    589
    ],
    "size": [
     360,
@@ -657,9 +639,7 @@
      "label": "IMAGE",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      462
-     ]
+     "links": []
     },
     {
      "label": "MASK",
@@ -697,8 +677,8 @@
    "id": 74042,
    "type": "3930ed23-b232-49cb-8c21-6d61c42c09f9",
    "pos": [
-    919.6331693286724,
-    111.40351373846009
+    720,
+    0
    ],
    "size": [
     590,
@@ -712,7 +692,7 @@
      "label": "prompt",
      "name": "prompt",
      "type": "STRING",
-     "link": 455
+     "link": null
     },
     {
      "label": "output_MP",
@@ -721,19 +701,19 @@
      "widget": {
       "name": "output_MP"
      },
-     "link": 456
+     "link": null
     },
     {
      "label": "source_video_info",
      "name": "source_video_info",
      "type": "VHS_VIDEOINFO",
-     "link": 457
+     "link": null
     },
     {
      "label": "source_image",
      "name": "source_image",
      "type": "IMAGE",
-     "link": 458
+     "link": null
     },
     {
      "label": "original_audio",
@@ -742,7 +722,7 @@
      "widget": {
       "name": "original_audio"
      },
-     "link": 459
+     "link": null
     },
     {
      "label": "motion_continuity",
@@ -751,34 +731,34 @@
      "widget": {
       "name": "motion_continuity"
      },
-     "link": 460
+     "link": null
     },
     {
      "label": "reference_720P",
      "name": "reference_720P",
      "type": "BOOLEAN",
-     "link": 461
+     "link": null
     },
     {
      "label": "character",
      "name": "character",
      "shape": 7,
      "type": "IMAGE",
-     "link": 462
+     "link": null
     },
     {
      "label": "source_audio",
      "name": "source_audio",
      "shape": 7,
      "type": "AUDIO",
-     "link": 463
+     "link": null
     },
     {
      "label": "color_strength",
      "name": "color_strength",
      "shape": 7,
      "type": "FLOAT",
-     "link": 465
+     "link": null
     }
    ],
    "outputs": [
@@ -786,9 +766,7 @@
      "label": "final_video",
      "name": "final_video",
      "type": "VIDEO",
-     "links": [
-      464
-     ]
+     "links": []
     }
    ],
    "title": "BUNNY | AUTO DANCE ENGINE / 自动迁移引擎",
@@ -819,8 +797,8 @@
    "id": 74045,
    "type": "MarkdownNote",
    "pos": [
-    448.54155492703615,
-    1183.5414816267253
+    0,
+    2369
    ],
    "size": [
     402.1667808471984,
@@ -848,8 +826,8 @@
    "id": 74046,
    "type": "MarkdownNote",
    "pos": [
-    40.0,
-    -200.0
+    0,
+    2089
    ],
    "size": [
     520,
@@ -866,99 +844,72 @@
    "widgets_values": [
     "# 狸猫AI 专属工作流\n\n**本文件由狸猫AI平台独家装配与调优**\n\n- 授权标识：`LM-1A0D-5040`\n- 版本：`LIMAO-WF-20261112-R1`\n- 指纹：`1a0d7dade82a06ee`\n\n> 本工作流嵌入狸猫AI数字指纹，可溯源。**禁止**未经授权的二次开发、复制、转发、公开分享或发布至任何其他平台。"
    ]
+  },
+  {
+   "id": 74047,
+   "type": "MarkdownNote",
+   "title": "狸猫AI·使用说明",
+   "pos": [
+    0,
+    -560
+   ],
+   "size": [
+    400,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 左侧框：需要你修改的输入与参数\n- 中间框：核心处理区（参数已调好，慎动）\n- 右侧框：输出结果\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源）\n- 显存不足：优先「H3·16G显存精修版」，保持显存治理节点开启\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
+   ]
   }
  ],
- "links": [
-  [
-   455,
-   826,
-   0,
-   74042,
-   0,
-   "STRING"
-  ],
-  [
-   456,
-   10020,
-   0,
-   74042,
-   1,
-   "FLOAT"
-  ],
-  [
-   457,
-   70000,
-   3,
-   74042,
-   2,
-   "VHS_VIDEOINFO"
-  ],
-  [
-   458,
-   70000,
-   0,
-   74042,
-   3,
-   "IMAGE"
-  ],
-  [
-   459,
-   70100,
-   0,
-   74042,
-   4,
-   "BOOLEAN"
-  ],
-  [
-   460,
-   72000,
-   0,
-   74042,
-   5,
-   "BOOLEAN"
-  ],
-  [
-   461,
-   10019,
-   0,
-   74042,
-   6,
-   "BOOLEAN"
-  ],
-  [
-   462,
-   349,
-   0,
-   74042,
-   7,
-   "IMAGE"
-  ],
-  [
-   463,
-   70000,
-   2,
-   74042,
-   8,
-   "AUDIO"
-  ],
-  [
-   465,
-   74000,
-   0,
-   74042,
-   9,
-   "FLOAT"
-  ],
-  [
-   464,
-   74042,
-   0,
-   70057,
-   0,
-   "VIDEO"
-  ]
+ "links": [],
+ "groups": [
+  {
+   "id": 1,
+   "title": "📥 输入区（改这里）",
+   "bounding": [
+    -50,
+    -120,
+    700,
+    3448.342179016133
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 2,
+   "title": "⚙️ 核心处理（参数已调好，慎动）",
+   "bounding": [
+    670,
+    -120,
+    860,
+    640
+   ],
+   "color": "#8f6e48",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 3,
+   "title": "📤 输出区",
+   "bounding": [
+    1570,
+    -120,
+    600,
+    1208
+   ],
+   "color": "#4a6b3f",
+   "font_size": 24,
+   "flags": {}
+  }
  ],
- "groups": [],
  "definitions": {
   "subgraphs": [
    {

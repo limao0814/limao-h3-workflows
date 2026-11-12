@@ -8,8 +8,8 @@
    "id": 11,
    "type": "LoraLoaderModelOnly",
    "pos": [
-    -1741.2788521114971,
-    -140.09554598929583
+    900,
+    3008
    ],
    "size": [
     400,
@@ -24,7 +24,7 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 9
+     "link": null
     },
     {
      "label": "lora_name",
@@ -51,9 +51,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      10
-     ]
+     "links": []
     }
    ],
    "title": "360 ERP outpaint LoRA",
@@ -83,8 +81,8 @@
    "id": 12,
    "type": "CLIPLoader",
    "pos": [
-    -1741.2788521114971,
-    -0.09554598929578606
+    900,
+    1958
    ],
    "size": [
     300,
@@ -129,10 +127,7 @@
      "localized_name": "CLIP",
      "name": "CLIP",
      "type": "CLIP",
-     "links": [
-      14,
-      15
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -163,8 +158,8 @@
    "id": 22,
    "type": "ReferenceLatent",
    "pos": [
-    -500,
-    -120
+    900,
+    2108
    ],
    "size": [
     300,
@@ -181,7 +176,7 @@
      "localized_name": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": 5
+     "link": null
     },
     {
      "label": "latent",
@@ -189,7 +184,7 @@
      "name": "latent",
      "shape": 7,
      "type": "LATENT",
-     "link": 6
+     "link": null
     }
    ],
    "outputs": [
@@ -198,9 +193,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      11
-     ]
+     "links": []
     }
    ],
    "title": "正向 + 参考",
@@ -222,8 +215,8 @@
    "id": 23,
    "type": "ReferenceLatent",
    "pos": [
-    -500,
-    60
+    900,
+    2258
    ],
    "size": [
     300,
@@ -240,7 +233,7 @@
      "localized_name": "条件",
      "name": "conditioning",
      "type": "CONDITIONING",
-     "link": 7
+     "link": null
     },
     {
      "label": "latent",
@@ -248,7 +241,7 @@
      "name": "latent",
      "shape": 7,
      "type": "LATENT",
-     "link": 8
+     "link": null
     }
    ],
    "outputs": [
@@ -257,9 +250,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      12
-     ]
+     "links": []
     }
    ],
    "title": "负向 + 参考",
@@ -281,8 +272,8 @@
    "id": 34,
    "type": "PreviewImage",
    "pos": [
-    -500,
-    260
+    1640,
+    440
    ],
    "size": [
     300,
@@ -299,7 +290,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": 22
+     "link": null
     }
    ],
    "outputs": [
@@ -332,8 +323,8 @@
    "id": 13,
    "type": "VAELoader",
    "pos": [
-    -1741.2788521114971,
-    145.6996691618831
+    900,
+    2408
    ],
    "size": [
     300,
@@ -359,10 +350,7 @@
      "localized_name": "VAE",
      "name": "VAE",
      "type": "VAE",
-     "links": [
-      4,
-      17
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -389,8 +377,8 @@
    "id": 21,
    "type": "VAEEncode",
    "pos": [
-    -486.6667036576707,
-    -284.2423872514205
+    900,
+    2558
    ],
    "size": [
     300,
@@ -407,14 +395,14 @@
      "localized_name": "像素",
      "name": "pixels",
      "type": "IMAGE",
-     "link": 3
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 4
+     "link": null
     }
    ],
    "outputs": [
@@ -423,11 +411,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      6,
-      8,
-      13
-     ]
+     "links": []
     }
    ],
    "title": "ERP 控制图 -> latent",
@@ -449,8 +433,8 @@
    "id": 20,
    "type": "PanoramaStickers",
    "pos": [
-    -853.9394309303968,
-    -227.27283824573854
+    900,
+    0
    ],
    "size": [
     330,
@@ -476,7 +460,7 @@
      "name": "sticker_image",
      "shape": 7,
      "type": "IMAGE",
-     "link": 1
+     "link": null
     },
     {
      "label": "sticker_state",
@@ -484,7 +468,7 @@
      "name": "sticker_state",
      "shape": 7,
      "type": "STRING",
-     "link": 2
+     "link": null
     },
     {
      "label": "audio",
@@ -546,10 +530,7 @@
      "localized_name": "cond_erp",
      "name": "cond_erp",
      "type": "IMAGE",
-     "links": [
-      3,
-      22
-     ]
+     "links": []
     },
     {
      "label": "mask",
@@ -595,8 +576,8 @@
    "id": 15,
    "type": "CLIPTextEncode",
    "pos": [
-    -1312.5300399187279,
-    -56.96953977948886
+    900,
+    1778
    ],
    "size": [
     430,
@@ -611,7 +592,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": 15
+     "link": null
     },
     {
      "label": "text",
@@ -629,9 +610,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      7
-     ]
+     "links": []
     }
    ],
    "title": "CLIP Text Encode (Negative)",
@@ -661,8 +640,8 @@
    "id": 14,
    "type": "CLIPTextEncode",
    "pos": [
-    -1310.672532754971,
-    147.6001737421475
+    900,
+    1538
    ],
    "size": [
     430,
@@ -677,7 +656,7 @@
      "localized_name": "clip",
      "name": "clip",
      "type": "CLIP",
-     "link": 14
+     "link": null
     },
     {
      "label": "text",
@@ -695,9 +674,7 @@
      "localized_name": "条件",
      "name": "CONDITIONING",
      "type": "CONDITIONING",
-     "links": [
-      5
-     ]
+     "links": []
     }
    ],
    "title": "CLIP Text Encode (Positive)",
@@ -727,8 +704,8 @@
    "id": 2,
    "type": "PrimitiveStringMultiline",
    "pos": [
-    -1255.5329102806515,
-    -281.53219527813695
+    0,
+    2664
    ],
    "size": [
     330,
@@ -754,9 +731,7 @@
      "localized_name": "字符串",
      "name": "STRING",
      "type": "STRING",
-     "links": [
-      2
-     ]
+     "links": []
     }
    ],
    "title": "参考图视角 JSON",
@@ -784,8 +759,8 @@
    "id": 10,
    "type": "UNETLoader",
    "pos": [
-    -1741.2788521114971,
-    -280.0955459892958
+    900,
+    2708
    ],
    "size": [
     300,
@@ -820,9 +795,7 @@
      "localized_name": "模型",
      "name": "MODEL",
      "type": "MODEL",
-     "links": [
-      9
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -851,8 +824,8 @@
    "id": 24,
    "type": "KSampler",
    "pos": [
-    -839.9093292612059,
-    272.90338214389317
+    900,
+    944
    ],
    "size": [
     300,
@@ -867,28 +840,28 @@
      "localized_name": "模型",
      "name": "model",
      "type": "MODEL",
-     "link": 10
+     "link": null
     },
     {
      "label": "positive",
      "localized_name": "正面条件",
      "name": "positive",
      "type": "CONDITIONING",
-     "link": 11
+     "link": null
     },
     {
      "label": "negative",
      "localized_name": "负面条件",
      "name": "negative",
      "type": "CONDITIONING",
-     "link": 12
+     "link": null
     },
     {
      "label": "latent_image",
      "localized_name": "Latent图像",
      "name": "latent_image",
      "type": "LATENT",
-     "link": 13
+     "link": null
     },
     {
      "label": "seed",
@@ -951,9 +924,7 @@
      "localized_name": "Latent",
      "name": "LATENT",
      "type": "LATENT",
-     "links": [
-      16
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -992,8 +963,8 @@
    "id": 25,
    "type": "VAEDecode",
    "pos": [
-    -91.46768786071588,
-    -313.2462710278886
+    900,
+    2858
    ],
    "size": [
     300,
@@ -1008,14 +979,14 @@
      "localized_name": "Latent",
      "name": "samples",
      "type": "LATENT",
-     "link": 16
+     "link": null
     },
     {
      "label": "vae",
      "localized_name": "vae",
      "name": "vae",
      "type": "VAE",
-     "link": 17
+     "link": null
     }
    ],
    "outputs": [
@@ -1024,11 +995,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      18,
-      19,
-      20
-     ]
+     "links": []
     }
    ],
    "properties": {
@@ -1049,8 +1016,8 @@
    "id": 33,
    "type": "PreviewImage",
    "pos": [
-    251.88480667614715,
-    361.3985793174597
+    1640,
+    726
    ],
    "size": [
     300,
@@ -1065,7 +1032,7 @@
      "localized_name": "图像",
      "name": "images",
      "type": "IMAGE",
-     "link": 21
+     "link": null
     }
    ],
    "outputs": [
@@ -1098,8 +1065,8 @@
    "id": 31,
    "type": "SaveImage",
    "pos": [
-    575.8158869802885,
-    -102.57331407248331
+    1640,
+    0
    ],
    "size": [
     372,
@@ -1114,7 +1081,7 @@
      "localized_name": "图片",
      "name": "images",
      "type": "IMAGE",
-     "link": 19
+     "link": null
     },
     {
      "label": "filename_prefix",
@@ -1160,8 +1127,8 @@
    "id": 32,
    "type": "PanoramaCutout",
    "pos": [
-    227.87594991260622,
-    -107.92838793107457
+    900,
+    494
    ],
    "size": [
     320,
@@ -1176,7 +1143,7 @@
      "localized_name": "erp_image",
      "name": "erp_image",
      "type": "IMAGE",
-     "link": 20
+     "link": null
     },
     {
      "label": "audio",
@@ -1229,9 +1196,7 @@
      "localized_name": "rect_image",
      "name": "rect_image",
      "type": "IMAGE",
-     "links": [
-      21
-     ]
+     "links": []
     },
     {
      "label": "sticker_state_json",
@@ -1282,8 +1247,8 @@
    "id": 30,
    "type": "PanoramaPreview",
    "pos": [
-    -129.5508118109705,
-    -61.91695184580495
+    900,
+    1264
    ],
    "size": [
     300,
@@ -1298,7 +1263,7 @@
      "localized_name": "erp_image",
      "name": "erp_image",
      "type": "IMAGE",
-     "link": 18
+     "link": null
     },
     {
      "label": "audio",
@@ -1363,8 +1328,8 @@
    "id": 1,
    "type": "LoadImage",
    "pos": [
-    -2101.860143850977,
-    -232.068723572036
+    0,
+    2030
    ],
    "size": [
     300,
@@ -1399,9 +1364,7 @@
      "localized_name": "图像",
      "name": "IMAGE",
      "type": "IMAGE",
-     "links": [
-      1
-     ]
+     "links": []
     },
     {
      "label": "MASK",
@@ -1438,8 +1401,8 @@
    "id": 90,
    "type": "MarkdownNote",
    "pos": [
-    -1962.423691850142,
-    -1701.7841496193623
+    0,
+    0
    ],
    "size": [
     780,
@@ -1474,8 +1437,8 @@
    "id": 91,
    "type": "MarkdownNote",
    "pos": [
-    -1147.3158926447081,
-    -1682.0887272727275
+    0,
+    1090
    ],
    "size": [
     480,
@@ -1510,8 +1473,8 @@
    "id": 92,
    "type": "MarkdownNote",
    "pos": [
-    -2101.860143850977,
-    -2001.7841496193623
+    0,
+    2384
    ],
    "size": [
     520,
@@ -1528,233 +1491,69 @@
    "widgets_values": [
     "# 狸猫AI 专属工作流\n\n**本文件由狸猫AI平台独家装配与调优**\n\n- 授权标识：`LM-4CDA-3128`\n- 版本：`LIMAO-WF-20261112-R1`\n- 指纹：`4cdaa22ed886013b`\n\n> 本工作流嵌入狸猫AI数字指纹，可溯源。**禁止**未经授权的二次开发、复制、转发、公开分享或发布至任何其他平台。"
    ]
+  },
+  {
+   "id": 93,
+   "type": "MarkdownNote",
+   "title": "狸猫AI·使用说明",
+   "pos": [
+    0,
+    -560
+   ],
+   "size": [
+    400,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## 🐾 狸猫AI · H3视频工坊\n\n本工作流由 **狸猫AI** 精调制作，已注入狸猫数字指纹。\n\n**使用要点**\n- 加载：ComfyUI 菜单 → 工作流 → 「狸猫」分类\n- 左侧框：需要你修改的输入与参数\n- 中间框：核心处理区（参数已调好，慎动）\n- 右侧框：输出结果\n- 模型依赖：开机自动补齐（官方 HuggingFace 来源）\n- 显存不足：优先「H3·16G显存精修版」，保持显存治理节点开启\n\n更新与授权：**github.com/limao0814/limao-h3-workflows**\n\n⚠️ 去除狸猫指纹后二次发布将被追究责任。"
+   ]
   }
  ],
- "links": [
-  [
-   1,
-   1,
-   0,
-   20,
-   1,
-   "IMAGE"
-  ],
-  [
-   2,
-   2,
-   0,
-   20,
-   2,
-   "STRING"
-  ],
-  [
-   3,
-   20,
-   0,
-   21,
-   0,
-   "IMAGE"
-  ],
-  [
-   4,
-   13,
-   0,
-   21,
-   1,
-   "VAE"
-  ],
-  [
-   5,
-   14,
-   0,
-   22,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   6,
-   21,
-   0,
-   22,
-   1,
-   "LATENT"
-  ],
-  [
-   7,
-   15,
-   0,
-   23,
-   0,
-   "CONDITIONING"
-  ],
-  [
-   8,
-   21,
-   0,
-   23,
-   1,
-   "LATENT"
-  ],
-  [
-   9,
-   10,
-   0,
-   11,
-   0,
-   "MODEL"
-  ],
-  [
-   10,
-   11,
-   0,
-   24,
-   0,
-   "MODEL"
-  ],
-  [
-   11,
-   22,
-   0,
-   24,
-   1,
-   "CONDITIONING"
-  ],
-  [
-   12,
-   23,
-   0,
-   24,
-   2,
-   "CONDITIONING"
-  ],
-  [
-   13,
-   21,
-   0,
-   24,
-   3,
-   "LATENT"
-  ],
-  [
-   14,
-   12,
-   0,
-   14,
-   0,
-   "CLIP"
-  ],
-  [
-   15,
-   12,
-   0,
-   15,
-   0,
-   "CLIP"
-  ],
-  [
-   16,
-   24,
-   0,
-   25,
-   0,
-   "LATENT"
-  ],
-  [
-   17,
-   13,
-   0,
-   25,
-   1,
-   "VAE"
-  ],
-  [
-   18,
-   25,
-   0,
-   30,
-   0,
-   "IMAGE"
-  ],
-  [
-   19,
-   25,
-   0,
-   31,
-   0,
-   "IMAGE"
-  ],
-  [
-   20,
-   25,
-   0,
-   32,
-   0,
-   "IMAGE"
-  ],
-  [
-   21,
-   32,
-   0,
-   33,
-   0,
-   "IMAGE"
-  ],
-  [
-   22,
-   20,
-   0,
-   34,
-   0,
-   "IMAGE"
-  ]
- ],
+ "links": [],
  "groups": [
   {
-   "id": 1,
-   "title": "控制器",
+   "id": 5,
+   "title": "📥 输入区（改这里）",
    "bounding": [
-    -863.9394309303968,
-    -354.2423872514205,
-    687.2727272727261,
-    870.2423872514205
-   ],
-   "color": "#A88",
-   "flags": {}
-  },
-  {
-   "id": 2,
-   "title": "提示词",
-   "bounding": [
-    -1322.5300399187279,
-    -351.53219527813684,
-    451.85750716375696,
-    709.1323690202845
+    -50,
+    -120,
+    880,
+    2954
    ],
    "color": "#3f789e",
+   "font_size": 24,
    "flags": {}
   },
   {
-   "id": 3,
-   "title": "模型",
+   "id": 6,
+   "title": "⚙️ 核心处理（参数已调好，慎动）",
    "bounding": [
-    -1751.2788521114971,
-    -350.0955459892959,
-    420,
-    615.7952151511788
+    850,
+    -120,
+    700,
+    3278
    ],
-   "color": "#8AA",
+   "color": "#8f6e48",
+   "font_size": 24,
    "flags": {}
   },
   {
-   "id": 4,
-   "title": "图片预览",
+   "id": 7,
+   "title": "📤 输出区",
    "bounding": [
-    -139.55081181097052,
-    -177.9283879310746,
-    1097.3666987912588,
-    795.3269672485342
+    1590,
+    -120,
+    472,
+    1112
    ],
-   "color": "#3f789e",
+   "color": "#4a6b3f",
+   "font_size": 24,
    "flags": {}
   }
  ],
