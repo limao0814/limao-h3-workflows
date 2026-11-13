@@ -429,6 +429,43 @@ class LimaoH3VRAMGuard:
 # 导出
 # ---------------------------------------------------------------------------
 
+class LimaoH3MemorySweep:
+    """狸猫·显存清道夫：解码后、保存前的全量清理（RAM/VRAM/模型卸载）。
+    揉合自 16G 显存精修版的 RAMCleanup + VRAMCleanup 双节点，收编为狸猫自研单节点。
+    纯 passthrough：输入什么返回什么，仅在链路经过时执行清理副作用。"""
+
+    CATEGORY = "limao/守卫"
+    FUNCTION = "sweep"
+    RETURN_TYPES = ("*",)
+    RETURN_NAMES = ("output",)
+    DESCRIPTION = ("显存清道夫：在解码→保存之间执行 RAM/VRAM 全量清理。"
+                   "低显存机型建议开启；清理发生在成片解码之后，不影响画质。")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {
+            "anything": ("*",),
+            "clean_ram": ("BOOLEAN", {"default": True}),
+            "clean_vram_cache": ("BOOLEAN", {"default": True}),
+            "offload_models": ("BOOLEAN", {"default": False}),
+        }}
+
+    def sweep(self, anything, clean_ram=True, clean_vram_cache=True, offload_models=False):
+        import gc
+        if offload_models:
+            try:
+                import comfy.model_management as mm
+                mm.unload_all_models()
+            except Exception:
+                pass
+        if clean_ram:
+            gc.collect()
+        if clean_vram_cache and torch.cuda.is_available():
+            torch.cuda.empty_cache()
+            torch.cuda.ipc_collect()
+        return (anything,)
+
+
 NODE_CLASS_MAPPINGS = {
     "LimaoH3ModelSentinel": LimaoH3ModelSentinel,
     "LimaoH3RefImageAudit": LimaoH3RefImageAudit,
@@ -437,6 +474,7 @@ NODE_CLASS_MAPPINGS = {
     "LimaoH3FrameBridge": LimaoH3FrameBridge,
     "LimaoH3SeedForge": LimaoH3SeedForge,
     "LimaoH3VRAMGuard": LimaoH3VRAMGuard,
+    "LimaoH3MemorySweep": LimaoH3MemorySweep,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
@@ -447,6 +485,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "LimaoH3FrameBridge": "狸猫·帧桥",
     "LimaoH3SeedForge": "狸猫·种子锻炉",
     "LimaoH3VRAMGuard": "狸猫·显存守卫",
+    "LimaoH3MemorySweep": "狸猫·显存清道夫",
 }
 
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]

@@ -50,8 +50,17 @@ H3 生态帧张量存在 `[B,T,H,W,C]` / `[B,C,T,H,W]` 等多种五维布局，
 模型链 passthrough，`balanced`/`aggressive` 两档缓存治理，削峰防 OOM；
 `off` 时零干预。
 
+### 🧹 狸猫·显存清道夫（LimaoH3MemorySweep）
+解码→保存之间的全量清理（RAM gc + VRAM cache/ipc + 可选模型卸载），
+纯 passthrough 副作用节点。揉合自 16G 显存精修版的 RAMCleanup +
+VRAMCleanup 双节点并收编为狸猫自研；低显存机型建议保持常驻激活，
+清理发生在成片解码之后，不影响画质。
+
 ## 配套工作流
 
-`workflows/狸猫·H3视频/狸猫·H3·九图三视频三音频·多参考专属.json`
+`workflows/狸猫·H3视频/狸猫·H3·九图三视频三音频·多参考专属.json`（v1.1.0 四合一）
 ——九图三视频三音频满配参考 + 双采放大 + bf16 上采样器钉死 +
-全套审计哨兵 + 文戏/武戏预设说明。详见仓库 `docs/`。
+全套审计哨兵 + 显存清道夫常驻，并揉合三档功能（bypass 待命一键切换）：
+- **武戏档**：ExtendIntermediateSigmas 双阶段重采样（4 步·0.65→0.28·sine）
+- **极致精修档**：sigma 精修 + JR 统一加速面板 + BUNNY V2 语义桥
+- **多镜头一键档**：H3MultishotSampler 整链（`---` 分镜脚本、镜头链式衔接、接缝裁剪）
