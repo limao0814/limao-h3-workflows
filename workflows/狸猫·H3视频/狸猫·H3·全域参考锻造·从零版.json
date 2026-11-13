@@ -140,7 +140,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadImage"
    },
@@ -170,7 +170,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "links": [
-      6
+      6,
+      156,
+      166
      ]
     },
     {
@@ -199,7 +201,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadImage"
    },
@@ -229,7 +231,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "links": [
-      7
+      7,
+      157,
+      167
      ]
     },
     {
@@ -258,7 +262,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadImage"
    },
@@ -288,7 +292,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "links": [
-      8
+      8,
+      158,
+      168
      ]
     },
     {
@@ -317,7 +323,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadImage"
    },
@@ -347,7 +353,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "links": [
-      9
+      9,
+      159,
+      169
      ]
     },
     {
@@ -376,7 +384,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadImage"
    },
@@ -406,7 +414,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "links": [
-      10
+      10,
+      160,
+      170
      ]
     },
     {
@@ -435,7 +445,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadImage"
    },
@@ -465,7 +475,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "links": [
-      11
+      11,
+      161,
+      171
      ]
     },
     {
@@ -494,7 +506,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadImage"
    },
@@ -524,7 +536,9 @@
      "name": "IMAGE",
      "type": "IMAGE",
      "links": [
-      12
+      12,
+      162,
+      172
      ]
     },
     {
@@ -553,7 +567,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadVideo"
    },
@@ -632,7 +646,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadVideo"
    },
@@ -711,7 +725,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadVideo"
    },
@@ -790,7 +804,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadAudio"
    },
@@ -829,7 +843,9 @@
      "name": "AUDIO",
      "type": "AUDIO",
      "links": [
-      19
+      19,
+      163,
+      173
      ]
     }
    ],
@@ -853,7 +869,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadAudio"
    },
@@ -892,7 +908,9 @@
      "name": "AUDIO",
      "type": "AUDIO",
      "links": [
-      20
+      20,
+      164,
+      174
      ]
     }
    ],
@@ -916,7 +934,7 @@
    ],
    "flags": {},
    "order": 0,
-   "mode": 0,
+   "mode": 4,
    "properties": {
     "Node name for S&R": "LoadAudio"
    },
@@ -955,7 +973,9 @@
      "name": "AUDIO",
      "type": "AUDIO",
      "links": [
-      21
+      21,
+      165,
+      175
      ]
     }
    ],
@@ -2404,7 +2424,7 @@
    ],
    "widgets_values": [
     "16:9 (Widescreen)",
-    1.05,
+    0.6,
     128
    ]
   },
@@ -2535,49 +2555,49 @@
      "name": "ref_images.ref_image_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 156
     },
     {
      "label": "ref_images.ref_image_3",
      "name": "ref_images.ref_image_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 157
     },
     {
      "label": "ref_images.ref_image_4",
      "name": "ref_images.ref_image_4",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 158
     },
     {
      "label": "ref_images.ref_image_5",
      "name": "ref_images.ref_image_5",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 159
     },
     {
      "label": "ref_images.ref_image_6",
      "name": "ref_images.ref_image_6",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 160
     },
     {
      "label": "ref_images.ref_image_7",
      "name": "ref_images.ref_image_7",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 161
     },
     {
      "label": "ref_images.ref_image_8",
      "name": "ref_images.ref_image_8",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 162
     },
     {
      "label": "ref_videos.ref_video_0",
@@ -2598,21 +2618,21 @@
      "name": "ref_audios.ref_audio_0",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 163
     },
     {
      "label": "ref_audios.ref_audio_1",
      "name": "ref_audios.ref_audio_1",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 164
     },
     {
      "label": "ref_audios.ref_audio_2",
      "name": "ref_audios.ref_audio_2",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 165
     },
     {
      "label": "semantic_bridge",
@@ -2905,49 +2925,49 @@
      "name": "ref_images.ref_image_2",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 166
     },
     {
      "label": "ref_images.ref_image_3",
      "name": "ref_images.ref_image_3",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 167
     },
     {
      "label": "ref_images.ref_image_4",
      "name": "ref_images.ref_image_4",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 168
     },
     {
      "label": "ref_images.ref_image_5",
      "name": "ref_images.ref_image_5",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 169
     },
     {
      "label": "ref_images.ref_image_6",
      "name": "ref_images.ref_image_6",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 170
     },
     {
      "label": "ref_images.ref_image_7",
      "name": "ref_images.ref_image_7",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 171
     },
     {
      "label": "ref_images.ref_image_8",
      "name": "ref_images.ref_image_8",
      "shape": 7,
      "type": "IMAGE",
-     "link": null
+     "link": 172
     },
     {
      "label": "ref_videos.ref_video_0",
@@ -2968,21 +2988,21 @@
      "name": "ref_audios.ref_audio_0",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 173
     },
     {
      "label": "ref_audios.ref_audio_1",
      "name": "ref_audios.ref_audio_1",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 174
     },
     {
      "label": "ref_audios.ref_audio_2",
      "name": "ref_audios.ref_audio_2",
      "shape": 7,
      "type": "AUDIO",
-     "link": null
+     "link": 175
     },
     {
      "label": "semantic_bridge",
@@ -6098,6 +6118,166 @@
    38,
    0,
    "MODEL"
+  ],
+  [
+   156,
+   3,
+   0,
+   44,
+   9,
+   "IMAGE"
+  ],
+  [
+   157,
+   4,
+   0,
+   44,
+   10,
+   "IMAGE"
+  ],
+  [
+   158,
+   5,
+   0,
+   44,
+   11,
+   "IMAGE"
+  ],
+  [
+   159,
+   6,
+   0,
+   44,
+   12,
+   "IMAGE"
+  ],
+  [
+   160,
+   7,
+   0,
+   44,
+   13,
+   "IMAGE"
+  ],
+  [
+   161,
+   8,
+   0,
+   44,
+   14,
+   "IMAGE"
+  ],
+  [
+   162,
+   9,
+   0,
+   44,
+   15,
+   "IMAGE"
+  ],
+  [
+   163,
+   16,
+   0,
+   44,
+   18,
+   "AUDIO"
+  ],
+  [
+   164,
+   17,
+   0,
+   44,
+   19,
+   "AUDIO"
+  ],
+  [
+   165,
+   18,
+   0,
+   44,
+   20,
+   "AUDIO"
+  ],
+  [
+   166,
+   3,
+   0,
+   45,
+   9,
+   "IMAGE"
+  ],
+  [
+   167,
+   4,
+   0,
+   45,
+   10,
+   "IMAGE"
+  ],
+  [
+   168,
+   5,
+   0,
+   45,
+   11,
+   "IMAGE"
+  ],
+  [
+   169,
+   6,
+   0,
+   45,
+   12,
+   "IMAGE"
+  ],
+  [
+   170,
+   7,
+   0,
+   45,
+   13,
+   "IMAGE"
+  ],
+  [
+   171,
+   8,
+   0,
+   45,
+   14,
+   "IMAGE"
+  ],
+  [
+   172,
+   9,
+   0,
+   45,
+   15,
+   "IMAGE"
+  ],
+  [
+   173,
+   16,
+   0,
+   45,
+   18,
+   "AUDIO"
+  ],
+  [
+   174,
+   17,
+   0,
+   45,
+   19,
+   "AUDIO"
+  ],
+  [
+   175,
+   18,
+   0,
+   45,
+   20,
+   "AUDIO"
   ]
  ],
  "groups": [],
