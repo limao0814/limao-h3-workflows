@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # 狸猫常驻网关(6006)：秒绑端口，ComfyUI(8188)就绪前亮狸猫欢迎页，就绪后透明反向代理(HTTP+WebSocket)
 # 革命点：不再杀进程切换端口，开机到就绪全程 6006 永不拒连（狸猫原创）
-import asyncio, pathlib
+import asyncio, pathlib, zlib
 from aiohttp import web, ClientSession, ClientTimeout, WSMsgType
 
 BACKEND = 'http://127.0.0.1:8188'
@@ -53,6 +53,16 @@ async def ws_proxy(req, client):
         pass
     return ws_out
 
+COMPRESSIBLE = ('application/json', 'text/html', 'text/css', 'text/javascript',
+                'application/javascript', 'image/svg+xml')
+
+async def _warmup(client):
+    # 开机后首次 /object_info 生成要 ~10s，提前预热让用户首次进界面秒开
+    try:
+        await client.get(BACKEND + '/object_info', timeout=ClientTimeout(total=120))
+    except Exception:
+        pass
+
 async def handler(req):
     if req.path == '/limao_cover.png':
         return web.FileResponse('/root/limao_cover.png')
@@ -60,6 +70,7 @@ async def handler(req):
     if not req.app['ready']:
         if await _healthy(client):
             req.app['ready'] = True
+            asyncio.get_event_loop().create_task(_warmup(client))
         elif req.path == '/_limao_status':
             return web.json_response({'ready': False})
         else:
@@ -78,15 +89,30 @@ async def handler(req):
             rh = {}
             for k, v in up.headers.items():
                 lk = k.lower()
-                if lk in HOP:
+                if lk in HOP or lk == 'content-length':
                     continue
                 if lk == 'location' and v.startswith(BACKEND):
                     v = v[len(BACKEND):] or '/'
                 rh[k] = v
+            # gzip 透明压缩：/object_info 等 27MB 大JSON → ~2.8MB，外链进界面提速约10倍
+            can_gz = ('gzip' in req.headers.get('Accept-Encoding', '')
+                      and up.status == 200
+                      and any(up.headers.get('Content-Type', '').startswith(c) for c in COMPRESSIBLE)
+                      and 'gzip' not in up.headers.get('Content-Encoding', '').lower())
+            if can_gz:
+                rh['Content-Encoding'] = 'gzip'
+                rh['Vary'] = 'Accept-Encoding'
             resp = web.StreamResponse(status=up.status, headers=rh)
             await resp.prepare(req)
-            async for chunk in up.content.iter_any():
-                await resp.write(chunk)
+            if can_gz:
+                co = zlib.compressobj(6, zlib.DEFLATED, 16 + zlib.MAX_WBITS)
+                async for chunk in up.content.iter_any():
+                    if chunk:
+                        await resp.write(co.compress(chunk))
+                await resp.write(co.flush())
+            else:
+                async for chunk in up.content.iter_any():
+                    await resp.write(chunk)
             await resp.write_eof()
             return resp
     except Exception:
