@@ -1607,8 +1607,7 @@
      "name": "model",
      "type": "MODEL",
      "links": [
-      128,
-      135
+      177
      ]
     }
    ],
@@ -5341,6 +5340,140 @@
     "minimax/电影感H3-loraV1.0正式版.safetensors",
     0.2
    ]
+  },
+  {
+   "id": 80,
+   "type": "MiniMaxH3LowVRAMAttentionT8Advanced",
+   "title": "低显存注意力（head_chunks 4）",
+   "pos": [
+    1980,
+    780
+   ],
+   "size": [
+    320,
+    140
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "properties": {
+    "Node name for S&R": "MiniMaxH3LowVRAMAttentionT8Advanced"
+   },
+   "inputs": [
+    {
+     "label": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 177
+    }
+   ],
+   "outputs": [
+    {
+     "label": "model",
+     "name": "model",
+     "type": "MODEL",
+     "links": [
+      178
+     ]
+    },
+    {
+     "label": "report_json",
+     "name": "report_json",
+     "type": "STRING",
+     "links": []
+    }
+   ],
+   "widgets_values": [
+    4
+   ]
+  },
+  {
+   "id": 81,
+   "type": "MiniMaxH3ChunkFeedForwardT8Advanced",
+   "title": "分块前馈（chunks 2）",
+   "pos": [
+    1980,
+    960
+   ],
+   "size": [
+    320,
+    140
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "properties": {
+    "Node name for S&R": "MiniMaxH3ChunkFeedForwardT8Advanced"
+   },
+   "inputs": [
+    {
+     "label": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 178
+    }
+   ],
+   "outputs": [
+    {
+     "label": "model",
+     "name": "model",
+     "type": "MODEL",
+     "links": [
+      179
+     ]
+    },
+    {
+     "label": "report_json",
+     "name": "report_json",
+     "type": "STRING",
+     "links": []
+    }
+   ],
+   "widgets_values": [
+    2,
+    4096
+   ]
+  },
+  {
+   "id": 82,
+   "type": "ModelMemoryUsageFactorOverride",
+   "title": "显存因子覆盖（0.06）",
+   "pos": [
+    1980,
+    1140
+   ],
+   "size": [
+    320,
+    140
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "properties": {
+    "Node name for S&R": "ModelMemoryUsageFactorOverride"
+   },
+   "inputs": [
+    {
+     "label": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 179
+    }
+   ],
+   "outputs": [
+    {
+     "label": "model",
+     "name": "model",
+     "type": "MODEL",
+     "links": [
+      128,
+      135
+     ]
+    }
+   ],
+   "widgets_values": [
+    0.06
+   ]
   }
  ],
  "links": [
@@ -6010,7 +6143,7 @@
   ],
   [
    128,
-   30,
+   82,
    0,
    32,
    0,
@@ -6066,7 +6199,7 @@
   ],
   [
    135,
-   30,
+   82,
    0,
    74,
    0,
@@ -6295,6 +6428,30 @@
    51,
    0,
    "INT"
+  ],
+  [
+   177,
+   30,
+   0,
+   80,
+   0,
+   "MODEL"
+  ],
+  [
+   178,
+   80,
+   0,
+   81,
+   0,
+   "MODEL"
+  ],
+  [
+   179,
+   81,
+   0,
+   82,
+   0,
+   "MODEL"
   ]
  ],
  "groups": [],
