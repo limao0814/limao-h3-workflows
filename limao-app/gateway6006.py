@@ -80,7 +80,10 @@ async def handler(req):
     if req.headers.get('Upgrade', '').lower() == 'websocket':
         return await ws_proxy(req, client)
     url = BACKEND + req.rel_url.path_qs
-    headers = {k: v for k, v in req.headers.items() if k.lower() not in HOP}
+    headers = {k: v for k, v in req.headers.items()
+               if k.lower() not in HOP and k.lower() != 'origin'}
+    # 剥离Origin：新版ComfyUI安全中间件对Origin与host不一致的请求返回403,
+    # 而前端ES module脚本天生带Origin——同源部署下后端不需要该头,剥离即全通
     body = req.content if req.can_read_body else None
     try:
         async with client.request(req.method, url, headers=headers, data=body,
