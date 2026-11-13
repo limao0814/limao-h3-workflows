@@ -22,6 +22,17 @@ INJ = ('<div id="limao-boot" style="position:fixed;top:0;left:0;right:0;z-index:
        '.catch(function(){setTimeout(p,3000)})})();p()})()</script>')
 SPLASH = SPLASH.replace('</body>', INJ + '</body>')
 
+MAIN_WF = pathlib.Path('/root/limao-app/狸猫·H3·全域参考锻造·从零版.json')
+# 新设备无工作流历史时，自动加载狸猫主打工作流（老用户会话不受影响）
+AUTOLOAD = ('<script>(function(){function ok(){return !localStorage.getItem("Comfy.Workflow.LastOpenPaths")}'
+            'function go(){if(!window.app){return setTimeout(go,300)}'
+            'if(!ok()){return}'
+            'setTimeout(function(){try{var g=app.rootGraph||app.graph;'
+            'var c=g&&g._nodes?g._nodes.length:99;'
+            'if(c<=14){fetch("/limao_main_workflow").then(function(r){return r.json()})'
+            '.then(function(w){return app.loadGraphData(w)}).catch(function(){})}}catch(e){}},2500)}'
+            'go()})()</script>')
+
 async def _healthy(client):
     try:
         async with client.get(BACKEND + '/system_stats',
@@ -66,6 +77,8 @@ async def _warmup(client):
 async def handler(req):
     if req.path == '/limao_cover.png':
         return web.FileResponse('/root/limao_cover.png')
+    if req.path == '/limao_main_workflow':
+        return web.FileResponse(MAIN_WF, headers={'Cache-Control': 'no-store'})
     client = req.app['client']
     if not req.app['ready']:
         if await _healthy(client):
@@ -79,7 +92,7 @@ async def handler(req):
         return web.json_response({'ready': True})
     if req.headers.get('Upgrade', '').lower() == 'websocket':
         return await ws_proxy(req, client)
-    url = BACKEND + req.rel_url.path_qs
+    url = BACKEND + req.rel_url.raw_path_qs  # 用原始编码路径：aiohttp 解码会把 %2F 变成 /，导致 userdata 嵌套路径 404
     headers = {k: v for k, v in req.headers.items()
                if k.lower() not in HOP and k.lower() != 'origin'}
     # 剥离Origin：新版ComfyUI安全中间件对Origin与host不一致的请求返回403,
@@ -105,15 +118,23 @@ async def handler(req):
             if can_gz:
                 rh['Content-Encoding'] = 'gzip'
                 rh['Vary'] = 'Accept-Encoding'
-            resp = web.StreamResponse(status=up.status, headers=rh)
-            await resp.prepare(req)
-            if can_gz:
-                co = zlib.compressobj(6, zlib.DEFLATED, 16 + zlib.MAX_WBITS)
-                async for chunk in up.content.iter_any():
-                    if chunk:
-                        await resp.write(co.compress(chunk))
-                await resp.write(co.flush())
+            # 首页HTML注入自动加载脚本：需整体缓冲后改写
+            inject = (req.path in ('/', '/index.html') and up.status == 200
+                      and up.headers.get('Content-Type', '').startswith('text/html'))
+            if inject or can_gz:
+                data = await up.read()
+                if inject:
+                    data = data.replace(b'</body>', AUTOLOAD.encode('utf-8') + b'</body>', 1)
+                if can_gz:
+                    co = zlib.compressobj(6, zlib.DEFLATED, 16 + zlib.MAX_WBITS)
+                    data = co.compress(data) + co.flush()
+                rh['Content-Length'] = str(len(data))
+                resp = web.StreamResponse(status=up.status, headers=rh)
+                await resp.prepare(req)
+                await resp.write(data)
             else:
+                resp = web.StreamResponse(status=up.status, headers=rh)
+                await resp.prepare(req)
                 async for chunk in up.content.iter_any():
                     await resp.write(chunk)
             await resp.write_eof()
