@@ -56,8 +56,8 @@ border:1px solid rgba(212,175,55,.35);border-radius:999px;padding:5px 14px}
   <div class="body">
     <div class="status"><div class="dot" id="dot"></div><b id="st">检测中…</b><span id="st2"></span></div>
     <button class="enter" id="btn" onclick="go()" disabled>进 入 工 作 台 →</button>
-    <p class="tip">点击按钮直达 ComfyUI 工作台（6006 端口）<br>
-    若浏览器拦截跳转，请回到 AutoDL 控制台点击 <code>web6006</code> 自定义服务入口</p>
+    <p class="tip">点击按钮直达 ComfyUI 工作台（6006 端口）· 同站跳转，永不 403<br>
+    若从控制台直接点 web6006/web6008 遇到 <code>403</code>：那是 AutoDL 平台的跨站防护规则（与狸猫无关），<b>点一下网址栏回车重试即可通过</b>；把本页<b>收藏夹书签</b>后，以后从书签进入不会再出现 403</p>
     <div class="meta"><span class="seal">🐾 狸猫专研</span><span id="ver"></span><span id="gpu"></span></div>
   </div>
 </div>
