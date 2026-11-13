@@ -3599,7 +3599,7 @@
      "widget": {
       "name": "noise_seed"
      },
-     "link": null
+     "link": 176
     }
    ],
    "outputs": [
@@ -5014,6 +5014,15 @@
     "random（每跑随机）",
     28022535127564,
     "default"
+   ],
+   "outputs": [
+    {
+     "name": "seed",
+     "type": "INT",
+     "links": [
+      176
+     ]
+    }
    ]
   },
   {
@@ -6278,6 +6287,14 @@
    45,
    20,
    "AUDIO"
+  ],
+  [
+   176,
+   68,
+   0,
+   51,
+   0,
+   "INT"
   ]
  ],
  "groups": [],
