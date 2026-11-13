@@ -55,7 +55,7 @@ border:1px solid rgba(212,175,55,.35);border-radius:999px;padding:5px 14px}
   </div>
   <div class="body">
     <div class="status"><div class="dot" id="dot"></div><b id="st">检测中…</b><span id="st2"></span></div>
-    <button class="enter" id="btn" onclick="go()" disabled>&#128274; 进 入 工 作 台</button>
+    <button class="enter" id="btn" onclick="go()" disabled>进 入 工 作 台 →</button>
     <p class="tip">点击按钮直达 ComfyUI 工作台（6006 端口）<br>
     若浏览器拦截跳转，请回到 AutoDL 控制台点击 <code>web6006</code> 自定义服务入口</p>
     <div class="meta"><span class="seal">🐾 狸猫专研</span><span id="ver"></span><span id="gpu"></span></div>
