@@ -3250,7 +3250,7 @@
     }
    ],
    "widgets_values": [
-    "subject_definitions:\n<Subject 1> is the person in <Image 1>. Face, hairstyle and overall identity follow <Image 2>. Identity comes ONLY from the pictures - never from imagination.\n\nmotion_director:\nMotion is directed by the text prompt alone: break the action into beats (anticipation - exertion - follow-through), and describe camera moves, cuts and pacing in words.\n\naudio_director:\nAudio is generated natively from the scene description; specify voice style, ambience and accents in words when needed.\n\nshot_plan:\n1 shot, continuous take; describe camera grammar in text; <Subject 1> performs the written action with coherent physics, stable identity and stable on-screen text.\n\nglobal_rules:\n- Second pass may change ONLY resolution / steps / scheduler / denoise (0.2-0.3; lip-sync shots <=0.3). Seed, prompt and reference order stay locked.\n- 武戏提示词要点：动作分解为「起手-发力-收势」三拍，写明接触点与重量感，避免高速旋转/大位移叠变。"
+    "subject_definitions:\n<Subject 1> is the young woman in <Picture 1>, reproduced with every visible detail of the photo: waist-length straight black hair with a natural center part and fine face-framing strands; large dark-brown eyes with a bright, gentle gaze; softly arched brows; fair, smooth porcelain skin; a small nose and a soft closed-lip smile; a black fitted sports tank top; white distressed denim shorts with frayed hems; long slender fingers with neat manicured nails; slim waist and natural proportions. Her face keeps the photo's true bone structure and proportions, rendered as a real young woman on film.\n\n<Subject 2> is the soft-lit studio shown in <Picture 1>: a seamless light-grey backdrop with a gentle top-left key light and a subtle floor shadow beneath her feet.\n\nsummary:\n[reference generation] A single short continuous medium shot in <Subject 2>. <Subject 1> faces the camera, smiles warmly, lifts her right hand to shoulder height and waves at the camera in a slow, friendly arc — palm open, five fingers clearly separated and anatomically correct — then lowers her hand back to her side. Her body stays relaxed and stable; the camera holds a locked medium shot.\n\nretention_analysis:\n<Subject 1> (appears throughout [Shot 1]): fully_preserved - the black tank top, white denim shorts, hairstyle and facial identity carry over from <Picture 1> through every beat.\n<Subject 2> (appears throughout [Shot 1]): fully_preserved - the light-grey studio backdrop and lighting remain constant behind every beat.\n\ndetailed_description:\nA hyper-realistic live-action clip rendered with natural film grain and true-to-life skin texture. The camera is locked at eye level, framing <Subject 1> from the waist up. She breathes naturally, her smile soft and steady, the waving motion smooth with correct wrist articulation. Her hands are strictly five-fingered and anatomically correct in every frame; fingers never merge, twist or blur. The backdrop stays clean and the lighting stays consistent. There is no on-screen text, no subtitles and no watermark anywhere in the frame.\n\nglobal_rules:\n- Second pass may change ONLY resolution / steps / scheduler / denoise (0.2-0.3). Seed, prompt and reference order stay locked.\n- Hands and fingers must remain stable and anatomically correct across all frames; no on-screen text."
    ]
   },
   {
@@ -3771,7 +3771,7 @@
   {
    "id": 54,
    "type": "MiniMaxH3LearnedLatentUpscaleT8Advanced",
-   "title": "潜空间放大器（bf16文件·fp16计算精度）",
+   "title": "潜空间放大器（bf16文件·fp16计算精度·已验证配置）",
    "pos": [
     3700,
     40
