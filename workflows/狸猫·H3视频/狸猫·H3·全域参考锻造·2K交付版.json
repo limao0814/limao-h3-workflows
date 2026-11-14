@@ -5035,7 +5035,7 @@
    "mode": 0,
    "properties": {},
    "widgets_values": [
-    "## 狸猫·全域参考锻造 v2.0.0（从零版）\n\n**默认激活 = 标准双采档**（已验证参数契约：8步草稿 → bf16 潜空间放大 ×1.5 → 精修 5 步）。\n\n### 武戏档（右键 EIS 节点取消 Bypass）\n双阶段 sigma 重采样：4 步·start 0.65→end 0.28·sine 分布，\n社区双验证的高动作伪影解法；启用后二采自动获得中间步插值。\n\n### 2K 高清档\n1. 四件套已随镜像内置：2K-IC(Kijai rank21) + HyperFlow 8步 + LMS Sharp + Pika Ref2VA\n2. 按 HyperFlow → LMS Sharp → IC 顺序取消三个 2K 档节点 Bypass\n3. 放大倍率 1.5 → 2.2（约 2560×1440），双采计划 refine_steps 5 → 3\n4. 种子/提示词/参考顺序锁死（二采铁律）\n⚠️ 注意：IC 路线官方要求未剪枝 ref2va 基模；若与混合基模不兼容\n（采样报错或花屏），改用「regen2k 后处理」路线（见运维档案）。\n\n### 极速档\nPika H3 Flex 适配：启用前 bypass 三个 Turbo/Eros 适配节点，\n双时钟 steps 8→6、CFG 1、7 值 sigma 手动表；禁止与 speed_slider 同开。\n\n### 铁律\n上采样器只准 bf16 文件；哨兵①拦截指纹异常（光斑事故的直接防线）。"
+    "## 狸猫·全域参考锻造 v2.4.0（2K交付版）\n\n**默认激活 = 标准双采档**（已验证参数契约：8步草稿 → bf16 潜空间放大 ×1.5 → 精修 5 步）。\n\n### 武戏档（右键 EIS 节点取消 Bypass）\n双阶段 sigma 重采样：4 步·start 0.65→end 0.28·sine 分布，\n社区双验证的高动作伪影解法；启用后二采自动获得中间步插值。\n\n### 2K 高清档\n1. 四件套已随镜像内置：2K-IC(Kijai rank21) + HyperFlow 8步 + LMS Sharp + Pika Ref2VA\n2. 按 HyperFlow → LMS Sharp → IC 顺序取消三个 2K 档节点 Bypass\n3. 放大倍率 1.5 → 2.2（约 2560×1440），双采计划 refine_steps 5 → 3\n4. 种子/提示词/参考顺序锁死（二采铁律）\n⚠️ 注意：IC 路线官方要求未剪枝 ref2va 基模；若与混合基模不兼容\n（采样报错或花屏），改用「regen2k 后处理」路线（见运维档案）。\n\n### 极速档\nPika H3 Flex 适配：启用前 bypass 三个 Turbo/Eros 适配节点，\n双时钟 steps 8→6、CFG 1、7 值 sigma 手动表；禁止与 speed_slider 同开。\n\n### 铁律\n上采样器只准 bf16 文件；哨兵①拦截指纹异常（光斑事故的直接防线）。"
    ]
   },
   {
