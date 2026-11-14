@@ -193,7 +193,7 @@ class LimaoH3RefImageAudit:
                 continue
             used += 1
             t = img if isinstance(img, torch.Tensor) else torch.tensor(img)
-            _, h, w = t.shape[-3], t.shape[-2], t.shape[-1]
+            h, w = t.shape[-3], t.shape[-2]  # 狸猫修复：[B,H,W,C]，旧代码多一个占位符把W塞给h、通道数塞给w，导致所有图必报❌
             aspect = w / h if h else 0
             digest = hashlib.sha1(t.detach().cpu().numpy().tobytes()).hexdigest()[:12]
             tag = f"图{i}"
