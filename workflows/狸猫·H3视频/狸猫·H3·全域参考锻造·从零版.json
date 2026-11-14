@@ -3771,7 +3771,7 @@
   {
    "id": 54,
    "type": "MiniMaxH3LearnedLatentUpscaleT8Advanced",
-   "title": "【铁律】bf16 潜空间放大器",
+   "title": "潜空间放大器（bf16文件·fp16计算精度）",
    "pos": [
     3700,
     40
@@ -3925,7 +3925,7 @@
     704,
     "preserve_source",
     1.05,
-    "bf16",
+    "fp16",
     "offload_after"
    ]
   },
