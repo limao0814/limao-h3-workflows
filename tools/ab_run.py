@@ -172,8 +172,8 @@ for nid, n in nodes.items():
 
 # 替换素材（两版同一套，保证 A/B 公平）：9 图 / 3 音频
 if True:
-    img_ids = sorted([k for k, v in prompt_nodes.items() if v == "LoadImage"])
-    aud_ids = sorted([k for k, v in prompt_nodes.items() if v == "LoadAudio"])
+    img_ids = []  # 狸猫修复：禁用A/B素材强制替换，保留工作流自身参考图
+    aud_ids = []  # 狸猫修复：同上
     for i, k in enumerate(img_ids[:9]):
         prompt[k]["inputs"]["image"] = ORIG_IMGS[i % len(ORIG_IMGS)]
     for i, k in enumerate(aud_ids[:3]):
