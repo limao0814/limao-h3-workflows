@@ -489,3 +489,85 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 }
 
 __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]
+
+
+class LimaoH3AVLatentSave:
+    """狸猫·AV潜空间落盘（两段式解码第一步）：把复合音视频 latent 拆开存 safetensors，
+    采样阶段与解码阶段解耦，规避采样后残留显存状态下 VAE 无声崩溃。
+    OUTPUT_NODE：直接作为阶段1的输出锚点。"""
+
+    CATEGORY = "limao/IO"
+    FUNCTION = "save"
+    OUTPUT_NODE = True
+    RETURN_TYPES = ()
+    DESCRIPTION = ("AV潜空间落盘：采样完成后把复合latent存盘，解码放到独立队列/重启后进行。"
+                   "文件存于 output/limao_av_latent/，视频latent+音频latent双键。")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {
+            "av_latent": ("LATENT",),
+            "filename": ("STRING", {"default": "limao_av_latent"}),
+        }}
+
+    def save(self, av_latent, filename):
+        import os
+        import folder_paths
+        from safetensors.torch import save_file
+        samples = av_latent["samples"]
+        parts = list(samples.unbind()) if getattr(samples, "is_nested", False) else [samples]
+        video = parts[0].detach().cpu().contiguous()
+        data = {"video": video}
+        if len(parts) > 1:
+            data["audio"] = parts[1].detach().cpu().contiguous()
+        out_dir = os.path.join(folder_paths.get_output_directory(), "limao_av_latent")
+        os.makedirs(out_dir, exist_ok=True)
+        safe = "".join(c for c in filename if c.isalnum() or c in "_-.") or "limao_av_latent"
+        path = os.path.join(out_dir, safe + ".safetensors")
+        save_file(data, path)
+        import json as _json
+        return {"ui": {"text": [_json.dumps({"path": path, "keys": list(data.keys()),
+                                            "shapes": {k: list(v.shape) for k, v in data.items()}})]}}
+
+
+class LimaoH3AVLatentLoad:
+    """狸猫·AV潜空间回载（两段式解码第二步）：读取落盘的复合 latent，
+    重建 NestedTensor 复合结构，供 H3Kit 分块解码与南风音频解码消费。"""
+
+    CATEGORY = "limao/IO"
+    FUNCTION = "load"
+    RETURN_TYPES = ("LATENT",)
+    RETURN_NAMES = ("av_latent",)
+    DESCRIPTION = ("AV潜空间回载：从 output/limao_av_latent/ 读取落盘文件，重建复合latent。")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {
+            "path": ("STRING", {"default": "limao_av_latent/limao_av_latent.safetensors"}),
+        }}
+
+    def load(self, path):
+        import os
+        import folder_paths
+        from safetensors.torch import load_file
+        p = path if os.path.isabs(path) else os.path.join(
+            folder_paths.get_output_directory(), path)
+        if not os.path.exists(p):
+            raise FileNotFoundError(f"狸猫AV潜空间回载：文件不存在 {p}")
+        data = load_file(p)
+        if "audio" in data:
+            import comfy.nested_tensor
+            samples = comfy.nested_tensor.NestedTensor((data["video"], data["audio"]))
+        else:
+            samples = data["video"]
+        return ({"samples": samples},)
+
+
+NODE_CLASS_MAPPINGS.update({
+    "LimaoH3AVLatentSave": LimaoH3AVLatentSave,
+    "LimaoH3AVLatentLoad": LimaoH3AVLatentLoad,
+})
+NODE_DISPLAY_NAME_MAPPINGS.update({
+    "LimaoH3AVLatentSave": "狸猫·AV潜空间落盘",
+    "LimaoH3AVLatentLoad": "狸猫·AV潜空间回载",
+})
