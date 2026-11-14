@@ -3250,7 +3250,7 @@
     }
    ],
    "widgets_values": [
-    "subject_definitions:\n<Subject 1> is the person in <Image 1>. Face and hairstyle follow <Image 2> (front) and <Image 3> (profile); body and proportions follow <Image 4> (full body); wardrobe follows <Image 5>; art style follows <Image 6>; environment follows <Image 7>; lighting mood follows <Image 8>; key props follow <Image 9>. Identity comes ONLY from the pictures — never from the videos.\n\nmotion_director:\n@Video 1 is the CAMERA reference: borrow only its camera moves, cuts and pacing — never its content.\n@Video 2 is the BODY reference: reproduce its physical actions, effort and timing for <Subject 1>.\n@Video 3 is the TRANSITION reference: structure scene changes and temporal flow after it.\n\naudio_director:\n@Audio 1 defines the voice of <Subject 1> (timbre, tone, emotion) and drives lip-sync.\n@Audio 2 is the ambient sound bed. @Audio 3 accents music or effects.\n\nshot_plan:\n1 shot, continuous take; camera follows @Video 1 grammar; <Subject 1> performs the action of @Video 2 with coherent physics, stable identity and stable on-screen text.\n\nglobal_rules:\n- Second pass may change ONLY resolution / steps / scheduler / denoise (0.2-0.3; lip-sync shots <=0.3). Seed, prompt and reference order stay locked.\n- 武戏提示词要点：动作分解为「起手-发力-收势」三拍，写明接触点与重量感，避免高速旋转/大位移叠变。"
+    "subject_definitions:\n<Subject 1> is the person in <Image 1>. Face, hairstyle and overall identity follow <Image 2>. Identity comes ONLY from the pictures - never from imagination.\n\nmotion_director:\nMotion is directed by the text prompt alone: break the action into beats (anticipation - exertion - follow-through), and describe camera moves, cuts and pacing in words.\n\naudio_director:\nAudio is generated natively from the scene description; specify voice style, ambience and accents in words when needed.\n\nshot_plan:\n1 shot, continuous take; describe camera grammar in text; <Subject 1> performs the written action with coherent physics, stable identity and stable on-screen text.\n\nglobal_rules:\n- Second pass may change ONLY resolution / steps / scheduler / denoise (0.2-0.3; lip-sync shots <=0.3). Seed, prompt and reference order stay locked.\n- 武戏提示词要点：动作分解为「起手-发力-收势」三拍，写明接触点与重量感，避免高速旋转/大位移叠变。"
    ]
   },
   {
@@ -3917,7 +3917,7 @@
     }
    ],
    "widgets_values": [
-    "minimax_h3_latent_upscaler_3d_fp16.safetensors",
+    "minimax_h3_latent_upscaler_3d_bf16.safetensors",
     "scale_by",
     1.5,
     1.0,
@@ -3925,7 +3925,7 @@
     704,
     "preserve_source",
     1.05,
-    "fp16",
+    "bf16",
     "offload_after"
    ]
   },
