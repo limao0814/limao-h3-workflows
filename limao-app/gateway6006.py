@@ -22,7 +22,7 @@ INJ = ('<div id="limao-boot" style="position:fixed;top:0;left:0;right:0;z-index:
        '.catch(function(){setTimeout(p,3000)})})();p()})()</script>')
 SPLASH = SPLASH.replace('</body>', INJ + '</body>')
 
-MAIN_WF = pathlib.Path('/root/limao-app/狸猫·H3·全域参考锻造·从零版.json')
+MAIN_WF = pathlib.Path('/root/limao-app/狸猫H3工作流.json')
 # 新设备无工作流历史时，自动加载狸猫主打工作流（老用户会话不受影响）
 AUTOLOAD = ('<script>(function(){function ok(){return !localStorage.getItem("Comfy.Workflow.LastOpenPaths")}'
             'function go(){if(!window.app){return setTimeout(go,300)}'

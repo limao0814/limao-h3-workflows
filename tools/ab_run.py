@@ -1,4 +1,4 @@
-# A/B 画质对照：从零版 vs 原版 DEBUG，同素材同种子
+# A/B 画质对照：狸猫H3工作流 vs BUNNY原版 DEBUG，同素材同种子
 # 用法: python3 ab_run.py limao|origin
 import json, urllib.request, sys, urllib.error
 BASE = "http://127.0.0.1:6006"
@@ -17,7 +17,7 @@ def get(path):
 
 oi = get("/object_info")
 which = sys.argv[1] if len(sys.argv) > 1 else "limao"
-WF = ("/root/ComfyUI/user/default/workflows/狸猫·H3视频/狸猫·H3·全域参考锻造·从零版.json"
+WF = ("/root/ComfyUI/user/default/workflows/狸猫·H3视频/狸猫H3工作流.json"
       if which == "limao" else
       "/root/ComfyUI/user/default/workflows/狸猫·H3视频/狸猫·DEBUG·原版双采对照.json")
 wf = json.load(open(WF))

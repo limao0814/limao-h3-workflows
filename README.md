@@ -2,9 +2,9 @@
 
 # 🐾 狸猫AI · H3视频工坊
 
-**MiniMax H3 全流程 ComfyUI 工作流合集 · 6 大类 · 41 个**
+**MiniMax H3 全流程 ComfyUI 工作流合集 · 7 大类 · 43 个**
 
-![License](https://img.shields.io/badge/License-Limao_Proprietary-red) ![Platform](https://img.shields.io/badge/Platform-ComfyUI-blue) ![Workflows](https://img.shields.io/badge/工作流-41个-gold) ![Fingerprint](https://img.shields.io/badge/数字指纹-LM系列-orange)
+![License](https://img.shields.io/badge/License-Limao_Proprietary-red) ![Platform](https://img.shields.io/badge/Platform-ComfyUI-blue) ![Workflows](https://img.shields.io/badge/工作流-43个-gold) ![Fingerprint](https://img.shields.io/badge/数字指纹-LM系列-orange)
 
 </div>
 
@@ -14,7 +14,7 @@
 
 > **本仓库由 [狸猫AI] 制作并发行，版权归狸猫AI所有。**
 >
-> 全部 41 个工作流均已注入**狸猫数字指纹**，包含三层标识：
+> 全部 43 个工作流均已注入**狸猫数字指纹**，包含三层标识：
 >
 > | 层级 | 位置 | 内容 |
 > |---|---|---|
@@ -30,7 +30,8 @@
 ## 📦 仓库内容
 
 ```
-├── workflows/          # 41 个狸猫工作流（6 大分类）
+├── workflows/          # 43 个狸猫工作流（7 大分类）
+│   ├── 狸猫·H3生图/            # H3-Image 4K直出（2026-11 开源生图模型）
 │   ├── 狸猫·H3视频/            # 主打：全域参考锻造·双采放大（旗舰）
 │   ├── 狸猫·动作迁移/          # 11 个动作迁移类
 │   ├── 狸猫·人物替换换装/      # 5 个替换类
@@ -81,7 +82,7 @@
 
 - **低配显卡也能跑长视频**：招牌「高动态三采放大」工作流，从 768p 草稿到高清成片一步到位，全程自动治理显存，消费级显卡即可上手
 - **武戏一键出片**：打斗、特技动作内置专属 LoRA，选好模板发即用，不用手动调参
-- **拿来就能用**：41 个工作流逐一实测校验，模型依赖齐备、开箱即跑
+- **拿来就能用**：43 个工作流逐一实测校验，模型依赖齐备、开箱即跑
 
 ## 🚀 安装
 

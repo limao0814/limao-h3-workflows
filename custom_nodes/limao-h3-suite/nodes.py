@@ -17,6 +17,14 @@ LimaoH3RefAudioAudit  音频参考审计: 3 条参考音频的官方约束校验
 LimaoH3FrameBridge    帧桥       : H3 五维帧布局 ↔ 标准四维帧，安全对接 RIFE/后处理
 LimaoH3SeedForge      种子锻炉   : 固定/每跑随机/安全种子池 三模式种子供给
 LimaoH3VRAMGuard      显存守卫   : 模型链上的显存治理 passthrough
+LimaoH3MemorySweep    显存清道夫 : 采样后立即回收显存（视频长跑贴墙防线）
+LimaoH3AVLatentSave   AV潜空间落盘: 复合音视频 latent 落盘（两段式解码第一步）
+LimaoH3AVLatentLoad   AV潜空间回载: 读取落盘 latent 重建复合结构（两段式解码第二步）
+
+—— 生图线（MiniMax-H3-Image，2026-11 开源）——
+LimaoH3ImagePromptGuard 提示词体检 : H3-Image 无负面词且堆砌词降质，出采样前人话体检
+LimaoH3ImageQAGate      出图硬闸   : 8MP 伪影线/16MP 推荐线、尺寸与比例一致性校验
+LimaoH3Ref16Audit      16图参考审计: H3-Image 官方 16 参考图约束（128–8192px / 1:4–4:1 / 64MiB）
 
 所有节点零第三方依赖（仅 torch + ComfyUI folder_paths），失败时给出
 中文人话诊断，不抛裸 traceback。
@@ -563,11 +571,211 @@ class LimaoH3AVLatentLoad:
         return ({"samples": samples},)
 
 
+
+# ---------------------------------------------------------------------------
+# 11. 生图线：MiniMax-H3-Image（2026-11 开源，33.1B DiT / 6步采样 / 无CFG）
+#     每个节点对应一条社区实测爆料毛病的防线。
+# ---------------------------------------------------------------------------
+
+# H3-Image 实测堆砌词（prompt 敏感：出现这些词整体画质反而下降）
+_HYPE_WORDS = [
+    "stunning", "masterpiece", "best quality", "high quality", "ultra detailed",
+    "ultra-detailed", "hyper detailed", "8k", "4k", "hd", "trending on",
+    "award winning", "professional photo", "very beautiful", "超清", "高清",
+    "杰作", "大师之作", "最佳画质", "最高质量",
+]
+# 提示词里出现即危险的否定式写法（模型无负面提示词，正向里写"不要X"大概率画出X）
+_NEGATIVE_PATTERNS = [
+    "no ", "not ", "without ", "avoid ", "don't", "dont ", "never ",
+    "不要", "没有", "避免", "禁止", "不要出现", "勿",
+]
+
+class LimaoH3ImagePromptGuard:
+    """狸猫·提示词体检（H3-Image 生图线专用）。
+
+    社区实测三大坑，全部在采样前拦截提醒：
+    1. 堆砌词降质 —— stunning/8k/masterpiece 类词出现越多，画质反而越差；
+    2. 否定式失效 —— 模型不支持负面提示词，正向里写"不要X"大概率画出X，
+       必须改写成正向描述（"不要模糊"→"画面整体清晰锐利"）；
+    3. 短文字裸奔 —— 图内文字要渲染正确必须用引号包住，且保持简短
+       （小字/长段落必出乱码或伪字）。"""
+
+    CATEGORY = "limao/守卫"
+    FUNCTION = "run"
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("prompt",)
+    DESCRIPTION = ("H3-Image 提示词体检：堆砌词降质/否定式失效/短文字引号 三项检查，"
+                   "透传 prompt 并输出中文报告。")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {
+            "prompt": ("STRING", {"multiline": True, "default": ""}),
+        }}
+
+    def run(self, prompt):
+        lines = ["—— 狸猫提示词体检（H3-Image）——"]
+        issues = 0
+        low = prompt.lower()
+        hits = [w for w in _HYPE_WORDS if w.lower() in low]
+        if hits:
+            issues += 1
+            lines.append(f"❌ 堆砌词 {len(hits)} 个: {', '.join(hits[:8])}"
+                         f"{' ...' if len(hits) > 8 else ''}")
+            lines.append("   实测这类词会拉低画质，请直接删除（模型自己懂质感）")
+        neg_hits = []
+        for p in _NEGATIVE_PATTERNS:
+            idx = low.find(p.lower())
+            if idx >= 0:
+                ctx = prompt[max(0, idx - 6): idx + 14].replace("\n", " ")
+                neg_hits.append(ctx)
+        if neg_hits:
+            issues += 1
+            lines.append(f"❌ 否定式写法 {len(neg_hits)} 处（模型无负面提示词，正向写『不要X』会画出X）:")
+            for c in neg_hits[:5]:
+                lines.append(f"   「…{c}…」→ 请改写成正向描述")
+        import re as _re
+        quoted = _re.findall(r'[“"「『]([^”"」』]+)[”"」』]', prompt)
+        bare_cn = [w for w in _re.findall(r"[\u4e00-\u9fff]{2,12}", prompt)
+                   if w not in [q for q in quoted]]
+        if bare_cn and len(bare_cn) > 2:
+            issues += 1
+            lines.append(f"⚠️ 图内文字建议用引号包裹并保持简短（小字必出乱码）: "
+                         f"{'、'.join(bare_cn[:5])}")
+        if len(prompt) > 4096 * 3:
+            issues += 1
+            lines.append(f"❌ 提示词过长（约 {len(prompt)} 字符，超 4096 token 会被截断）")
+        if issues == 0:
+            lines.append("✅ 通过：无堆砌词、无否定式、文字已加引号")
+        lines.append(f"问题 {issues} 项　—　官方建议：先交代图像类型（如『街拍照片/70年代电影帧』），再描述内容")
+        return {"result": (prompt,), "ui": {"text": ["\n".join(lines)]}}
+
+
+class LimaoH3ImageQAGate:
+    """狸猫·出图硬闸（H3-Image 生图线专用）。
+
+    社区实测：8MP 以下（尤其 2MP/4MP）脸、手、背景小人有伪影，
+    8MP 以上才明显变好，16MP（4K）为最佳工作区 —— 本节点按分辨率
+    分级放行：≥16MP ✅ / 8–16MP ⚠️ / <8MP ❌（建议重出，别省这点时间）。"""
+
+    CATEGORY = "limao/守卫"
+    FUNCTION = "run"
+    OUTPUT_NODE = True
+    RETURN_TYPES = ("IMAGE",)
+    RETURN_NAMES = ("images",)
+    DESCRIPTION = ("H3-Image 出图质检：分辨率伪影线（8MP）与最佳线（16MP）分级校验，"
+                   "多图输出尺寸一致性校验。")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {
+            "images": ("IMAGE",),
+            "mode": (["16MP直出(推荐)", "8MP起", "自定义"],),
+            "custom_min_mp": ("INT", {"default": 8, "min": 1, "max": 32, "step": 1}),
+        }}
+
+    def run(self, images, mode="16MP直出(推荐)", custom_min_mp=8):
+        t = images if isinstance(images, torch.Tensor) else torch.tensor(images)
+        min_mp = 16.0 if mode.startswith("16") else (8.0 if mode == "8MP起" else float(custom_min_mp))
+        lines = ["—— 狸猫出图硬闸（H3-Image）——"]
+        issues = 0
+        sizes = set()
+        for i in range(int(t.shape[0])):
+            h, w = int(t.shape[-3]), int(t.shape[-2])
+            mp = w * h / 1e6
+            sizes.add((w, h))
+            tag = f"图{i+1}"
+            if mp >= 16.0:
+                lines.append(f"✅ {tag}: {w}×{h} ≈ {mp:.1f}MP（4K最佳工作区，脸/手/细节稳定）")
+            elif mp >= 8.0:
+                lines.append(f"⚠️ {tag}: {w}×{h} ≈ {mp:.1f}MP（可用区，注意检查脸与手）")
+            elif mp >= min_mp:
+                lines.append(f"⚠️ {tag}: {w}×{h} ≈ {mp:.1f}MP（伪影风险区边缘）")
+            else:
+                issues += 1
+                lines.append(f"❌ {tag}: {w}×{h} ≈ {mp:.1f}MP（实测 <8MP 脸/手/小人出伪影，建议重出）")
+        if len(sizes) > 1:
+            issues += 1
+            lines.append(f"❌ 多图尺寸不一致: {sorted(sizes)}（拼图/对比前请统一）")
+        if issues == 0:
+            lines.append("✅ 全部通过")
+        lines.append("ℹ️ 提醒: 模型不支持透明背景（PNG 无 alpha），抠图素材请另行走分割链")
+        return (images, {"ui": {"text": ["\n".join(lines)]}})
+
+
+# H3-Image 官方参考图约束：128–8192px、宽高比 1:4–4:1、单张 ≤64MiB
+_REF16_MIN_SIDE = 128
+_REF16_MAX_SIDE = 8192
+_REF16_ASPECT_LO, _REF16_ASPECT_HI = 0.25, 4.0
+_REF16_MAX_BYTES = 64 * 1024 * 1024
+
+class LimaoH3Ref16Audit:
+    """狸猫·16图参考审计（H3-Image 生图线专用）。
+
+    官方约束逐张校验：128–8192px、宽高比 1:4–4:1；重复图检测。
+    参考图在提示词中以 <Picture N> 寻址（上传顺序即编号），
+    多图融合实测有角色漂移风险 —— 主角色图务必放 <Picture 1> 并在
+    提示词里点名锁定。"""
+
+    CATEGORY = "limao/守卫"
+    FUNCTION = "run"
+    OUTPUT_NODE = True
+    RETURN_TYPES = ()
+    DESCRIPTION = ("校验 H3-Image 16 参考图槽：官方尺寸/比例约束、重复检测、"
+                   "<Picture N> 锁位建议。")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {}, "optional": {
+            f"image_{i}": ("IMAGE",) for i in range(1, 17)
+        }}
+
+    def run(self, **kwargs):
+        lines = ["—— 狸猫16图参考审计（H3-Image）——"]
+        seen = {}
+        issues = 0
+        used = 0
+        for i in range(1, 17):
+            img = kwargs.get(f"image_{i}")
+            if img is None:
+                continue
+            used += 1
+            t = img if isinstance(img, torch.Tensor) else torch.tensor(img)
+            h, w = int(t.shape[-3]), int(t.shape[-2])
+            aspect = w / h if h else 0
+            nbytes = int(t.numel() * t.element_size())
+            tag = f"<Picture {i}>"
+            ok = True
+            if not (_REF16_MIN_SIDE <= min(h, w) and max(h, w) <= _REF16_MAX_SIDE):
+                lines.append(f"❌ {tag}: {w}×{h} 超出官方 128–8192px"); ok = False; issues += 1
+            elif not (_REF16_ASPECT_LO <= aspect <= _REF16_ASPECT_HI):
+                lines.append(f"❌ {tag}: 宽高比 {aspect:.2f} 超出官方 1:4–4:1"); ok = False; issues += 1
+            else:
+                lines.append(f"✅ {tag}: {w}×{h}（比例 {aspect:.2f}）")
+            if nbytes > _REF16_MAX_BYTES:
+                lines.append(f"⚠️ {tag}: 解码后约 {nbytes>>20}MiB 超 64MiB 上限，会被官方拒绝"); issues += 1
+            digest = hashlib.sha1(t.detach().cpu().numpy().tobytes()).hexdigest()[:12]
+            if digest in seen:
+                lines.append(f"⚠️ {tag} 与 <Picture {seen[digest]}> 内容完全相同"); issues += 1
+            else:
+                seen[digest] = i
+        lines.append(f"已接 {used}/16 张；问题 {issues} 项")
+        if used >= 2:
+            lines.append("ℹ️ 多图融合实测有角色漂移：主角色务必 <Picture 1>，提示词点名『保持 <Picture 1> 的人物特征完全一致』")
+        return {"ui": {"text": ["\n".join(lines)]}}
+
+
 NODE_CLASS_MAPPINGS.update({
     "LimaoH3AVLatentSave": LimaoH3AVLatentSave,
     "LimaoH3AVLatentLoad": LimaoH3AVLatentLoad,
+    "LimaoH3ImagePromptGuard": LimaoH3ImagePromptGuard,
+    "LimaoH3ImageQAGate": LimaoH3ImageQAGate,
+    "LimaoH3Ref16Audit": LimaoH3Ref16Audit,
 })
 NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3AVLatentSave": "狸猫·AV潜空间落盘",
     "LimaoH3AVLatentLoad": "狸猫·AV潜空间回载",
+    "LimaoH3ImagePromptGuard": "狸猫·提示词体检（生图）",
+    "LimaoH3ImageQAGate": "狸猫·出图硬闸",
+    "LimaoH3Ref16Audit": "狸猫·16图参考审计",
 })
