@@ -25,6 +25,7 @@ LimaoH3AVLatentLoad   AV潜空间回载: 读取落盘 latent 重建复合结构�
 LimaoH3ImagePromptGuard 提示词体检 : H3-Image 无负面词且堆砌词降质，出采样前人话体检
 LimaoH3ImageQAGate      出图硬闸   : 8MP 伪影线/16MP 推荐线、尺寸与比例一致性校验
 LimaoH3Ref16Audit      16图参考审计: H3-Image 官方 16 参考图约束（128–8192px / 1:4–4:1 / 64MiB）
+LimaoH3HandRiskWatch  手部风险哨兵: 手势正确率~48%防线（分级/正向稳定句/批出建议）
 
 所有节点零第三方依赖（仅 torch + ComfyUI folder_paths），失败时给出
 中文人话诊断，不抛裸 traceback。
@@ -598,31 +599,48 @@ class LimaoH3ImagePromptGuard:
     2. 否定式失效 —— 模型不支持负面提示词，正向里写"不要X"大概率画出X，
        必须改写成正向描述（"不要模糊"→"画面整体清晰锐利"）；
     3. 短文字裸奔 —— 图内文字要渲染正确必须用引号包住，且保持简短
-       （小字/长段落必出乱码或伪字）。"""
+       （小字/长段落必出乱码或伪字）；
+    4. 自作主张 —— 实测爱加条形码、二维码、水印、假数据：自动按官方句式
+       把排除项写进正向提示词（官方允许的唯一排除方式）；
+    5. 角色漂移 —— 有参考图时自动注入 <Picture 1> 身份锁定句。"""
 
     CATEGORY = "limao/守卫"
     FUNCTION = "run"
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("prompt",)
-    DESCRIPTION = ("H3-Image 提示词体检：堆砌词降质/否定式失效/短文字引号 三项检查，"
-                   "透传 prompt 并输出中文报告。")
+    DESCRIPTION = ("H3-Image 提示词体检+自动修复：堆砌词剔除/否定式提醒/引号检查/"
+                   "防条形码假数据尾缀/参考图身份锁定，输出中文报告。")
 
     @classmethod
     def INPUT_TYPES(cls):
         return {"required": {
             "prompt": ("STRING", {"multiline": True, "default": ""}),
+            "mode": (["体检并自动修复", "仅体检"],),
+            "reference_mode": (["无参考图", "有参考图(锁定主角色)"],),
         }}
 
-    def run(self, prompt):
+    def run(self, prompt, mode="体检并自动修复", reference_mode="无参考图"):
         lines = ["—— 狸猫提示词体检（H3-Image）——"]
         issues = 0
+        fixes = 0
         low = prompt.lower()
+        cleaned = prompt
         hits = [w for w in _HYPE_WORDS if w.lower() in low]
         if hits:
             issues += 1
             lines.append(f"❌ 堆砌词 {len(hits)} 个: {', '.join(hits[:8])}"
                          f"{' ...' if len(hits) > 8 else ''}")
             lines.append("   实测这类词会拉低画质，请直接删除（模型自己懂质感）")
+            if mode == "体检并自动修复":
+                import re as _re
+                for w in sorted(_HYPE_WORDS, key=len, reverse=True):
+                    if all(ord(c) < 128 for c in w):
+                        cleaned = _re.sub(rf"\b{_re.escape(w)}\b", "", cleaned, flags=_re.I)
+                    else:
+                        cleaned = cleaned.replace(w, "")
+                cleaned = _re.sub(r"\s{2,}", " ", cleaned).strip(" ,，")
+                fixes += 1
+                lines.append("   🔧 已自动剔除")
         neg_hits = []
         for p in _NEGATIVE_PATTERNS:
             idx = low.find(p.lower())
@@ -631,9 +649,10 @@ class LimaoH3ImagePromptGuard:
                 neg_hits.append(ctx)
         if neg_hits:
             issues += 1
-            lines.append(f"❌ 否定式写法 {len(neg_hits)} 处（模型无负面提示词，正向写『不要X』会画出X）:")
+            lines.append(f"⚠️ 否定式写法 {len(neg_hits)} 处（无负面提示词，写『不要X』易画出X）:")
             for c in neg_hits[:5]:
-                lines.append(f"   「…{c}…」→ 请改写成正向描述")
+                lines.append(f"   「…{c}…」→ 排除杂物请保留本节点的官方句式尾缀，"
+                             f"否定画面主体的请改写成正向描述")
         import re as _re
         quoted = _re.findall(r'[“"「『]([^”"」』]+)[”"」』]', prompt)
         bare_cn = [w for w in _re.findall(r"[\u4e00-\u9fff]{2,12}", prompt)
@@ -642,13 +661,30 @@ class LimaoH3ImagePromptGuard:
             issues += 1
             lines.append(f"⚠️ 图内文字建议用引号包裹并保持简短（小字必出乱码）: "
                          f"{'、'.join(bare_cn[:5])}")
+            if len(bare_cn) > 3:
+                lines.append("   ℹ️ 文字超过 3 段时乱码率陡增 —— 长文案强烈建议后期排版叠加")
         if len(prompt) > 4096 * 3:
             issues += 1
             lines.append(f"❌ 提示词过长（约 {len(prompt)} 字符，超 4096 token 会被截断）")
+        # 自作主张防线：官方句式尾缀（官方明确：把避免项写进正向）
+        if mode == "体检并自动修复":
+            cleaned = cleaned.rstrip()
+            cleaned += ("\n\nThe composition contains only the elements described above, "
+                        "rendered exactly as specified: no barcodes, no QR codes, no watermarks, "
+                        "no logos, no signatures, and no fabricated data or labels.")
+            fixes += 1
+            lines.append("🔧 已注入防杂物尾缀（条形码/二维码/水印/假数据，官方句式正向排除）")
+            if reference_mode.startswith("有参考图"):
+                cleaned += ("\nStrictly follow the identity, face, hairstyle, body proportions "
+                            "and outfit shown in <Picture 1>; do not alter the character's "
+                            "appearance under any circumstances.")
+                fixes += 1
+                lines.append("🔧 已注入 <Picture 1> 主角色身份锁定句（多图融合角色漂移防线）")
         if issues == 0:
-            lines.append("✅ 通过：无堆砌词、无否定式、文字已加引号")
-        lines.append(f"问题 {issues} 项　—　官方建议：先交代图像类型（如『街拍照片/70年代电影帧』），再描述内容")
-        return {"result": (prompt,), "ui": {"text": ["\n".join(lines)]}}
+            lines.append("✅ 通过：无堆砌词、无危险否定式、文字已加引号")
+        lines.append(f"问题 {issues} 项 · 自动修复 {fixes} 项"
+                     f"　—　官方建议：先交代图像类型（如『街拍照片/70年代电影帧』），再描述内容")
+        return {"result": (cleaned,), "ui": {"text": ["\n".join(lines)]}}
 
 
 class LimaoH3ImageQAGate:
@@ -765,12 +801,70 @@ class LimaoH3Ref16Audit:
         return {"ui": {"text": ["\n".join(lines)]}}
 
 
+# 手部风险词（实测 H3-Image 手语手势正确率仅 48.1%——好了很多但仍有约一半错误率）
+_HAND_WORDS = [
+    "hand", "hands", "finger", "fingers", "gesture", "hand sign", "sign language",
+    "waving", "pointing", "holding", "grip", "clapping", "thumbs up", "okay sign",
+    "palm", "fist", "nail", "手", "手势", "手指", "挥手", "比心", "点赞",
+    "牵手", "握", "托", "挥手告别", "手部特写", "五指",
+]
+
+class LimaoH3HandRiskWatch:
+    """狸猫·手部风险哨兵（H3-Image 生图线专用）。
+
+    实测：美国手语手势测试正确率 48.1%——比对照模型高一截，但仍有约一半
+    错误率。手不是"解决了"，是"好多了"。本节点做三件事：
+    1. 扫描提示词手部相关词，给风险分级（特写/交互/无手）；
+    2. 高风险任务自动注入手部正向稳定句（五指/自然姿态，业界常用正向增强）；
+    3. 给出批出建议：手部任务实测建议一次出 4 张挑最好的，别赌单张。"""
+
+    CATEGORY = "limao/守卫"
+    FUNCTION = "run"
+    RETURN_TYPES = ("STRING",)
+    RETURN_NAMES = ("prompt",)
+    DESCRIPTION = ("H3-Image 手部风险哨兵：手部词扫描分级、正向稳定句注入、"
+                   "批出张数建议。")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {
+            "prompt": ("STRING", {"multiline": True, "default": ""}),
+            "mode": (["自动增强", "仅评估"],),
+        }}
+
+    def run(self, prompt, mode="自动增强"):
+        import re as _re
+        low = prompt.lower()
+        hits = sorted({w for w in _HAND_WORDS if w in low or w.lower() in low})
+        lines = ["—— 狸猫手部风险哨兵（H3-Image）——"]
+        cleaned = prompt
+        if not hits:
+            lines.append("✅ 无手部元素，风险等级：无")
+            lines.append("ℹ️ 构图提示：半身/远景手少入画，是最稳的出图策略")
+            return {"result": (cleaned,), "ui": {"text": ["\n".join(lines)]}}
+        # 分级
+        close_up = any(w in hits for w in ("手部特写", "hand", "palm", "finger", "fingers", "nail", "手势"))
+        interact = any(w in hits for w in ("holding", "grip", "牵手", "握手", "托", "握", "clapping"))
+        level = "高风险（手部特写/多指交互）" if close_up or interact else "中风险（画面含手）"
+        lines.append(f"⚠️ 手部词 {len(hits)} 个: {'、'.join(hits[:8])}")
+        lines.append(f"风险等级：{level}　—　实测手势正确率约 48%，仍有约一半错误率")
+        if mode == "自动增强":
+            cleaned = cleaned.rstrip()
+            cleaned += ("\nAnatomically correct hands with exactly five fingers per hand, "
+                        "natural relaxed finger pose, realistic joint structure.")
+            lines.append("🔧 已注入手部正向稳定句（五指/自然姿态/真实关节）")
+        lines.append("📋 批出建议：手部任务一次出 ≥4 张挑最好，别赌单张；"
+                     "特写构图优先改中景（手少入画）")
+        return {"result": (cleaned,), "ui": {"text": ["\n".join(lines)]}}
+
+
 NODE_CLASS_MAPPINGS.update({
     "LimaoH3AVLatentSave": LimaoH3AVLatentSave,
     "LimaoH3AVLatentLoad": LimaoH3AVLatentLoad,
     "LimaoH3ImagePromptGuard": LimaoH3ImagePromptGuard,
     "LimaoH3ImageQAGate": LimaoH3ImageQAGate,
     "LimaoH3Ref16Audit": LimaoH3Ref16Audit,
+    "LimaoH3HandRiskWatch": LimaoH3HandRiskWatch,
 })
 NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3AVLatentSave": "狸猫·AV潜空间落盘",
@@ -778,4 +872,5 @@ NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3ImagePromptGuard": "狸猫·提示词体检（生图）",
     "LimaoH3ImageQAGate": "狸猫·出图硬闸",
     "LimaoH3Ref16Audit": "狸猫·16图参考审计",
+    "LimaoH3HandRiskWatch": "狸猫·手部风险哨兵",
 })

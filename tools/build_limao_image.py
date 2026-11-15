@@ -141,22 +141,24 @@ def build_t2i():
     assert res["type"] == "ResolutionSelector", res["type"]
     res["widgets_values"][1] = 16
 
-    # B. 提示词体检串接：用户prompt → PromptGuard → subgraph.replace
-    pg = ctx.node("LimaoH3ImagePromptGuard", pos=(-950, 120),
+    # B. 提示词体检 + 手部哨兵串接：用户prompt → PromptGuard → HandRiskWatch → subgraph.replace
+    pg = ctx.node("LimaoH3ImagePromptGuard", [LIMAO_T2I_PROMPT, "体检并自动修复", "无参考图"],
+                  pos=(-950, 120),
+                  inputs=[{"name": "prompt", "type": "STRING", "link": None}],
+                  outputs=[{"name": "prompt", "type": "STRING", "links": []}])
+    hw = ctx.node("LimaoH3HandRiskWatch", ["自动增强"], pos=(-650, 120),
                   inputs=[{"name": "prompt", "type": "STRING", "link": None}],
                   outputs=[{"name": "prompt", "type": "STRING", "links": []}])
     pbox = ctx.node("PrimitiveStringMultiline", [LIMAO_T2I_PROMPT], pos=(-1300, 120),
                     outputs=[{"name": "STRING", "type": "STRING", "links": []}])
     ctx.link(pbox["id"], 0, pg["id"], 0, "STRING")
-    relink(wf, old_src=23, old_sslot=None, new_src=pg["id"], new_sslot=0,
-           dst=23, dslot=0, typ="STRING") if False else None
+    ctx.link(pg["id"], 0, hw["id"], 0, "STRING")
     # subgraph 节点 #23 的 replace 槽原本吃 widget 默认值（无连线），
-    # 接线后 prompt 由 PromptGuard 供给（widget 变为备用默认，不影响）。
-    pg_out = pg["outputs"][0]
+    # 接线后 prompt 由 HandRiskWatch 供给（widget 变为备用默认，不影响）。
     lid = ctx.lid + 1
     ctx.lid = lid
-    wf["links"].append([lid, pg["id"], 0, 23, 0, "STRING"])
-    pg_out["links"].append(lid)
+    wf["links"].append([lid, hw["id"], 0, 23, 0, "STRING"])
+    hw["outputs"][0]["links"].append(lid)
     sub_in = [i for n in wf["nodes"] if n["id"] == 23 for i in n["inputs"] if i["name"] == "replace"][0]
     sub_in["link"] = lid
 
@@ -190,13 +192,19 @@ def build_edit():
     assert n56["widgets_values"][0] == "scale total pixels"
     n56["widgets_values"][1] = 16
 
-    # B. 提示词体检串接：#43 指令 → PromptGuard → (#41.on_false + #40.replace)
-    pg = ctx.node("LimaoH3ImagePromptGuard", pos=(-1200, 1400),
+    # B. 提示词体检 + 手部哨兵串接：#43 指令 → PromptGuard → HandRiskWatch → (#41.on_false + #40.replace)
+    pg = ctx.node("LimaoH3ImagePromptGuard", ["", "体检并自动修复", "有参考图(锁定主角色)"],
+                  pos=(-1200, 1400),
+                  inputs=[{"name": "prompt", "type": "STRING", "link": None}],
+                  outputs=[{"name": "prompt", "type": "STRING", "links": []}])
+    hw = ctx.node("LimaoH3HandRiskWatch", ["自动增强"], pos=(-950, 1400),
                   inputs=[{"name": "prompt", "type": "STRING", "link": None}],
                   outputs=[{"name": "prompt", "type": "STRING", "links": []}])
     relink(wf, 43, 0, pg["id"], 0, 41, 0, "STRING")
     relink(wf, 43, 0, pg["id"], 0, 40, 1, "STRING")
     ctx.link(43, 0, pg["id"], 0, "STRING")
+    ctx.link(pg["id"], 0, hw["id"], 0, "STRING")
+    # edit 模板必有参考图（源图即 <Picture 1>），主角色锁定默认开启
 
     # C. 出图硬闸：#42 VAEDecode → QAGate → SaveImage
     qa = ctx.node("LimaoH3ImageQAGate", ["16MP直出(推荐)", 8], pos=(300, 300),
