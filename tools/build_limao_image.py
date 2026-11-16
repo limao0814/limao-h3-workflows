@@ -83,6 +83,41 @@ def stamp(wf, name):
     return fp, lic
 
 
+# 实例文件适配（狸猫 4080S 构建机现状）：
+# - 扩散模型 INT8 在 diffusion_models/minimax/ 子目录（共享库软链，零下载）
+# - 文本编码器盘上只有 int4_convrot（int8 版 32G 系统盘放不下）——扩散模型 int8 不变，
+#   编码器 int4 对画质影响远小于扩散模型，实测可接受
+# - PE 扩写 qwen3.5_9b_w4a8_gptq 缺货 → 用盘上 qwen3.5_4b_bf16 替换（t2i 默认关 PE 不受影响）
+ADAPT = {
+    "minimax_h3_image_pruned_int8_convrot.safetensors":
+        "minimax/minimax_h3_image_pruned_int8_convrot.safetensors",
+    "qwen3vl_32b_minimax_h3_int8_convrot.safetensors":
+        "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+    "qwen3.5_9b_w4a8_gptq.safetensors":
+        "qwen3.5_4b_bf16.safetensors",
+}
+
+def adapt_filenames(wf):
+    n_adapted = 0
+    for n in wf["nodes"]:
+        wv = n.get("widgets_values")
+        if isinstance(wv, list):
+            for i, v in enumerate(wv):
+                if isinstance(v, str) and v in ADAPT:
+                    wv[i] = ADAPT[v]
+                    n_adapted += 1
+    # subgraph 定义里的节点同样处理
+    for sg in wf.get("definitions", {}).get("subgraphs", []):
+        for n in sg["nodes"]:
+            wv = n.get("widgets_values")
+            if isinstance(wv, list):
+                for i, v in enumerate(wv):
+                    if isinstance(v, str) and v in ADAPT:
+                        wv[i] = ADAPT[v]
+                        n_adapted += 1
+    return n_adapted
+
+
 class Ctx:
     def __init__(self, wf):
         self.wf = wf
@@ -134,6 +169,7 @@ def relink(wf, old_src, old_sslot, new_src, new_sslot, dst, dslot, typ):
 # ---------------------------------------------------------------------------
 def build_t2i():
     wf = json.load(open(os.path.join(SRC, "t2i.json"), encoding="utf-8"))
+    print("实例文件适配:", adapt_filenames(wf), "处")
     ctx = Ctx(wf)
 
     # A. 4K直出：ResolutionSelector 4MP → 16MP（比例选项沿用官方支持集）
@@ -146,7 +182,7 @@ def build_t2i():
                   pos=(-950, 120),
                   inputs=[{"name": "prompt", "type": "STRING", "link": None}],
                   outputs=[{"name": "prompt", "type": "STRING", "links": []}])
-    hw = ctx.node("LimaoH3HandRiskWatch", ["自动增强"], pos=(-650, 120),
+    hw = ctx.node("LimaoH3HandRiskWatch", ["", "自动增强"], pos=(-650, 120),
                   inputs=[{"name": "prompt", "type": "STRING", "link": None}],
                   outputs=[{"name": "prompt", "type": "STRING", "links": []}])
     pbox = ctx.node("PrimitiveStringMultiline", [LIMAO_T2I_PROMPT], pos=(-1300, 120),
@@ -162,11 +198,11 @@ def build_t2i():
     sub_in = [i for n in wf["nodes"] if n["id"] == 23 for i in n["inputs"] if i["name"] == "replace"][0]
     sub_in["link"] = lid
 
-    # C. 出图硬闸：subgraph IMAGE → QAGate → SaveImage
+    # C. 出图硬闸：QAGate 输出→SaveImage；其输入(images)在运行时由
+    #    run_t2i.py 展开 subgraph 后接内部 VAEDecode（构建期跨不过 subgraph 边界）
     qa = ctx.node("LimaoH3ImageQAGate", ["16MP直出(推荐)", 8], pos=(300, 300),
                   inputs=[{"name": "images", "type": "IMAGE", "link": None}],
                   outputs=[{"name": "images", "type": "IMAGE", "links": []}])
-    relink(wf, 23, 0, qa["id"], 0, 9, 0, "IMAGE")
 
     # E. 保存前缀 + 版权声明
     ctx.nodes[9]["widgets_values"] = ["limao_h3_image_t2i_4k"]
@@ -184,6 +220,7 @@ def build_t2i():
 # ---------------------------------------------------------------------------
 def build_edit():
     wf = json.load(open(os.path.join(SRC, "edit.json"), encoding="utf-8"))
+    print("实例文件适配:", adapt_filenames(wf), "处")
     ctx = Ctx(wf)
 
     # A. 4K直出：#56 scale total pixels 4MP → 16MP（源图抬到 4K 画布再采样）
@@ -197,20 +234,25 @@ def build_edit():
                   pos=(-1200, 1400),
                   inputs=[{"name": "prompt", "type": "STRING", "link": None}],
                   outputs=[{"name": "prompt", "type": "STRING", "links": []}])
-    hw = ctx.node("LimaoH3HandRiskWatch", ["自动增强"], pos=(-950, 1400),
+    hw = ctx.node("LimaoH3HandRiskWatch", ["", "自动增强"], pos=(-950, 1400),
                   inputs=[{"name": "prompt", "type": "STRING", "link": None}],
                   outputs=[{"name": "prompt", "type": "STRING", "links": []}])
-    relink(wf, 43, 0, pg["id"], 0, 41, 0, "STRING")
-    relink(wf, 43, 0, pg["id"], 0, 40, 1, "STRING")
-    ctx.link(43, 0, pg["id"], 0, "STRING")
-    ctx.link(pg["id"], 0, hw["id"], 0, "STRING")
+    l43a = next(l for l in wf["links"] if l[1] == 43 and l[3] == 41)
+    l43a[1], l43a[2] = hw["id"], 0                  # #41.on_false ← 手部哨兵输出
+    l43b = next(l for l in wf["links"] if l[1] == 43 and l[3] == 40)
+    l43b[1], l43b[2] = hw["id"], 0                  # #40.replace ← 手部哨兵输出
+    ctx.link(43, 0, pg["id"], 0, "STRING")          # #43指令 → 提示词体检
+    ctx.link(pg["id"], 0, hw["id"], 0, "STRING")    # 体检 → 手部哨兵
     # edit 模板必有参考图（源图即 <Picture 1>），主角色锁定默认开启
 
-    # C. 出图硬闸：#42 VAEDecode → QAGate → SaveImage
+    # C. 出图硬闸：#42 VAEDecode → QAGate.images；QAGate → #9 SaveImage
     qa = ctx.node("LimaoH3ImageQAGate", ["16MP直出(推荐)", 8], pos=(300, 300),
                   inputs=[{"name": "images", "type": "IMAGE", "link": None}],
                   outputs=[{"name": "images", "type": "IMAGE", "links": []}])
-    relink(wf, 42, 0, qa["id"], 0, 9, 0, "IMAGE")
+    l42 = next(l for l in wf["links"] if l[1] == 42 and l[3] == 9)
+    l42[3], l42[4] = qa["id"], 0                    # 42 → QAGate.images
+    qa["inputs"][0]["link"] = l42[0]
+    ctx.link(qa["id"], 0, 9, 0, "IMAGE")            # QAGate → SaveImage
 
     # D. 16图参考审计：源图 LoadImage 挂审计（纯展示，不占主链）
     aud = ctx.node("LimaoH3Ref16Audit", pos=(-1300, 300))
