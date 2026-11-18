@@ -5,6 +5,11 @@
 # 架构 v2：ComfyUI 永驻 8188；6006=常驻反向代理网关(就绪前亮欢迎页,无空窗)；
 #          6008=狸猫专属进入面板。彻底废除 splash→takeover 杀进程切换。
 # 可重入：已在跑则跳过，绝不互杀。
+# ------------------------------------------------------------
+# 外部依赖（由狸猫发布镜像的初始化脚本投放至 /root/，不在本仓库）：
+#   /root/autoshutdown_watchdog.sh  空闲自动关机看门狗（总开关 /root/.autoshutdown_disable）
+#   /root/bootstrap_models.sh       模型自举（幂等补缺模型）
+# 两文件缺失时第 1/2 步被 [ -f ] 保护静默跳过，不影响 ComfyUI 主链路。
 # ============================================================
 export PATH="/usr/local/bin:/root/miniconda3/bin:$PATH"
 LOG=/root/limao-autostart.log
