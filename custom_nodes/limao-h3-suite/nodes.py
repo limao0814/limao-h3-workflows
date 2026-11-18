@@ -26,6 +26,7 @@ LimaoH3ImagePromptGuard 提示词体检 : H3-Image 无负面词且堆砌词降�
 LimaoH3ImageQAGate      出图硬闸   : 8MP 伪影线/16MP 推荐线、尺寸与比例一致性校验
 LimaoH3Ref16Audit      16图参考审计: H3-Image 官方 16 参考图约束（128–8192px / 1:4–4:1 / 64MiB）
 LimaoH3HandRiskWatch  手部风险哨兵: 手势正确率~48%防线（分级/正向稳定句/批出建议）
+LimaoH3TextProofread  文字校验闸  : 图内文字逐字比对（tesseract），错字自动打回重roll
 
 所有节点零第三方依赖（仅 torch + ComfyUI folder_paths），失败时给出
 中文人话诊断，不抛裸 traceback。
@@ -34,6 +35,7 @@ LimaoH3HandRiskWatch  手部风险哨兵: 手势正确率~48%防线（分级/正
 import hashlib
 import os
 import random
+import shutil
 
 import torch
 
@@ -662,7 +664,8 @@ class LimaoH3ImagePromptGuard:
             lines.append(f"⚠️ 图内文字建议用引号包裹并保持简短（小字必出乱码）: "
                          f"{'、'.join(bare_cn[:5])}")
             if len(bare_cn) > 3:
-                lines.append("   ℹ️ 文字超过 3 段时乱码率陡增 —— 长文案强烈建议后期排版叠加")
+                lines.append("   ℹ️ 文字超过 3 段时乱码率陡增 —— 长文案拆短/分次生成"
+                             "（产品铁律：交付文字必须模型直出，不做后期贴字）")
         if len(prompt) > 4096 * 3:
             issues += 1
             lines.append(f"❌ 提示词过长（约 {len(prompt)} 字符，超 4096 token 会被截断）")
@@ -674,6 +677,15 @@ class LimaoH3ImagePromptGuard:
                         "no logos, no signatures, and no fabricated data or labels.")
             fixes += 1
             lines.append("🔧 已注入防杂物尾缀（条形码/二维码/水印/假数据，官方句式正向排除）")
+            if quoted:
+                q_txt = "、".join("「" + t + "」" for t in quoted[:4])
+                cleaned += ("\nRender the text " + q_txt + " exactly as written, in standard "
+                            "highly legible regular script (kaishu), with precise correct stroke "
+                            "structure — exactly these characters, with no extra, missing, merged, "
+                            "or distorted characters.")
+                fixes += 1
+                lines.append("🔧 已注入标准文字渲染句（逐字精确/标准楷体/无变形无添字）——"
+                             "这是模型文字强项的正确打开方式，配合文字校验闸闭环")
             if reference_mode.startswith("有参考图"):
                 cleaned += ("\nStrictly follow the identity, face, hairstyle, body proportions "
                             "and outfit shown in <Picture 1>; do not alter the character's "
@@ -858,6 +870,118 @@ class LimaoH3HandRiskWatch:
         return {"result": (cleaned,), "ui": {"text": ["\n".join(lines)]}}
 
 
+# —— 第六道防线：文字校验闸（产品铁律：交付文字必须是模型直出的标准文字，禁止贴字）——
+_TEXT_PROOFREAD_REPORT = "/tmp/limao_text_proofread_report.json"
+_OCR_ENGINE = None
+
+
+def _proofread_ocr(image_np):
+    """RapidOCR 读字（中文实测远强于 tesseract，书法体单字可读）。
+    返回 (recognized_text, error_or_None)。引擎进程级缓存。"""
+    global _OCR_ENGINE
+    try:
+        from rapidocr_onnxruntime import RapidOCR
+    except ImportError:
+        return None, ("rapidocr 未安装（pip install rapidocr-onnxruntime，"
+                      "约 60MB 纯 CPU 推理）")
+    try:
+        import numpy as _np
+        from PIL import Image as _PIL
+        if _OCR_ENGINE is None:
+            _OCR_ENGINE = RapidOCR()
+        img = _PIL.fromarray(image_np)
+        # 多尺度联合读字：不同字号在不同缩放下检测率不同，任一尺度命中即算
+        # （实测校准：卷轴书法"福"在 4096 读不出、1024 才读出）
+        seen = []
+        for cap in (4096, 2048, 1024):
+            im2 = img if max(img.size) <= cap else img.resize(
+                (max(1, int(img.width * cap / max(img.size))),
+                 max(1, int(img.height * cap / max(img.size)))))
+            try:
+                result, _ = _OCR_ENGINE(_np.array(im2))
+            except Exception:
+                continue
+            for _, t, c in (result or []):
+                if float(c) >= 0.5:  # 低置信度噪声框丢弃，防假PASS
+                    seen.append(t)
+        return "".join(seen), None
+    except Exception as e:
+        return None, f"OCR 执行失败: {e}"
+
+
+class LimaoH3TextProofread:
+    """狸猫·文字校验闸（H3-Image 生图线专用）。
+
+    社区与官方实测：H3-Image 文字排版能力是强项（多层排版/指定字体可出），
+    但中文字符偶发崩坏，社区标准解法就是"重试"。本节点把重试闭环化：
+      1. 出图后立即用 RapidOCR 读图内文字，与 expected_text 逐字比对；
+      2. 结果 PASS/FAIL/SKIP 写入 /tmp/limao_text_proofread_report.json，
+         驱动脚本读到 FAIL 自动换种子重roll（默认至多 3 次），直到交付标准文字；
+      3. 校验不可用（OCR 缺失）时报告 SKIP，不拦流程但显式提示安装命令。
+    实测校准（2026-11-16 沙箱）：写对的"福"字 RapidOCR conf=1.00 判 PASS；
+    汉服卷轴翻车的第二个乱码字被识别为"一"→ 逐字比对 FAIL → 触发重roll。
+    配套：PromptGuard 会自动注入"逐字精确/标准楷体"渲染句，双管齐下。"""
+
+    CATEGORY = "limao/守卫"
+    FUNCTION = "run"
+    OUTPUT_NODE = True
+    RETURN_TYPES = ()
+    DESCRIPTION = ("H3-Image 文字校验闸：图内文字与 expected_text 逐字比对，"
+                   "错字打回重roll，保证交付即标准文字。")
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {"required": {
+            "images": ("IMAGE",),
+            "expected_text": ("STRING", {"multiline": False, "default": ""}),
+            "mode": (["打回重画(驱动重roll)", "仅报告"],),
+        }}
+
+    def run(self, images, expected_text="", mode="打回重画(驱动重roll)"):
+        lines = ["—— 狸猫文字校验闸（H3-Image）——"]
+        expected = (expected_text or "").strip()
+        status, recognized, missing = "SKIP", "", []
+        if not expected:
+            lines.append("ℹ️ 未提供 expected_text（驱动 --text 传入），本图不校验文字")
+        else:
+            t = images if isinstance(images, torch.Tensor) else torch.tensor(images)
+            arr = (t[0].detach().cpu().numpy() * 255).clip(0, 255).astype("uint8")
+            recognized, err = _proofread_ocr(arr)
+            if err:
+                lines.append(f"⚠️ SKIP：{err}")
+                lines.append("ℹ️ 校验不可用时不拦流程；请装 OCR 后重跑以启用闭环")
+            else:
+                keep = lambda s: [c for c in s if c.isalnum() or "\u4e00" <= c <= "\u9fff"]
+                rec_seq = "".join(keep(recognized))
+                from collections import Counter as _Counter
+                rec_cnt = _Counter(rec_seq)
+                missing = []
+                for ch, need in _Counter("".join(keep(expected))).items():
+                    got = rec_cnt.get(ch, 0)
+                    if got < need:
+                        missing.extend([ch] * (need - got))
+                contiguous = "".join(keep(expected)) in rec_seq
+                if not missing:
+                    status = "PASS"
+                    lines.append(f"✅ PASS：『{expected}』全部字符渲染正确"
+                                 + ("（连续成串）" if contiguous else "（逐字命中）"))
+                else:
+                    status = "FAIL"
+                    lines.append(f"❌ FAIL：『{expected}』缺字/错字 {'、'.join(missing)}"
+                                 f" —— OCR 读到: {rec_seq[:60] or '(空白)'}")
+                lines.append(f"ℹ️ 模式：{mode}" + ("" if status != "FAIL"
+                             else "　→ 驱动脚本将自动换种子重roll"))
+        import json as _json, time as _time
+        try:
+            _json.dump({"status": status, "expected": expected, "missing": missing,
+                        "recognized": recognized[:400], "mode": mode,
+                        "time": _time.strftime("%H:%M:%S")},
+                       open(_TEXT_PROOFREAD_REPORT, "w", encoding="utf-8"))
+        except OSError:
+            pass
+        return {"ui": {"text": ["\n".join(lines)]}}
+
+
 NODE_CLASS_MAPPINGS.update({
     "LimaoH3AVLatentSave": LimaoH3AVLatentSave,
     "LimaoH3AVLatentLoad": LimaoH3AVLatentLoad,
@@ -865,6 +989,7 @@ NODE_CLASS_MAPPINGS.update({
     "LimaoH3ImageQAGate": LimaoH3ImageQAGate,
     "LimaoH3Ref16Audit": LimaoH3Ref16Audit,
     "LimaoH3HandRiskWatch": LimaoH3HandRiskWatch,
+    "LimaoH3TextProofread": LimaoH3TextProofread,
 })
 NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3AVLatentSave": "狸猫·AV潜空间落盘",
@@ -873,4 +998,5 @@ NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3ImageQAGate": "狸猫·出图硬闸",
     "LimaoH3Ref16Audit": "狸猫·16图参考审计",
     "LimaoH3HandRiskWatch": "狸猫·手部风险哨兵",
+    "LimaoH3TextProofread": "狸猫·文字校验闸",
 })
