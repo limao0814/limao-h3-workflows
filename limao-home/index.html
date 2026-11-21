@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>狸猫AI · H3视频工坊</title>
+<style>
+  :root{
+    --bg:#0d1017; --card:#141927; --card2:#171d2e;
+    --line:#242c42; --txt:#dfe6f5; --sub:#8b95ad;
+    --orange:#ff8a3d; --gold1:#ffd27a; --gold2:#ffb347; --blue:#4d9fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--txt);font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;min-height:100vh}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 24px 60px}
+
+  /* ============ Banner ============ */
+  .banner{position:relative;border-radius:16px;overflow:hidden;padding:56px 44px 46px;
+    background:
+      radial-gradient(600px 300px at 85% 20%, rgba(77,159,255,.22), transparent 60%),
+      radial-gradient(500px 260px at 15% 85%, rgba(255,138,61,.20), transparent 60%),
+      radial-gradient(340px 200px at 55% 30%, rgba(255,178,71,.12), transparent 65%),
+      linear-gradient(135deg,#12182b 0%,#0e1220 55%,#131024 100%);
+    border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,0,0,.45)}
+  .banner::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+    background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+    background-size:44px 44px}
+  .banner .glow{position:absolute;width:220px;height:220px;border-radius:50%;filter:blur(70px);opacity:.5}
+  .banner .g1{background:#ff8a3d;top:-60px;right:8%}
+  .banner .g2{background:#4d9fff;bottom:-70px;left:6%}
+  .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--gold1);
+    border:1px solid rgba(255,178,71,.4);background:rgba(255,178,71,.08);border-radius:999px;padding:5px 14px;letter-spacing:2px}
+  .title{margin-top:18px;font-size:52px;font-weight:800;letter-spacing:2px;line-height:1.15;
+    background:linear-gradient(92deg,#ffe7b0 8%,#ffb347 55%,#ff8a3d 95%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 8px 30px rgba(255,138,61,.15)}
+  .subtitle{margin-top:14px;color:var(--sub);font-size:15px;letter-spacing:1px}
+  .subtitle b{color:var(--txt)}
+  .banner-actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;font-size:14px;
+    text-decoration:none;font-weight:600;transition:transform .15s,box-shadow .15s;border:1px solid transparent}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:linear-gradient(92deg,#ff9a4d,#ff7a26);color:#1a0d02;box-shadow:0 6px 18px rgba(255,122,38,.35)}
+  .btn-ghost{border-color:var(--line);color:var(--txt);background:rgba(255,255,255,.04)}
+
+  /* ============ 通用区块 ============ */
+  .section{margin-top:34px}
+  .sec-head{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+  .sec-head::before{content:"";width:4px;height:20px;border-radius:2px;background:linear-gradient(#ff9a4d,#ff7a26)}
+  .sec-head h2{font-size:19px;letter-spacing:1px}
+  .sec-head span{color:var(--sub);font-size:13px}
+
+  /* 免责声明 */
+  .notice{border:1px solid rgba(255,138,61,.55);background:rgba(255,138,61,.06);border-radius:12px;
+    padding:16px 18px;font-size:13.5px;line-height:1.9;color:#f2c9a8}
+  .notice b{color:#ffb347}
+  .notice a{color:#4d9fff;text-decoration:none}
+
+  /* 入口卡片 */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{display:block;text-decoration:none;color:var(--txt);background:var(--card);
+    border:1px solid var(--line);border-radius:14px;padding:20px;transition:transform .16s,border-color .16s,background .16s;position:relative;overflow:hidden}
+  .card:hover{transform:translateY(-3px);border-color:rgba(255,138,61,.5);background:var(--card2)}
+  .card .ico{font-size:26px}
+  .card h3{margin-top:10px;font-size:16.5px;color:#ffd27a;letter-spacing:.5px}
+  .card p{margin-top:8px;font-size:13px;line-height:1.75;color:var(--sub)}
+  .card .go{display:inline-block;margin-top:14px;font-size:12.5px;color:var(--orange);border:1px solid rgba(255,138,61,.45);
+    border-radius:999px;padding:5px 14px}
+  .card .tag{position:absolute;top:14px;right:14px;font-size:11px;color:#7bd07b;border:1px solid rgba(123,208,123,.35);
+    background:rgba(123,208,123,.08);padding:3px 10px;border-radius:999px}
+
+  /* 工作流目录 */
+  .wf{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .wf-row{display:flex;align-items:center;gap:14px;padding:15px 20px;border-top:1px solid var(--line);text-decoration:none;color:var(--txt);transition:background .15s}
+  .wf-row:first-child{border-top:none}
+  .wf-row:hover{background:var(--card2)}
+  .wf-ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+  .wf-ico.v{background:rgba(255,138,61,.12);border:1px solid rgba(255,138,61,.3)}
+  .wf-ico.i{background:rgba(77,159,255,.12);border:1px solid rgba(77,159,255,.3)}
+  .wf-name{font-size:14.5px;font-weight:600}
+  .wf-desc{font-size:12.5px;color:var(--sub);margin-top:3px}
+  .wf-arrow{margin-left:auto;color:var(--sub)}
+
+  footer{margin-top:44px;text-align:center;color:#5a6478;font-size:12.5px;line-height:2}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="banner">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="badge">🐱 MINIMAX H3 · 全流程创作舱</div>
+    <div class="title">狸猫AI · H3视频工坊</div>
+    <div class="subtitle"><b>MiniMax H3 全流程</b> · 文生图 / 图生视频 / 视频生成一站式 · 分辨率档位 = 一采 MP 口径（480P=0.4MP · 720P=0.6MP · 成片 ×1.5）</div>
+    <div class="banner-actions">
+      <a class="btn btn-primary" id="comfyBtn">🎬 进入 ComfyUI 工作台</a>
+      <a class="btn btn-ghost" href="https://limaocg.cn" target="_blank" rel="noopener">🌐 狸猫AI创作平台</a>
+      <a class="btn btn-ghost" href="/lab/tree/root/狸猫H3工坊/使用说明.md">📖 使用说明.md</a>
+    </div>
+  </div>
+
+  <div class="section">
+        <div class="notice">
+      🛡️ <b>版权与协议声明：</b>本镜像内全部工作流、自研节点与配套脚本均为<b>狸猫AI（limaocg.cn）原创成果</b>，受版权保护，<b>禁止任何形式的二次修改、转载、发布或售卖</b>；内置自研风控质检节点，对生成内容进行合规监测。如需获取授权或商务合作，请访问
+      <a href="https://limaocg.cn" target="_blank" rel="noopener">limaocg.cn</a> 联系狸猫AI 官方。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head"><h2>快速入口</h2><span>常用工具一站直达</span></div>
+    <div class="grid">
+      <a class="card" id="comfyCard">
+        <div class="ico">🎬</div>
+        <h3>ComfyUI 工作台</h3>
+        <p>H3 全流程可视化编排：文生图、图生视频、多参考视频生成、画幅计算器与视频参数枢纽均在工作流中内置。</p>
+        <span class="go">进入工作台 →</span>
+      </a>
+      <a class="card" href="https://limaocg.cn" target="_blank" rel="noopener">
+        <div class="ico">🌐</div>
+        <h3>狸猫AI创作平台</h3>
+        <p>云端算力生图 / 生视频面板：分辨率档位、生成比例、时长档、16 图参考槽，任务进度与画廊统一管理。</p>
+        <span class="go">打开平台 →</span>
+      </a>
+      <a class="card" href="/lab">
+        <div class="ico">💻</div>
+        <h3>JupyterLab 终端</h3>
+        <p>实例管理与环境维护：工作流 JSON、狸猫套件源码（limao-h3-suite）、模型文件与日志全在这里。</p>
+        <span class="go">打开终端 →</span>
+      </a>
+      <a class="card" href="/lab/tree/root/狸猫H3工坊/使用说明.md">
+        <div class="ico">📖</div>
+        <h3>从零掌握（视频版）</h3>
+        <p>全网最详细的 H3 工坊使用说明：参数口径、节点图解、常见问题与排错，配合视频食用更佳。</p>
+        <span class="go">查看说明 →</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-head"><h2>工作流目录</h2><span>本机品牌 5 个 · 位于 /root/狸猫H3工坊/</span></div>
+    <div class="wf">
+      <a class="wf-row" id="wfVideo">
+        <div class="wf-ico v">🎞️</div>
+        <div>
+          <div class="wf-name">狸猫视频 / 狸猫H3工作流</div>
+          <div class="wf-desc">多参考视频主线 · 视频参数枢纽（一采分辨率×放大倍率×时长 三合一）· 17n+5 帧网格自动吸附</div>
+        </div>
+        <div class="wf-arrow">→</div>
+      </a>
+      <a class="wf-row" id="wfImg1">
+        <div class="wf-ico i">🖼️</div>
+        <div>
+          <div class="wf-name">狸猫图片 / 文生图（自然真实风格）</div>
+          <div class="wf-desc">默认档超4K（16MP 最佳工作区）· 出图硬闸质检 · 档位=MP 口径</div>
+        </div>
+        <div class="wf-arrow">→</div>
+      </a>
+      <a class="wf-row" id="wfImg2">
+        <div class="wf-ico i">🖼️</div>
+        <div>
+          <div class="wf-name">狸猫图片 / 图生图（自然真实风格）</div>
+          <div class="wf-desc">参考图改图 · 16 图参考槽 · 手部风险哨兵</div>
+        </div>
+        <div class="wf-arrow">→</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    狸猫AI · H3视频工坊 · 本页由实例自动加载（Jupyter 起始页）<br>
+    分辨率档位说明：480P = 一采 0.4MP · 720P = 一采 0.6MP · 1K = 1MP · 2K = 4MP · 4K = 9MP · 超4K = 16MP
+  </footer>
+</div>
+
+<script>
+  /* ComfyUI 入口：与 Jupyter 同域换端口 8888 → 8188（仙宫云端口代理域名适用）；
+     若不可达，用户仍可从平台（limaocg.cn）云端生成。 */
+  (function () {
+    function comfyURL() {
+      try {
+        var h = location.hostname, proto = location.protocol;
+        if (location.port === "8888") return proto + "//" + h + ":8188";
+        return proto + "//" + h + ":8188";
+      } catch (e) { return "http://127.0.0.1:8188"; }
+    }
+    ["comfyBtn", "comfyCard", "wfVideo", "wfImg1", "wfImg2"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var u = comfyURL();
+      var path = { wfVideo: "/lab/tree/root/狸猫H3工坊/狸猫视频/狸猫H3工作流.json",
+                   wfImg1: "/lab/tree/root/狸猫H3工坊/狸猫图片/文生图（自然真实风格）.json",
+                   wfImg2: "/lab/tree/root/狸猫H3工坊/狸猫图片/图生图（自然真实风格）.json" }[id];
+      if (path) { el.href = path; return; }   /* 工作流目录：JupyterLab 内打开 */
+      el.href = u;
+      el.target = "_blank";
+      el.rel = "noopener";
+    });
+  })();
+</script>
+</body>
+</html>

@@ -982,6 +982,170 @@ class LimaoH3TextProofread:
         return {"ui": {"text": ["\n".join(lines)]}}
 
 
+
+
+# ---------------------------------------------------------------------------
+# 14. 输出画幅计算器（档位分辨率 × 生成比例 → 一采宽高）
+# ---------------------------------------------------------------------------
+
+_RES_MP_TABLE = {
+    "480P": 400_000, "720P": 600_000,
+    "1K": 1_000_000, "2K": 4_000_000,
+    "4K": 9_000_000, "超4K": 16_000_000, "16MP": 16_000_000,
+}
+
+class LimaoH3WHCalc:
+    """输出画幅计算器（2026-11-20 站长需求）。
+
+    输入档位字符串与比例字符串，内部按 算式 计算
+    width × height（multiple 倍数对齐，先定高再定宽）：
+        height = round(√(总像素 ÷ 比例) ÷ multiple) × multiple
+        width  = round(height × 比例 ÷ multiple) × multiple
+
+    resolution 支持写法：480P / 720P / 1K / 2K / 4K / 超4K / 16MP /
+    "0.4MP" / "600000" / 纯数字像素；解析失败回退 720P 并打印提示。
+    aspect 支持写法："16:9"、"9:21"、纯数字（宽÷高）；解析失败回退 16:9。
+
+    平台侧（狸猫AI）通过 {ures}/{uratio} 占位符注入所选档位；
+    ComfyUI 直用时分辨率手填字符串，比例用下拉框选择（9 档）。
+    """
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "resolution": ("STRING", {"default": "720P",
+                    "tooltip": "档位：480P=0.4MP 720P=0.6MP 1K=1MP 2K=4MP 4K=9MP 超4K=16MP；也可填 0.4MP / 600000 / 纯像素数"}),
+                "aspect": (["1:1", "4:3", "3:4", "16:9", "9:16", "3:2", "2:3", "21:9", "9:21"],
+                    {"default": "16:9",
+                    "tooltip": "生成比例（下拉选择）：横竖版/方图/宽银幕 9 档，与狸猫平台参数一致"}),
+                "multiple": ("INT", {"default": 32, "min": 8, "max": 128, "step": 8,
+                    "tooltip": "宽高对齐倍数（H3 一采要求 32 的倍数）"}),
+            },
+        }
+
+    RETURN_TYPES = ("INT", "INT")
+    RETURN_NAMES = ("width", "height")
+    FUNCTION = "calc"
+    CATEGORY = "limao"
+
+    @staticmethod
+    def _parse_pixels(text: str) -> int:
+        t = str(text).strip().replace("，", "").replace(",", "")
+        up = t.upper()
+        for key, val in _RES_MP_TABLE.items():
+            if up == key.upper():
+                return val
+        # "0.4MP" / "16MP" 写法
+        if up.endswith("MP"):
+            try:
+                return int(float(up[:-2]) * 1_000_000)
+            except ValueError:
+                pass
+        if up.endswith("K") and up[:-1].replace(".", "", 1).isdigit():
+            # 未收录的 K 档（如 3K）：K² MP 粗算 1024×1024 口径
+            k = float(up[:-1])
+            return int(k * k * 1_000_000)
+        if t.isdigit():
+            return int(t)
+        raise ValueError(f"无法解析分辨率档位：{text!r}")
+
+    @staticmethod
+    def _parse_aspect(text: str) -> float:
+        t = str(text).strip().replace("：", ":")
+        if ":" in t:
+            w, h = t.split(":", 1)
+            w = float(w.strip()); h = float(h.strip())
+            if w <= 0 or h <= 0:
+                raise ValueError(f"比例数值必须为正：{text!r}")
+            return w / h
+        v = float(t)
+        if v <= 0:
+            raise ValueError(f"比例数值必须为正：{text!r}")
+        return v
+
+    def calc(self, resolution, aspect, multiple):
+        try:
+            pixels = self._parse_pixels(resolution)
+        except ValueError as e:
+            print(f"[LimaoH3WHCalc] {e} —— 回退默认 720P(0.6MP)")
+            pixels = _RES_MP_TABLE["720P"]
+        try:
+            ratio = self._parse_aspect(aspect)
+        except ValueError as e:
+            print(f"[LimaoH3WHCalc] {e} —— 回退默认 16:9")
+            ratio = 16.0 / 9.0
+        m = max(8, int(multiple))
+        h = max(m, round((pixels / ratio) ** 0.5 / m) * m)
+        w = max(m, round(h * ratio / m) * m)
+        print(f"[LimaoH3WHCalc] 档位={resolution} 比例={aspect} → 一采 {w}×{h}"
+              f"（总像素 {w * h:,}，{w * h / 1e6:.2f}MP）")
+        return (w, h)
+
+
+# ---------------------------------------------------------------------------
+# 15. 视频参数枢纽（一采分辨率 × 放大倍率 × 时长 三节点合一）
+# ---------------------------------------------------------------------------
+
+class LimaoH3VideoParams:
+    """视频参数枢纽（2026-11-21 站长需求：原版三个节点合并到一个节点框）。
+
+    把「一采基础分辨率（画幅计算）」「放大倍率 / Upscale Scale」「视频时长（秒）」
+    合并为单节点，四个输出分别供给下游：
+      width / height      → 一采条件与潜空间尺寸（算式与 LimaoH3WHCalc 完全一致，
+                            档位即一采 MP 口径：480P=0.4MP、720P=0.6MP）
+      upscale_scale       → 二采 learned latent upscale 的 scale_by（默认 1.5，
+                            成片 = 一采 × 1.5）
+      duration            → 视频时长秒（平台 {seconds} 注入；下游 17n+5 帧网格
+                            数学节点自动吸附）
+
+    平台占位符 {ures}/{uratio}/{seconds} 注入字段不变，服务端无需任何改动。
+    """
+
+    @classmethod
+    def INPUT_TYPES(cls):
+        return {
+            "required": {
+                "resolution": ("STRING", {"default": "720P",
+                    "tooltip": "档位即一采像素总量：480P=0.4MP 720P=0.6MP 1K=1MP 2K=4MP 4K=9MP 超4K=16MP；也可填 0.4MP / 600000 / 纯像素数"}),
+                "aspect": (["1:1", "4:3", "3:4", "16:9", "9:16", "3:2", "2:3", "21:9", "9:21"],
+                    {"default": "16:9",
+                    "tooltip": "生成比例（下拉 9 档），与狸猫平台参数一致"}),
+                "multiple": ("INT", {"default": 32, "min": 8, "max": 128, "step": 8,
+                    "tooltip": "宽高对齐倍数（H3 一采要求 32 的倍数）"}),
+                "upscale_scale": ("FLOAT", {"default": 1.5, "min": 1.0, "max": 4.0, "step": 0.05,
+                    "tooltip": "二采放大倍率：成片 = 一采 × 此倍率（480P→成片约1296×720，720P→约1536×864）"}),
+                "duration": ("FLOAT", {"default": 10.0, "min": 1.0, "max": 60.0, "step": 0.5,
+                    "tooltip": "视频时长（秒）；平台注入 {seconds}，工作流内自动吸附 17n+5 帧网格"}),
+            },
+        }
+
+    RETURN_TYPES = ("INT", "INT", "FLOAT", "FLOAT")
+    RETURN_NAMES = ("width", "height", "upscale_scale", "duration")
+    FUNCTION = "calc"
+    CATEGORY = "limao"
+
+    def calc(self, resolution, aspect, multiple, upscale_scale, duration):
+        try:
+            pixels = LimaoH3WHCalc._parse_pixels(resolution)
+        except ValueError as e:
+            print(f"[LimaoH3VideoParams] {e} —— 回退默认 720P(0.6MP)")
+            pixels = _RES_MP_TABLE["720P"]
+        try:
+            ratio = LimaoH3WHCalc._parse_aspect(aspect)
+        except ValueError as e:
+            print(f"[LimaoH3VideoParams] {e} —— 回退默认 16:9")
+            ratio = 16.0 / 9.0
+        m = max(8, int(multiple))
+        h = max(m, round((pixels / ratio) ** 0.5 / m) * m)
+        w = max(m, round(h * ratio / m) * m)
+        ups = min(4.0, max(1.0, float(upscale_scale)))
+        dur = min(60.0, max(1.0, float(duration)))
+        print(f"[LimaoH3VideoParams] 档位={resolution} 比例={aspect} 倍率={ups} 时长={dur}s"
+              f" → 一采 {w}×{h}（{w * h / 1e6:.2f}MP）→ 成片 {round(w * ups)}×{round(h * ups)}")
+        return (int(w), int(h), ups, dur)
+
+
 NODE_CLASS_MAPPINGS.update({
     "LimaoH3AVLatentSave": LimaoH3AVLatentSave,
     "LimaoH3AVLatentLoad": LimaoH3AVLatentLoad,
@@ -990,7 +1154,11 @@ NODE_CLASS_MAPPINGS.update({
     "LimaoH3Ref16Audit": LimaoH3Ref16Audit,
     "LimaoH3HandRiskWatch": LimaoH3HandRiskWatch,
     "LimaoH3TextProofread": LimaoH3TextProofread,
+    "LimaoH3WHCalc": LimaoH3WHCalc,
+    "LimaoH3VideoParams": LimaoH3VideoParams,
 })
+
+
 NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3AVLatentSave": "狸猫·AV潜空间落盘",
     "LimaoH3AVLatentLoad": "狸猫·AV潜空间回载",
@@ -999,4 +1167,6 @@ NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3Ref16Audit": "狸猫·16图参考审计",
     "LimaoH3HandRiskWatch": "狸猫·手部风险哨兵",
     "LimaoH3TextProofread": "狸猫·文字校验闸",
+    "LimaoH3WHCalc": "狸猫·输出画幅计算器",
+    "LimaoH3VideoParams": "狸猫·视频参数枢纽（分辨率×倍率×时长）",
 })
