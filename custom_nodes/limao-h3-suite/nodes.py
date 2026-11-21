@@ -27,6 +27,8 @@ LimaoH3ImageQAGate      出图硬闸   : 8MP 伪影线/16MP 推荐线、尺寸�
 LimaoH3Ref16Audit      16图参考审计: H3-Image 官方 16 参考图约束（128–8192px / 1:4–4:1 / 64MiB）
 LimaoH3HandRiskWatch  手部风险哨兵: 手势正确率~48%防线（分级/正向稳定句/批出建议）
 LimaoH3TextProofread  文字校验闸  : 图内文字逐字比对（tesseract），错字自动打回重roll
+LimaoH3TextRegionFix  文字渲染修复·定位裁剪: OCR定位+文案解析+裁剪放大+羽化mask（三段式一段）
+LimaoH3TextRegionMerge 文字渲染修复·回贴融合: 修复图贴回原图+复验比对（三段式三段）
 
 所有节点零第三方依赖（仅 torch + ComfyUI folder_paths），失败时给出
 中文人话诊断，不抛裸 traceback。
@@ -982,168 +984,340 @@ class LimaoH3TextProofread:
         return {"ui": {"text": ["\n".join(lines)]}}
 
 
-
-
 # ---------------------------------------------------------------------------
-# 14. 输出画幅计算器（档位分辨率 × 生成比例 → 一采宽高）
+# 第七道防线：文字渲染修复（crop-zoom-render-merge，产品铁律的进化版）
+#
+# 铁律不变：交付文字必须模型直出，禁止贴字。本防线把「整图打回重roll碰运气」
+# 进化为「文字区域定向重渲染」：
+#   定位裁剪节点: RapidOCR 定位图内文字框 + 提示词引号解析文案
+#                 → 裁剪文字区域放大（字在画面里占比大了，模型才渲染得准）
+#                 → 输出放大图 + 羽化 mask + 坐标元数据
+#   工作流中段  : 同一个 H3 底模对放大区域 inpaint 重采样（VAEEncode →
+#                 SetLatentNoiseMask → KSampler → VAEDecode，提示词含文案）
+#   回贴融合节点: 修复结果缩放贴回原图（羽化融合）+ RapidOCR 复验逐字比对
+# 全程模型直出，没有任何 PIL 画字。
 # ---------------------------------------------------------------------------
 
-_RES_MP_TABLE = {
-    "480P": 400_000, "720P": 600_000,
-    "1K": 1_000_000, "2K": 4_000_000,
-    "4K": 9_000_000, "超4K": 16_000_000, "16MP": 16_000_000,
-}
+_TEXTFIX_META = "/tmp/limao_textfix_meta.json"
 
-class LimaoH3WHCalc:
-    """输出画幅计算器（2026-11-20 站长需求）。
 
-    输入档位字符串与比例字符串，内部按 算式 计算
-    width × height（multiple 倍数对齐，先定高再定宽）：
-        height = round(√(总像素 ÷ 比例) ÷ multiple) × multiple
-        width  = round(height × 比例 ÷ multiple) × multiple
+def _tensor_to_pil(t):
+    """[B,H,W,C] 0-1 tensor → PIL RGB（取第一张）。"""
+    import numpy as _np
+    from PIL import Image as _PIL
+    arr = (t[0].detach().cpu().numpy() * 255.0).clip(0, 255).astype("uint8")
+    return _PIL.fromarray(arr)
 
-    resolution 支持写法：480P / 720P / 1K / 2K / 4K / 超4K / 16MP /
-    "0.4MP" / "600000" / 纯数字像素；解析失败回退 720P 并打印提示。
-    aspect 支持写法："16:9"、"9:21"、纯数字（宽÷高）；解析失败回退 16:9。
 
-    平台侧（狸猫AI）通过 {ures}/{uratio} 占位符注入所选档位；
-    ComfyUI 直用时分辨率手填字符串，比例用下拉框选择（9 档）。
-    """
+def _pil_to_tensor(pil):
+    """PIL RGB → [1,H,W,C] 0-1 tensor。"""
+    import numpy as _np
+    import torch as _torch
+    arr = _np.asarray(pil.convert("RGB"), dtype=_np.float32) / 255.0
+    return _torch.from_numpy(arr).unsqueeze(0)
+
+
+def _parse_quoted_texts(prompt):
+    """从提示词提取引号文案（与 PromptGuard 同一套引号族）。"""
+    import re as _re
+    if not prompt:
+        return []
+    seen, out = set(), []
+    for m in _re.finditer(r'[“"「『]([^”"」』]+)[”"」』]', prompt):
+        t = m.group(1).strip()
+        if 1 <= len(t) <= 16 and t not in seen:
+            seen.add(t)
+            out.append(t)
+    return out
+
+
+def _graph_positive_text(prompt_graph):
+    """从 ComfyUI PROMPT 执行图提取正向提示词：KSampler→positive→CLIPTextEncode.text。"""
+    if not isinstance(prompt_graph, dict):
+        return ""
+    _SAMPLERS = {"KSampler", "KSamplerAdvanced", "SamplerCustom", "SamplerCustomAdvanced"}
+    _TEXT_NODES = {"CLIPTextEncode", "CLIPTextEncodeSDXL", "CLIPTextEncodeFlux",
+                   "TextEncodeQwenImageEdit", "T5TokenizerEncode", "CLIPTokenizerEncode"}
+
+    def _collect(node_id, depth):
+        node = prompt_graph.get(str(node_id)) or prompt_graph.get(node_id)
+        if node is None or depth > 6:
+            return []
+        node = node if isinstance(node, dict) else {}
+        texts = []
+        if node.get("class_type") in _TEXT_NODES:
+            t = node.get("inputs", {}).get("text")
+            if isinstance(t, str) and t.strip():
+                texts.append(t)
+        for v in node.get("inputs", {}).values():
+            if isinstance(v, list) and len(v) == 2 and isinstance(v[0], (str, int)):
+                texts.extend(_collect(v[0], depth + 1))
+        return texts
+
+    for nid, node in prompt_graph.items():
+        if isinstance(node, dict) and node.get("class_type") in _SAMPLERS:
+            pos = node.get("inputs", {}).get("positive")
+            if isinstance(pos, list) and len(pos) == 2:
+                texts = _collect(pos[0], 0)
+                if texts:
+                    return max(texts, key=len)  # 正向主提示词取链上最长段
+    return ""
+
+
+def _ocr_text_boxes(image_pil, conf_min=0.45, detect_cap=2048):
+    """RapidOCR 定位文字框（复用文字校验闸的引擎缓存）。
+    返回 ([(box4x2, text, conf), ...], None) 或 (None, 错误串)。"""
+    global _OCR_ENGINE
+    try:
+        from rapidocr_onnxruntime import RapidOCR
+    except ImportError:
+        return None, "rapidocr 未安装（pip install rapidocr-onnxruntime）"
+    try:
+        import numpy as _np
+        if _OCR_ENGINE is None:
+            # det_limit_type='min'：小图不缩、大图缩到 1536，保证招牌小字不被压没
+            _OCR_ENGINE = RapidOCR(det_limit_side_len=1536, det_limit_type="min")
+        img = image_pil
+        if max(img.size) > detect_cap:
+            img = img.resize((max(1, int(img.width * detect_cap / max(img.size))),
+                              max(1, int(img.height * detect_cap / max(img.size)))))
+        scale_x = image_pil.width / img.width
+        scale_y = image_pil.height / img.height
+        result, _ = _OCR_ENGINE(_np.array(img))
+        boxes = []
+        for box, text, conf in (result or []):
+            c = float(conf)
+            if c < conf_min:
+                continue
+            b = _np.asarray(box, dtype=float)
+            b[:, 0] *= scale_x
+            b[:, 1] *= scale_y
+            boxes.append((b, str(text), c))
+        return boxes, None
+    except Exception as e:
+        return None, f"OCR 执行失败: {e}"
+
+
+def _round64(v):
+    return max(64, int(round(v / 64.0)) * 64)
+
+
+class LimaoH3TextRegionFix:
+    """狸猫·文字渲染修复·定位裁剪（H3-Image 生图线专用）。
+
+    三段式第一段：OCR 定位 + 提示词文案解析 + 裁剪放大 + 羽化 mask。
+    输出交给工作流中段（VAEEncode → SetLatentNoiseMask → KSampler →
+    VAEDecode，同底模同提示词）对放大区域重采样——模型在熟悉的
+    分辨率区间把字重新"渲染"出来，全程无贴字。
+
+    无文字框 / 无文案 / OCR 不可用时自动 passthrough（输出原图），
+    不拦流程。"""
+
+    CATEGORY = "limao/守卫"
+    FUNCTION = "run"
+    RETURN_TYPES = ("IMAGE", "MASK", "IMAGE", "STRING")
+    RETURN_NAMES = ("fixed_image", "fixed_mask", "original_image", "meta")
+    DESCRIPTION = ("文字渲染修复·定位裁剪：OCR 定位文字框+提示词文案解析+"
+                   "裁剪放大+羽化mask，配合中段inpaint重采样与回贴节点闭环。")
 
     @classmethod
     def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "resolution": ("STRING", {"default": "720P",
-                    "tooltip": "档位：480P=0.4MP 720P=0.6MP 1K=1MP 2K=4MP 4K=9MP 超4K=16MP；也可填 0.4MP / 600000 / 纯像素数"}),
-                "aspect": (["1:1", "4:3", "3:4", "16:9", "9:16", "3:2", "2:3", "21:9", "9:21"],
-                    {"default": "16:9",
-                    "tooltip": "生成比例（下拉选择）：横竖版/方图/宽银幕 9 档，与狸猫平台参数一致"}),
-                "multiple": ("INT", {"default": 32, "min": 8, "max": 128, "step": 8,
-                    "tooltip": "宽高对齐倍数（H3 一采要求 32 的倍数）"}),
-            },
-        }
+        return {"required": {
+            "images": ("IMAGE",),
+            "zoom_res": (["1536", "2048", "3072"],),
+            "pad_ratio": ("FLOAT", {"default": 0.6, "min": 0.1, "max": 2.0, "step": 0.1}),
+            "mask_expand": ("INT", {"default": 28, "min": 4, "max": 96, "step": 4}),
+        }, "optional": {
+            "texts_override": ("STRING", {"default": "", "multiline": False}),
+        }, "hidden": {"prompt": "PROMPT"}}
 
-    RETURN_TYPES = ("INT", "INT")
-    RETURN_NAMES = ("width", "height")
-    FUNCTION = "calc"
-    CATEGORY = "limao"
+    def run(self, images, zoom_res="2048", pad_ratio=0.6, mask_expand=28,
+            texts_override="", prompt=None):
+        import json as _json
+        import numpy as _np
+        from PIL import ImageDraw as _ImageDraw, ImageFilter as _ImageFilter
 
-    @staticmethod
-    def _parse_pixels(text: str) -> int:
-        t = str(text).strip().replace("，", "").replace(",", "")
-        up = t.upper()
-        for key, val in _RES_MP_TABLE.items():
-            if up == key.upper():
-                return val
-        # "0.4MP" / "16MP" 写法
-        if up.endswith("MP"):
-            try:
-                return int(float(up[:-2]) * 1_000_000)
-            except ValueError:
-                pass
-        if up.endswith("K") and up[:-1].replace(".", "", 1).isdigit():
-            # 未收录的 K 档（如 3K）：K² MP 粗算 1024×1024 口径
-            k = float(up[:-1])
-            return int(k * k * 1_000_000)
-        if t.isdigit():
-            return int(t)
-        raise ValueError(f"无法解析分辨率档位：{text!r}")
+        lines = ["—— 狸猫文字渲染修复 · 定位裁剪 ——"]
+        original = images if isinstance(images, torch.Tensor) else torch.tensor(images)
+        pil = _tensor_to_pil(original)
+        zoom = int(zoom_res)
 
-    @staticmethod
-    def _parse_aspect(text: str) -> float:
-        t = str(text).strip().replace("：", ":")
-        if ":" in t:
-            w, h = t.split(":", 1)
-            w = float(w.strip()); h = float(h.strip())
-            if w <= 0 or h <= 0:
-                raise ValueError(f"比例数值必须为正：{text!r}")
-            return w / h
-        v = float(t)
-        if v <= 0:
-            raise ValueError(f"比例数值必须为正：{text!r}")
-        return v
+        meta = {"skip": True, "reason": "", "texts": [], "boxes": 0}
+        skip_img = original
+        skip_mask = torch.zeros((1, pil.height, pil.width), dtype=torch.float32)
 
-    def calc(self, resolution, aspect, multiple):
         try:
-            pixels = self._parse_pixels(resolution)
-        except ValueError as e:
-            print(f"[LimaoH3WHCalc] {e} —— 回退默认 720P(0.6MP)")
-            pixels = _RES_MP_TABLE["720P"]
+            boxes, err = _ocr_text_boxes(pil)
+            if err:
+                meta["reason"] = err
+                lines.append(f"⚠️ SKIP（passthrough 原图）：{err}")
+            elif not boxes:
+                meta["reason"] = "OCR 未检出文字框"
+                lines.append("✅ 图内无文字框（或低于置信度阈值），直通原图")
+            else:
+                prompt_text = (texts_override or "").strip() or _graph_positive_text(prompt or {})
+                texts = _parse_quoted_texts(prompt_text) if not texts_override else [
+                    t.strip() for t in texts_override.replace("，", ",").split(",") if t.strip()]
+                lines.append(f"🔎 OCR 检出 {len(boxes)} 个文字框")
+                for b, t, c in boxes[:6]:
+                    lines.append(f"   「{t[:20]}」 conf={c:.2f}")
+                if texts:
+                    lines.append(f"📝 提示词文案 {len(texts)} 段: {' / '.join(texts[:4])}")
+                else:
+                    lines.append("ℹ️ 提示词/override 无引号文案——仍按原提示词重渲染（乱码区域将由模型按上下文重画）")
+
+                # 包围盒 + padding
+                xs = [p for b, _, _ in boxes for p in b[:, 0]]
+                ys = [p for b, _, _ in boxes for p in b[:, 1]]
+                x0, x1 = max(0.0, min(xs) - pil.width * pad_ratio * 0.5), min(float(pil.width), max(xs) + pil.width * pad_ratio * 0.5)
+                y0, y1 = max(0.0, min(ys) - pil.height * pad_ratio * 0.5), min(float(pil.height), max(ys) + pil.height * pad_ratio * 0.5)
+                crop_w, crop_h = x1 - x0, y1 - y0
+                if crop_w < 64 or crop_h < 64:
+                    meta["reason"] = "文字区域过小"
+                    lines.append("⚠️ SKIP：文字区域过小，直通原图")
+                else:
+                    # 裁剪 + 放大到 zoom（长边对齐，64 对齐）
+                    from PIL import Image as _PILImg
+                    crop = pil.crop((int(x0), int(y0), int(x1), int(y1)))
+                    scale = zoom / max(crop.size)
+                    out_w, out_h = _round64(crop.width * scale), _round64(crop.height * scale)
+                    if out_w * out_h > zoom * zoom:
+                        s2 = (zoom * zoom / (out_w * out_h)) ** 0.5
+                        out_w, out_h = _round64(out_w * s2), _round64(out_h * s2)
+                    fixed = crop.resize((out_w, out_h), _PILImg.LANCZOS)
+
+                    # mask：框映射到 crop 坐标 → 放大坐标 → 多边形填充 → 扩边羽化
+                    msk = _PILImg.new("L", fixed.size, 0)
+                    dm = _ImageDraw.Draw(msk)
+                    inv_sx, inv_sy = out_w / crop.width, out_h / crop.height
+                    for b, _, _ in boxes:
+                        poly = [((px - x0) * inv_sx, (py - y0) * inv_sy) for px, py in b]
+                        dm.polygon(poly, fill=255)
+                    msk = msk.filter(_ImageFilter.MaxFilter(mask_expand | 1))
+                    msk = msk.filter(_ImageFilter.GaussianBlur(mask_expand / 2.5))
+
+                    mask_t = torch.from_numpy(
+                        _np.asarray(msk, dtype=_np.float32) / 255.0).unsqueeze(0)
+
+                    meta = {
+                        "skip": False,
+                        "crop": [int(x0), int(y0), int(x1), int(y1)],
+                        "sample_size": [out_w, out_h],
+                        "texts": texts,
+                        "boxes": len(boxes),
+                        "original_size": [pil.width, pil.height],
+                    }
+                    lines.append(f"✂️ 裁剪区域 ({int(x0)},{int(y0)})-({int(x1)},{int(y1)}) "
+                                 f"→ 采样尺寸 {out_w}×{out_h}")
+                    lines.append("➡️ 中段：本图 → VAEEncode → SetLatentNoiseMask(本mask) → "
+                                 "KSampler(denoise 0.85, 同模型同提示词) → VAEDecode → 回贴节点")
+                    skip_img = _pil_to_tensor(fixed)
+                    skip_mask = mask_t
+        except Exception as e:
+            meta["reason"] = f"异常兜底: {e}"
+            lines.append(f"⚠️ SKIP（passthrough 原图）：异常兜底 {e}")
+
         try:
-            ratio = self._parse_aspect(aspect)
-        except ValueError as e:
-            print(f"[LimaoH3WHCalc] {e} —— 回退默认 16:9")
-            ratio = 16.0 / 9.0
-        m = max(8, int(multiple))
-        h = max(m, round((pixels / ratio) ** 0.5 / m) * m)
-        w = max(m, round(h * ratio / m) * m)
-        print(f"[LimaoH3WHCalc] 档位={resolution} 比例={aspect} → 一采 {w}×{h}"
-              f"（总像素 {w * h:,}，{w * h / 1e6:.2f}MP）")
-        return (w, h)
+            _json.dump(meta, open(_TEXTFIX_META, "w", encoding="utf-8"), ensure_ascii=False)
+        except OSError:
+            pass
+        meta_str = _json.dumps(meta, ensure_ascii=False)
+        lines.append(f"问题 {0 if not meta.get('skip') else 1} 项 · "
+                     + ("直通（无修复需求）" if meta.get("skip") else "进入渲染修复链"))
+        return {"result": (skip_img, skip_mask, original, meta_str),
+                "ui": {"text": ["\n".join(lines)]}}
 
 
-# ---------------------------------------------------------------------------
-# 15. 视频参数枢纽（一采分辨率 × 放大倍率 × 时长 三节点合一）
-# ---------------------------------------------------------------------------
+class LimaoH3TextRegionMerge:
+    """狸猫·文字渲染修复·回贴融合（H3-Image 生图线专用）。
 
-class LimaoH3VideoParams:
-    """视频参数枢纽（2026-11-21 站长需求：原版三个节点合并到一个节点框）。
+    三段式第三段：把中段 inpaint 重采样后的放大图缩放贴回原图（羽化融合），
+    并对修复区域 RapidOCR 复验——文案逐字比对，PASS/FAIL 写报告。
+    任何异常兜底返回原图，不拦流程。"""
 
-    把「一采基础分辨率（画幅计算）」「放大倍率 / Upscale Scale」「视频时长（秒）」
-    合并为单节点，四个输出分别供给下游：
-      width / height      → 一采条件与潜空间尺寸（算式与 LimaoH3WHCalc 完全一致，
-                            档位即一采 MP 口径：480P=0.4MP、720P=0.6MP）
-      upscale_scale       → 二采 learned latent upscale 的 scale_by（默认 1.5，
-                            成片 = 一采 × 1.5）
-      duration            → 视频时长秒（平台 {seconds} 注入；下游 17n+5 帧网格
-                            数学节点自动吸附）
-
-    平台占位符 {ures}/{uratio}/{seconds} 注入字段不变，服务端无需任何改动。
-    """
+    CATEGORY = "limao/守卫"
+    FUNCTION = "run"
+    RETURN_TYPES = ("IMAGE",)
+    RETURN_NAMES = ("images",)
+    DESCRIPTION = ("文字渲染修复·回贴融合：修复图按元数据贴回原图+羽化融合，"
+                   "RapidOCR 复验逐字比对，全程模型直出无贴字。")
 
     @classmethod
     def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "resolution": ("STRING", {"default": "720P",
-                    "tooltip": "档位即一采像素总量：480P=0.4MP 720P=0.6MP 1K=1MP 2K=4MP 4K=9MP 超4K=16MP；也可填 0.4MP / 600000 / 纯像素数"}),
-                "aspect": (["1:1", "4:3", "3:4", "16:9", "9:16", "3:2", "2:3", "21:9", "9:21"],
-                    {"default": "16:9",
-                    "tooltip": "生成比例（下拉 9 档），与狸猫平台参数一致"}),
-                "multiple": ("INT", {"default": 32, "min": 8, "max": 128, "step": 8,
-                    "tooltip": "宽高对齐倍数（H3 一采要求 32 的倍数）"}),
-                "upscale_scale": ("FLOAT", {"default": 1.5, "min": 1.0, "max": 4.0, "step": 0.05,
-                    "tooltip": "二采放大倍率：成片 = 一采 × 此倍率（480P→成片约1296×720，720P→约1536×864）"}),
-                "duration": ("FLOAT", {"default": 10.0, "min": 1.0, "max": 60.0, "step": 0.5,
-                    "tooltip": "视频时长（秒）；平台注入 {seconds}，工作流内自动吸附 17n+5 帧网格"}),
-            },
-        }
+        return {"required": {
+            "original_image": ("IMAGE",),
+            "inpainted_image": ("IMAGE",),
+            "meta": ("STRING", {"default": ""}),
+            "feather": ("INT", {"default": 18, "min": 4, "max": 64, "step": 2}),
+        }}
 
-    RETURN_TYPES = ("INT", "INT", "FLOAT", "FLOAT")
-    RETURN_NAMES = ("width", "height", "upscale_scale", "duration")
-    FUNCTION = "calc"
-    CATEGORY = "limao"
+    def run(self, original_image, inpainted_image, meta, feather=18):
+        import json as _json
+        import numpy as _np
+        from PIL import Image as _PIL, ImageFilter as _ImageFilter
 
-    def calc(self, resolution, aspect, multiple, upscale_scale, duration):
+        lines = ["—— 狸猫文字渲染修复 · 回贴融合 ——"]
         try:
-            pixels = LimaoH3WHCalc._parse_pixels(resolution)
-        except ValueError as e:
-            print(f"[LimaoH3VideoParams] {e} —— 回退默认 720P(0.6MP)")
-            pixels = _RES_MP_TABLE["720P"]
+            meta_d = _json.loads(meta) if meta else {}
+        except Exception:
+            meta_d = {}
+        original = original_image if isinstance(original_image, torch.Tensor) else torch.tensor(original_image)
+        if meta_d.get("skip") or not meta_d.get("crop"):
+            lines.append("✅ 定位阶段为直通（无文字/无文案），直接输出原图")
+            return {"result": (original,), "ui": {"text": ["\n".join(lines)]}}
+
         try:
-            ratio = LimaoH3WHCalc._parse_aspect(aspect)
-        except ValueError as e:
-            print(f"[LimaoH3VideoParams] {e} —— 回退默认 16:9")
-            ratio = 16.0 / 9.0
-        m = max(8, int(multiple))
-        h = max(m, round((pixels / ratio) ** 0.5 / m) * m)
-        w = max(m, round(h * ratio / m) * m)
-        ups = min(4.0, max(1.0, float(upscale_scale)))
-        dur = min(60.0, max(1.0, float(duration)))
-        print(f"[LimaoH3VideoParams] 档位={resolution} 比例={aspect} 倍率={ups} 时长={dur}s"
-              f" → 一采 {w}×{h}（{w * h / 1e6:.2f}MP）→ 成片 {round(w * ups)}×{round(h * ups)}")
-        return (int(w), int(h), ups, dur)
+            pil_orig = _tensor_to_pil(original)
+            pil_fix = _tensor_to_pil(inpainted_image if isinstance(inpainted_image, torch.Tensor) else torch.tensor(inpainted_image))
+            x0, y0, x1, y1 = meta_d["crop"]
+            cw, ch = x1 - x0, y1 - y0
+            patch = pil_fix.resize((cw, ch), _PIL.LANCZOS)
+
+            # 羽化融合：mask 用裁剪矩形内缩+高斯模糊，边缘软过渡
+            m = _PIL.new("L", (cw, ch), 0)
+            inset = max(2, feather // 2)
+            from PIL import ImageDraw as _ImageDraw
+            _ImageDraw.Draw(m).rectangle([inset, inset, cw - inset, ch - inset], fill=255)
+            m = m.filter(_ImageFilter.GaussianBlur(feather))
+
+            base = pil_orig.convert("RGB").copy()
+            base.paste(patch, (x0, y0), m)
+
+            # 复验：修复区域 OCR，与文案逐字比对
+            texts = meta_d.get("texts") or []
+            verdict = "SKIP"
+            if texts:
+                region = base.crop((x0, y0, x1, y1))
+                rec, err = _ocr_text_boxes(region, conf_min=0.5, detect_cap=1024)
+                if err:
+                    lines.append(f"⚠️ 复验跳过：{err}")
+                else:
+                    rec_seq = "".join(
+                        c for _, t2, _ in (rec or [])
+                        for c in t2 if c.isalnum() or "\u4e00" <= c <= "\u9fff")
+                    from collections import Counter as _Counter
+                    miss = []
+                    for ch_, need in _Counter("".join(c for t2 in texts for c in t2
+                                                      if c.isalnum() or "\u4e00" <= c <= "\u9fff")).items():
+                        if _Counter(rec_seq).get(ch_, 0) < need:
+                            miss.append(ch_)
+                    verdict = "PASS" if not miss else "FAIL"
+                    lines.append(("✅ 复验 PASS：文案逐字渲染正确" if verdict == "PASS"
+                                  else f"❌ 复验 FAIL：缺/错字 {'、'.join(miss[:8])}"
+                                       f" —— OCR 读到: {rec_seq[:40] or '(空白)'}")
+                                 + "　→ FAIL 可调大 zoom_res/重roll")
+            else:
+                lines.append("ℹ️ 无显式文案（按上下文重渲染），复验仅记录 OCR 读字")
+                region = base.crop((x0, y0, x1, y1))
+                rec, _ = _ocr_text_boxes(region, conf_min=0.5, detect_cap=1024)
+                if rec:
+                    lines.append("   修复区域现读作: " + " / ".join(t for _, t, _ in rec[:4]))
+
+            lines.append(f"🩹 已贴回 ({x0},{y0})-({x1},{y1})，羽化 {feather}px")
+            return {"result": (_pil_to_tensor(base),), "ui": {"text": ["\n".join(lines)]}}
+        except Exception as e:
+            lines.append(f"⚠️ 异常兜底，返回原图: {e}")
+            return {"result": (original,), "ui": {"text": ["\n".join(lines)]}}
 
 
 NODE_CLASS_MAPPINGS.update({
@@ -1154,11 +1328,9 @@ NODE_CLASS_MAPPINGS.update({
     "LimaoH3Ref16Audit": LimaoH3Ref16Audit,
     "LimaoH3HandRiskWatch": LimaoH3HandRiskWatch,
     "LimaoH3TextProofread": LimaoH3TextProofread,
-    "LimaoH3WHCalc": LimaoH3WHCalc,
-    "LimaoH3VideoParams": LimaoH3VideoParams,
+    "LimaoH3TextRegionFix": LimaoH3TextRegionFix,
+    "LimaoH3TextRegionMerge": LimaoH3TextRegionMerge,
 })
-
-
 NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3AVLatentSave": "狸猫·AV潜空间落盘",
     "LimaoH3AVLatentLoad": "狸猫·AV潜空间回载",
@@ -1167,6 +1339,6 @@ NODE_DISPLAY_NAME_MAPPINGS.update({
     "LimaoH3Ref16Audit": "狸猫·16图参考审计",
     "LimaoH3HandRiskWatch": "狸猫·手部风险哨兵",
     "LimaoH3TextProofread": "狸猫·文字校验闸",
-    "LimaoH3WHCalc": "狸猫·输出画幅计算器",
-    "LimaoH3VideoParams": "狸猫·视频参数枢纽（分辨率×倍率×时长）",
+    "LimaoH3TextRegionFix": "狸猫·文字渲染修复（定位裁剪）",
+    "LimaoH3TextRegionMerge": "狸猫·文字渲染修复（回贴融合）",
 })

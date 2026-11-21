@@ -1,8 +1,8 @@
 {
  "id": "f66ae3ad-428b-467a-a697-396e170ece44",
  "revision": 0,
- "last_node_id": 100008,
- "last_link_id": 17,
+ "last_node_id": 100065,
+ "last_link_id": 33,
  "nodes": [
   {
    "id": 9,
@@ -23,7 +23,7 @@
      "localized_name": "images",
      "name": "images",
      "type": "IMAGE",
-     "link": 1
+     "link": 33
     },
     {
      "localized_name": "filename_prefix",
@@ -267,7 +267,7 @@
      "name": "images",
      "type": "IMAGE",
      "links": [
-      1
+      19
      ]
     }
    ],
@@ -569,7 +569,9 @@
      "type": "VAE",
      "links": [
       7,
-      17
+      17,
+      24,
+      31
      ]
     }
    ],
@@ -653,7 +655,8 @@
      "type": "CONDITIONING",
      "links": [
       11,
-      13
+      13,
+      27
      ]
     },
     {
@@ -707,7 +710,8 @@
      "name": "CONDITIONING",
      "type": "CONDITIONING",
      "links": [
-      14
+      14,
+      28
      ]
     }
    ],
@@ -930,7 +934,8 @@
      "name": "MODEL",
      "type": "MODEL",
      "links": [
-      12
+      12,
+      26
      ]
     }
    ],
@@ -945,17 +950,295 @@
     "lora_name": "limao_nature and true style.safetensors",
     "strength_model": 1
    }
+  },
+  {
+   "id": 100060,
+   "type": "LimaoH3TextRegionFix",
+   "pos": [
+    2484.134765625,
+    -770
+   ],
+   "size": [
+    320,
+    260
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 19
+    }
+   ],
+   "outputs": [
+    {
+     "name": "fixed_image",
+     "type": "IMAGE",
+     "links": [
+      20
+     ]
+    },
+    {
+     "name": "fixed_mask",
+     "type": "MASK",
+     "links": [
+      21
+     ]
+    },
+    {
+     "name": "original_image",
+     "type": "IMAGE",
+     "links": [
+      22
+     ]
+    },
+    {
+     "name": "meta",
+     "type": "STRING",
+     "links": [
+      23
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "LimaoH3TextRegionFix"
+   },
+   "widgets_values": [
+    "2048",
+    0.6,
+    28,
+    ""
+   ]
+  },
+  {
+   "id": 100061,
+   "type": "VAEEncode",
+   "pos": [
+    2864.134765625,
+    -770
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "pixels",
+     "type": "IMAGE",
+     "link": 20
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 24
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      25
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "VAEEncode"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 100062,
+   "type": "SetLatentNoiseMask",
+   "pos": [
+    3244.134765625,
+    -770
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 25
+    },
+    {
+     "name": "mask",
+     "type": "MASK",
+     "link": 21
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      29
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "SetLatentNoiseMask"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 100063,
+   "type": "KSampler",
+   "pos": [
+    3624.134765625,
+    -770
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 26
+    },
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "link": 27
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "link": 28
+    },
+    {
+     "name": "latent_image",
+     "type": "LATENT",
+     "link": 29
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      30
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "KSampler"
+   },
+   "widgets_values": [
+    42,
+    "fixed",
+    6,
+    1,
+    "euler",
+    "simple",
+    0.85
+   ]
+  },
+  {
+   "id": 100064,
+   "type": "VAEDecode",
+   "pos": [
+    4004.134765625,
+    -770
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 30
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 31
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      32
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "VAEDecode"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 100065,
+   "type": "LimaoH3TextRegionMerge",
+   "pos": [
+    4384.134765625,
+    -770
+   ],
+   "size": [
+    320,
+    200
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "original_image",
+     "type": "IMAGE",
+     "link": 22
+    },
+    {
+     "name": "inpainted_image",
+     "type": "IMAGE",
+     "link": 32
+    },
+    {
+     "name": "meta",
+     "type": "STRING",
+     "link": 23
+    }
+   ],
+   "outputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "links": [
+      33
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "LimaoH3TextRegionMerge"
+   },
+   "widgets_values": [
+    18
+   ]
   }
  ],
  "links": [
-  [
-   1,
-   32,
-   0,
-   9,
-   0,
-   "IMAGE"
-  ],
   [
    2,
    31,
@@ -1099,6 +1382,126 @@
    100007,
    0,
    "MODEL"
+  ],
+  [
+   19,
+   32,
+   0,
+   100060,
+   0,
+   "IMAGE"
+  ],
+  [
+   20,
+   100060,
+   0,
+   100061,
+   0,
+   "IMAGE"
+  ],
+  [
+   21,
+   100060,
+   1,
+   100062,
+   1,
+   "MASK"
+  ],
+  [
+   22,
+   100060,
+   2,
+   100065,
+   0,
+   "IMAGE"
+  ],
+  [
+   23,
+   100060,
+   3,
+   100065,
+   2,
+   "STRING"
+  ],
+  [
+   24,
+   100003,
+   0,
+   100061,
+   1,
+   "VAE"
+  ],
+  [
+   25,
+   100061,
+   0,
+   100062,
+   0,
+   "LATENT"
+  ],
+  [
+   26,
+   100030,
+   0,
+   100063,
+   0,
+   "MODEL"
+  ],
+  [
+   27,
+   100005,
+   0,
+   100063,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   28,
+   100006,
+   0,
+   100063,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   29,
+   100062,
+   0,
+   100063,
+   3,
+   "LATENT"
+  ],
+  [
+   30,
+   100063,
+   0,
+   100064,
+   0,
+   "LATENT"
+  ],
+  [
+   31,
+   100003,
+   0,
+   100064,
+   1,
+   "VAE"
+  ],
+  [
+   32,
+   100064,
+   0,
+   100065,
+   1,
+   "IMAGE"
+  ],
+  [
+   33,
+   100065,
+   0,
+   9,
+   0,
+   "IMAGE"
   ]
  ],
  "groups": [],
