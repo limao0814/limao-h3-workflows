@@ -136,7 +136,7 @@
   </div>
 
   <div class="section">
-    <div class="sec-head"><h2>工作流目录</h2><span>本机品牌 5 个 · 位于 /root/狸猫H3工坊/</span></div>
+    <div class="sec-head"><h2>工作流目录</h2><span>本机品牌 7 个 · 位于 /root/狸猫H3工坊/</span></div>
     <div class="wf">
       <a class="wf-row" id="wfVideo">
         <div class="wf-ico v">🎞️</div>
@@ -146,19 +146,51 @@
         </div>
         <div class="wf-arrow">→</div>
       </a>
-      <a class="wf-row" id="wfImg1">
+      <a class="wf-row" id="wfT2I">
         <div class="wf-ico i">🖼️</div>
         <div>
-          <div class="wf-name">狸猫图片 / 文生图（自然真实风格）</div>
-          <div class="wf-desc">默认档超4K（16MP 最佳工作区）· 出图硬闸质检 · 档位=MP 口径</div>
+          <div class="wf-name">狸猫图片 / 文生图</div>
+          <div class="wf-desc">无风格 LoRA 基础版 · 默认档超4K（16MP 最佳工作区）· 出图硬闸质检 · 档位=MP 口径</div>
         </div>
         <div class="wf-arrow">→</div>
       </a>
-      <a class="wf-row" id="wfImg2">
+      <a class="wf-row" id="wfI2I">
+        <div class="wf-ico i">🖼️</div>
+        <div>
+          <div class="wf-name">狸猫图片 / 图生图</div>
+          <div class="wf-desc">无风格 LoRA 基础版 · 参考图改图 · 16 图参考槽 · 手部风险哨兵</div>
+        </div>
+        <div class="wf-arrow">→</div>
+      </a>
+      <a class="wf-row" id="wfT2IReal">
+        <div class="wf-ico i">🖼️</div>
+        <div>
+          <div class="wf-name">狸猫图片 / 文生图（自然真实风格）</div>
+          <div class="wf-desc">自然真实 LoRA（触发词 limaoreal）· 拟真摄影质感 · 档位=MP 口径</div>
+        </div>
+        <div class="wf-arrow">→</div>
+      </a>
+      <a class="wf-row" id="wfI2IReal">
         <div class="wf-ico i">🖼️</div>
         <div>
           <div class="wf-name">狸猫图片 / 图生图（自然真实风格）</div>
-          <div class="wf-desc">参考图改图 · 16 图参考槽 · 手部风险哨兵</div>
+          <div class="wf-desc">自然真实 LoRA · 参考图改图 · 16 图参考槽</div>
+        </div>
+        <div class="wf-arrow">→</div>
+      </a>
+      <a class="wf-row" id="wfT2IMJ">
+        <div class="wf-ico i">🎨</div>
+        <div>
+          <div class="wf-name">狸猫图片 / 文生图（MJstyle）</div>
+          <div class="wf-desc">MJ 风格 LoRA（触发词 mjstyle 已预置）· 时尚商业片质感 · 高饱和编辑感 · 493 图精训</div>
+        </div>
+        <div class="wf-arrow">→</div>
+      </a>
+      <a class="wf-row" id="wfI2IMJ">
+        <div class="wf-ico i">🎨</div>
+        <div>
+          <div class="wf-name">狸猫图片 / 图生图（MJstyle）</div>
+          <div class="wf-desc">MJ 风格 LoRA · 参考图改图保留构图换 MJ 质感 · 16 图参考槽</div>
         </div>
         <div class="wf-arrow">→</div>
       </a>
@@ -182,13 +214,17 @@
         return proto + "//" + h + ":8188";
       } catch (e) { return "http://127.0.0.1:8188"; }
     }
-    ["comfyBtn", "comfyCard", "wfVideo", "wfImg1", "wfImg2"].forEach(function (id) {
+    ["comfyBtn", "comfyCard", "wfVideo", "wfT2I", "wfI2I", "wfT2IReal", "wfI2IReal", "wfT2IMJ", "wfI2IMJ"].forEach(function (id) {
       var el = document.getElementById(id);
       if (!el) return;
       var u = comfyURL();
       var path = { wfVideo: "/lab/tree/root/狸猫H3工坊/狸猫视频/狸猫H3工作流.json",
-                   wfImg1: "/lab/tree/root/狸猫H3工坊/狸猫图片/文生图（自然真实风格）.json",
-                   wfImg2: "/lab/tree/root/狸猫H3工坊/狸猫图片/图生图（自然真实风格）.json" }[id];
+                   wfT2I: "/lab/tree/root/狸猫H3工坊/狸猫图片/文生图.json",
+                   wfI2I: "/lab/tree/root/狸猫H3工坊/狸猫图片/图生图.json",
+                   wfT2IReal: "/lab/tree/root/狸猫H3工坊/狸猫图片/文生图（自然真实风格）.json",
+                   wfI2IReal: "/lab/tree/root/狸猫H3工坊/狸猫图片/图生图（自然真实风格）.json",
+                   wfT2IMJ: "/lab/tree/root/狸猫H3工坊/狸猫图片/文生图（MJstyle）.json",
+                   wfI2IMJ: "/lab/tree/root/狸猫H3工坊/狸猫图片/图生图（MJstyle）.json" }[id];
       if (path) { el.href = path; return; }   /* 工作流目录：JupyterLab 内打开 */
       el.href = u;
       el.target = "_blank";
