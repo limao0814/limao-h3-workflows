@@ -39,7 +39,7 @@
 │   ├── 狸猫·智能图像编辑/      # 7 个图像编辑类
 │   └── 狸猫·视频生成/          # 6 个 Wan 视频类
 ├── custom_nodes/
-│   ├── limao-h3-suite/         # 狸猫自研 H3 工坊节点套件（17 个节点）
+│   ├── limao-h3-suite/         # 狸猫自研 H3 工坊节点套件（19 个节点）
 │   │   ├── LimaoH3ModelSentinel    #   模型哨兵（存在性/一致性校验）
 │   │   ├── LimaoH3RefImageAudit    #   参考图审计（视频9图逐张校验）
 │   │   ├── LimaoH3RefVideoAudit    #   参考视频审计
@@ -55,6 +55,8 @@
 │   │   ├── LimaoH3Ref16Audit       #   16图参考审计（图生图逐张校验）
 │   │   ├── LimaoH3HandRiskWatch    #   手部风险哨兵
 │   │   ├── LimaoH3TextProofread    #   文字校验闸（RapidOCR逐字比对）
+│   │   ├── LimaoH3TextRegionFix    #   文字渲染修复·定位裁剪（OCR定位乱码字区+提示词文案解析+放大裁剪）
+│   │   ├── LimaoH3TextRegionMerge  #   文字渲染修复·回贴融合（局部重渲染结果回贴+羽化+OCR逐字复验）
 │   │   ├── LimaoH3WHCalc           #   输出画幅计算器（实时算式预览）
 │   │   └── LimaoH3VideoParams      #   视频参数枢纽（分辨率×比例×倍率×时长 一节点输出）
 │   └── limao-vram-tools/       # 狸猫自研显存治理节点包
