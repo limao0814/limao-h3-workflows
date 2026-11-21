@@ -30,24 +30,33 @@
 ## 📦 仓库内容
 
 ```
-├── workflows/          # 40 个狸猫工作流（7 大分类）+ 9 份历史版本存档
-│   ├── 狸猫·H3生图/            # 2 个：H3-Image 4K直出（文生图/图像编辑，五道毛病防线全内置）
-│   ├── 狸猫·H3视频/            # 1 个主打：全域参考锻造（旗舰）+ 2K交付版 + 存档/ 8 份历史版本
+├── workflows/          # 44 个狸猫工作流（7 大分类）+ 9 份历史版本存档
+│   ├── 狸猫·H3生图/            # 6 个：画布现役 4 套（文生图 / 文生图·自然真实风格 / 图生图·16图参考 / 图生图·自然真实风格）+ 4K直出双工作流（文生图/图像编辑）
+│   ├── 狸猫·H3视频/            # 1 个主打：狸猫H3工作流（现役版：三节点合一 + 9图/3音频参考直连 + 双采二阶放大）+ 2K交付版 + 存档/ 8 份历史版本
 │   ├── 狸猫·动作迁移/          # 12 个动作迁移类
 │   ├── 狸猫·人物替换换装/      # 5 个替换类
 │   ├── 狸猫·数字人对口型/      # 7 个数字人类
 │   ├── 狸猫·智能图像编辑/      # 7 个图像编辑类
 │   └── 狸猫·视频生成/          # 6 个 Wan 视频类
 ├── custom_nodes/
-│   ├── limao-h3-suite/         # 狸猫自研 H3 工坊节点套件（8 个节点）
+│   ├── limao-h3-suite/         # 狸猫自研 H3 工坊节点套件（17 个节点）
 │   │   ├── LimaoH3ModelSentinel    #   模型哨兵（存在性/一致性校验）
-│   │   ├── LimaoH3RefImageAudit    #   参考图审计
+│   │   ├── LimaoH3RefImageAudit    #   参考图审计（视频9图逐张校验）
 │   │   ├── LimaoH3RefVideoAudit    #   参考视频审计
 │   │   ├── LimaoH3RefAudioAudit    #   参考音频审计
 │   │   ├── LimaoH3FrameBridge      #   帧桥（参考帧桥接）
 │   │   ├── LimaoH3SeedForge        #   种子锻炉（确定性种子）
 │   │   ├── LimaoH3VRAMGuard        #   显存守卫（自动清理/告警）
-│   │   └── LimaoH3MemorySweep      #   显存清扫（连跑前释放残留）
+│   │   ├── LimaoH3MemorySweep      #   显存清道夫（链路中间释放峰值）
+│   │   ├── LimaoH3AVLatentSave     #   AV潜空间落盘（采样/解码两段式解耦）
+│   │   ├── LimaoH3AVLatentLoad     #   AV潜空间回载（阶段2独立解码）
+│   │   ├── LimaoH3ImagePromptGuard #   提示词体检（生图）
+│   │   ├── LimaoH3ImageQAGate      #   出图硬闸（质检拦截）
+│   │   ├── LimaoH3Ref16Audit       #   16图参考审计（图生图逐张校验）
+│   │   ├── LimaoH3HandRiskWatch    #   手部风险哨兵
+│   │   ├── LimaoH3TextProofread    #   文字校验闸（RapidOCR逐字比对）
+│   │   ├── LimaoH3WHCalc           #   输出画幅计算器（实时算式预览）
+│   │   └── LimaoH3VideoParams      #   视频参数枢纽（分辨率×比例×倍率×时长 一节点输出）
 │   └── limao-vram-tools/       # 狸猫自研显存治理节点包
 │       ├── LimaoVRAMGuard      #   显存守卫（自动清理/告警）
 │       ├── LimaoVAEChunkDecode #   分块解码（32帧分块）
@@ -56,6 +65,7 @@
 │   ├── autostart_v2.sh         #   开机自启入口（customer.cmd.sh → /etc/autodl.sh → 本脚本）
 │   ├── gateway6006.py          #   6006 常驻反向代理网关（就绪前亮欢迎页，HTTP+WS 全穿透，零空窗）
 │   └── panel6008.py            #   6008 狸猫专属进入面板（实时状态 + 一键进工作台）
+├── limao-home/                 # Jupyter 起始页门户（狸猫AI·H3视频工坊）+ 使用说明
 ├── MODELS.md           # 模型依赖清单（文件名/目录/大小/来源/SHA256）
 └── LICENSE             # 狸猫专有许可
 ```
